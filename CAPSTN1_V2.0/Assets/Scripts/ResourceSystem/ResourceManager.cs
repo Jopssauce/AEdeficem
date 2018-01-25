@@ -75,4 +75,12 @@ public class ResourceManager : MonoBehaviour {
 		}
 	}
 
+	public void GetRegionQualitySum()
+	{
+		//Get list of regions
+		//Get get Max and Current Region Quality 
+		//Normalize/Percentage it
+	}
+
+
 }
