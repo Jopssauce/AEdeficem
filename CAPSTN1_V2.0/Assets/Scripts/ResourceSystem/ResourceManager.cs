@@ -18,6 +18,9 @@ public class ResourceManager : MonoBehaviour {
 	public int power;
 	public int actionPoints;
 
+	public int currentRQSum;
+	public int maxRQSum;
+
 	void Awake()
 	{
 		if (instance == null) 

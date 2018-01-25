@@ -33,6 +33,7 @@ public class TurnManager : MonoBehaviour {
 			//Update region special resource
 			//Random Events Pop-up
 			//Begin Next Turn
+			currentTurns++;
 			isTurnEnded = false;
 		}
 	}
