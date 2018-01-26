@@ -6,8 +6,11 @@ public class RegionManager : MonoBehaviour
 {
     public List<GameObject> Region;
 
+
+    private List<GameObject> Duplicates;
     private GameObject[] RegionHolder;
-    private List<RegionBase.RegionSpeciality> TypeCheckList;
+    private List<ResourceManager.ResourceType> TypeCheckList;
+    private List<ResourceManager.ResourceType> MissingRegionType;
 
     public static RegionManager instance = null;
 	void Awake()
@@ -25,42 +28,19 @@ public class RegionManager : MonoBehaviour
 
     void Start()
     {
-
         RegionHolder = GameObject.FindGameObjectsWithTag("Region");
 
-        TypeCheckList = new List<RegionBase.RegionSpeciality>();
+        TypeCheckList = new List<ResourceManager.ResourceType>();
+        Duplicates = new List<GameObject>();
+        MissingRegionType = new List<ResourceManager.ResourceType>();
 
-        foreach (var item in RegionHolder)
+        
+
+        for (int i = 0; i < 4; i++)
         {
-            Region.Add(item);
+            MissingRegionType.Add((ResourceManager.ResourceType)i);
         }
-
-        foreach (var item in Region)
-        {
-            if (!TypeCheckList.Contains(item.GetComponent<RegionBase>().RegionType))
-            {
-                TypeCheckList.Add(item.GetComponent<RegionBase>().RegionType);
-            }
-        }
-
-        if (TypeCheckList.Count < 4)
-        {
-            foreach (var item in Region)
-            {
-                if (TypeCheckList.Contains(item.GetComponent<RegionBase>().RegionType))
-                {
-                    while (true)
-                    {
-                        item.GetComponent<RegionBase>().AssignRegionType();
-
-                        if (TypeCheckList.Contains(item.GetComponent<RegionBase>().RegionType)) break;
-                    }
-
-                }
-
-                continue;
-            }
-        }
+        FixRegionTypes();
 
     }
 
@@ -75,4 +55,35 @@ public class RegionManager : MonoBehaviour
 
     }
 
+    void FixRegionTypes()
+    {
+        foreach (var item in RegionHolder)
+        {
+            Region.Add(item);
+        }
+
+        foreach (var item in Region)
+        {
+            //Adds existing region types and disregards duplicates
+            if (!TypeCheckList.Contains(item.GetComponent<RegionBase>().RegionType))
+            {
+                TypeCheckList.Add(item.GetComponent<RegionBase>().RegionType);
+            }
+            else
+            {
+                Duplicates.Add(item);
+            }
+        }
+
+        int num = 0;
+        foreach (var item in MissingRegionType)
+        {
+            if (!TypeCheckList.Contains(item))
+            {
+                Duplicates[num].GetComponent<RegionBase>().RegionType = item;
+                Duplicates[num].GetComponent<RegionBase>().AdjustResourceByType();
+                num++;
+            }
+        }
+    }
 }
