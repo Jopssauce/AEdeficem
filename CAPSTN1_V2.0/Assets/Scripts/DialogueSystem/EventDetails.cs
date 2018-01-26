@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Dialogue : MonoBehaviour 
+public class EventDetails 
 {
 	public string EventName;
-	public string[] Details;
+    [TextArea(3, 999)]
+	public string Details;
+
 }
