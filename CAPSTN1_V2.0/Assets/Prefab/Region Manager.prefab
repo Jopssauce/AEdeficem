@@ -51,3 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473d2f6b529b5ad41b3cdff3aac58e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Region:
+  - {fileID: 1701066038239278, guid: 180b80ebeb38db74dbf6c5c392df61ee, type: 2}
+  - {fileID: 1378749366224606, guid: 4188a442cf63b4641b7c348bcdab7177, type: 2}
+  - {fileID: 1757145257427930, guid: 7792c4fce210c8d489d42fcfced8b27c, type: 2}
+  - {fileID: 1705738902511258, guid: 208e155da3ea9db468a4b7f4d600294b, type: 2}
+  - {fileID: 1790132886780966, guid: 12430a4f21192d64a85c77151af619d0, type: 2}
+  - {fileID: 1452138024304416, guid: f045c7a76d4c24c4d82187809b91f158, type: 2}
