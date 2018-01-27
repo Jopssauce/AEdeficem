@@ -13,6 +13,6 @@ public class EventDetailsTrigger : MonoBehaviour
 
     public void StartEvent()
     {
-        FindObjectOfType<EventDetailsManager>().ShowEventDescription(EventDetail, ResourceManager.ResourceType.Food);
+        FindObjectOfType<EventDetailsManager>().ShowEventDescription(EventDetail, ResourceManager.ResourceType.Water);
     }
 }
