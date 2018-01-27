@@ -15,4 +15,14 @@ public class EventDetailsTrigger : MonoBehaviour
     {
         FindObjectOfType<EventDetailsManager>().ShowEventDescription(EventDetail, ResourceManager.ResourceType.Water);
     }
+
+    public void ResovleButtonClicked()
+    {
+        Debug.Log("Resolved");
+    }
+
+    public void IgnoreButtonClicked()
+    {
+        Debug.Log("Ignored");
+    }
 }

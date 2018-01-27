@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EventDetailsManager : MonoBehaviour {
 
+    public Text DetailsText;
+    public Text TitleText;
 	private string sentences;
     // Use this for initialization
     void Start()
@@ -32,5 +35,7 @@ public class EventDetailsManager : MonoBehaviour {
         }
 
         Debug.Log("Event: " + Desc.EventName + "Details: " + Desc.Details);
+        DetailsText.text = Desc.Details;
+        TitleText.text = Desc.EventName;
     }
 }
