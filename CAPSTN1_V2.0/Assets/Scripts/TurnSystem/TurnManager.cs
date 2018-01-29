@@ -25,6 +25,7 @@ public class TurnManager : MonoBehaviour {
 	{
 		if (isTurnEnded == true) 
 		{
+			
 			//Replenish Resources
 			//Event Timer goes down
 			//Check for solved/Unresolved
