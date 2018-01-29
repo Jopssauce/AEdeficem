@@ -17,6 +17,7 @@ public class RegionBase : MonoBehaviour
     public int RegionQuality;
     public Resources RegionResources;
 
+    public int MaxRegionResource;
 
     void Awake()
     {
@@ -26,7 +27,7 @@ public class RegionBase : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        MaxRegionResource = 6;
     }
 
     // Update is called once per frame
