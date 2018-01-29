@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TurnManager : MonoBehaviour {
 	public static TurnManager instance = null;
-
-	public float currentTurns;
-	public bool isTurnEnded;
+	
+	public float 	currentTurn;
+	public int 		turns;
+	public bool 	isTurnEnded;
 
 	void Awake()
 	{
@@ -20,7 +21,7 @@ public class TurnManager : MonoBehaviour {
 		}
 		DontDestroyOnLoad (gameObject);
 	}
-
+	
 	public void AdvanceTurn()
 	{
 		if (isTurnEnded == true) 
@@ -34,7 +35,7 @@ public class TurnManager : MonoBehaviour {
 			//Update region special resource
 			//Random Events Pop-up
 			//Begin Next Turn
-			currentTurns++;
+			currentTurn++;
 			isTurnEnded = false;
 		}
 	}

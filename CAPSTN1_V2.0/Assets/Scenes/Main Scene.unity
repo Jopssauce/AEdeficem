@@ -1081,6 +1081,8 @@ MonoBehaviour:
     type: 2}
   regionManager: {fileID: 1548663410176516, guid: 9574f5294e9e8734dadab53d720e14af,
     type: 2}
+  turnManager: {fileID: 1830540796842406, guid: d6744ee24e952a54db9c8b0df01e7d82,
+    type: 2}
   managers: []
 --- !u!1 &1645632519
 GameObject:
