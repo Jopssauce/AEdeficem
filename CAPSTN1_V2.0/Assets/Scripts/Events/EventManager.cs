@@ -12,6 +12,8 @@ public class EventManager : MonoBehaviour {
 
     public RegionManager RegionManagerInstance;
 
+    public List<Button> EventList;
+
     void Awake()
 	{
         newCanvas = Canvas.FindObjectOfType<Canvas>();
@@ -29,6 +31,8 @@ public class EventManager : MonoBehaviour {
 
     void Start()
     {
+        EventList = new List<Button>();
+
         Invoke("SpawnEvent",0.1f);
     }
 
@@ -47,6 +51,7 @@ public class EventManager : MonoBehaviour {
 
         newButton.transform.position = point;
 
+        EventList.Add(newButton);
     }
 
     private Vector2 RandomPointInBox(Vector2 center, Vector2 size)
