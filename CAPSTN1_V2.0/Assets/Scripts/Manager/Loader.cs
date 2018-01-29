@@ -6,7 +6,7 @@ public class Loader : MonoBehaviour {
 	public GameObject resourceManager;
 	public GameObject eventManager;
 	public GameObject regionManager;
-
+	public GameObject turnManager;
 	public List<GameObject> managers;
 
 	void Awake()
@@ -22,6 +22,10 @@ public class Loader : MonoBehaviour {
 		if (RegionManager.instance == null) 
 		{
 			Instantiate (regionManager);
+		}
+		if (ResourceManager.instance = null)
+		{
+			Instantiate (turnManager);
 		}
 	}
 }
