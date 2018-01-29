@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RegionManager : MonoBehaviour
 {
-    public List<GameObject> Region;
+    public List<GameObject> RegionList;
 
 
     private List<GameObject> Duplicates;
@@ -59,10 +59,10 @@ public class RegionManager : MonoBehaviour
     {
         foreach (var item in RegionHolder)
         {
-            Region.Add(item);
+            RegionList.Add(item);
         }
 
-        foreach (var item in Region)
+        foreach (var item in RegionList)
         {
             //Adds existing region types and disregards duplicates
             if (!TypeCheckList.Contains(item.GetComponent<RegionBase>().RegionType))
