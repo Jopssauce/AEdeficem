@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EventManager : MonoBehaviour {
+public class EventManager : MonoBehaviour
+{
 
 	public static EventManager instance = null;
 
