@@ -85,5 +85,17 @@ public class ResourceManager : MonoBehaviour {
 		//Normalize/Percentage it
 	}
 
+	public void GetResourceSum()
+	{
+		//Get total amount of resource that can be lost/gained every turn
+	}
+
+	public void ReplenishResource()
+	{
+		AddResource(ResourceType.ActionPoints, 1);
+		AddResource(ResourceType.Food, 1);
+		AddResource(ResourceType.Power, 1);
+		AddResource(ResourceType.Water, 1);
+	}
 
 }

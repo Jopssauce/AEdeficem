@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TurnManager : MonoBehaviour {
 	public static TurnManager instance = null;
-	
+	public ResourceManager 	resManager;
+	public EventManager 	eventManager;
 	public float 	currentTurn;
 	public int 		turns;
 	public bool 	isTurnEnded;
@@ -22,13 +23,29 @@ public class TurnManager : MonoBehaviour {
 		DontDestroyOnLoad (gameObject);
 	}
 	
+	void Start()
+	{
+		if (ResourceManager.instance != null)
+		{
+			resManager = ResourceManager.instance;
+		}
+		if (EventManager.instance != null)
+		{
+			eventManager = EventManager.instance;
+		}
+	}
+
 	public void AdvanceTurn()
 	{
 		if (isTurnEnded == true) 
 		{
-			
 			//Replenish Resources
+			if (resManager != null)
+			{
+				resManager.ReplenishResource();
+			}
 			//Event Timer goes down
+
 			//Check for solved/Unresolved
 			//Deduct/Add region quality to regions
 			//Check for collpasing Regions
