@@ -12,6 +12,8 @@ public class EventPopUpBase : MonoBehaviour
     public bool ResolveOnEnd;
     public Canvas EventCanvas;
 
+    public GameObject RegionOrigin;
+
 	// Use this for initialization
 	void Start ()
     {

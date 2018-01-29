@@ -50,6 +50,8 @@ public class EventManager : MonoBehaviour
 
         Vector2 point = Camera.main.WorldToScreenPoint(RandomPointInBox(RegionManagerInstance.Region[num].transform.position, RegionManagerInstance.Region[num].transform.localScale));
 
+        newButton.GetComponent<EventPopUpBase>().RegionOrigin = RegionManagerInstance.Region[num];
+
         newButton.transform.position = point;
 
         EventList.Add(newButton);
