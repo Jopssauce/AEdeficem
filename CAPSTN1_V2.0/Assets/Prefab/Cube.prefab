@@ -108,6 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28545d340b6e157488d481a46aca92ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RegionStatsCanvas: {fileID: 223425153289847406, guid: 7750507d5af067d4295c9654b9a9e815,
+    type: 2}
 --- !u!114 &114244438921805284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,3 +127,4 @@ MonoBehaviour:
     Water: 0
     Power: 0
     Food: 0
+  MaxRegionResource: 0
