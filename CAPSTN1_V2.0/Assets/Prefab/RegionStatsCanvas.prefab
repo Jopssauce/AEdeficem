@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 223425153289847406}
   - component: {fileID: 114687139938007990}
   - component: {fileID: 114498084007277950}
+  - component: {fileID: 114517444605936742}
   m_Layer: 5
   m_Name: RegionStatsCanvas
   m_TagString: Untagged
@@ -259,6 +260,24 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114517444605936742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1452856651166484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434e79658acb64447b77bb5a6795f018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RegionName: {fileID: 114453650944903950}
+  AP: {fileID: 114551088844713040}
+  Food: {fileID: 114622908700828156}
+  Water: {fileID: 114823548726525700}
+  Power: {fileID: 114520520734922356}
+  RegionQuality: {fileID: 114942250439804322}
+  Close: {fileID: 114883640070680936}
 --- !u!114 &114520520734922356
 MonoBehaviour:
   m_ObjectHideFlags: 1

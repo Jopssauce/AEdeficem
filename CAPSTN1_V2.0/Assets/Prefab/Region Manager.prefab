@@ -51,4 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473d2f6b529b5ad41b3cdff3aac58e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Region: []
+  RegionList: []
+  RegionStatsCanvasPrefab: {fileID: 223425153289847406, guid: 7750507d5af067d4295c9654b9a9e815,
+    type: 2}
+  RegionStatUI: {fileID: 0}

@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RegionManager : MonoBehaviour
 {
     public List<GameObject> RegionList;
 
+    public Canvas RegionStatsCanvasPrefab;
+    public Canvas RegionStatUI;
 
     private List<GameObject> Duplicates;
     private GameObject[] RegionHolder;
@@ -34,7 +37,7 @@ public class RegionManager : MonoBehaviour
         Duplicates = new List<GameObject>();
         MissingRegionType = new List<ResourceManager.ResourceType>();
 
-        
+        MakeRegionStatsCanvas();
 
         for (int i = 0; i < 4; i++)
         {
@@ -85,5 +88,11 @@ public class RegionManager : MonoBehaviour
                 num++;
             }
         }
+    }
+
+    void MakeRegionStatsCanvas()
+    {
+        RegionStatUI = Instantiate(RegionStatsCanvasPrefab) as Canvas;
+        RegionStatUI.enabled = false;
     }
 }

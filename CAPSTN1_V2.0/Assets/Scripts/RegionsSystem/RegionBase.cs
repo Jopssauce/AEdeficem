@@ -7,6 +7,7 @@ public class RegionBase : MonoBehaviour
     [System.Serializable]
     public class Resources
     {
+        public int Ap;
         public int Water;
         public int Power;
         public int Food;
@@ -69,6 +70,7 @@ public class RegionBase : MonoBehaviour
     {
         if (this.RegionType == ResourceManager.ResourceType.ActionPoints)
         {
+            this.RegionResources.Ap = 2;
             this.RegionResources.Water = 1;
             this.RegionResources.Power = 1;
             this.RegionResources.Food = 1;
