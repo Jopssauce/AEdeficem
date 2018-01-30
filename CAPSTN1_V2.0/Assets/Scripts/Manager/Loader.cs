@@ -23,7 +23,7 @@ public class Loader : MonoBehaviour {
 		{
 			Instantiate (regionManager);
 		}
-		if (ResourceManager.instance == null)
+		if (TurnManager.instance == null)
 		{
 			Instantiate (turnManager);
 		}

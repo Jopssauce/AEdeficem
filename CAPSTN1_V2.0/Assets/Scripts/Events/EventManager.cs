@@ -34,7 +34,7 @@ public class EventManager : MonoBehaviour
     {
         EventList = new List<Button>();
 
-        Invoke("SpawnEvent",0.1f);
+        //Invoke("SpawnEvent",0.1f);
     }
 
     public void SpawnEvent()

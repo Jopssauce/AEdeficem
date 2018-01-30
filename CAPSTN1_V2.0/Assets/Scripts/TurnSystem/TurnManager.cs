@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour {
-	public static TurnManager instance = null;
-	public ResourceManager 	resManager;
-	public EventManager 	eventManager;
-	public RegionManager	regionManager;
-	public float 	currentTurn;
-	public int 		turns;
-	public bool 	isTurnEnded;
+	public static TurnManager 	instance = null;
+	public ResourceManager 		resManager;
+	public EventManager 		eventManager;
+	public RegionManager		regionManager;
+	
+	public float 				currentTurn;
+	public int 					turns;
+	public bool 				isTurnEnded;
 
 	void Awake()
 	{
@@ -84,9 +85,7 @@ public class TurnManager : MonoBehaviour {
 								eventManager.EventList.Remove(item);
 							}
 						}
-						
-					}
-
+					}	
 				}
 			}
 			
