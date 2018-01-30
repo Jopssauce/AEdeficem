@@ -82,6 +82,7 @@ public class TurnManager : MonoBehaviour {
 								{
 									
 								}
+								Destroy(item.gameObject);
 								eventManager.EventList.Remove(item);
 							}
 						}

@@ -4,13 +4,18 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class TurnButton : MonoBehaviour, IPointerClickHandler {
-	public TurnManager turnManager;
+	public TurnManager 	turnManager;
+	public EventManager eventManager;
 	
 	void Start()
 	{
 		if (TurnManager.instance != null)
 		{
 			turnManager = TurnManager.instance;
+		}
+		if (EventManager.instance != null)
+		{
+			eventManager = EventManager.instance;
 		}
 	}
 
