@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RegionStats : MonoBehaviour
 {
+    public Canvas RegionStatsCanvas;
+
     private RegionBase RegionRef;
 
     void Start()
@@ -13,6 +16,6 @@ public class RegionStats : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log(RegionRef.name);
+        Canvas RegionStatUI = Instantiate(RegionStatsCanvas) as Canvas;
     }
 }
