@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class RegionManager : MonoBehaviour
 {
@@ -47,17 +48,14 @@ public class RegionManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void CheckRegionQuality()
     {
 
     }
 
+
+    //This function assumes that the number of regions is greater than or equal to the number of resource types 
+    //so having less than that will have the Unity Console an "Arguement Out of Range Error"
     void FixRegionTypes()
     {
         foreach (var item in RegionHolder)
@@ -88,6 +86,8 @@ public class RegionManager : MonoBehaviour
                 num++;
             }
         }
+
+        RegionList = RegionList.OrderBy(t => t.name).ToList();
     }
 
     void MakeRegionStatsCanvas()

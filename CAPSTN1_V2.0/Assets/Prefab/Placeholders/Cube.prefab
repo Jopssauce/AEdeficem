@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1790132886780966}
+  m_RootGameObject: {fileID: 1701066038239278}
   m_IsPrefabParent: 1
---- !u!1 &1790132886780966
+--- !u!1 &1701066038239278
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4954691558415280}
-  - component: {fileID: 33581703224925842}
-  - component: {fileID: 65791569532888278}
-  - component: {fileID: 23012039495636596}
-  - component: {fileID: 114070201409303194}
-  - component: {fileID: 114732635433085430}
+  - component: {fileID: 4041125940106692}
+  - component: {fileID: 33015876499312990}
+  - component: {fileID: 65185725571013738}
+  - component: {fileID: 23061740418536690}
+  - component: {fileID: 114244438921805284}
+  - component: {fileID: 114016125479210514}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Cube
   m_TagString: Region
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4954691558415280
+--- !u!4 &4041125940106692
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790132886780966}
+  m_GameObject: {fileID: 1701066038239278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.43, y: -1.38, z: 0.12455009}
+  m_LocalPosition: {x: 3.35, y: -1.39, z: 0.12455009}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23012039495636596
+--- !u!23 &23061740418536690
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790132886780966}
+  m_GameObject: {fileID: 1701066038239278}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -78,31 +78,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33581703224925842
+--- !u!33 &33015876499312990
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790132886780966}
+  m_GameObject: {fileID: 1701066038239278}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65791569532888278
+--- !u!65 &65185725571013738
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790132886780966}
+  m_GameObject: {fileID: 1701066038239278}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114070201409303194
+--- !u!114 &114016125479210514
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790132886780966}
+  m_GameObject: {fileID: 1701066038239278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28545d340b6e157488d481a46aca92ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114244438921805284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1701066038239278}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0968685080d56bb41ba51fd0cadf8e60, type: 3}
@@ -110,21 +121,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RegionType: 0
   RegionQuality: 50
-  RegionResources:
-    Water: 0
-    Power: 0
-    Food: 0
+  RegionResourceAmount: 1
   MaxRegionResource: 0
---- !u!114 &114732635433085430
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790132886780966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28545d340b6e157488d481a46aca92ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RegionStatsCanvas: {fileID: 223425153289847406, guid: 7750507d5af067d4295c9654b9a9e815,
-    type: 2}

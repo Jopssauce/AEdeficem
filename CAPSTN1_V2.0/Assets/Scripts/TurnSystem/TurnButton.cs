@@ -26,7 +26,7 @@ public class TurnButton : MonoBehaviour, IPointerClickHandler {
 		{
 			turnManager.isTurnEnded = true;
 			turnManager.AdvanceTurn();
-			Debug.Log("Turn Button Clicked");
+			//Debug.Log("Turn Button Clicked");
 		}
         //throw new System.NotImplementedException();
     }

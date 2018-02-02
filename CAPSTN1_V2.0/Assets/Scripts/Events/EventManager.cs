@@ -44,9 +44,9 @@ public class EventManager : MonoBehaviour
         Button newButton = Instantiate(prefab) as Button;
         newButton.transform.SetParent(newCanvas.transform, false);
 
-        int num = Random.Range(0 , RegionManagerInstance.RegionList.Count - 1);
+        int num = Random.Range(0 , RegionManagerInstance.RegionList.Count);
 
-        Debug.Log(RegionManagerInstance.RegionList[num].transform.position);
+        //Debug.Log(RegionManagerInstance.RegionList[num].transform.position);
 
         Vector2 point = Camera.main.WorldToScreenPoint(RandomPointInBox(RegionManagerInstance.RegionList[num].transform.position, RegionManagerInstance.RegionList[num].transform.localScale));
 

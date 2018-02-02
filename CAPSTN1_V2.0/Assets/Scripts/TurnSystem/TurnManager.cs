@@ -69,7 +69,8 @@ public class TurnManager : MonoBehaviour {
 
 						if (eventPopUp.ResolveOnEnd == true)
 						{
-							eventManager.EventList.Remove(item);
+                            Destroy(item.gameObject);
+                            eventManager.EventList.Remove(item);
 						}
 						if (eventPopUp.ResolveOnEnd == false)
 						{

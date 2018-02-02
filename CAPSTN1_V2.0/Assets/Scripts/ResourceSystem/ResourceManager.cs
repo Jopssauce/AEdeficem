@@ -21,6 +21,8 @@ public class ResourceManager : MonoBehaviour {
 	public int currentRQSum;
 	public int maxRQSum;
 
+    private RegionManager RegionMngrReference;
+
 	void Awake()
 	{
 		if (instance == null) 
@@ -34,7 +36,12 @@ public class ResourceManager : MonoBehaviour {
 		DontDestroyOnLoad (gameObject);
 	}
 
-	public void AddResource(ResourceType type, int amount)
+    void Start()
+    {
+        Invoke("DelayAssign",0.3f);
+    }
+
+    public void AddResource(ResourceType type, int amount)
 	{
 		switch (type) 
 		{
@@ -92,10 +99,14 @@ public class ResourceManager : MonoBehaviour {
 
 	public void ReplenishResource()
 	{
-		AddResource(ResourceType.ActionPoints, 1);
-		AddResource(ResourceType.Food, 1);
-		AddResource(ResourceType.Power, 1);
-		AddResource(ResourceType.Water, 1);
+        foreach (var item in RegionMngrReference.RegionList)
+        {
+            AddResource(item.GetComponent<RegionBase>().RegionType, item.GetComponent<RegionBase>().RegionResourceAmount);
+        }
 	}
 
+    public void DelayAssign()
+    {
+        RegionMngrReference = RegionManager.instance;
+    }
 }
