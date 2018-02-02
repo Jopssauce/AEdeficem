@@ -6,10 +6,7 @@ using UnityEngine.UI;
 public class RegionCanvasScript : MonoBehaviour
 {
     public Text RegionName;
-    public Text AP;
-    public Text Food;
-    public Text Water;
-    public Text Power;
+    public Text ResourceAmount;
 
     public Text RegionQuality;
     public Button Close;

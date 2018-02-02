@@ -16,7 +16,7 @@ public class RegionBase : MonoBehaviour
 
     public ResourceManager.ResourceType RegionType;
     public int RegionQuality;
-    public Resources RegionResources;
+    public int RegionResourceAmount;
 
     public int MaxRegionResource;
 
@@ -62,36 +62,12 @@ public class RegionBase : MonoBehaviour
             this.RegionType = ResourceManager.ResourceType.Food;
         }
 
-        AdjustResourceByType();
+        //AdjustResourceByType();
 
     }
 
     public void AdjustResourceByType()
     {
-        if (this.RegionType == ResourceManager.ResourceType.ActionPoints)
-        {
-            this.RegionResources.Ap = 2;
-            this.RegionResources.Water = 1;
-            this.RegionResources.Power = 1;
-            this.RegionResources.Food = 1;
-        }
-        else if (this.RegionType == ResourceManager.ResourceType.Water)
-        {
-            this.RegionResources.Water = 2;
-            this.RegionResources.Power = 1;
-            this.RegionResources.Food = 1;
-        }
-        else if (this.RegionType == ResourceManager.ResourceType.Power)
-        {
-            this.RegionResources.Water = 1;
-            this.RegionResources.Power = 2;
-            this.RegionResources.Food = 1;
-        }
-        else if (this.RegionType == ResourceManager.ResourceType.Food)
-        {
-            this.RegionResources.Water = 1;
-            this.RegionResources.Power = 1;
-            this.RegionResources.Food = 2;
-        }
+        
     }
 }
