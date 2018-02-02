@@ -13,9 +13,12 @@ public class EventReader : MonoBehaviour
     public Button Unresolve;
     public Button Resolve;
 
+	Queue<string> details;
+
     // Use this for initialization
     void Start()
     {
+		details = new Queue<string> ();
         Unresolve.onClick.AddListener(IgnoreEvent);
         Resolve.onClick.AddListener(ResolveEvent);
     }
@@ -33,4 +36,9 @@ public class EventReader : MonoBehaviour
         Debug.Log(EventOrigin.GetComponent<EventPopUpBase>().ResolveOnEnd);
         Destroy(this.gameObject);
     }
+
+	public void StartText()
+	{
+		
+	}
 }
