@@ -380,6 +380,10 @@ MonoBehaviour:
   EventOrigin: {fileID: 0}
   ActionQueue: {fileID: 1003967711272080, guid: 3c8eb7fcb03b7a8418f18f8f8b7f0b46,
     type: 2}
+<<<<<<< HEAD
+=======
+  eventDetails: {fileID: 11400000, guid: 496b3e14e57d7504cbe0687b238c49d8, type: 2}
+>>>>>>> 9adf36d0e75684dec13a3e48a4ec41dbfb5523ba
   EventText: {fileID: 114650537038148922}
   EventTitle: {fileID: 114573949792024480}
   Unresolve: {fileID: 114901846704418954}
