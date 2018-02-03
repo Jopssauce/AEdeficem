@@ -6,6 +6,7 @@ using UnityEngine;
 public class EventDetails : ScriptableObject 
 {
 	public List<string> EventName;
+    public List<int> TurnsBeforeFail;
 	[TextArea]
 	public List<string> EventDescription;
 }

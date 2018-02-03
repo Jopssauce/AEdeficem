@@ -67,12 +67,12 @@ public class TurnManager : MonoBehaviour {
 					{
 						EventPopUpBase eventPopUp = item.GetComponent<EventPopUpBase> ();
 
-						if (eventPopUp.ResolveOnEnd == true)
+						if (eventPopUp.isResolved == true)
 						{
                             Destroy(item.gameObject);
                             eventManager.EventList.Remove(item);
 						}
-						if (eventPopUp.ResolveOnEnd == false)
+						if (eventPopUp.isResolved == false)
 						{
 							eventPopUp.TurnsBeforeFail -= 1;
 

@@ -25,15 +25,15 @@ public class EventReader : MonoBehaviour
 
     public void ResolveEvent()
     {
-        EventOrigin.GetComponent<EventPopUpBase>().ResolveOnEnd = true;
-        Debug.Log(EventOrigin.GetComponent<EventPopUpBase>().ResolveOnEnd);
+        EventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
+        Debug.Log(EventOrigin.GetComponent<EventPopUpBase>().isResolved);
         Destroy(this.gameObject);
     }
 
     public void IgnoreEvent()
     {
-        EventOrigin.GetComponent<EventPopUpBase>().ResolveOnEnd = false;
-        Debug.Log(EventOrigin.GetComponent<EventPopUpBase>().ResolveOnEnd);
+        EventOrigin.GetComponent<EventPopUpBase>().isResolved = false;
+        //Debug.Log(EventOrigin.GetComponent<EventPopUpBase>().isResolved);
         Destroy(this.gameObject);
     }
 

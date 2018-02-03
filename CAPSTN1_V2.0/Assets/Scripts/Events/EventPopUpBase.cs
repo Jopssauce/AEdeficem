@@ -9,7 +9,7 @@ public class EventPopUpBase : MonoBehaviour
     public int TurnsBeforeFail;
     [TextArea]
     public string EventDetails;
-    public bool ResolveOnEnd;
+    public bool isResolved;
     public Canvas EventCanvas;
 
     public GameObject RegionOrigin;
