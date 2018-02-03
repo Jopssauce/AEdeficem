@@ -5,15 +5,18 @@ using UnityEngine.UI;
 
 public class EventReader : MonoBehaviour
 {
-    public Button EventOrigin;
+    public GameObject ActionQueue;
 
     public Text EventText;
     public Text EventTitle;
 
+    public Button EventOrigin;
     public Button Unresolve;
     public Button Resolve;
 
-	Queue<string> details;
+	private Queue<string> details;
+
+    private EventManager call;
 
     // Use this for initialization
     void Start()
@@ -27,6 +30,11 @@ public class EventReader : MonoBehaviour
     {
         EventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
         Debug.Log(EventOrigin.GetComponent<EventPopUpBase>().isResolved);
+
+        GameObject NewActionQueue = Instantiate(ActionQueue) as GameObject;
+        NewActionQueue.transform.SetParent(EventManager.instance.newCanvas.transform, false);
+        NewActionQueue.GetComponent<AQscript>().EventOrigin = this.EventOrigin;
+
         Destroy(this.gameObject);
     }
 
