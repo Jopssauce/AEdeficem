@@ -378,6 +378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventOrigin: {fileID: 0}
+  ActionQueue: {fileID: 1003967711272080, guid: 3c8eb7fcb03b7a8418f18f8f8b7f0b46,
+    type: 2}
+  eventDetails: {fileID: 11400000, guid: 496b3e14e57d7504cbe0687b238c49d8, type: 2}
   EventText: {fileID: 114650537038148922}
   EventTitle: {fileID: 114573949792024480}
   Unresolve: {fileID: 114901846704418954}
