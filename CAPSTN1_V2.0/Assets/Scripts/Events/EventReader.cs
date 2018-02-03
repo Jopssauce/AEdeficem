@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class EventReader : MonoBehaviour
 {
     public Button EventOrigin;
-    public EventDetails eventDetails;
 
     public Text EventText;
     public Text EventTitle;
@@ -22,8 +21,6 @@ public class EventReader : MonoBehaviour
 		details = new Queue<string> ();
         Unresolve.onClick.AddListener(IgnoreEvent);
         Resolve.onClick.AddListener(ResolveEvent);
-        
-        StartText(eventDetails.eventText[Random.Range(0, eventDetails.eventText.Count)]);
     }
 
     public void ResolveEvent()
@@ -40,28 +37,8 @@ public class EventReader : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-	public void StartText(EventText text)
+	public void StartText()
 	{
-		details.Clear();
-        this.EventTitle.text = text.eventName;
-		this.details.Enqueue(text.eventDetails);
 		
-        if (this.details.Count <= 0)
-		{
-			//EndDialogue();
-			return;
-		}
-		//description.text = sentences.Dequeue();
-		StopAllCoroutines();
-		StartCoroutine( TypeSentence(details.Dequeue() ));
-	}
-    IEnumerator TypeSentence(string text)
-	{
-		EventText.text = "";
-		foreach (char letter in text.ToCharArray())
-		{
-			EventText.text += letter;
-			yield return new WaitForSeconds(0.0f);
-		}
 	}
 }
