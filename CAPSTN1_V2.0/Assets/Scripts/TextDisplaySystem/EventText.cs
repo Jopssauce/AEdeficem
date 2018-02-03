@@ -5,9 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class EventText  
 {
-	public string 	eventName;
-
-	[TextArea(3,10)]
-	public string 	eventDetails;
+	public EventDetails 	Name;
+	public EventDetails 	Details;
 
 }
