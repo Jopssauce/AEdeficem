@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EventReader : MonoBehaviour
 {
     public Button EventOrigin;
+    public GameObject ActionQueue;
 
     public Text EventText;
     public Text EventTitle;
@@ -27,6 +28,11 @@ public class EventReader : MonoBehaviour
     {
         EventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
         Debug.Log(EventOrigin.GetComponent<EventPopUpBase>().isResolved);
+
+        GameObject NewQueueItem = Instantiate(ActionQueue) as GameObject;
+        NewQueueItem.transform.SetParent(EventManager.instance.newCanvas.transform, false);
+        NewQueueItem.GetComponent<AQscript>().EventOrigin = this.EventOrigin;
+
         Destroy(this.gameObject);
     }
 

@@ -12,11 +12,6 @@ public class AQscript : MonoBehaviour {
         CloseButton.onClick.AddListener(RemoveFromQueue);
     }
 
-    // Update is called once per frame
-    void Update() {
-
-    }
-
     void RemoveFromQueue()
     {
         EventOrigin.GetComponent<EventPopUpBase>().isResolved = false;
