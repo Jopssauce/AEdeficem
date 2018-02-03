@@ -23,7 +23,7 @@ public class EventReader : MonoBehaviour
         Unresolve.onClick.AddListener(IgnoreEvent);
         Resolve.onClick.AddListener(ResolveEvent);
         
-        StartText(eventDetails.eventText[0]);
+        StartText(eventDetails.eventText[Random.Range(0, eventDetails.eventText.Count)]);
     }
 
     public void ResolveEvent()
