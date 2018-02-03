@@ -378,15 +378,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   ActionQueue: {fileID: 1003967711272080, guid: 3c8eb7fcb03b7a8418f18f8f8b7f0b46,
     type: 2}
 =======
   EventOrigin: {fileID: 0}
   eventDetails: {fileID: 11400000, guid: 496b3e14e57d7504cbe0687b238c49d8, type: 2}
 >>>>>>> 18fc962a59d5d78ad6009f9a314cd08a19265afb
+=======
+  EventOrigin: {fileID: 0}
+>>>>>>> parent of 3b7ca92... Action Queue Implemented
   EventText: {fileID: 114650537038148922}
   EventTitle: {fileID: 114573949792024480}
-  EventOrigin: {fileID: 0}
   Unresolve: {fileID: 114901846704418954}
   Resolve: {fileID: 114137506978611364}
 --- !u!114 &114851067200844366
