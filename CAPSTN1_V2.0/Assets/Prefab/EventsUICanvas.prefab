@@ -245,7 +245,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RESLOVE
+  m_Text: RESOLVE
 --- !u!114 &114299480365833242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -378,6 +378,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventOrigin: {fileID: 0}
+  ActionQueue: {fileID: 1003967711272080, guid: 3c8eb7fcb03b7a8418f18f8f8b7f0b46,
+    type: 2}
   EventText: {fileID: 114650537038148922}
   EventTitle: {fileID: 114573949792024480}
   Unresolve: {fileID: 114901846704418954}
