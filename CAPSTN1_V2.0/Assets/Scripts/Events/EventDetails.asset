@@ -11,25 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce06d14f9720eb847b9f8dc863cba503, type: 3}
   m_Name: EventDetails
   m_EditorClassIdentifier: 
-  EventName:
-  - Event1
-  - Event2
-  - Event3
-  - Event4
-  - Event5
-  - Event6
-  - Event7
-  - Event8
-  - Event9
-  - Event10
-  EventDescription:
-  - Water Shortage
-  - Nuclear Outbreak
-  - POTA
-  - INA
-  - GAGO
-  - ANO
-  - BA
-  - Naman
-  - YAN
-  - Place Holder Lang po
+  eventText:
+  - eventName: Event Test
+    eventDetails: This is the event to end all events but not really cause events
+      are cool
+  - eventName: Thot Management ALERT
+    eventDetails: TOO MANY THOTS HELP HELP HELP
+  - eventName: One does not simply WADABS
+    eventDetails: Dont go to wadabs
+  - eventName: AIDS AIDS HELP
+    eventDetails: I guess we can cure overpopulation with this
+  - eventName: Are you an ass or tits man??
+    eventDetails: This is every important
