@@ -12,24 +12,14 @@ MonoBehaviour:
   m_Name: EventDetails
   m_EditorClassIdentifier: 
   eventText:
-  - eventName: Test
+  - eventName: Event Test
     eventDetails: This is the event to end all events but not really cause events
       are cool
-  - eventName: 
-    eventDetails: 
-  - eventName: 
-    eventDetails: 
-  - eventName: 
-    eventDetails: 
-  - eventName: 
-    eventDetails: 
-  - eventName: 
-    eventDetails: 
-  - eventName: 
-    eventDetails: 
-  - eventName: 
-    eventDetails: 
-  - eventName: 
-    eventDetails: 
-  - eventName: 
-    eventDetails: 
+  - eventName: Thot Management ALERT
+    eventDetails: TOO MANY THOTS HELP HELP HELP
+  - eventName: One does not simply WADABS
+    eventDetails: Dont go to wadabs
+  - eventName: AIDS AIDS HELP
+    eventDetails: I guess we can cure overpopulation with this
+  - eventName: Are you an ass or tits man??
+    eventDetails: This is every important
