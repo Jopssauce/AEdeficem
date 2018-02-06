@@ -18,6 +18,6 @@ public class RegionCanvasScript : MonoBehaviour
 
     void Destroy()
     {
-        this.GetComponent<Canvas>().enabled = false;
+        this.gameObject.SetActive(false);
     }
 }

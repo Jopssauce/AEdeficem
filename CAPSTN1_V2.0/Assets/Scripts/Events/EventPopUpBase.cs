@@ -10,7 +10,7 @@ public class EventPopUpBase : MonoBehaviour
     [TextArea]
     public string EventDetails;
     public bool isResolved;
-    public Canvas EventCanvas;
+    public GameObject EventCanvas;
 
     public GameObject RegionOrigin;
 
@@ -28,7 +28,8 @@ public class EventPopUpBase : MonoBehaviour
 
     void Click()
     {
-        Canvas newButton = Instantiate(EventCanvas) as Canvas;
+        GameObject newButton = Instantiate(EventCanvas) as GameObject;
         newButton.GetComponent<EventReader>().EventOrigin = this.GetComponent<Button>();
+        newButton.transform.SetParent(EventManager.instance.newCanvas.transform, false);
     }
 }

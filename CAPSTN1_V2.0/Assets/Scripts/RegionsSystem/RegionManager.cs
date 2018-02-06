@@ -8,8 +8,8 @@ public class RegionManager : MonoBehaviour
 {
     public List<GameObject> RegionList;
 
-    public Canvas RegionStatsCanvasPrefab;
-    public Canvas RegionStatUI;
+    public GameObject RegionStatsCanvasPrefab;
+    public GameObject RegionStatUI;
 
     private List<GameObject> Duplicates;
     private GameObject[] RegionHolder;
@@ -92,7 +92,8 @@ public class RegionManager : MonoBehaviour
 
     void MakeRegionStatsCanvas()
     {
-        RegionStatUI = Instantiate(RegionStatsCanvasPrefab) as Canvas;
-        RegionStatUI.enabled = false;
+        RegionStatUI = Instantiate(RegionStatsCanvasPrefab) as GameObject;
+        RegionStatUI.transform.SetParent(EventManager.instance.newCanvas.transform, false);
+        RegionStatUI.SetActive(false);
     }
 }

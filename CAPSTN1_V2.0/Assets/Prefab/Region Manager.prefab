@@ -52,6 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RegionList: []
-  RegionStatsCanvasPrefab: {fileID: 223425153289847406, guid: 7750507d5af067d4295c9654b9a9e815,
+  RegionStatsCanvasPrefab: {fileID: 1543879224274138, guid: 0f0800ec4b0f268459af40e42f65f629,
     type: 2}
   RegionStatUI: {fileID: 0}

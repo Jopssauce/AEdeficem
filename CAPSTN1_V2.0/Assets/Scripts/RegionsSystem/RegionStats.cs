@@ -22,7 +22,7 @@ public class RegionStats : MonoBehaviour
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            RegionMngrRef.RegionStatUI.enabled = true;
+            RegionMngrRef.RegionStatUI.SetActive(true);
 
             RegionMngrRef.RegionStatUI.GetComponent<RegionCanvasScript>().RegionName.text = this.GetComponent<RegionBase>().name;
 
