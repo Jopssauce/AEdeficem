@@ -32,14 +32,14 @@ public class EventReader : MonoBehaviour
         NewQueueItem.transform.SetParent(EventManager.instance.newCanvas.transform, false);
         NewQueueItem.GetComponent<AQscript>().EventOrigin = this.EventOrigin;
 
-        Destroy(this.gameObject);
+        EventManager.instance.EventPanel.SetActive(false);
     }
 
     public void IgnoreEvent()
     {
         EventOrigin.GetComponent<EventPopUpBase>().isResolved = false;
         //Debug.Log(EventOrigin.GetComponent<EventPopUpBase>().isResolved);
-        Destroy(this.gameObject);
+        EventManager.instance.EventPanel.SetActive(false);
     }
 
 

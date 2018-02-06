@@ -10,8 +10,10 @@ public class EventManager : MonoBehaviour
 
     public Button prefab;
     public Canvas newCanvas;
+    public GameObject EventsPanelPrefab;
+    public GameObject EventPanel;
 
-    public RegionManager RegionManagerInstance;
+    private RegionManager RegionManagerInstance;
 
     public List<Button> EventList;
 
@@ -33,6 +35,10 @@ public class EventManager : MonoBehaviour
     void Start()
     {
         EventList = new List<Button>();
+
+        EventPanel = Instantiate(EventsPanelPrefab) as GameObject;
+        EventPanel.transform.SetParent(newCanvas.transform, false);
+        EventPanel.SetActive(false);
 
         //Invoke("SpawnEvent",0.1f);
     }

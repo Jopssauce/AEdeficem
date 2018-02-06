@@ -28,8 +28,8 @@ public class EventPopUpBase : MonoBehaviour
 
     void Click()
     {
-        GameObject newButton = Instantiate(EventCanvas) as GameObject;
-        newButton.GetComponent<EventReader>().EventOrigin = this.GetComponent<Button>();
-        newButton.transform.SetParent(EventManager.instance.newCanvas.transform, false);
+        EventManager.instance.EventPanel.SetActive(true);
+        EventManager.instance.EventPanel.GetComponent<EventReader>().EventOrigin = this.GetComponent<Button>();
+        EventManager.instance.EventPanel.transform.SetAsLastSibling();
     }
 }
