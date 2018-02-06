@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 114748784002795728}
   - component: {fileID: 114525732506363584}
   - component: {fileID: 114751909832198936}
+  - component: {fileID: 95512730817207316}
   m_Layer: 5
   m_Name: EventsUIPanel
   m_TagString: Untagged
@@ -134,6 +135,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &95512730817207316
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1688351182550100}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 527d8518051ac1944879e6306e7db181, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114180692856412812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -366,6 +384,7 @@ MonoBehaviour:
   eventDetails: {fileID: 11400000, guid: 496b3e14e57d7504cbe0687b238c49d8, type: 2}
   EventText: {fileID: 114180692856412812}
   EventTitle: {fileID: 114895803357451714}
+  animator: {fileID: 95512730817207316}
 --- !u!114 &114807384608107474
 MonoBehaviour:
   m_ObjectHideFlags: 1

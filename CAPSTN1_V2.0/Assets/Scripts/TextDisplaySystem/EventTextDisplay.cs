@@ -11,7 +11,7 @@ public class EventTextDisplay : MonoBehaviour {
 
     public Text EventText;
     public Text EventTitle;
-
+	public Animator animator;
 
 	Queue<string> details;
 
@@ -47,4 +47,22 @@ public class EventTextDisplay : MonoBehaviour {
 			yield return new WaitForSeconds(0.0f);
 		}
     }
+
+	void OnEnable()
+	{
+		if (animator != null)
+		{
+			animator.SetBool("isOpen", true);
+		}
+		
+	}
+	void OnDisable()
+	{
+		if (animator != null)
+		{
+			animator.SetBool("isOpen", false);
+		}
+	}
+
+
 }
