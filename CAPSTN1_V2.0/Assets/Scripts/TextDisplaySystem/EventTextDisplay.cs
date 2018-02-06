@@ -50,6 +50,8 @@ public class EventTextDisplay : MonoBehaviour {
 
 	void OnEnable()
 	{
+		details = new Queue<string> ();
+        StartText(eventDetails.eventText[Random.Range(0, eventDetails.eventText.Count)]);
 		if (animator != null)
 		{
 			animator.SetBool("isOpen", true);
