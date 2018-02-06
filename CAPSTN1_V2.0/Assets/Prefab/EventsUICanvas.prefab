@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114257445530650418}
   - component: {fileID: 114968634699869424}
   - component: {fileID: 114797652910265530}
+  - component: {fileID: 114246494843555182}
   m_Layer: 5
   m_Name: EventsUICanvas
   m_TagString: Untagged
@@ -192,6 +193,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114246494843555182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1183964229974472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07e20ba53bdee84fbc92f03077fba12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventDetails: {fileID: 11400000, guid: 496b3e14e57d7504cbe0687b238c49d8, type: 2}
+  EventText: {fileID: 114650537038148922}
+  EventTitle: {fileID: 114573949792024480}
 --- !u!114 &114257445530650418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,9 +395,6 @@ MonoBehaviour:
   EventOrigin: {fileID: 0}
   ActionQueue: {fileID: 1003967711272080, guid: 3c8eb7fcb03b7a8418f18f8f8b7f0b46,
     type: 2}
-  eventDetails: {fileID: 11400000, guid: 496b3e14e57d7504cbe0687b238c49d8, type: 2}
-  EventText: {fileID: 114650537038148922}
-  EventTitle: {fileID: 114573949792024480}
   Unresolve: {fileID: 114901846704418954}
   Resolve: {fileID: 114137506978611364}
 --- !u!114 &114851067200844366
