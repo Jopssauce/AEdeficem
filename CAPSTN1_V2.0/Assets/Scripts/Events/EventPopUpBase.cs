@@ -30,8 +30,5 @@ public class EventPopUpBase : MonoBehaviour
     {
         Canvas newButton = Instantiate(EventCanvas) as Canvas;
         newButton.GetComponent<EventReader>().EventOrigin = this.GetComponent<Button>();
-
-        newButton.GetComponent<EventReader>().EventTitle.text = EventTitle;
-        newButton.GetComponent<EventReader>().EventText.text = EventDetails;
     }
 }
