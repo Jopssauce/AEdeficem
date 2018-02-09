@@ -12,7 +12,7 @@ public class EventPopUpBase : MonoBehaviour
     public bool isResolved;
     public GameObject EventCanvas;
 
-    public GameObject RegionOrigin;
+    public GameObject regionOrigin;
 
 	public Vector3 randPos;
 
@@ -20,12 +20,13 @@ public class EventPopUpBase : MonoBehaviour
 	void Start ()
     {
         this.GetComponent<Button>().onClick.AddListener(Click);
+		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		this.transform.position = Camera.main.WorldToScreenPoint(RandomPointInPolygon(RegionOrigin.GetComponent<BoxCollider>().bounds.center, RegionOrigin.GetComponent<BoxCollider>().bounds, randPos) );
+		//this.transform.position = Camera.main.WorldToScreenPoint(RandomPointInPolygon(RegionOrigin.GetComponent<BoxCollider>().bounds.center, RegionOrigin.GetComponent<BoxCollider>().bounds, randPos) );
 	}
 
     void Click()

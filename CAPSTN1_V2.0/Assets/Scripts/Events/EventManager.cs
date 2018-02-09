@@ -52,8 +52,7 @@ public class EventManager : MonoBehaviour
 
         newButton.transform.SetParent(newCanvas.transform, false);
 
-		newButton.GetComponent<EventPopUpBase>().RegionOrigin 	= RegionManagerInstance.RegionList[num];
-		newButton.GetComponent<EventPopUpBase> ().randPos 		= new Vector3 (Random.value, Random.value, Random.value);
+		newButton.GetComponent<EventPopUpBase>().regionOrigin = RegionManagerInstance.RegionList[num];
 
         EventList.Add(newButton);
     }

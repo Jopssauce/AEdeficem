@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114602892140211326}
   - component: {fileID: 114572910853362570}
   - component: {fileID: 114406298388919078}
+  - component: {fileID: 114891892703524064}
   m_Layer: 5
   m_Name: EventPrefab
   m_TagString: Untagged
@@ -99,7 +100,8 @@ MonoBehaviour:
   isResolved: 0
   EventCanvas: {fileID: 1688351182550100, guid: a3df83e487d81fc4283515c6d2765ef0,
     type: 2}
-  RegionOrigin: {fileID: 0}
+  regionOrigin: {fileID: 0}
+  randPos: {x: 0, y: 0, z: 0}
 --- !u!114 &114572910853362570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,6 +170,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114891892703524064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1652539101088490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae8f41920865f64cbf4d8626e3a316d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regionOrigin: {fileID: 0}
+  randomPoint: 1
+  offset: 0
+  randPos: {x: 0, y: 0, z: 0}
 --- !u!222 &222557057826905708
 CanvasRenderer:
   m_ObjectHideFlags: 1
