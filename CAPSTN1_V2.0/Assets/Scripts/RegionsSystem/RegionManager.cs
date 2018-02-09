@@ -6,7 +6,7 @@ using System.Linq;
 
 public class RegionManager : MonoBehaviour
 {
-    public List<GameObject> RegionList;
+    public List<GameObject> regionList;
 
     public GameObject RegionStatsCanvasPrefab;
     public GameObject RegionStatUI;
@@ -28,15 +28,12 @@ public class RegionManager : MonoBehaviour
 			Destroy (gameObject);
 		}
 		DontDestroyOnLoad (gameObject);
-	}
 
-    void Start()
-    {
         RegionHolder = GameObject.FindGameObjectsWithTag("Region");
 
-        TypeCheckList = new List<ResourceManager.ResourceType>();
-        Duplicates = new List<GameObject>();
-        MissingRegionType = new List<ResourceManager.ResourceType>();
+        TypeCheckList       = new List<ResourceManager.ResourceType>();
+        Duplicates          = new List<GameObject>();
+        MissingRegionType   = new List<ResourceManager.ResourceType>();
 
         MakeRegionStatsCanvas();
 
@@ -45,13 +42,7 @@ public class RegionManager : MonoBehaviour
             MissingRegionType.Add((ResourceManager.ResourceType)i);
         }
         FixRegionTypes();
-
-    }
-
-    public void CheckRegionQuality()
-    {
-
-    }
+	}
 
 
     //This function assumes that the number of regions is greater than or equal to the number of resource types 
@@ -60,10 +51,10 @@ public class RegionManager : MonoBehaviour
     {
         foreach (var item in RegionHolder)
         {
-            RegionList.Add(item);
+            regionList.Add(item);
         }
 
-        foreach (var item in RegionList)
+        foreach (var item in regionList)
         {
             //Adds existing region types and disregards duplicates
             if (!TypeCheckList.Contains(item.GetComponent<RegionBase>().RegionType))
@@ -87,7 +78,7 @@ public class RegionManager : MonoBehaviour
             }
         }
 
-        RegionList = RegionList.OrderBy(t => t.name).ToList();
+        regionList = regionList.OrderBy(t => t.name).ToList();
     }
 
     void MakeRegionStatsCanvas()

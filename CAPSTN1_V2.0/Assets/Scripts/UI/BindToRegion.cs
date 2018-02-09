@@ -10,19 +10,22 @@ public class BindToRegion : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		randPos 	= new Vector3 (Random.value, Random.value, Random.value);
+		randPos = new Vector3 (Random.value, Random.value, Random.value);
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
-		if (randomPoint == true) 
+		if (regionOrigin != null)
 		{
-			this.transform.position = Camera.main.WorldToScreenPoint(RandomPointInPolygon(regionOrigin.GetComponent<BoxCollider>().bounds.center, regionOrigin.GetComponent<BoxCollider>().bounds, randPos) );
-		}
-		if (randomPoint == false) 
-		{
-			this.transform.position = Camera.main.WorldToScreenPoint(PointInPolygon(regionOrigin.GetComponent<BoxCollider>().bounds.center, regionOrigin.GetComponent<BoxCollider>().bounds) );
+			if (randomPoint == true) 
+			{
+				this.transform.position = Camera.main.WorldToScreenPoint(RandomPointInPolygon(regionOrigin.GetComponent<BoxCollider>().bounds.center, regionOrigin.GetComponent<BoxCollider>().bounds, randPos) );
+			}
+			if (randomPoint == false) 
+			{
+				this.transform.position = Camera.main.WorldToScreenPoint(PointInPolygon(regionOrigin.GetComponent<BoxCollider>().bounds.center, regionOrigin.GetComponent<BoxCollider>().bounds) );
+			}
 		}
 	}
 	private Vector3 RandomPointInPolygon(Vector3 center, Bounds size, Vector3 randPos)

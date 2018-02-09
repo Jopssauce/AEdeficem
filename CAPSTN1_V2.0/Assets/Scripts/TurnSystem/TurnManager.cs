@@ -95,7 +95,7 @@ public class TurnManager : MonoBehaviour {
 			//Update region special resource
 			if (regionManager != null)
 			{
-				foreach (var item in regionManager.RegionList)
+				foreach (var item in regionManager.regionList)
 				{
 					//If region quality is low. Lower resource gain from region
 				}

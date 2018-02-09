@@ -99,7 +99,7 @@ public class ResourceManager : MonoBehaviour {
 
 	public void ReplenishResource()
 	{
-        foreach (var item in RegionMngrReference.RegionList)
+        foreach (var item in RegionMngrReference.regionList)
         {
             AddResource(item.GetComponent<RegionBase>().RegionType, item.GetComponent<RegionBase>().RegionResourceAmount);
         }

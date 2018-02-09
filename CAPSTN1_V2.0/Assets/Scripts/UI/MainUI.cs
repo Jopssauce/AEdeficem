@@ -12,23 +12,34 @@ public class MainUI : MonoBehaviour
 
     public Text Turn;
 
-    private ResourceManager ResourceMngrRef;
-    private TurnManager 	TurnMngrRef;
+    private ResourceManager resManager;
+    private TurnManager 	turnManager;
+    private RegionManager   regManager;
 
+    public GameObject regQualityBarPrefab;
     // Use this for initialization
     void Start ()
     {
-        TurnMngrRef = TurnManager.instance;
-        ResourceMngrRef = ResourceManager.instance;
+        turnManager = TurnManager.instance;
+        resManager  = ResourceManager.instance;
+        regManager  = RegionManager.instance;
+
+        foreach (var region in regManager.regionList)
+        {
+            GameObject rqBar                                = Instantiate(regQualityBarPrefab);
+            rqBar.GetComponent<RegionQualityBar>().origin   = region;
+            rqBar.GetComponent<BindToRegion>().regionOrigin = region;
+            rqBar.transform.SetParent(this.transform, false);
+        }
     }
 
     void Update()
     {
-        WaterAmnt.text 	= ResourceMngrRef.water.ToString();
-        PowerAmnt.text 	= ResourceMngrRef.power.ToString();
-        FoodAmnt.text 	= ResourceMngrRef.food.ToString();
-        APAmnt.text 	= ResourceMngrRef.actionPoints.ToString();
+        WaterAmnt.text 	= resManager.water.ToString();
+        PowerAmnt.text 	= resManager.power.ToString();
+        FoodAmnt.text 	= resManager.food.ToString();
+        APAmnt.text 	= resManager.actionPoints.ToString();
 
-        Turn.text = "TURN " + TurnMngrRef.currentTurn;
+        Turn.text = "TURN " + turnManager.currentTurn;
     }
 }

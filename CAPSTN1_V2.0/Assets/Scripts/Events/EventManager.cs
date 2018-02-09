@@ -47,12 +47,12 @@ public class EventManager : MonoBehaviour
     {
         RegionManagerInstance = RegionManager.instance;
 
-		int num 			= Random.Range(0 , RegionManagerInstance.RegionList.Count);
+		int num 			= Random.Range(0 , RegionManagerInstance.regionList.Count);
         Button newButton 	= Instantiate(prefab);
 
         newButton.transform.SetParent(newCanvas.transform, false);
 
-		newButton.GetComponent<EventPopUpBase>().regionOrigin = RegionManagerInstance.RegionList[num];
+		newButton.GetComponent<EventPopUpBase>().regionOrigin = RegionManagerInstance.regionList[num];
 
         EventList.Add(newButton);
     }
