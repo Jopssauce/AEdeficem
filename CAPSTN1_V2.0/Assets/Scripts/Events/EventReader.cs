@@ -38,7 +38,6 @@ public class EventReader : MonoBehaviour
     public void IgnoreEvent()
     {
         EventOrigin.GetComponent<EventPopUpBase>().isResolved = false;
-        //Debug.Log(EventOrigin.GetComponent<EventPopUpBase>().isResolved);
         EventManager.instance.EventPanel.SetActive(false);
     }
 

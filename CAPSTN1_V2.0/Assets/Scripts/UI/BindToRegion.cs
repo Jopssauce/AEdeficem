@@ -20,11 +20,11 @@ public class BindToRegion : MonoBehaviour {
 		{
 			if (randomPoint == true) 
 			{
-				this.transform.position = Camera.main.WorldToScreenPoint(RandomPointInPolygon(regionOrigin.GetComponent<BoxCollider>().bounds.center, regionOrigin.GetComponent<BoxCollider>().bounds, randPos) );
+				this.transform.position = Camera.main.WorldToScreenPoint(RandomPointInPolygon(regionOrigin.GetComponent<MeshCollider>().bounds.center, regionOrigin.GetComponent<MeshCollider>().bounds, randPos) );
 			}
 			if (randomPoint == false) 
 			{
-				this.transform.position = Camera.main.WorldToScreenPoint(PointInPolygon(regionOrigin.GetComponent<BoxCollider>().bounds.center, regionOrigin.GetComponent<BoxCollider>().bounds) );
+				this.transform.position = Camera.main.WorldToScreenPoint(PointInPolygon(regionOrigin.GetComponent<MeshCollider>().bounds.center, regionOrigin.GetComponent<MeshCollider>().bounds) );
 			}
 		}
 	}

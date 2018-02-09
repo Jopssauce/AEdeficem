@@ -7,4 +7,4 @@ public class EventDetails : ScriptableObject
 {
 
 	public List<EventText> eventText;
-}
+} 
