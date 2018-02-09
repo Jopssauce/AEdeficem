@@ -51,6 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049a8edc2e692b34bbea7696a08183c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resManager: {fileID: 0}
+  eventManager: {fileID: 0}
+  regionManager: {fileID: 0}
   currentTurn: 0
   turns: 0
   isTurnEnded: 0
