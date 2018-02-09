@@ -28,7 +28,7 @@ public class RegionStats : MonoBehaviour
 
             RegionMngrRef.RegionStatUI.GetComponent<RegionCanvasScript>().ResourceAmount.text = this.GetComponent<RegionBase>().RegionResourceAmount.ToString();
 
-            RegionMngrRef.RegionStatUI.GetComponent<RegionCanvasScript>().RegionQuality.text = this.GetComponent<RegionBase>().RegionQuality.ToString();
+			RegionMngrRef.RegionStatUI.GetComponent<RegionCanvasScript>().RegionQuality.text = this.GetComponent<RegionBase>().regionQuality.ToString();
         }
     }
 

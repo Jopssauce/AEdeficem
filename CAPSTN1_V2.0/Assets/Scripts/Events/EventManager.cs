@@ -54,8 +54,8 @@ public class EventManager : MonoBehaviour
 
         //Debug.Log(RegionManagerInstance.RegionList[num].transform.position);
 
-        Vector2 point = Camera.main.WorldToScreenPoint(RandomPointInPolygon(RegionManagerInstance.RegionList[num].GetComponent<PolygonCollider2D>().bounds.center
-            , RegionManagerInstance.RegionList[num].GetComponent<PolygonCollider2D>().bounds));
+		Vector3 point = Camera.main.WorldToScreenPoint(RandomPointInPolygon(RegionManagerInstance.RegionList[num].GetComponent<BoxCollider>().bounds.center
+			, RegionManagerInstance.RegionList[num].GetComponent<BoxCollider>().bounds));
 
         newButton.GetComponent<EventPopUpBase>().RegionOrigin = RegionManagerInstance.RegionList[num];
 
@@ -64,13 +64,9 @@ public class EventManager : MonoBehaviour
         EventList.Add(newButton);
     }
 
-    private Vector2 RandomPointInPolygon(Vector2 center, Bounds size)
+    private Vector3 RandomPointInPolygon(Vector3 center, Bounds size)
     {
-        return center + new Vector2((Random.value - 0.55f) * size.extents.x,(Random.value - 0.55f) * size.extents.y);
+		return center + new Vector3((Random.value - 0.55f) * size.extents.x,(Random.value - 0.55f) * size.extents.y, (Random.value - 0.55f) * size.extents.z);
     }
-
-    //private Vector2 RandomPointInPolygon(Vector2 center, Bounds bounds)
-    //{
-    //    return Vector2()
-    //}
+		
 }

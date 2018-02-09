@@ -13,28 +13,22 @@ public class MainUI : MonoBehaviour
     public Text Turn;
 
     private ResourceManager ResourceMngrRef;
-    private TurnManager TurnMngrRef;
+    private TurnManager 	TurnMngrRef;
 
     // Use this for initialization
     void Start ()
     {
         TurnMngrRef = TurnManager.instance;
         ResourceMngrRef = ResourceManager.instance;
-        //Invoke("DelayAssign", 0.1f);
     }
 
     void Update()
     {
-        WaterAmnt.text = ResourceMngrRef.water.ToString();
-        PowerAmnt.text = ResourceMngrRef.power.ToString();
-        FoodAmnt.text = ResourceMngrRef.food.ToString();
-        APAmnt.text = ResourceMngrRef.actionPoints.ToString();
+        WaterAmnt.text 	= ResourceMngrRef.water.ToString();
+        PowerAmnt.text 	= ResourceMngrRef.power.ToString();
+        FoodAmnt.text 	= ResourceMngrRef.food.ToString();
+        APAmnt.text 	= ResourceMngrRef.actionPoints.ToString();
 
         Turn.text = "TURN " + TurnMngrRef.currentTurn;
-    }
-
-    void DelayAssign()
-    {
-        
     }
 }

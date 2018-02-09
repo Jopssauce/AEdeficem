@@ -15,7 +15,8 @@ public class RegionBase : MonoBehaviour
 
 
     public ResourceManager.ResourceType RegionType;
-    public int RegionQuality;
+	public float regionQuality;
+	public float maxRegionQuality;
     public int RegionResourceAmount;
 
     public int MaxRegionResource;
@@ -28,7 +29,9 @@ public class RegionBase : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        MaxRegionResource = 6;
+        MaxRegionResource 	= 6;
+		maxRegionQuality 	= 100f;
+		regionQuality 		= 50f;
     }
 
     // Update is called once per frame

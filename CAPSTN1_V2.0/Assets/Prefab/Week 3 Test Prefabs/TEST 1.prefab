@@ -160,9 +160,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RegionType: 0
-  RegionQuality: 50
-  RegionResourceAmount: 1
-  MaxRegionResource: 0
+  regionQuality: 0
+  maxRegionQuality: 0
+  RegionResourceAmount: 50
+  MaxRegionResource: 100
 --- !u!114 &114424726747978132
 MonoBehaviour:
   m_ObjectHideFlags: 1
