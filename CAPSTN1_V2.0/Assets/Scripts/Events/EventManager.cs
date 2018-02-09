@@ -47,19 +47,13 @@ public class EventManager : MonoBehaviour
     {
         RegionManagerInstance = RegionManager.instance;
 
-        Button newButton = Instantiate(prefab) as Button;
+		int num 			= Random.Range(0 , RegionManagerInstance.RegionList.Count);
+        Button newButton 	= Instantiate(prefab);
+
         newButton.transform.SetParent(newCanvas.transform, false);
 
-        int num = Random.Range(0 , RegionManagerInstance.RegionList.Count);
-
-        //Debug.Log(RegionManagerInstance.RegionList[num].transform.position);
-
-		Vector3 point = Camera.main.WorldToScreenPoint(RandomPointInPolygon(RegionManagerInstance.RegionList[num].GetComponent<BoxCollider>().bounds.center
-			, RegionManagerInstance.RegionList[num].GetComponent<BoxCollider>().bounds));
-
-        newButton.GetComponent<EventPopUpBase>().RegionOrigin = RegionManagerInstance.RegionList[num];
-
-        newButton.transform.position = point;
+		newButton.GetComponent<EventPopUpBase>().RegionOrigin 	= RegionManagerInstance.RegionList[num];
+		newButton.GetComponent<EventPopUpBase> ().randPos 		= new Vector3 (Random.value, Random.value, Random.value);
 
         EventList.Add(newButton);
     }

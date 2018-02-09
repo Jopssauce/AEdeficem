@@ -14,6 +14,8 @@ public class EventPopUpBase : MonoBehaviour
 
     public GameObject RegionOrigin;
 
+	public Vector3 randPos;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -23,7 +25,7 @@ public class EventPopUpBase : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		
+		this.transform.position = Camera.main.WorldToScreenPoint(RandomPointInPolygon(RegionOrigin.GetComponent<BoxCollider>().bounds.center, RegionOrigin.GetComponent<BoxCollider>().bounds, randPos) );
 	}
 
     void Click()
@@ -32,4 +34,8 @@ public class EventPopUpBase : MonoBehaviour
         EventManager.instance.EventPanel.GetComponent<EventReader>().EventOrigin = this.GetComponent<Button>();
         EventManager.instance.EventPanel.transform.SetAsLastSibling();
     }
+	private Vector3 RandomPointInPolygon(Vector3 center, Bounds size, Vector3 randPos)
+	{
+		return center + new Vector3((randPos.x - 0.55f) * size.extents.x,(randPos.y - 0.55f) * size.extents.y, (randPos.z - 0.55f) * size.extents.z);
+	}
 }
