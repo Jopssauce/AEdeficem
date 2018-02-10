@@ -17,6 +17,4 @@ public class AQscript : MonoBehaviour {
         EventOrigin.GetComponent<EventPopUpBase>().isResolved = false;
         Destroy(this.gameObject);
     }
-
-
 }
