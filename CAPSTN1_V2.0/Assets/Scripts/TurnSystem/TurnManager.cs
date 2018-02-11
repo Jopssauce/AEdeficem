@@ -60,7 +60,7 @@ public class TurnManager : MonoBehaviour {
 						
 					if (eventManager.EventList.Count != 10)
 					{
-						eventManager.SpawnEvent();
+						//eventManager.SpawnEvent();
 					}
 					
 					foreach (var item in eventManager.EventList.ToArray())
@@ -95,9 +95,15 @@ public class TurnManager : MonoBehaviour {
 			//Update region special resource
 			if (regionManager != null)
 			{
-				foreach (var item in regionManager.regionList)
+				foreach (var region in regionManager.regionList)
 				{
-					//If region quality is low. Lower resource gain from region
+					RegionBase regionBase = region.GetComponent<RegionBase>();
+					regionBase.regionQuality 			-= regionBase.regionQualityDecay * regionBase.maxRegionQuality;
+					regionBase.regionResourceAmount 	= Mathf.RoundToInt( (regionBase.regionQuality / regionBase.maxRegionQuality) * regionBase.MaxRegionResource);
+					if (regionBase.regionResourceAmount <= 0)
+					{
+						regionBase.regionResourceAmount = 0;
+					}
 				}
 			}
 			//Begin Next Turn
