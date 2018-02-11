@@ -9,11 +9,13 @@ public class RegionQualityBar : MonoBehaviour {
 	void Start () 
 	{
 		slider = this.GetComponent<Slider> ();
-		this.GetComponent<BindToRegion>().regionOrigin = origin;
 	}
 
 	void Update () 
 	{
-		slider.value = origin.GetComponent<RegionBase>().regionQuality / origin.GetComponent<RegionBase>().maxRegionQuality;
+		if (origin != null)
+		{
+			slider.value = origin.GetComponent<RegionBase>().regionQuality / origin.GetComponent<RegionBase>().maxRegionQuality;
+		}
 	}
 }

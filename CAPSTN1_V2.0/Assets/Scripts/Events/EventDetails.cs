@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Event", menuName = "EventDetails")]
 public class EventDetails : ScriptableObject 
 {
-
 	public List<EventText> eventText;
+	
 } 

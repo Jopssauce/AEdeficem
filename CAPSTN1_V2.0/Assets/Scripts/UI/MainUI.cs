@@ -16,7 +16,7 @@ public class MainUI : MonoBehaviour
     private TurnManager 	turnManager;
     private RegionManager   regManager;
 
-    public GameObject regQualityBarPrefab;
+    public GameObject regionUnderlayDisplay;
     // Use this for initialization
     void Start ()
     {
@@ -26,10 +26,9 @@ public class MainUI : MonoBehaviour
 
         foreach (var region in regManager.regionList)
         {
-            GameObject rqBar                                = Instantiate(regQualityBarPrefab);
-            rqBar.GetComponent<RegionQualityBar>().origin   = region;
-            rqBar.GetComponent<BindToRegion>().regionOrigin = region;
-            rqBar.transform.SetParent(this.transform, false);
+            GameObject ruBar = Instantiate(regionUnderlayDisplay);
+            ruBar.GetComponent<RegionUnderlayDisplay>().regionOrigin = region;
+            ruBar.transform.SetParent(this.transform, false);
         }
     }
 
