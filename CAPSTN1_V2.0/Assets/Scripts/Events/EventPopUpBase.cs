@@ -5,18 +5,12 @@ using UnityEngine.UI;
 
 public class EventPopUpBase : MonoBehaviour
 {
-    public string EventTitle;
-    public int TurnsBeforeFail;
-    [TextArea]
-    public string EventDetails;
+    public int turnsLeft;
     public bool isResolved;
     public GameObject EventCanvas;
 
     public GameObject regionOrigin;
 
-	public Vector3 randPos;
-
-	// Use this for initialization
 	void Start ()
     {
         this.GetComponent<Button>().onClick.AddListener(Click);

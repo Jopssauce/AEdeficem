@@ -74,18 +74,18 @@ public class TurnManager : MonoBehaviour {
 						}
 						if (eventPopUp.isResolved == false)
 						{
-							eventPopUp.TurnsBeforeFail -= 1;
+							//eventPopUp.turnsLeft -= 1;
 
-							if (eventPopUp.TurnsBeforeFail <= 0)
-							{
+							//if (eventPopUp.turnsLeft <= 0)
+							//{
 								//Deduct quality to regions
 								if (regionManager != null)
 								{
 									
 								}
-								Destroy(item.gameObject);
-								eventManager.EventList.Remove(item);
-							}
+								//Destroy(item.gameObject);
+								//eventManager.EventList.Remove(item);
+							//}
 						}
 					}	
 				}
