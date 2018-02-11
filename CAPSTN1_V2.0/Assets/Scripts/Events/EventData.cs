@@ -7,7 +7,6 @@ public class EventData
 {
 	public string  	eventName;
 	public int 		turnsLeft;
-	//public bool		isResolved;
 	public Sprite 	eventSprite;
 
 	[Header("Resource Costs")]

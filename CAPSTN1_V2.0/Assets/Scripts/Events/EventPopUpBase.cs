@@ -9,10 +9,10 @@ public class EventPopUpBase : MonoBehaviour
     public GameObject   regionOrigin;
     public int          turnsLeft;
     public bool         isResolved;
-
 	void Start ()
     {
         isResolved = false;
+        
         this.GetComponent<Button>().onClick.AddListener(Click);
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
 	}
