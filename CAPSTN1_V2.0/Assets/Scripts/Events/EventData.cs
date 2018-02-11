@@ -17,6 +17,7 @@ public class EventData
 	public int 		actionCost;
 	[TextArea(3,10)]
     public string 	eventDetails;
-
+    public int qualityDecay;
+    public int qualityReward;
 	ResourceManager.ResourceType resourceType;
 }
