@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 
 public class EventTextDisplay : MonoBehaviour {
-
-
-    public EventDetails eventDetails;
 	public GameObject 	eventOrigin;
     public Text 		EventText;
     public Text 		EventTitle;

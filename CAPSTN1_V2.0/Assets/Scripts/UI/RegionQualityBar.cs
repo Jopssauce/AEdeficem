@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RegionQualityBar : MonoBehaviour {
-	public GameObject 	origin;
+	public GameObject 	regionOrigin;
 	public Slider 		slider;
 	void Start () 
 	{
@@ -13,9 +13,9 @@ public class RegionQualityBar : MonoBehaviour {
 
 	void Update () 
 	{
-		if (origin != null)
+		if (regionOrigin != null)
 		{
-			slider.value = origin.GetComponent<RegionBase>().regionQuality / origin.GetComponent<RegionBase>().maxRegionQuality;
+			slider.value = regionOrigin.GetComponent<RegionBase>().regionQuality / regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
 		}
 	}
 }

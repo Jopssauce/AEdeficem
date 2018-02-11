@@ -4,20 +4,45 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RegionResources : MonoBehaviour {
-	public Text 		regionResources;
+	public Text 		resourceAmount;
 	public Image 		resourceImage;
 	public GameObject 	regionOrigin;
 	
 	void Start ()
 	{
-		
+		SetSprite(regionOrigin.GetComponent<RegionBase>().regionType);
 	}
 
 	void Update () 
 	{
 		if (regionOrigin != null)
 		{
-			regionResources.text = regionOrigin.GetComponent<RegionBase>().RegionResourceAmount.ToString();
+			resourceAmount.text = "+" + regionOrigin.GetComponent<RegionBase>().regionResourceAmount.ToString();
+		}
+	}
+	   public void SetSprite(ResourceManager.ResourceType type)
+	{
+		switch (type) 
+		{
+		case ResourceManager.ResourceType.ActionPoints:
+			resourceImage.sprite = Resources.Load <Sprite>("ManpowerColored");
+			resourceAmount.color = new Color32(253, 161, 3, 255);
+			break;
+		case ResourceManager.ResourceType.Food:
+			resourceImage.sprite = Resources.Load <Sprite>("WaterColored");
+			resourceAmount.color = new Color32(0, 222, 255, 255);
+			break;
+		case ResourceManager.ResourceType.Power:
+			resourceImage.sprite = Resources.Load <Sprite>("EnergyColored");
+			resourceAmount.color = new Color32(255, 228, 0, 255);
+			break;
+		case ResourceManager.ResourceType.Water:
+			resourceImage.sprite = Resources.Load <Sprite>("FoodColored");
+			resourceAmount.color = new Color32(80, 195, 2, 255);
+			break;
+		default:
+			Debug.Log ("Cant add Sprite");
+			break;
 		}
 	}
 }

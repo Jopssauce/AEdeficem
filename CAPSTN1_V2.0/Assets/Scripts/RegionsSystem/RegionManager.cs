@@ -57,9 +57,9 @@ public class RegionManager : MonoBehaviour
         foreach (var item in regionList)
         {
             //Adds existing region types and disregards duplicates
-            if (!TypeCheckList.Contains(item.GetComponent<RegionBase>().RegionType))
+            if (!TypeCheckList.Contains(item.GetComponent<RegionBase>().regionType))
             {
-                TypeCheckList.Add(item.GetComponent<RegionBase>().RegionType);
+                TypeCheckList.Add(item.GetComponent<RegionBase>().regionType);
             }
             else
             {
@@ -72,7 +72,7 @@ public class RegionManager : MonoBehaviour
         {
             if (!TypeCheckList.Contains(item))
             {
-                Duplicates[num].GetComponent<RegionBase>().RegionType = item;
+                Duplicates[num].GetComponent<RegionBase>().regionType = item;
                 Duplicates[num].GetComponent<RegionBase>().AdjustResourceByType();
                 num++;
             }

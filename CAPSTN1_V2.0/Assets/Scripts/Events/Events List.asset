@@ -12,43 +12,93 @@ MonoBehaviour:
   m_Name: Events List
   m_EditorClassIdentifier: 
   eventDataList:
-  - eventName: test1
+  - eventName: 1
     turnsLeft: 0
     isResolved: 0
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0
     powerCost: 0
+    actionCost: 0
     eventDetails: asdadasd
-  - eventName: test2
+  - eventName: 2
     turnsLeft: 0
     isResolved: 0
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0
     powerCost: 0
+    actionCost: 0
     eventDetails: dasdasdasdas
-  - eventName: test3
+  - eventName: 3
     turnsLeft: 0
     isResolved: 0
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0
     powerCost: 0
+    actionCost: 0
     eventDetails: asdasdasdsadasda
-  - eventName: test4
+  - eventName: 4
     turnsLeft: 0
     isResolved: 0
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0
     powerCost: 0
+    actionCost: 0
     eventDetails: dadasdasdasdadasda
-  - eventName: test5
+  - eventName: 5
     turnsLeft: 0
     isResolved: 0
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0
     powerCost: 0
+    actionCost: 0
+    eventDetails: asdadasdadasdad
+  - eventName: 6
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    actionCost: 0
+    eventDetails: asdadasdadasdad
+  - eventName: 7
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    actionCost: 0
+    eventDetails: asdadasdadasdad
+  - eventName: 8
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    actionCost: 0
+    eventDetails: asdadasdadasdad
+  - eventName: 9
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    actionCost: 0
+    eventDetails: asdadasdadasdad
+  - eventName: 10
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    actionCost: 0
     eventDetails: asdadasdadasdad

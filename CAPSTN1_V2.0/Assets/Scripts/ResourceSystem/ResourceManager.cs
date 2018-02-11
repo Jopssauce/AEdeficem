@@ -101,7 +101,7 @@ public class ResourceManager : MonoBehaviour {
 	{
         foreach (var item in RegionMngrReference.regionList)
         {
-            AddResource(item.GetComponent<RegionBase>().RegionType, item.GetComponent<RegionBase>().RegionResourceAmount);
+            AddResource(item.GetComponent<RegionBase>().regionType, item.GetComponent<RegionBase>().regionResourceAmount);
         }
 	}
 

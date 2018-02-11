@@ -6,11 +6,7 @@ using UnityEngine.EventSystems;
 
 public class RegionStats : MonoBehaviour
 {
-    //public Canvas RegionStatsCanvas;
-    
 
-    
-    
     private RegionManager RegionMngrRef;
 
     void Start()
@@ -26,7 +22,7 @@ public class RegionStats : MonoBehaviour
 
             RegionMngrRef.RegionStatUI.GetComponent<RegionCanvasScript>().RegionName.text = this.GetComponent<RegionBase>().name;
 
-            RegionMngrRef.RegionStatUI.GetComponent<RegionCanvasScript>().ResourceAmount.text = this.GetComponent<RegionBase>().RegionResourceAmount.ToString();
+            RegionMngrRef.RegionStatUI.GetComponent<RegionCanvasScript>().ResourceAmount.text = this.GetComponent<RegionBase>().regionResourceAmount.ToString();
 
 			RegionMngrRef.RegionStatUI.GetComponent<RegionCanvasScript>().RegionQuality.text = this.GetComponent<RegionBase>().regionQuality.ToString();
         }

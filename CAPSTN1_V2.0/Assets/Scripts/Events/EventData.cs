@@ -14,6 +14,7 @@ public class EventData
 	public int 		waterCost;
 	public int 		foodCost;
 	public int 		powerCost;
+	public int 		actionCost;
 	[TextArea(3,10)]
     public string 	eventDetails;
 
