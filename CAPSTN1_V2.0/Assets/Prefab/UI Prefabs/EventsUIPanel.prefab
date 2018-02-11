@@ -338,9 +338,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d033dc480b5a7c4eab46ce6b110f9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventOrigin: {fileID: 0}
   ActionQueue: {fileID: 1003967711272080, guid: 3c8eb7fcb03b7a8418f18f8f8b7f0b46,
     type: 2}
+  eventOrigin: {fileID: 0}
   Unresolve: {fileID: 114424693109961990}
   Resolve: {fileID: 114468828814849498}
 --- !u!114 &114748784002795728
@@ -381,9 +381,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07e20ba53bdee84fbc92f03077fba12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventDetails: {fileID: 11400000, guid: 496b3e14e57d7504cbe0687b238c49d8, type: 2}
-  EventText: {fileID: 114180692856412812}
-  EventTitle: {fileID: 114895803357451714}
+  eventOrigin: {fileID: 0}
+  eventText: {fileID: 114180692856412812}
+  eventTitle: {fileID: 114895803357451714}
   animator: {fileID: 95512730817207316}
 --- !u!114 &114807384608107474
 MonoBehaviour:
