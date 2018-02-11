@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class EventTextDisplay : MonoBehaviour {
 	public GameObject 	eventOrigin;
-    public Text 		EventText;
-    public Text 		EventTitle;
+    public Text 		eventText;
+    public Text 		eventTitle;
 	public Animator 	animator;
 
 	Queue<string> details;
@@ -26,7 +26,7 @@ public class EventTextDisplay : MonoBehaviour {
 	public void StartText(EventData data)
  	{
 		details.Clear();
-        this.EventTitle.text = data.eventName;
+        this.eventTitle.text = data.eventName;
 		this.details.Enqueue(data.eventDetails);
  		
         if (this.details.Count <= 0)
@@ -40,10 +40,10 @@ public class EventTextDisplay : MonoBehaviour {
 	}
     IEnumerator TypeSentence(string text)
 	{
-		EventText.text = "";
+		eventText.text = "";
 		foreach (char letter in text.ToCharArray())
 		{
-			EventText.text += letter;
+			eventText.text += letter;
 			yield return new WaitForSeconds(0.0f);
 		}
     }
