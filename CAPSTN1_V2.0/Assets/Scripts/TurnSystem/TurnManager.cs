@@ -57,12 +57,6 @@ public class TurnManager : MonoBehaviour {
 			{
 				if (eventManager.eventTracker != null)
 				{
-						
-					if (eventManager.eventTracker.Count != 10)
-					{
-						eventManager.SpawnEvent();
-					}
-					
 					foreach (var item in eventManager.eventTracker.ToArray())
 					{
 						
@@ -85,6 +79,10 @@ public class TurnManager : MonoBehaviour {
 								eventManager.eventTracker.Remove(item);
 							}
 						}
+					}
+					if (eventManager.eventTracker.Count != 10)
+					{
+						eventManager.SpawnEvent();
 					}	
 				}
 			}
