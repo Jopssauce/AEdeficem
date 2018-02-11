@@ -4,6 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Event", menuName = "EventsList")]
 public class EventsList : ScriptableObject 
 {
-	public List<EventData> eventData;
+	public List<EventData> eventDataList;
 
 }

@@ -8,10 +8,10 @@ public class EventTextDisplay : MonoBehaviour {
 
 
     public EventDetails eventDetails;
-
-    public Text EventText;
-    public Text EventTitle;
-	public Animator animator;
+	public GameObject 	eventOrigin;
+    public Text 		EventText;
+    public Text 		EventTitle;
+	public Animator 	animator;
 
 	Queue<string> details;
 
@@ -19,15 +19,18 @@ public class EventTextDisplay : MonoBehaviour {
     void Start()
     {
 		details = new Queue<string> ();
-        StartText(eventDetails.eventText[Random.Range(0, eventDetails.eventText.Count)]);
+		if (eventOrigin != null)
+		{
+			StartText(eventOrigin.GetComponent<EventPopUpBase>().eventData);
+		}
     }
 
 
-	public void StartText(EventText text)
+	public void StartText(EventData data)
  	{
 		details.Clear();
-        this.EventTitle.text = text.eventName;
-		this.details.Enqueue(text.eventDetails);
+        this.EventTitle.text = data.eventName;
+		this.details.Enqueue(data.eventDetails);
  		
         if (this.details.Count <= 0)
 		{
@@ -51,7 +54,10 @@ public class EventTextDisplay : MonoBehaviour {
 	void OnEnable()
 	{
 		details = new Queue<string> ();
-        StartText(eventDetails.eventText[Random.Range(0, eventDetails.eventText.Count)]);
+		if (eventOrigin != null)
+		{
+			StartText(eventOrigin.GetComponent<EventPopUpBase>().eventData);
+		}
 		if (animator != null)
 		{
 			animator.SetBool("isOpen", true);

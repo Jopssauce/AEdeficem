@@ -6,9 +6,14 @@ using UnityEngine;
 public class EventData
 {
 	public string  	eventName;
-	public int 		turnsLeft;
-	public int 		resourceCost;
+	public int 		turnsLeft = 3;
+	public bool		isResolved;
 	public Sprite 	eventSprite;
+
+	[Header("Resource Costs")]
+	public int 		waterCost;
+	public int 		foodCost;
+	public int 		powerCost;
 	[TextArea(3,10)]
     public string 	eventDetails;
 

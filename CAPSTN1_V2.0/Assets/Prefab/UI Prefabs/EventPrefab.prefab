@@ -92,16 +92,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630e2e760b9d98f418d23b37f103b330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventTitle: Just A Random Title
-  TurnsBeforeFail: 4
-  EventDetails: 'This is
-
-    a TITLE'
+  turnsLeft: 0
   isResolved: 0
-  EventCanvas: {fileID: 1688351182550100, guid: a3df83e487d81fc4283515c6d2765ef0,
-    type: 2}
+  eventData:
+    eventName: 
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    eventDetails: 
+  eventsList: {fileID: 11400000, guid: 0210d4b63da722a48a102faab2510077, type: 2}
   regionOrigin: {fileID: 0}
-  randPos: {x: 0, y: 0, z: 0}
 --- !u!114 &114572910853362570
 MonoBehaviour:
   m_ObjectHideFlags: 1

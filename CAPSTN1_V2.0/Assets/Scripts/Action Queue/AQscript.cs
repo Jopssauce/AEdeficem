@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AQscript : MonoBehaviour {
 
     public Button CloseButton;
-    public Button EventOrigin;
+    public GameObject eventOrigin;
     // Use this for initialization
     void Start() {
         CloseButton.onClick.AddListener(RemoveFromQueue);
@@ -14,7 +14,7 @@ public class AQscript : MonoBehaviour {
 
     void RemoveFromQueue()
     {
-        EventOrigin.GetComponent<EventPopUpBase>().isResolved = false;
+        eventOrigin.GetComponent<EventPopUpBase>().isResolved = false;
         Destroy(this.gameObject);
     }
 }

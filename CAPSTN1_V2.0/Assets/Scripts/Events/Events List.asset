@@ -11,4 +11,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec159e809972c049ae6fabba68497ff, type: 3}
   m_Name: Events List
   m_EditorClassIdentifier: 
-  eventData: []
+  eventDataList:
+  - eventName: test1
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    eventDetails: asdadasd
+  - eventName: test2
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    eventDetails: dasdasdasdas
+  - eventName: test3
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    eventDetails: asdasdasdsadasda
+  - eventName: test4
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    eventDetails: dadasdasdasdadasda
+  - eventName: test5
+    turnsLeft: 0
+    isResolved: 0
+    eventSprite: {fileID: 0}
+    waterCost: 0
+    foodCost: 0
+    powerCost: 0
+    eventDetails: asdadasdadasdad
