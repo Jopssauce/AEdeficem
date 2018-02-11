@@ -8,14 +8,14 @@ public class EventManager : MonoBehaviour
 
 	public static EventManager instance = null;
 
-    public Button prefab;
+    public GameObject prefab;
     public Canvas newCanvas;
     public GameObject EventsPanelPrefab;
     public GameObject EventPanel;
 
     private RegionManager RegionManagerInstance;
 
-    public List<Button> EventList;
+    public List<GameObject> eventTracker;
 
     void Awake()
 	{
@@ -34,7 +34,7 @@ public class EventManager : MonoBehaviour
 
     void Start()
     {
-        EventList = new List<Button>();
+        //EventList = new List<Button>();
 
         EventPanel = Instantiate(EventsPanelPrefab) as GameObject;
         EventPanel.transform.SetParent(newCanvas.transform, false);
@@ -47,14 +47,14 @@ public class EventManager : MonoBehaviour
     {
         RegionManagerInstance = RegionManager.instance;
 
-		int num 			= Random.Range(0 , RegionManagerInstance.regionList.Count);
-        Button newButton 	= Instantiate(prefab);
+		int num 			    = Random.Range(0 , RegionManagerInstance.regionList.Count);
+        GameObject newButton    = Instantiate(prefab);
 
         newButton.transform.SetParent(newCanvas.transform, false);
 
 		newButton.GetComponent<EventPopUpBase>().regionOrigin = RegionManagerInstance.regionList[num];
 
-        EventList.Add(newButton);
+        eventTracker.Add(newButton);
     }
 
     private Vector3 RandomPointInPolygon(Vector3 center, Bounds size)

@@ -55,37 +55,38 @@ public class TurnManager : MonoBehaviour {
 			//Spawn Event if limit is not reached
 			if (eventManager != null)
 			{
-				if (eventManager.EventList != null)
+				if (eventManager.eventTracker != null)
 				{
 						
-					if (eventManager.EventList.Count != 10)
+					if (eventManager.eventTracker.Count != 10)
 					{
-						//eventManager.SpawnEvent();
+						eventManager.SpawnEvent();
 					}
 					
-					foreach (var item in eventManager.EventList.ToArray())
+					foreach (var item in eventManager.eventTracker.ToArray())
 					{
-						EventPopUpBase eventPopUp = item.GetComponent<EventPopUpBase> ();
+						EventData eventData = item.GetComponent<EventPopUpBase> ().eventData;
 
-						if (eventPopUp.isResolved == true)
+						if (eventData.isResolved == true)
 						{
                             Destroy(item.gameObject);
-                            eventManager.EventList.Remove(item);
+                           //eventManager.eventTracker.Remove(item);
 						}
-						if (eventPopUp.isResolved == false)
+						if (eventData.isResolved == false)
 						{
-							//eventPopUp.turnsLeft -= 1;
-
-							//if (eventPopUp.turnsLeft <= 0)
-							//{
+							//eventData.turnsLeft -= 1;
+							Debug.Log(eventData.turnsLeft);
+							if (eventData.turnsLeft <= 0)
+							{
 								//Deduct quality to regions
 								if (regionManager != null)
 								{
 									
 								}
+								
 								//Destroy(item.gameObject);
-								//eventManager.EventList.Remove(item);
-							//}
+								//eventManager.eventTracker.Remove(item);
+							}
 						}
 					}	
 				}

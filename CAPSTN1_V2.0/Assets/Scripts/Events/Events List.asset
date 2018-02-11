@@ -21,8 +21,8 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 10
     eventDetails: A massive sinkhole has appeared in the region.
-    qualityDecay: 20
-    qualityReward: 20
+    qualityDecay: 0
+    qualityReward: 1
   - eventName: Rotating Black Out
     turnsLeft: 4
     isResolved: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     qualityDecay: 30
     qualityReward: 31
   - eventName: Gas Pipe Explosion
-    turnsLeft: 1
+    turnsLeft: 2
     isResolved: 0
     eventSprite: {fileID: 0}
     waterCost: 6
