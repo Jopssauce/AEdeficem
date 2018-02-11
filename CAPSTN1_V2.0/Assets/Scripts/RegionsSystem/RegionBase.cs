@@ -14,12 +14,13 @@ public class RegionBase : MonoBehaviour
     }
 
 
-    public ResourceManager.ResourceType regionType;
 	public float                        regionQuality;
 	public float                        maxRegionQuality;
     public int                          regionResourceAmount;
     public Material                     material;
-    public int MaxRegionResource;
+    public int                          MaxRegionResource;
+    public float                        regionQualityDecay;
+    public ResourceManager.ResourceType regionType;
 
     void Awake()
     {
@@ -30,8 +31,10 @@ public class RegionBase : MonoBehaviour
     void Start()
     {
         MaxRegionResource 	= 6;
-		maxRegionQuality 	= 100f;
-		regionQuality 		= 50f;
+        maxRegionQuality    = 100;
+        regionQualityDecay  = 0.1f;
+        regionResourceAmount = Mathf.RoundToInt( (regionQuality / maxRegionQuality) * MaxRegionResource);
+        material            = this.GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame

@@ -160,6 +160,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114477224383218826, guid: 24da7fb8fc7633a4aae71d3b188e7d80,
+        type: 2}
+      propertyPath: regionQuality
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477224383218826, guid: 24da7fb8fc7633a4aae71d3b188e7d80,
+        type: 2}
+      propertyPath: regionResourceAmount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24da7fb8fc7633a4aae71d3b188e7d80, type: 2}
   m_IsPrefabParent: 0
@@ -209,6 +219,16 @@ Prefab:
     - target: {fileID: 1980750308604942, guid: 24da7fb8fc7633a4aae71d3b188e7d80, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477224383218826, guid: 24da7fb8fc7633a4aae71d3b188e7d80,
+        type: 2}
+      propertyPath: regionQuality
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477224383218826, guid: 24da7fb8fc7633a4aae71d3b188e7d80,
+        type: 2}
+      propertyPath: regionResourceAmount
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24da7fb8fc7633a4aae71d3b188e7d80, type: 2}
@@ -324,10 +344,6 @@ Prefab:
     - target: {fileID: 1980750308604942, guid: 24da7fb8fc7633a4aae71d3b188e7d80, type: 2}
       propertyPath: m_Name
       value: Region 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980750308604942, guid: 24da7fb8fc7633a4aae71d3b188e7d80, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24da7fb8fc7633a4aae71d3b188e7d80, type: 2}
@@ -1635,6 +1651,16 @@ Prefab:
     - target: {fileID: 1980750308604942, guid: 24da7fb8fc7633a4aae71d3b188e7d80, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477224383218826, guid: 24da7fb8fc7633a4aae71d3b188e7d80,
+        type: 2}
+      propertyPath: regionQuality
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477224383218826, guid: 24da7fb8fc7633a4aae71d3b188e7d80,
+        type: 2}
+      propertyPath: regionResourceAmount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24da7fb8fc7633a4aae71d3b188e7d80, type: 2}
