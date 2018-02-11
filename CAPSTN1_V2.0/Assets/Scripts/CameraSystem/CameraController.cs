@@ -34,6 +34,6 @@ public class CameraController : MonoBehaviour {
 		{
 			transform.position += Vector3.forward * -1 * speed * Time.deltaTime;
 		}
-		Debug.Log(Input.mousePosition);
+	
 	}
 }
