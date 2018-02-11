@@ -35,6 +35,7 @@ public class RegionBase : MonoBehaviour
         regionQualityDecay  = 0.1f;
         regionResourceAmount = Mathf.RoundToInt( (regionQuality / maxRegionQuality) * MaxRegionResource);
         material            = this.GetComponent<Renderer>().material;
+        material.color = Color.Lerp(Color.red, Color.green, regionQuality / maxRegionQuality);
     }
 
     // Update is called once per frame

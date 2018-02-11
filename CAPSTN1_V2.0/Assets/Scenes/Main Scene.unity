@@ -345,6 +345,11 @@ Prefab:
       propertyPath: m_Name
       value: Region 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114477224383218826, guid: 24da7fb8fc7633a4aae71d3b188e7d80,
+        type: 2}
+      propertyPath: regionQuality
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24da7fb8fc7633a4aae71d3b188e7d80, type: 2}
   m_IsPrefabParent: 0
