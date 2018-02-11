@@ -18,7 +18,7 @@ public class RegionBase : MonoBehaviour
 	public float                        regionQuality;
 	public float                        maxRegionQuality;
     public int                          regionResourceAmount;
-
+    public Material                     material;
     public int MaxRegionResource;
 
     void Awake()
