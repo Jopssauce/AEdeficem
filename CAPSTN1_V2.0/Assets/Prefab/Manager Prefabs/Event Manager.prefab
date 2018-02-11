@@ -56,4 +56,5 @@ MonoBehaviour:
   EventsPanelPrefab: {fileID: 1688351182550100, guid: a3df83e487d81fc4283515c6d2765ef0,
     type: 2}
   EventPanel: {fileID: 0}
+  eventsList: {fileID: 11400000, guid: 0210d4b63da722a48a102faab2510077, type: 2}
   eventTracker: []

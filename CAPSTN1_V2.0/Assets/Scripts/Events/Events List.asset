@@ -14,18 +14,16 @@ MonoBehaviour:
   eventDataList:
   - eventName: Sinkhole
     turnsLeft: 3
-    isResolved: 0
     eventSprite: {fileID: 0}
     waterCost: 20
     foodCost: 20
     powerCost: 0
     actionCost: 10
     eventDetails: A massive sinkhole has appeared in the region.
-    qualityDecay: 0
-    qualityReward: 1
+    qualityDecay: 0.1
+    qualityReward: 0.1
   - eventName: Rotating Black Out
-    turnsLeft: 4
-    isResolved: 0
+    turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0
@@ -36,8 +34,7 @@ MonoBehaviour:
     qualityDecay: 3
     qualityReward: 5
   - eventName: Damaged Water Filter Station
-    turnsLeft: 4
-    isResolved: 0
+    turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0
@@ -48,8 +45,7 @@ MonoBehaviour:
     qualityDecay: 5
     qualityReward: 6
   - eventName: Polluted Factory
-    turnsLeft: 5
-    isResolved: 0
+    turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0
@@ -59,8 +55,7 @@ MonoBehaviour:
     qualityDecay: 7
     qualityReward: 8
   - eventName: Super Typhoon Aftermath
-    turnsLeft: 2
-    isResolved: 0
+    turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 15
     foodCost: 15
@@ -70,8 +65,7 @@ MonoBehaviour:
     qualityDecay: 15
     qualityReward: 17
   - eventName: Slums
-    turnsLeft: 5
-    isResolved: 0
+    turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 20
     foodCost: 20
@@ -82,8 +76,7 @@ MonoBehaviour:
     qualityDecay: 30
     qualityReward: 31
   - eventName: Gas Pipe Explosion
-    turnsLeft: 2
-    isResolved: 0
+    turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 6
     foodCost: 8
@@ -93,8 +86,7 @@ MonoBehaviour:
     qualityDecay: 6
     qualityReward: 7
   - eventName: Rampant Illegal Logging
-    turnsLeft: 5
-    isResolved: 0
+    turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 15
     foodCost: 0
@@ -104,8 +96,7 @@ MonoBehaviour:
     qualityDecay: 21
     qualityReward: 25
   - eventName: Rampant Littering
-    turnsLeft: 4
-    isResolved: 0
+    turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 10
     foodCost: 0
@@ -115,8 +106,7 @@ MonoBehaviour:
     qualityDecay: 10
     qualityReward: 12
   - eventName: 10
-    turnsLeft: 2
-    isResolved: 0
+    turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0

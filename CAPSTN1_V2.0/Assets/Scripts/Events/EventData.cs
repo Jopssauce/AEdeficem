@@ -6,8 +6,8 @@ using UnityEngine;
 public class EventData
 {
 	public string  	eventName;
-	public int 		turnsLeft = 3;
-	public bool		isResolved;
+	public int 		turnsLeft;
+	//public bool		isResolved;
 	public Sprite 	eventSprite;
 
 	[Header("Resource Costs")]

@@ -8,11 +8,12 @@ public class EventManager : MonoBehaviour
 
 	public static EventManager instance = null;
 
-    public GameObject prefab;
-    public Canvas newCanvas;
-    public GameObject EventsPanelPrefab;
-    public GameObject EventPanel;
-
+    public GameObject   prefab;
+    public Canvas       newCanvas;
+    public GameObject   EventsPanelPrefab;
+    public GameObject   EventPanel;
+    public EventsList   eventsList;
+    
     private RegionManager RegionManagerInstance;
 
     public List<GameObject> eventTracker;
@@ -34,13 +35,9 @@ public class EventManager : MonoBehaviour
 
     void Start()
     {
-        //EventList = new List<Button>();
-
         EventPanel = Instantiate(EventsPanelPrefab) as GameObject;
         EventPanel.transform.SetParent(newCanvas.transform, false);
         EventPanel.SetActive(false);
-
-        //Invoke("SpawnEvent",0.1f);
     }
 
     public void SpawnEvent()
@@ -53,7 +50,9 @@ public class EventManager : MonoBehaviour
         newButton.transform.SetParent(newCanvas.transform, false);
 
 		newButton.GetComponent<EventPopUpBase>().regionOrigin = RegionManagerInstance.regionList[num];
-
+        //newButton.GetComponent<EventPopUpBase>().eventData      = new EventData();
+        newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.eventDataList[Random.Range(0, eventsList.eventDataList.Count)];
+        newButton.GetComponent<EventPopUpBase>().turnsLeft    = newButton.GetComponent<EventPopUpBase>().eventData.turnsLeft;
         eventTracker.Add(newButton);
     }
 

@@ -18,7 +18,6 @@ public class EventReader : MonoBehaviour
     {
         Unresolve.onClick.AddListener(IgnoreEvent);
         Resolve.onClick.AddListener(ResolveEvent);
-        
     }
 
     public void ResolveEvent()

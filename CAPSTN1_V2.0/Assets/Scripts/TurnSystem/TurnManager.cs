@@ -65,27 +65,24 @@ public class TurnManager : MonoBehaviour {
 					
 					foreach (var item in eventManager.eventTracker.ToArray())
 					{
-						EventData eventData = item.GetComponent<EventPopUpBase> ().eventData;
-
-						if (eventData.isResolved == true)
+						
+						if (item.GetComponent<EventPopUpBase> ().isResolved == true)
 						{
-                            Destroy(item.gameObject);
-                           //eventManager.eventTracker.Remove(item);
+                        	Destroy(item.gameObject);
+                           	eventManager.eventTracker.Remove(item);
 						}
-						if (eventData.isResolved == false)
+						if (item.GetComponent<EventPopUpBase> ().isResolved == false)
 						{
-							//eventData.turnsLeft -= 1;
-							Debug.Log(eventData.turnsLeft);
-							if (eventData.turnsLeft <= 0)
+							item.GetComponent<EventPopUpBase> ().turnsLeft -= 1;
+							if (item.GetComponent<EventPopUpBase> ().turnsLeft <= 0)
 							{
 								//Deduct quality to regions
 								if (regionManager != null)
 								{
 									
 								}
-								
-								//Destroy(item.gameObject);
-								//eventManager.eventTracker.Remove(item);
+								Destroy(item.gameObject);
+								eventManager.eventTracker.Remove(item);
 							}
 						}
 					}	
@@ -98,7 +95,7 @@ public class TurnManager : MonoBehaviour {
 			{
 				foreach (var region in regionManager.regionList)
 				{
-					RegionBase regionBase = region.GetComponent<RegionBase>();
+					RegionBase regionBase 				= region.GetComponent<RegionBase>();
 					regionBase.regionQuality 			-= regionBase.regionQualityDecay * regionBase.maxRegionQuality;
 					regionBase.regionResourceAmount 	= Mathf.RoundToInt( (regionBase.regionQuality / regionBase.maxRegionQuality) * regionBase.MaxRegionResource);
 					if (regionBase.regionResourceAmount <= 0)
