@@ -143,6 +143,17 @@ public class ResourceManager : MonoBehaviour {
             AddResource(item.GetComponent<RegionBase>().regionType, item.GetComponent<RegionBase>().regionResourceAmount);
         }
 	}
-
+	public bool isEnoughRes(int waterCost, int foodCost, int powerCost, int actionCost)
+	{
+		if (water < waterCost || food < foodCost || power < powerCost || actionPoints < actionCost)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+		
+	}
   
 }
