@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: 3bc2a3c64f537a94e9cfa95ea4ac29e3
+guid: 93c00db326cf9e6499df114f61421d06
 timeCreated: 1518528848
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: polySurface2
+    100000: polySurface3
     100002: //RootNode
-    400000: polySurface2
+    400000: polySurface3
     400002: //RootNode
     2100000: lambert1
-    2300000: polySurface2
-    3300000: polySurface2
-    4300000: polySurface2
+    2300000: polySurface3
+    3300000: polySurface3
+    4300000: polySurface3
   externalObjects: {}
   materials:
     importMaterials: 1
