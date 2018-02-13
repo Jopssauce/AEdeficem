@@ -20,7 +20,7 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 10
     eventDetails: A massive sinkhole has appeared in the region.
-    qualityDecay: 0.01
+    qualityDecay: 0.513
     qualityReward: 0.1
   - eventName: Rotating Black Out
     turnsLeft: 3
