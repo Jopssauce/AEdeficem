@@ -59,9 +59,16 @@ public class TurnManager : MonoBehaviour {
 				{
 					foreach (var item in eventManager.eventTracker.ToArray())
 					{
-						
+						EventPopUpBase eventPopUp = item.GetComponent<EventPopUpBase>();
 						if (item.GetComponent<EventPopUpBase> ().isResolved == true)
 						{
+							resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventPopUp.eventData.actionCost);
+							resManager.DeductResource(ResourceManager.ResourceType.Water,	eventPopUp.eventData.waterCost);
+							resManager.DeductResource(ResourceManager.ResourceType.Power, 	eventPopUp.eventData.powerCost);
+							resManager.DeductResource(ResourceManager.ResourceType.Food, 	eventPopUp.eventData.foodCost);
+
+							eventPopUp.regionOrigin.GetComponent<RegionBase>().regionQuality -= eventPopUp.eventData.qualityDecay * eventPopUp.regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
+
                         	Destroy(item.gameObject);
                            	eventManager.eventTracker.Remove(item);
 						}
