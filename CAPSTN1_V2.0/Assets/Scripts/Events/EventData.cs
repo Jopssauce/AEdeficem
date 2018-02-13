@@ -16,9 +16,9 @@ public class EventData
 	public int 		actionCost;
 	[TextArea(3,10)]
     public string 	eventDetails;
-	[SerializeField][Range(0.1f, 1.0f)]
+	[SerializeField][Range(0.01f, 1.0f)]
     public float qualityDecay;
-	[SerializeField][Range(0.1f, 1.0f)]
+	[SerializeField][Range(0.01f, 1.0f)]
     public float qualityReward;
 	ResourceManager.ResourceType resourceType;
 }
