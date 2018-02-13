@@ -24,7 +24,7 @@ public class RegionBase : MonoBehaviour
 
     void Awake()
     {
-        AssignRegionType();
+        //AssignRegionType();
     }
 
     // Use this for initialization

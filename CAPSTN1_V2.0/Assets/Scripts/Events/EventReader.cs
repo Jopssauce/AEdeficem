@@ -23,15 +23,22 @@ public class EventReader : MonoBehaviour
 
     public void ResolveEvent()
     {
-        eventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
-        Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
+        if (ResourceManager.instance.CheckResources(eventOrigin) == true)
+        {
+            eventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
+            Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
 
-        NewQueueItem = Instantiate(ActionQueue, new Vector3(0.0f, queueActions.Count * 386.1f, 0.0f), Quaternion.identity) as GameObject;
-        NewQueueItem.transform.SetParent(EventManager.instance.newCanvas.transform, false);
-        NewQueueItem.GetComponent<AQscript>().eventOrigin = this.eventOrigin;
-        queueActions.Enqueue(NewQueueItem);
+            NewQueueItem = Instantiate(ActionQueue, new Vector3(0.0f, queueActions.Count * 386.1f, 0.0f), Quaternion.identity) as GameObject;
+            NewQueueItem.transform.SetParent(EventManager.instance.newCanvas.transform, false);
+            NewQueueItem.GetComponent<AQscript>().eventOrigin = this.eventOrigin;
+            queueActions.Enqueue(NewQueueItem);
 
-        EventManager.instance.EventPanel.SetActive(false);
+            EventManager.instance.EventPanel.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("Not Enough Resources");
+        }
     }
 
     public void IgnoreEvent()

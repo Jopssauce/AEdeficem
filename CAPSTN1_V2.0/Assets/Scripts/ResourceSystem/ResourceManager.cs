@@ -23,6 +23,8 @@ public class ResourceManager : MonoBehaviour {
 	public int powerSum;
 	public int actionPointsSum;
 
+    public List<int> ResourceSpent;
+
 	public int currentRQSum;
 	public int maxRQSum;
 
@@ -39,8 +41,14 @@ public class ResourceManager : MonoBehaviour {
 			Destroy (gameObject);
 		}
 		DontDestroyOnLoad (gameObject);
-		
-	}
+
+        ResourceSpent = new List<int>();
+        ResourceSpent.Add(0);
+        ResourceSpent.Add(0);
+        ResourceSpent.Add(0);
+        ResourceSpent.Add(0);
+
+    }
 
     void Start()
     {
@@ -106,6 +114,36 @@ public class ResourceManager : MonoBehaviour {
 		//Get get Max and Current Region Quality 
 		//Normalize/Percentage it
 	}
+
+    public bool CheckResources(GameObject Event)
+    {
+        List<int> CurrentResource = new List<int>();
+        CurrentResource.Add(water);
+        CurrentResource.Add(food);
+        CurrentResource.Add(power);
+        CurrentResource.Add(actionPoints);
+
+        List<int> ResourceRequirement = new List<int>();
+        ResourceRequirement.Add(Event.GetComponent<EventPopUpBase>().eventData.waterCost);
+        ResourceRequirement.Add(Event.GetComponent<EventPopUpBase>().eventData.foodCost);
+        ResourceRequirement.Add(Event.GetComponent<EventPopUpBase>().eventData.powerCost);
+        ResourceRequirement.Add(Event.GetComponent<EventPopUpBase>().eventData.actionCost);
+
+        for (int i = 0; i < ResourceSpent.Count; i++)
+        {
+            Debug.Log(ResourceSpent[i]);
+            if ((ResourceSpent[i] + ResourceRequirement[i]) < CurrentResource[i])
+            {
+                ResourceSpent[i] += ResourceRequirement[i];
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 
 	public void GetResourceSum()
 	{

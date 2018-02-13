@@ -119,6 +119,10 @@ public class TurnManager : MonoBehaviour {
 					}
 				}
 			}
+            for (int i = 0; i < ResourceManager.instance.ResourceSpent.Count; i++)
+            {
+                ResourceManager.instance.ResourceSpent[i] = 0;
+            }
 			//Begin Next Turn
 			currentTurn++;
 			isTurnEnded = false;
