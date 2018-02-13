@@ -32,7 +32,7 @@ public class RegionBase : MonoBehaviour
     {
         MaxRegionResource 	= 6;
         maxRegionQuality    = 100;
-        regionQualityDecay  = 0.1f;
+        regionQualityDecay  = 0.05f;
         regionResourceAmount = Mathf.RoundToInt( ( regionQuality / maxRegionQuality) * MaxRegionResource);
         material            = this.GetComponent<Renderer>().material;
         material.color = Color.Lerp(Color.red, Color.green, regionQuality / maxRegionQuality);
