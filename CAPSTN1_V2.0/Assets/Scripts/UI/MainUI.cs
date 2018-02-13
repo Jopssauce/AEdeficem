@@ -10,6 +10,11 @@ public class MainUI : MonoBehaviour
     public Text FoodAmnt;
     public Text APAmnt;
 
+    public Text waterAmntSum;
+    public Text powerAmntSum;
+    public Text foodAmntSum;
+    public Text apAmntSum;
+
     public Text Turn;
 
     private ResourceManager resManager;
@@ -17,6 +22,7 @@ public class MainUI : MonoBehaviour
     private RegionManager   regManager;
 
     public GameObject regionUnderlayDisplay;
+    
     // Use this for initialization
     void Start ()
     {
@@ -30,6 +36,9 @@ public class MainUI : MonoBehaviour
             ruBar.GetComponent<RegionUnderlayDisplay>().regionOrigin = region;
             ruBar.transform.SetParent(this.transform, false);
         }
+
+       
+
     }
 
     void Update()
@@ -39,6 +48,28 @@ public class MainUI : MonoBehaviour
         FoodAmnt.text 	= resManager.food.ToString();
         APAmnt.text 	= resManager.actionPoints.ToString();
 
+        //waterAmntSum.text   = resManager.waterSum.ToString();
+        //powerAmntSum.text   = resManager.powerSum.ToString();
+        //foodAmntSum.text    = resManager.foodSum.ToString();
+        //apAmntSum.text      = resManager.actionPointsSum.ToString();
+
+        SumText(waterAmntSum,   resManager.waterSum);
+        SumText(powerAmntSum,   resManager.powerSum);
+        SumText(foodAmntSum,    resManager.foodSum);
+        SumText(apAmntSum,      resManager.actionPointsSum);
+
         Turn.text = "TURN " + turnManager.currentTurn;
+    }
+
+    void SumText(Text text, int sum)
+    {
+        if (sum >= 0)
+        {
+            text.text = "+" + sum.ToString();
+        }
+        if (sum < 0)
+        {
+            text.text = "-" + sum.ToString();
+        }
     }
 }

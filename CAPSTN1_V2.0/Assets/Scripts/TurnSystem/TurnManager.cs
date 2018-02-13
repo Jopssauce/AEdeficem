@@ -39,6 +39,7 @@ public class TurnManager : MonoBehaviour {
 		{
 			regionManager = RegionManager.instance;
 		}
+		resManager.GetResourceSum();
 	}
 
 	public void AdvanceTurn()
@@ -49,6 +50,7 @@ public class TurnManager : MonoBehaviour {
 			if (resManager != null)
 			{
 				resManager.ReplenishResource();
+				resManager.GetResourceSum();
 			}
 			//Event Timer goes down
 			//Check for solved/Unresolved
@@ -62,12 +64,12 @@ public class TurnManager : MonoBehaviour {
 						EventPopUpBase eventPopUp = item.GetComponent<EventPopUpBase>();
 						if (item.GetComponent<EventPopUpBase> ().isResolved == true)
 						{
-							resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventPopUp.eventData.actionCost);
-							resManager.DeductResource(ResourceManager.ResourceType.Water,	eventPopUp.eventData.waterCost);
-							resManager.DeductResource(ResourceManager.ResourceType.Power, 	eventPopUp.eventData.powerCost);
-							resManager.DeductResource(ResourceManager.ResourceType.Food, 	eventPopUp.eventData.foodCost);
+							//resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventPopUp.eventData.actionCost);
+							//resManager.DeductResource(ResourceManager.ResourceType.Water,	eventPopUp.eventData.waterCost);
+							//resManager.DeductResource(ResourceManager.ResourceType.Power, 	eventPopUp.eventData.powerCost);
+							//resManager.DeductResource(ResourceManager.ResourceType.Food, 	eventPopUp.eventData.foodCost);
 
-							eventPopUp.regionOrigin.GetComponent<RegionBase>().regionQuality -= eventPopUp.eventData.qualityDecay * eventPopUp.regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
+							eventPopUp.regionOrigin.GetComponent<RegionBase>().regionQuality += eventPopUp.eventData.qualityDecay * eventPopUp.regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
 
                         	Destroy(item.gameObject);
                            	eventManager.eventTracker.Remove(item);
@@ -107,6 +109,10 @@ public class TurnManager : MonoBehaviour {
 					if (regionBase.regionResourceAmount <= 0)
 					{
 						regionBase.regionResourceAmount = 0;
+					}
+					if (regionBase.regionQuality > regionBase.maxRegionQuality)
+					{
+						regionBase.regionQuality = regionBase.maxRegionQuality;
 					}
 				}
 			}
