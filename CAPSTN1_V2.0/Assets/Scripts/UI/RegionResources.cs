@@ -28,7 +28,7 @@ public class RegionResources : MonoBehaviour {
 			resourceImage.sprite = Resources.Load <Sprite>("ManpowerColored");
 			resourceAmount.color = new Color32(253, 161, 3, 255);
 			break;
-		case ResourceManager.ResourceType.Food:
+		case ResourceManager.ResourceType.Water:
 			resourceImage.sprite = Resources.Load <Sprite>("WaterColored");
 			resourceAmount.color = new Color32(0, 222, 255, 255);
 			break;
@@ -36,7 +36,7 @@ public class RegionResources : MonoBehaviour {
 			resourceImage.sprite = Resources.Load <Sprite>("EnergyColored");
 			resourceAmount.color = new Color32(255, 228, 0, 255);
 			break;
-		case ResourceManager.ResourceType.Water:
+		case ResourceManager.ResourceType.Food:
 			resourceImage.sprite = Resources.Load <Sprite>("FoodColored");
 			resourceAmount.color = new Color32(80, 195, 2, 255);
 			break;

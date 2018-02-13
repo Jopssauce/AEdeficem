@@ -18,6 +18,11 @@ public class ResourceManager : MonoBehaviour {
 	public int power;
 	public int actionPoints;
 
+	public int waterSum;
+	public int foodSum;
+	public int powerSum;
+	public int actionPointsSum;
+
 	public int currentRQSum;
 	public int maxRQSum;
 
@@ -34,15 +39,20 @@ public class ResourceManager : MonoBehaviour {
 			Destroy (gameObject);
 		}
 		DontDestroyOnLoad (gameObject);
+		
 	}
 
     void Start()
     {
-        Invoke("DelayAssign",0.3f);
-		water = 30;
-		food = 30;
-		power = 30;
-		actionPoints = 30;
+        if (RegionManager.instance != null)
+		{
+			regManager = RegionManager.instance;
+		}
+		water 			= 30;
+		food 			= 30;
+		power 			= 30;
+		actionPoints 	= 30;
+		
     }
 
     public void AddResource(ResourceType type, int amount)
@@ -91,6 +101,7 @@ public class ResourceManager : MonoBehaviour {
 
 	public void GetRegionQualitySum()
 	{
+		
 		//Get list of regions
 		//Get get Max and Current Region Quality 
 		//Normalize/Percentage it
@@ -98,7 +109,31 @@ public class ResourceManager : MonoBehaviour {
 
 	public void GetResourceSum()
 	{
-		//Get total amount of resource that can be lost/gained every turn
+		waterSum 		= 0;
+		foodSum 		= 0;
+		powerSum 		= 0;
+		actionPointsSum = 0;
+		foreach (var region in regManager.regionList)
+        {
+          switch (region.GetComponent<RegionBase>().regionType)
+		  {
+			  case ResourceType.Water:
+			  	waterSum 		+= region.GetComponent<RegionBase>().regionResourceAmount;
+				break;	
+			  case ResourceType.Food:
+			  	foodSum 		+= region.GetComponent<RegionBase>().regionResourceAmount;
+				break;
+			  case ResourceType.Power:
+			  	powerSum 		+= region.GetComponent<RegionBase>().regionResourceAmount;
+				break;
+			  case ResourceType.ActionPoints:
+			  	actionPointsSum += region.GetComponent<RegionBase>().regionResourceAmount;
+				break;
+			  default:
+			  Debug.Log ("error region quality sum");
+			  break;
+		  }  
+        }
 	}
 
 	public void ReplenishResource()
@@ -109,8 +144,5 @@ public class ResourceManager : MonoBehaviour {
         }
 	}
 
-    public void DelayAssign()
-    {
-        regManager = RegionManager.instance;
-    }
+  
 }
