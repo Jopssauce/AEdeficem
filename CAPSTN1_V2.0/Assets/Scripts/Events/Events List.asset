@@ -20,9 +20,15 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 10
     eventDetails: A massive sinkhole has appeared in the region.
+<<<<<<< HEAD
     qualityDecay: 0.22
     qualityReward: 0.1
     eventTier: 0
+=======
+    qualityDecay: 0.2
+    qualityReward: 0.22
+    eventTier: 2
+>>>>>>> 774a66a20b4e58a61c63ab1b70100c0ad274e3be
     eventType: 0
   - eventName: Rotating Black Out
     turnsLeft: 3
@@ -33,8 +39,13 @@ MonoBehaviour:
     actionCost: 3
     eventDetails: A generator within the region's powerplant has been damaged and
       is causing rotating black outs.
+<<<<<<< HEAD
     qualityDecay: 0.16
     qualityReward: 0.14
+=======
+    qualityDecay: 0.07
+    qualityReward: 0.09
+>>>>>>> 774a66a20b4e58a61c63ab1b70100c0ad274e3be
     eventTier: 0
     eventType: 0
   - eventName: Damaged Water Filter Station
@@ -46,8 +57,13 @@ MonoBehaviour:
     actionCost: 2
     eventDetails: Due to an unforseen technical disaster the local water plant has
       been damaged.
+<<<<<<< HEAD
     qualityDecay: 0.14
     qualityReward: 0.19
+=======
+    qualityDecay: 0.09
+    qualityReward: 0.1
+>>>>>>> 774a66a20b4e58a61c63ab1b70100c0ad274e3be
     eventTier: 0
     eventType: 0
   - eventName: Polluted Factory
@@ -58,8 +74,13 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 3
     eventDetails: A factory has been causing an extreme amount of pollution.
+<<<<<<< HEAD
     qualityDecay: 0.16
     qualityReward: 0.18
+=======
+    qualityDecay: 0.1
+    qualityReward: 0.12
+>>>>>>> 774a66a20b4e58a61c63ab1b70100c0ad274e3be
     eventTier: 0
     eventType: 0
   - eventName: Super Typhoon Aftermath
@@ -70,9 +91,15 @@ MonoBehaviour:
     powerCost: 4
     actionCost: 8
     eventDetails: A Typhoon has hit the country and the people are suffering.
+<<<<<<< HEAD
     qualityDecay: 0.12
     qualityReward: 0.14
     eventTier: 0
+=======
+    qualityDecay: 0.25
+    qualityReward: 0.27
+    eventTier: 1
+>>>>>>> 774a66a20b4e58a61c63ab1b70100c0ad274e3be
     eventType: 0
   - eventName: Slums
     turnsLeft: 3
@@ -83,9 +110,15 @@ MonoBehaviour:
     actionCost: 10
     eventDetails: Sprawling slums have appeared within the region's capital. You must
       expend resources to relocate and build them new housing.
+<<<<<<< HEAD
     qualityDecay: 0.17
     qualityReward: 0.18
     eventTier: 0
+=======
+    qualityDecay: 0.3
+    qualityReward: 0.31
+    eventTier: 2
+>>>>>>> 774a66a20b4e58a61c63ab1b70100c0ad274e3be
     eventType: 0
   - eventName: Gas Pipe Explosion
     turnsLeft: 3
@@ -95,8 +128,13 @@ MonoBehaviour:
     powerCost: 4
     actionCost: 0
     eventDetails: A gas pipe has exploded within a city and is causing problems.
+<<<<<<< HEAD
     qualityDecay: 0.04
     qualityReward: 0.08
+=======
+    qualityDecay: 0.06
+    qualityReward: 0.07
+>>>>>>> 774a66a20b4e58a61c63ab1b70100c0ad274e3be
     eventTier: 0
     eventType: 0
   - eventName: Rampant Illegal Logging
@@ -107,9 +145,15 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 5
     eventDetails: Illegal loggers.
+<<<<<<< HEAD
     qualityDecay: 0.12
     qualityReward: 0.16
     eventTier: 0
+=======
+    qualityDecay: 0.21
+    qualityReward: 0.25
+    eventTier: 2
+>>>>>>> 774a66a20b4e58a61c63ab1b70100c0ad274e3be
     eventType: 0
   - eventName: Rampant Littering
     turnsLeft: 3
@@ -119,19 +163,34 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 10
     eventDetails: People have been littering.
+<<<<<<< HEAD
     qualityDecay: 0.08
     qualityReward: 0.13
     eventTier: 0
     eventType: 0
   - eventName: 10
+=======
+    qualityDecay: 0.1
+    qualityReward: 0.12
+    eventTier: 0
+    eventType: 0
+  - eventName: Nigger's Day
+>>>>>>> 774a66a20b4e58a61c63ab1b70100c0ad274e3be
     turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0
     powerCost: 0
+<<<<<<< HEAD
     actionCost: 0
     eventDetails: asdadasdadasdad
     qualityDecay: 0.12
+=======
+    actionCost: 10
+    eventDetails: Everyone becomes black for one day in celebration of cultural friendship
+      with African citizens.
+    qualityDecay: 0
+>>>>>>> 774a66a20b4e58a61c63ab1b70100c0ad274e3be
     qualityReward: 0.1
     eventTier: 0
     eventType: 0
