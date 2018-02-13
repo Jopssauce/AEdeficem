@@ -89,10 +89,13 @@ public class TurnManager : MonoBehaviour {
 							}
 						}
 					}
-					if (eventManager.eventTracker.Count != 10)
+					for (int i = 0; i < 3; i++)
 					{
-						eventManager.SpawnEvent();
-					}	
+						if (eventManager.eventTracker.Count != 10)
+						{
+							eventManager.SpawnEvent();
+						}	
+					}					
 				}
 			}
 			

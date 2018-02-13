@@ -48,10 +48,10 @@ public class ResourceManager : MonoBehaviour {
 		{
 			regManager = RegionManager.instance;
 		}
-		water 			= 30;
-		food 			= 30;
-		power 			= 30;
-		actionPoints 	= 30;
+		water 			= 10;
+		food 			= 10;
+		power 			= 10;
+		actionPoints 	= 10;
 		
     }
 

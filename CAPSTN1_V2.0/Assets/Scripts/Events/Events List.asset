@@ -20,8 +20,10 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 10
     eventDetails: A massive sinkhole has appeared in the region.
-    qualityDecay: 0.513
+    qualityDecay: 0.22
     qualityReward: 0.1
+    eventTier: 0
+    eventType: 0
   - eventName: Rotating Black Out
     turnsLeft: 3
     eventSprite: {fileID: 0}
@@ -31,8 +33,10 @@ MonoBehaviour:
     actionCost: 3
     eventDetails: A generator within the region's powerplant has been damaged and
       is causing rotating black outs.
-    qualityDecay: 3
-    qualityReward: 5
+    qualityDecay: 0.16
+    qualityReward: 0.14
+    eventTier: 0
+    eventType: 0
   - eventName: Damaged Water Filter Station
     turnsLeft: 3
     eventSprite: {fileID: 0}
@@ -42,8 +46,10 @@ MonoBehaviour:
     actionCost: 2
     eventDetails: Due to an unforseen technical disaster the local water plant has
       been damaged.
-    qualityDecay: 5
-    qualityReward: 6
+    qualityDecay: 0.14
+    qualityReward: 0.19
+    eventTier: 0
+    eventType: 0
   - eventName: Polluted Factory
     turnsLeft: 3
     eventSprite: {fileID: 0}
@@ -52,8 +58,10 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 3
     eventDetails: A factory has been causing an extreme amount of pollution.
-    qualityDecay: 7
-    qualityReward: 8
+    qualityDecay: 0.16
+    qualityReward: 0.18
+    eventTier: 0
+    eventType: 0
   - eventName: Super Typhoon Aftermath
     turnsLeft: 3
     eventSprite: {fileID: 0}
@@ -62,8 +70,10 @@ MonoBehaviour:
     powerCost: 4
     actionCost: 8
     eventDetails: A Typhoon has hit the country and the people are suffering.
-    qualityDecay: 15
-    qualityReward: 17
+    qualityDecay: 0.12
+    qualityReward: 0.14
+    eventTier: 0
+    eventType: 0
   - eventName: Slums
     turnsLeft: 3
     eventSprite: {fileID: 0}
@@ -73,8 +83,10 @@ MonoBehaviour:
     actionCost: 10
     eventDetails: Sprawling slums have appeared within the region's capital. You must
       expend resources to relocate and build them new housing.
-    qualityDecay: 30
-    qualityReward: 31
+    qualityDecay: 0.17
+    qualityReward: 0.18
+    eventTier: 0
+    eventType: 0
   - eventName: Gas Pipe Explosion
     turnsLeft: 3
     eventSprite: {fileID: 0}
@@ -83,8 +95,10 @@ MonoBehaviour:
     powerCost: 4
     actionCost: 0
     eventDetails: A gas pipe has exploded within a city and is causing problems.
-    qualityDecay: 6
-    qualityReward: 7
+    qualityDecay: 0.04
+    qualityReward: 0.08
+    eventTier: 0
+    eventType: 0
   - eventName: Rampant Illegal Logging
     turnsLeft: 3
     eventSprite: {fileID: 0}
@@ -93,8 +107,10 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 5
     eventDetails: Illegal loggers.
-    qualityDecay: 21
-    qualityReward: 25
+    qualityDecay: 0.12
+    qualityReward: 0.16
+    eventTier: 0
+    eventType: 0
   - eventName: Rampant Littering
     turnsLeft: 3
     eventSprite: {fileID: 0}
@@ -103,8 +119,10 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 10
     eventDetails: People have been littering.
-    qualityDecay: 10
-    qualityReward: 12
+    qualityDecay: 0.08
+    qualityReward: 0.13
+    eventTier: 0
+    eventType: 0
   - eventName: 10
     turnsLeft: 3
     eventSprite: {fileID: 0}
@@ -113,5 +131,7 @@ MonoBehaviour:
     powerCost: 0
     actionCost: 0
     eventDetails: asdadasdadasdad
-    qualityDecay: 0
-    qualityReward: 0
+    qualityDecay: 0.12
+    qualityReward: 0.1
+    eventTier: 0
+    eventType: 0
