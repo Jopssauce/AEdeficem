@@ -37,6 +37,7 @@ public class EventPopUpBase : MonoBehaviour
     {   
         EventManager.instance.EventPanel.GetComponent<EventReader>().eventOrigin        = this.gameObject;
         EventManager.instance.EventPanel.GetComponent<EventTextDisplay>().eventOrigin   = this.gameObject;
+        EventManager.instance.EventPanel.GetComponent<DisplayResourceCost>().eventOrigin   = this.gameObject;
         EventManager.instance.EventPanel.SetActive(true);
         EventManager.instance.EventPanel.transform.SetAsLastSibling();
     }
