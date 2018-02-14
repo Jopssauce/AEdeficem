@@ -123,15 +123,16 @@ MonoBehaviour:
     qualityReward: 0.12
     eventTier: 0
     eventType: 0
-  - eventName: Nigger's Day
+  - eventName: Intercultural Appreciation Day
     turnsLeft: 3
     eventSprite: {fileID: 0}
     waterCost: 0
     foodCost: 0
     powerCost: 0
-    actionCost: 10
-    eventDetails: Everyone becomes black for one day in celebration of cultural friendship
-      with African citizens.
+    actionCost: 5
+    eventDetails: The nation celebrates a special holiday. Every citizen is invited
+      to share with special cultural intricacies and practices of their neighbor to
+      foster camaraderie, fellowship and mutual understanding.
     qualityDecay: 0
     qualityReward: 0.1
     eventTier: 0
