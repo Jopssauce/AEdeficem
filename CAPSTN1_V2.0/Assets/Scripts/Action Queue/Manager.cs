@@ -20,16 +20,16 @@ public class Manager : MonoBehaviour {
 		notifications = new List<Notification> ();
 	}
 
+	//shows notifs
 	public void ShowNotification(Notification notification)
 	{
-		float posY = 386.1f + (60.3f * (float)notifications.Count);
-		if (notifications.Count >= MaxNumberOfEvents) 
+		//float posY = 386.1f + (60.3f * (float)notifications.Count);
+		/*if (notifications.Count >= MaxNumberOfEvents) 
 		{
-			notifications.RemoveAt (0);
-			Destroy (notifications [0]);
-		}
+			// deletes the first index of the events
+		}*/
 
-		GameObject NewNotif = Instantiate (ActionQueuePrefab, new Vector3 (0.0f, posY, 0.0f), Quaternion.identity);
-		notifications.Add (notification);
+		//GameObject NewNotif = Instantiate (ActionQueuePrefab, new Vector3 (0.0f, posY, 0.0f), Quaternion.identity);
+		//notifications.Add (notification);
 	}
 }

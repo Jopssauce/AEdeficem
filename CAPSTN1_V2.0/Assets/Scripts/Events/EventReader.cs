@@ -26,7 +26,7 @@ public class EventReader : MonoBehaviour
             eventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
             Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
 
-            NewQueueItem = Instantiate(ActionQueue) as GameObject;
+			NewQueueItem = Instantiate(ActionQueue, new Vector3(0.0f, 386.1f + 60.3f), Quaternion.identity) as GameObject;
             NewQueueItem.transform.SetParent(EventManager.instance.newCanvas.transform, false);
             NewQueueItem.GetComponent<AQscript>().eventOrigin = this.eventOrigin;
 
