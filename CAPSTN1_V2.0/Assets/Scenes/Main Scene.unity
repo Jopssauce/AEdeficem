@@ -218,7 +218,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 69554a0d7ffcbf94885bfb7d284163aa, type: 2}
+  - {fileID: 2100000, guid: ecd79328231d9074794fb66b3b78d891, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968685080d56bb41ba51fd0cadf8e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionQuality: 75
+  regionQuality: 60
   maxRegionQuality: 0
   regionResourceAmount: 0
   material: {fileID: 0}
@@ -424,7 +424,7 @@ Prefab:
     - target: {fileID: 2300000, guid: db208094b706bf343aaa029d789a0fc4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 69554a0d7ffcbf94885bfb7d284163aa, type: 2}
+      objectReference: {fileID: 2100000, guid: ecd79328231d9074794fb66b3b78d891, type: 2}
     - target: {fileID: 100000, guid: db208094b706bf343aaa029d789a0fc4, type: 3}
       propertyPath: m_TagString
       value: Region
@@ -571,7 +571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &428616981
 Transform:
   m_ObjectHideFlags: 0
@@ -959,7 +959,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 69554a0d7ffcbf94885bfb7d284163aa, type: 2}
+  - {fileID: 2100000, guid: ecd79328231d9074794fb66b3b78d891, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1583,7 +1583,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 966bb9d22fa2a394cb914fdd0ec4da31, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 69554a0d7ffcbf94885bfb7d284163aa, type: 2}
+      objectReference: {fileID: 2100000, guid: ecd79328231d9074794fb66b3b78d891, type: 2}
     - target: {fileID: 100000, guid: 966bb9d22fa2a394cb914fdd0ec4da31, type: 3}
       propertyPath: m_TagString
       value: Region
@@ -1631,7 +1631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968685080d56bb41ba51fd0cadf8e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionQuality: 75
+  regionQuality: 50
   maxRegionQuality: 100
   regionResourceAmount: 0
   material: {fileID: 0}
@@ -2299,7 +2299,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 69554a0d7ffcbf94885bfb7d284163aa, type: 2}
+  - {fileID: 2100000, guid: ecd79328231d9074794fb66b3b78d891, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2376,7 +2376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968685080d56bb41ba51fd0cadf8e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionQuality: 75
+  regionQuality: 50
   maxRegionQuality: 0
   regionResourceAmount: 0
   material: {fileID: 0}
@@ -2533,7 +2533,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2119366312}
   m_LocalRotation: {x: 0.37836218, y: -0, z: -0, w: 0.9256577}
-  m_LocalPosition: {x: 0, y: 3.72, z: -4.91}
+  m_LocalPosition: {x: 0, y: 6, z: -4.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

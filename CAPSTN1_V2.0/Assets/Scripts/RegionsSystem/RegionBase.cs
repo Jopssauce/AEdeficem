@@ -35,13 +35,15 @@ public class RegionBase : MonoBehaviour
         regionQualityDecay  = 0.05f;
         regionResourceAmount = Mathf.RoundToInt( ( regionQuality / maxRegionQuality) * MaxRegionResource);
         material            = this.GetComponent<Renderer>().material;
-        material.color = Color.Lerp(Color.red, Color.green, regionQuality / maxRegionQuality);
+        material.shader = Shader.Find("SFHologram/HologramShader");
+        //material.color = Color.Lerp(Color.red, Color.green, regionQuality / maxRegionQuality);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        material.SetColor("_MainColor", Color.Lerp(Color.red, Color.green, regionQuality / maxRegionQuality) );
     }
 
 
