@@ -12,11 +12,9 @@ public class EventReader : MonoBehaviour
     public Button       Resolve;
 
     private GameObject  NewQueueItem;
-    private Queue<GameObject> queueActions;
     // Use this for initialization
     void Start()
     {
-        queueActions = new Queue<GameObject>();
         Unresolve.onClick.AddListener(IgnoreEvent);
         Resolve.onClick.AddListener(ResolveEvent);
     }
@@ -28,10 +26,9 @@ public class EventReader : MonoBehaviour
             eventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
             Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
 
-            NewQueueItem = Instantiate(ActionQueue, new Vector3(0.0f, queueActions.Count * 386.1f, 0.0f), Quaternion.identity) as GameObject;
+			NewQueueItem = Instantiate(ActionQueue, new Vector3(0.0f, 386.1f + 60.3f), Quaternion.identity) as GameObject;
             NewQueueItem.transform.SetParent(EventManager.instance.newCanvas.transform, false);
             NewQueueItem.GetComponent<AQscript>().eventOrigin = this.eventOrigin;
-            queueActions.Enqueue(NewQueueItem);
 
             EventManager.instance.EventPanel.SetActive(false);
         }
