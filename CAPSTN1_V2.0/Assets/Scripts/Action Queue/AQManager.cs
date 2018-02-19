@@ -8,6 +8,7 @@ public class AQManager : MonoBehaviour {
 
     public static AQManager instance = null;
     public GameObject EventOrigin;
+    public GameObject InstantiatedPrefab;
 
     private UIActionElement uiAction;
     // Use this for initialization
@@ -27,6 +28,6 @@ public class AQManager : MonoBehaviour {
 
     public void RemoveActionUI()
     {
-        
+        Destroy(InstantiatedPrefab);
     }
 }
