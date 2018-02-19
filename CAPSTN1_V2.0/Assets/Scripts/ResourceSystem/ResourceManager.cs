@@ -115,35 +115,7 @@ public class ResourceManager : MonoBehaviour {
 		//Normalize/Percentage it
 	}
 
-    public bool CheckResources(GameObject Event)
-    {
-        List<int> CurrentResource = new List<int>();
-        CurrentResource.Add(water);
-        CurrentResource.Add(food);
-        CurrentResource.Add(power);
-        CurrentResource.Add(actionPoints);
 
-        List<int> ResourceRequirement = new List<int>();
-        ResourceRequirement.Add(Event.GetComponent<EventPopUpBase>().eventData.waterCost);
-        ResourceRequirement.Add(Event.GetComponent<EventPopUpBase>().eventData.foodCost);
-        ResourceRequirement.Add(Event.GetComponent<EventPopUpBase>().eventData.powerCost);
-        ResourceRequirement.Add(Event.GetComponent<EventPopUpBase>().eventData.actionCost);
-
-        for (int i = 0; i < ResourceSpent.Count; i++)
-        {
-            Debug.Log(ResourceSpent[i]);
-            if ((ResourceSpent[i] + ResourceRequirement[i]) < CurrentResource[i])
-            {
-                ResourceSpent[i] += ResourceRequirement[i];
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        return true;
-    }
 
 	public void GetResourceSum()
 	{
@@ -181,9 +153,10 @@ public class ResourceManager : MonoBehaviour {
             AddResource(item.GetComponent<RegionBase>().regionType, item.GetComponent<RegionBase>().regionResourceAmount);
         }
 	}
-	public bool isEnoughRes(int waterCost, int foodCost, int powerCost, int actionCost)
+	public bool isEnoughRes(GameObject Event)
 	{
-		if (water < waterCost || food < foodCost || power < powerCost || actionPoints < actionCost)
+		if (water < Event.GetComponent<EventPopUpBase>().eventData.waterCost || food < Event.GetComponent<EventPopUpBase>().eventData.foodCost 
+		 || power < Event.GetComponent<EventPopUpBase>().eventData.powerCost || actionPoints < Event.GetComponent<EventPopUpBase>().eventData.actionCost)
 		{
 			return false;
 		}
