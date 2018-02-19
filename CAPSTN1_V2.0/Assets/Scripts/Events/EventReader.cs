@@ -24,11 +24,11 @@ public class EventReader : MonoBehaviour
         if (ResourceManager.instance.CheckResources(eventOrigin) == true)
         {
             eventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
-            Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
+            //Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
 
-			NewQueueItem = Instantiate(ActionQueue, new Vector3(0.0f, 386.1f + 60.3f), Quaternion.identity) as GameObject;
+			NewQueueItem = Instantiate(ActionQueue) as GameObject;
             NewQueueItem.transform.SetParent(EventManager.instance.newCanvas.transform, false);
-            NewQueueItem.GetComponent<AQscript>().eventOrigin = this.eventOrigin;
+            NewQueueItem.GetComponent<UIActionElement>().eventOrigin = this.eventOrigin;
 
             EventManager.instance.EventPanel.SetActive(false);
         }

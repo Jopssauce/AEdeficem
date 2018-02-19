@@ -7,6 +7,7 @@ public class TurnManager : MonoBehaviour {
 	public ResourceManager 		resManager;
 	public EventManager 		eventManager;
 	public RegionManager		regionManager;
+	public AQManager 			aqManager;
 	
 	public float 				currentTurn;
 	public int 					turns;
@@ -39,6 +40,10 @@ public class TurnManager : MonoBehaviour {
 		{
 			regionManager = RegionManager.instance;
 		}
+        if (AQManager.instance != null)
+        {
+            aqManager = AQManager.instance;
+        }
 		resManager.GetResourceSum();
 	}
 
@@ -72,6 +77,7 @@ public class TurnManager : MonoBehaviour {
 							eventPopUp.regionOrigin.GetComponent<RegionBase>().regionQuality += eventPopUp.eventData.qualityDecay * eventPopUp.regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
 
                         	Destroy(item.gameObject);
+
                            	eventManager.eventTracker.Remove(item);
 						}
 						if (item.GetComponent<EventPopUpBase> ().isResolved == false)
