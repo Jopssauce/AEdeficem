@@ -29,11 +29,11 @@ public class EventReader : MonoBehaviour
         if (ResourceManager.instance.isEnoughRes(eventOrigin) == true)
         {
             eventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
-            Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
+            //Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
 
-			NewQueueItem = Instantiate(ActionQueue, new Vector3(0.0f, 386.1f + 60.3f), Quaternion.identity) as GameObject;
+			NewQueueItem = Instantiate(ActionQueue) as GameObject;
             NewQueueItem.transform.SetParent(EventManager.instance.newCanvas.transform, false);
-            NewQueueItem.GetComponent<AQscript>().eventOrigin = this.eventOrigin;
+            NewQueueItem.GetComponent<UIActionElement>().eventOrigin = this.eventOrigin;
 
             resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost);
             resManager.DeductResource(ResourceManager.ResourceType.Water,	eventOrigin.GetComponent<EventPopUpBase>().eventData.waterCost);
