@@ -35,9 +35,10 @@ public class EventPopUpBase : MonoBehaviour
 
     void Click()
     {   
-        EventManager.instance.EventPanel.GetComponent<EventReader>().eventOrigin        = this.gameObject;
-        EventManager.instance.EventPanel.GetComponent<EventTextDisplay>().eventOrigin   = this.gameObject;
-        EventManager.instance.EventPanel.GetComponent<DisplayResourceCost>().eventOrigin   = this.gameObject;
+        EventManager.instance.EventPanel.GetComponent<EventReader>().eventOrigin                = this.gameObject;
+        EventManager.instance.EventPanel.GetComponent<EventReader>().eventThumbnail.sprite      = eventData.eventSprite;
+        EventManager.instance.EventPanel.GetComponent<EventTextDisplay>().eventOrigin           = this.gameObject;
+        EventManager.instance.EventPanel.GetComponent<DisplayResourceCost>().eventOrigin        = this.gameObject;
         EventManager.instance.EventPanel.SetActive(true);
         EventManager.instance.EventPanel.transform.SetAsLastSibling();
     }

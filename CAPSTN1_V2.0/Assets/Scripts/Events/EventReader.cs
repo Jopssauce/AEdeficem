@@ -10,6 +10,8 @@ public class EventReader : MonoBehaviour
     public GameObject   eventOrigin;
     public Button       Unresolve;
     public Button       Resolve;
+    public Image        eventThumbnail;
+
 
     private GameObject  NewQueueItem;
     public ResourceManager resManager;
@@ -22,6 +24,7 @@ public class EventReader : MonoBehaviour
 		{
 			resManager = ResourceManager.instance;
 		}
+        //eventThumbnail.sprite = eventOrigin.GetComponent<EventPopUpBase>().eventData.eventSprite;
     }
 
     public void ResolveEvent()

@@ -14,7 +14,7 @@ MonoBehaviour:
   eventDataList:
   - eventName: Sinkhole
     turnsLeft: 3
-    eventSprite: {fileID: 0}
+    eventSprite: {fileID: 21300000, guid: 155750c4353aa7b419336c88607cb56e, type: 3}
     waterCost: 20
     foodCost: 20
     powerCost: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
     eventType: 0
   - eventName: Rotating Black Out
     turnsLeft: 3
-    eventSprite: {fileID: 0}
+    eventSprite: {fileID: 21300000, guid: 872f252f2d3141d44b90ddd8622c62cd, type: 3}
     waterCost: 0
     foodCost: 0
     powerCost: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
     eventType: 0
   - eventName: Damaged Water Filter Station
     turnsLeft: 3
-    eventSprite: {fileID: 0}
+    eventSprite: {fileID: 21300000, guid: 66cf0daac1dd8dc42a369c1575726d32, type: 3}
     waterCost: 0
     foodCost: 0
     powerCost: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
     eventType: 0
   - eventName: Polluted Factory
     turnsLeft: 3
-    eventSprite: {fileID: 0}
+    eventSprite: {fileID: 21300000, guid: 40fa836cd62e33a468961c5566a6df52, type: 3}
     waterCost: 0
     foodCost: 0
     powerCost: 0
