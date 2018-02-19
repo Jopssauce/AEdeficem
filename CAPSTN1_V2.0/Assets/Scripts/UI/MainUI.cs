@@ -21,7 +21,12 @@ public class MainUI : MonoBehaviour
     private TurnManager 	turnManager;
     private RegionManager   regManager;
 
+    public List<GameObject> regionUnderlayDisplayList;
+
     public GameObject regionUnderlayDisplay;
+
+    public GameObject toggleUnderlayDisplay;
+    public bool isUnderlayToggled;
     
     // Use this for initialization
     void Start ()
@@ -34,10 +39,11 @@ public class MainUI : MonoBehaviour
         {
             GameObject ruBar = Instantiate(regionUnderlayDisplay);
             ruBar.GetComponent<RegionUnderlayDisplay>().regionOrigin = region;
+            regionUnderlayDisplayList.Add(ruBar);
             ruBar.transform.SetParent(this.transform, false);
         }
 
-       
+       isUnderlayToggled = false;
 
     }
 
@@ -47,11 +53,6 @@ public class MainUI : MonoBehaviour
         PowerAmnt.text 	= resManager.power.ToString();
         FoodAmnt.text 	= resManager.food.ToString();
         APAmnt.text 	= resManager.actionPoints.ToString();
-
-        //waterAmntSum.text   = resManager.waterSum.ToString();
-        //powerAmntSum.text   = resManager.powerSum.ToString();
-        //foodAmntSum.text    = resManager.foodSum.ToString();
-        //apAmntSum.text      = resManager.actionPointsSum.ToString();
 
         SumText(waterAmntSum,   resManager.waterSum);
         SumText(powerAmntSum,   resManager.powerSum);
@@ -71,5 +72,21 @@ public class MainUI : MonoBehaviour
         {
             text.text = "-" + sum.ToString();
         }
+    }
+
+    public void toggleRegionUnderlayDisplay()
+    {
+        foreach (var underlay in regionUnderlayDisplayList)
+        {
+            if (isUnderlayToggled == false)
+            {
+                underlay.SetActive(false);
+            }
+            else
+            {
+                underlay.SetActive(true);
+            }
+        }
+        isUnderlayToggled = !isUnderlayToggled;
     }
 }

@@ -19,7 +19,7 @@ public class EventPopUpBase : MonoBehaviour
 	
     void Update()
     {
-        if (isResolved == true)
+        /*if (isResolved == true)
         {
             ColorBlock cb = this.GetComponent<Button>().colors;
             cb.normalColor = Color.green;
@@ -30,7 +30,7 @@ public class EventPopUpBase : MonoBehaviour
             ColorBlock cb = this.GetComponent<Button>().colors;
             cb.normalColor = Color.red;
             this.GetComponent<Button>().colors = cb;
-        }
+        }*/
     }
 
     void Click()
