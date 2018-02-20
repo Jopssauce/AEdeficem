@@ -92,19 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630e2e760b9d98f418d23b37f103b330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventData:
-    eventName: 
-    turnsLeft: 0
-    eventSprite: {fileID: 0}
-    waterCost: 0
-    foodCost: 0
-    powerCost: 0
-    actionCost: 0
-    eventDetails: 
-    qualityDecay: 0
-    qualityReward: 0
-    eventTier: 0
-    eventType: 0
+  eventData: {fileID: 0}
   regionOrigin: {fileID: 0}
   turnsLeft: 0
   isResolved: 0
@@ -168,7 +156,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 86d9ad1919b38134fab604f49b8bc348, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2acfccf63359f4f45bc22562bdee8472, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
