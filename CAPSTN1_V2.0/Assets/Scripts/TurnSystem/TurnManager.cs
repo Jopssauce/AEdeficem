@@ -10,7 +10,7 @@ public class TurnManager : MonoBehaviour {
 	public AQManager 			aqManager;
 	
 	public float 				currentTurn;
-	public int 					turns;
+	//public int 					turns;
 	public bool 				isTurnEnded;
 
 	void Awake()
@@ -96,7 +96,20 @@ public class TurnManager : MonoBehaviour {
 					{
 						if (eventManager.eventTracker.Count != 10)
 						{
-							eventManager.SpawnEvent(EventData.EventTier.Tier1);
+							if (currentTurn >= 0 && currentTurn < 20)
+							{
+								eventManager.SpawnEvent(EventData.EventTier.Tier1);
+							}
+							else if (currentTurn >= 20 && currentTurn < 40)
+							{
+								Debug.Log("SPawned tier2");
+								eventManager.SpawnEvent(EventData.EventTier.Tier2);
+							}
+							else if (currentTurn >= 40)
+							{
+								eventManager.SpawnEvent(EventData.EventTier.Tier3);
+							}
+							
 						}	
 					}					
 				}
