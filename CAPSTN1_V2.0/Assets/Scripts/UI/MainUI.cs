@@ -59,7 +59,7 @@ public class MainUI : MonoBehaviour
         SumText(foodAmntSum,    resManager.foodSum);
         SumText(apAmntSum,      resManager.actionPointsSum);
 
-        Turn.text = "TURN " + turnManager.currentTurn;
+        Turn.text = turnManager.currentTurn.ToString();
     }
 
     void SumText(Text text, int sum)
