@@ -124,7 +124,7 @@ public class TurnManager : MonoBehaviour {
 					RegionBase regionBase 				= region.GetComponent<RegionBase>();
 					regionBase.regionQuality 			-= regionBase.regionQualityDecay * regionBase.maxRegionQuality;
 					regionBase.regionResourceAmount 	= Mathf.RoundToInt( (regionBase.regionQuality / regionBase.maxRegionQuality) * regionBase.MaxRegionResource);
-					regionBase.material.color = Color.Lerp(Color.red, Color.blue, regionBase.regionQuality / regionBase.maxRegionQuality);
+					regionBase.material.color = Color.Lerp(Color.red, Color.green, regionBase.regionQuality / regionBase.maxRegionQuality);
 					if (regionBase.regionResourceAmount <= 0)
 					{
 						regionBase.regionResourceAmount = 0;

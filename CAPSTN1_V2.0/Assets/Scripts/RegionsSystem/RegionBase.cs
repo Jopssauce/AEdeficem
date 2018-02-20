@@ -43,7 +43,7 @@ public class RegionBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        material.SetColor("_MainColor", Color.Lerp(Color.red, Color.cyan, regionQuality / maxRegionQuality) );
+        material.SetColor("_MainColor", Color.Lerp(Color.red, Color.green, regionQuality / maxRegionQuality) );
     }
 
 
