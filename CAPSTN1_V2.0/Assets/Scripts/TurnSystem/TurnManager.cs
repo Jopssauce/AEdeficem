@@ -96,7 +96,7 @@ public class TurnManager : MonoBehaviour {
 					{
 						if (eventManager.eventTracker.Count != 10)
 						{
-							eventManager.SpawnEvent();
+							eventManager.SpawnEvent(EventData.EventTier.Tier1);
 						}	
 					}					
 				}

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Event", menuName = "Event Object")]
 [System.Serializable]
-public class EventData
+public class EventData : ScriptableObject
 {
 	public enum EventTier
 	{
