@@ -9,17 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7150299902151d64cb8f6e4ea23a1fb5, type: 3}
-  m_Name: Damaged_Water_Station
+  m_Name: Rampant_Littering
   m_EditorClassIdentifier: 
-  eventName: Damaged Water Station
-  turnsLeft: 4
-  eventSprite: {fileID: 21300000, guid: 66cf0daac1dd8dc42a369c1575726d32, type: 3}
-  waterCost: 4
+  eventName: Rampant Littering
+  turnsLeft: 5
+  eventSprite: {fileID: 0}
+  waterCost: 0
   foodCost: 0
   powerCost: 0
-  actionCost: 3
-  eventDetails: An incident has damaged the local Water plant of the region.
-  qualityDecay: 0.07
-  qualityReward: 0.09
-  eventTier: 0
+  actionCost: 8
+  eventDetails: The people have begun littering to an extreme extent. Much of streets
+    of cities and event outlying unurbanized areas are become unsighly filthy.
+  qualityDecay: 0.19
+  qualityReward: 0.2
+  eventTier: 1
   eventType: 0

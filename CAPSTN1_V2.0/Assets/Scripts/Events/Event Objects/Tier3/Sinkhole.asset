@@ -9,17 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7150299902151d64cb8f6e4ea23a1fb5, type: 3}
-  m_Name: Event
+  m_Name: Sinkhole
   m_EditorClassIdentifier: 
   eventName: Sinkhole
   turnsLeft: 3
   eventSprite: {fileID: 21300000, guid: 155750c4353aa7b419336c88607cb56e, type: 3}
-  waterCost: 4
-  foodCost: 4
-  powerCost: 4
-  actionCost: 4
-  eventDetails: 
-  qualityDecay: 0.024
-  qualityReward: 0.024
-  eventTier: 0
+  waterCost: 25
+  foodCost: 25
+  powerCost: 0
+  actionCost: 9
+  eventDetails: A massive sinkhole has damaged the region's capital.
+  qualityDecay: 0.24
+  qualityReward: 0.29
+  eventTier: 2
   eventType: 0

@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Name: Rotating_Black_Out
   m_EditorClassIdentifier: 
   eventName: Rotating Black Out
-  turnsLeft: 3
+  turnsLeft: 4
   eventSprite: {fileID: 21300000, guid: 872f252f2d3141d44b90ddd8622c62cd, type: 3}
-  waterCost: 4
-  foodCost: 4
-  powerCost: 4
+  waterCost: 0
+  foodCost: 0
+  powerCost: 0
   actionCost: 4
-  eventDetails: 
-  qualityDecay: 0.015
-  qualityReward: 0.029
+  eventDetails: The region's power plant has been damaged due to an unexpected technical
+    failure.
+  qualityDecay: 0.07
+  qualityReward: 0.09
   eventTier: 0
   eventType: 0
