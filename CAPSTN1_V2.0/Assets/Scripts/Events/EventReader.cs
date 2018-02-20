@@ -15,6 +15,7 @@ public class EventReader : MonoBehaviour
 
     private GameObject  NewQueueItem;
     public ResourceManager resManager;
+    public AQManager aqManager;
     // Use this for initialization
     void Start()
     {
@@ -24,6 +25,10 @@ public class EventReader : MonoBehaviour
 		{
 			resManager = ResourceManager.instance;
 		}
+        if (AQManager.instance != null)
+        {
+            aqManager = AQManager.instance;
+        }
         //eventThumbnail.sprite = eventOrigin.GetComponent<EventPopUpBase>().eventData.eventSprite;
     }
 
@@ -34,8 +39,9 @@ public class EventReader : MonoBehaviour
             eventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
             //Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
 
+            aqManager.Panel.SetActive(true);
 			NewQueueItem = Instantiate(ActionQueue) as GameObject;
-            NewQueueItem.transform.SetParent(EventManager.instance.newCanvas.transform, false);
+            NewQueueItem.transform.SetParent(aqManager.ParentPrefab.transform, false);
             NewQueueItem.GetComponent<UIActionElement>().eventOrigin = this.eventOrigin;
 
             resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost);

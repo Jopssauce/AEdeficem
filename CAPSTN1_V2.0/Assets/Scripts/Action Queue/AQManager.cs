@@ -7,10 +7,12 @@ using UnityEngine.Events;
 public class AQManager : MonoBehaviour {
 
     public static AQManager instance = null;
-    public GameObject EventOrigin;
-    public GameObject InstantiatedPrefab;
+    public GameObject Panel;
+    public GameObject ParentPrefab;
+   // public GameObject EventOrigin;
+   // public GameObject InstantiatedPrefab;
 
-    private UIActionElement uiAction;
+    //private UIActionElement uiAction;
     // Use this for initialization
 
     void Awake()
@@ -28,6 +30,6 @@ public class AQManager : MonoBehaviour {
 
     public void RemoveActionUI()
     {
-        Destroy(InstantiatedPrefab);
+        //Destroy(InstantiatedPrefab);
     }
 }
