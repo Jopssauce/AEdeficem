@@ -11,129 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec159e809972c049ae6fabba68497ff, type: 3}
   m_Name: Events_List
   m_EditorClassIdentifier: 
-  eventDataList:
-  - eventName: Sinkhole
-    turnsLeft: 3
-    eventSprite: {fileID: 21300000, guid: 155750c4353aa7b419336c88607cb56e, type: 3}
-    waterCost: 20
-    foodCost: 20
-    powerCost: 0
-    actionCost: 10
-    eventDetails: A massive sinkhole has appeared in the region.
-    qualityDecay: 0.2
-    qualityReward: 0.22
-    eventTier: 2
-    eventType: 0
-  - eventName: Rotating Black Out
-    turnsLeft: 3
-    eventSprite: {fileID: 21300000, guid: 872f252f2d3141d44b90ddd8622c62cd, type: 3}
-    waterCost: 0
-    foodCost: 0
-    powerCost: 0
-    actionCost: 3
-    eventDetails: A generator within the region's powerplant has been damaged and
-      is causing rotating black outs.
-    qualityDecay: 0.07
-    qualityReward: 0.09
-    eventTier: 0
-    eventType: 0
-  - eventName: Damaged Water Filter Station
-    turnsLeft: 3
-    eventSprite: {fileID: 21300000, guid: 66cf0daac1dd8dc42a369c1575726d32, type: 3}
-    waterCost: 0
-    foodCost: 0
-    powerCost: 0
-    actionCost: 2
-    eventDetails: Due to an unforseen technical disaster the local water plant has
-      been damaged.
-    qualityDecay: 0.09
-    qualityReward: 0.1
-    eventTier: 0
-    eventType: 0
-  - eventName: Polluted Factory
-    turnsLeft: 3
-    eventSprite: {fileID: 21300000, guid: 40fa836cd62e33a468961c5566a6df52, type: 3}
-    waterCost: 0
-    foodCost: 0
-    powerCost: 0
-    actionCost: 3
-    eventDetails: A factory has been causing an extreme amount of pollution.
-    qualityDecay: 0.1
-    qualityReward: 0.12
-    eventTier: 0
-    eventType: 0
-  - eventName: Super Typhoon Aftermath
-    turnsLeft: 3
-    eventSprite: {fileID: 0}
-    waterCost: 15
-    foodCost: 15
-    powerCost: 4
-    actionCost: 8
-    eventDetails: A Typhoon has hit the country and the people are suffering.
-    qualityDecay: 0.25
-    qualityReward: 0.27
-    eventTier: 1
-    eventType: 0
-  - eventName: Slums
-    turnsLeft: 3
-    eventSprite: {fileID: 0}
-    waterCost: 20
-    foodCost: 20
-    powerCost: 10
-    actionCost: 10
-    eventDetails: Sprawling slums have appeared within the region's capital. You must
-      expend resources to relocate and build them new housing.
-    qualityDecay: 0.3
-    qualityReward: 0.31
-    eventTier: 2
-    eventType: 0
-  - eventName: Gas Pipe Explosion
-    turnsLeft: 3
-    eventSprite: {fileID: 0}
-    waterCost: 6
-    foodCost: 8
-    powerCost: 4
-    actionCost: 0
-    eventDetails: A gas pipe has exploded within a city and is causing problems.
-    qualityDecay: 0.06
-    qualityReward: 0.07
-    eventTier: 0
-    eventType: 0
-  - eventName: Rampant Illegal Logging
-    turnsLeft: 3
-    eventSprite: {fileID: 0}
-    waterCost: 15
-    foodCost: 0
-    powerCost: 0
-    actionCost: 5
-    eventDetails: Illegal loggers.
-    qualityDecay: 0.21
-    qualityReward: 0.25
-    eventTier: 2
-    eventType: 0
-  - eventName: Rampant Littering
-    turnsLeft: 3
-    eventSprite: {fileID: 0}
-    waterCost: 10
-    foodCost: 0
-    powerCost: 0
-    actionCost: 10
-    eventDetails: People have been littering.
-    qualityDecay: 0.1
-    qualityReward: 0.12
-    eventTier: 0
-    eventType: 0
-  - eventName: Intercultural Appreciation Day
-    turnsLeft: 3
-    eventSprite: {fileID: 0}
-    waterCost: 0
-    foodCost: 0
-    powerCost: 0
-    actionCost: 5
-    eventDetails: The nation celebrates a special holiday. Every citizen is invited
-      to share with special cultural intricacies and practices of their neighbor to
-      foster camaraderie, fellowship and mutual understanding.
-    qualityDecay: 0
-    qualityReward: 0.1
-    eventTier: 0
-    eventType: 0
+  tier1Events:
+  - {fileID: 11400000, guid: a865c3d7043c69f479affcf86a6febb6, type: 2}
+  - {fileID: 11400000, guid: 3d35c18ba4d8fef4794f63bba48537f1, type: 2}
+  - {fileID: 11400000, guid: bd57986895b31844daf0b4f3d96ee988, type: 2}
+  - {fileID: 11400000, guid: adfc04d94abf54147a6ad1ca95405ae1, type: 2}
+  tier2Events:
+  - {fileID: 11400000, guid: 46b4d324afb2ff94d87feca2e8b6ae11, type: 2}
+  - {fileID: 11400000, guid: 609040cea3df2424d92b29241e661e04, type: 2}
+  - {fileID: 11400000, guid: 9bb2048a5edb339478c44b4857531eab, type: 2}
+  tier3Events:
+  - {fileID: 11400000, guid: 42fbfdaf809344341bd4023a0ae1d23e, type: 2}
+  - {fileID: 11400000, guid: a1536ac9a663914409a6196824de6d67, type: 2}
+  - {fileID: 11400000, guid: 0af8c7a3d4261ac4b9e03ece7942bde5, type: 2}
+  tier4Events: []
