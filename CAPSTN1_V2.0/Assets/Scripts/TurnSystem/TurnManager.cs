@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class TurnManager : MonoBehaviour {
 	public static TurnManager 	instance = null;
@@ -10,8 +12,11 @@ public class TurnManager : MonoBehaviour {
 	public AQManager 			aqManager;
 	
 	public float 				currentTurn;
-	//public int 					turns;
 	public bool 				isTurnEnded;
+	public bool 				victory;
+	public bool 				defeat;
+
+	public int 					sustainableRegions;
 
 	void Awake()
 	{
@@ -45,10 +50,13 @@ public class TurnManager : MonoBehaviour {
             aqManager = AQManager.instance;
         }
 		resManager.GetResourceSum();
+		victory = true;
+		defeat = true;
 	}
 
 	public void AdvanceTurn()
 	{
+		sustainableRegions = 0;
 		if (isTurnEnded == true) 
 		{
 			//Replenish Resources
@@ -69,8 +77,6 @@ public class TurnManager : MonoBehaviour {
 						EventPopUpBase eventPopUp = item.GetComponent<EventPopUpBase>();
 						if (item.GetComponent<EventPopUpBase> ().isResolved == true)
 						{
-							
-
 							eventPopUp.regionOrigin.GetComponent<RegionBase>().regionQuality += eventPopUp.eventData.qualityDecay * eventPopUp.regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
 
                         	Destroy(item.gameObject);
@@ -82,11 +88,6 @@ public class TurnManager : MonoBehaviour {
 							item.GetComponent<EventPopUpBase> ().turnsLeft -= 1;
 							if (item.GetComponent<EventPopUpBase> ().turnsLeft <= 0)
 							{
-								//Deduct quality to regions
-								if (regionManager != null)
-								{
-									
-								}
 								Destroy(item.gameObject);
 								eventManager.eventTracker.Remove(item);
 							}
@@ -94,7 +95,7 @@ public class TurnManager : MonoBehaviour {
 					}
 					for (int i = 0; i < 3; i++)
 					{
-						if (eventManager.eventTracker.Count != 10)
+						if (eventManager.eventTracker.Count != 5)
 						{
 							if (currentTurn >= 0 && currentTurn < 20)
 							{
@@ -124,7 +125,7 @@ public class TurnManager : MonoBehaviour {
 					RegionBase regionBase 				= region.GetComponent<RegionBase>();
 					regionBase.regionQuality 			-= regionBase.regionQualityDecay * regionBase.maxRegionQuality;
 					regionBase.regionResourceAmount 	= Mathf.RoundToInt( (regionBase.regionQuality / regionBase.maxRegionQuality) * regionBase.MaxRegionResource);
-					regionBase.material.color = Color.Lerp(Color.red, Color.cyan, regionBase.regionQuality / regionBase.maxRegionQuality);
+					regionBase.material.color 			= Color.Lerp(Color.red, Color.cyan, regionBase.regionQuality / regionBase.maxRegionQuality);
 					if (regionBase.regionResourceAmount <= 0)
 					{
 						regionBase.regionResourceAmount = 0;
@@ -133,6 +134,26 @@ public class TurnManager : MonoBehaviour {
 					{
 						regionBase.regionQuality = regionBase.maxRegionQuality;
 					}
+				}
+
+				bool isVictory;
+				if (currentTurn >= 50)
+				{
+				if (regionManager.regionList.All(region => region.GetComponent<RegionBase>().regionQuality >= 90))
+					{
+						isVictory = true;
+						//Victory Scene
+						PlayerPrefs.SetString("isVictory", isVictory.ToString());
+						SceneManager.LoadScene("Victory Scene");
+					}
+				}
+				
+				if (regionManager.regionList.All(region => region.GetComponent<RegionBase>().regionQuality <= 0))
+				{
+					isVictory = false;
+					//Defeat Scene
+					PlayerPrefs.SetString("isVictory", isVictory.ToString());
+					SceneManager.LoadScene("Victory Scene");
 				}
 			}
             for (int i = 0; i < ResourceManager.instance.ResourceSpent.Count; i++)
@@ -144,4 +165,5 @@ public class TurnManager : MonoBehaviour {
 			isTurnEnded = false;
 		}
 	}
+	
 }
