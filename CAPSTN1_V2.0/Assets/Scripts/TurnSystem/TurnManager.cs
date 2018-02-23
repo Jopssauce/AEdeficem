@@ -63,6 +63,11 @@ public class TurnManager : MonoBehaviour {
 	{
 		currentTurn++;
 		sustainableRegions = 0;
+        aqManager.Panel.SetActive(false);
+        foreach(Transform child in aqManager.ParentPrefab.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
 		if (isTurnEnded == true) 
 		{
 			//Replenish Resources
