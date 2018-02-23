@@ -9,8 +9,7 @@ public class RegionUnderlayDisplay : MonoBehaviour {
 	public GameObject regionResources;
 	public Text regionName;
 	void Start ()
-	{
-		
+	{	
 		regionQualityBar.GetComponent<RegionQualityBar>().regionOrigin 	= regionOrigin;
 		regionResources.GetComponent<RegionResources>().regionOrigin 	= this.regionOrigin;
 		regionName.text = regionOrigin.name;
