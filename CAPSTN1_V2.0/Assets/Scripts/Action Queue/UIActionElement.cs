@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class UIActionElement : MonoBehaviour {
+public class UIActionElement : MonoBehaviour
+{
 
     public GameObject eventOrigin;
     public Button CloseButton;
@@ -23,4 +24,10 @@ public class UIActionElement : MonoBehaviour {
         eventOrigin.GetComponent<EventPopUpBase>().isResolved = false;
 		Destroy (this.gameObject);
 	}
+
+    public void RemoveOnEndTurn()
+    {
+        this.gameObject.SetActive(false);
+        //destroy
+    }
 }
