@@ -34,27 +34,31 @@ public class EventReader : MonoBehaviour
 
     public void ResolveEvent()
     {
-        if (ResourceManager.instance.isEnoughRes(eventOrigin) == true)
+        if (eventOrigin.GetComponent<EventPopUpBase>().isResolved == false)
         {
-            eventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
-            //Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
+            if (ResourceManager.instance.isEnoughRes(eventOrigin) == true)
+            {
+                eventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
+                //Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
 
-            aqManager.Panel.SetActive(true);
-			NewQueueItem = Instantiate(ActionQueue) as GameObject;
-            NewQueueItem.transform.SetParent(aqManager.ParentPrefab.transform, false);
-            NewQueueItem.GetComponent<UIActionElement>().eventOrigin = this.eventOrigin;
+                aqManager.Panel.SetActive(true);
+                NewQueueItem = Instantiate(ActionQueue) as GameObject;
+                NewQueueItem.transform.SetParent(aqManager.ParentPrefab.transform, false);
+                NewQueueItem.GetComponent<UIActionElement>().eventOrigin = this.eventOrigin;
 
-            resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost);
-            resManager.DeductResource(ResourceManager.ResourceType.Water,	eventOrigin.GetComponent<EventPopUpBase>().eventData.waterCost);
-            resManager.DeductResource(ResourceManager.ResourceType.Power, 	eventOrigin.GetComponent<EventPopUpBase>().eventData.powerCost);
-            resManager.DeductResource(ResourceManager.ResourceType.Food, 	eventOrigin.GetComponent<EventPopUpBase>().eventData.foodCost);
+                resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost);
+                resManager.DeductResource(ResourceManager.ResourceType.Water,	eventOrigin.GetComponent<EventPopUpBase>().eventData.waterCost);
+                resManager.DeductResource(ResourceManager.ResourceType.Power, 	eventOrigin.GetComponent<EventPopUpBase>().eventData.powerCost);
+                resManager.DeductResource(ResourceManager.ResourceType.Food, 	eventOrigin.GetComponent<EventPopUpBase>().eventData.foodCost);
 
-            EventManager.instance.EventPanel.SetActive(false);
+                EventManager.instance.EventPanel.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Not Enough Resources");
+            }
         }
-        else
-        {
-            Debug.Log("Not Enough Resources");
-        }
+       
     }
 
     public void IgnoreEvent()

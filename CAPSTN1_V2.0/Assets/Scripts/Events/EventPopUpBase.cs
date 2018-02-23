@@ -17,21 +17,6 @@ public class EventPopUpBase : MonoBehaviour
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
 	}
 	
-    void Update()
-    {
-        /*if (isResolved == true)
-        {
-            ColorBlock cb = this.GetComponent<Button>().colors;
-            cb.normalColor = Color.green;
-            this.GetComponent<Button>().colors = cb;
-        }
-        if (isResolved == false)
-        {
-            ColorBlock cb = this.GetComponent<Button>().colors;
-            cb.normalColor = Color.red;
-            this.GetComponent<Button>().colors = cb;
-        }*/
-    }
 
     void Click()
     {   

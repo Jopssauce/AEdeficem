@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour {
 
 	void Update () 
 	{
+		
 		//Debug.Log(Camera.main.WorldToViewportPoint(Input.mousePosition));
 		if (Input.GetAxisRaw("Horizontal") != 0)
 		{
@@ -34,6 +35,9 @@ public class CameraController : MonoBehaviour {
 		{
 			transform.position += Vector3.forward * -1 * speed * Time.deltaTime;
 		}
-	
+		Vector3 clampedPos = transform.position;
+		clampedPos.z = Mathf.Clamp(transform.position.z, -13f, 3f);
+		clampedPos.x = Mathf.Clamp(transform.position.x, -5f, 5f);
+		transform.position = clampedPos;
 	}
 }
