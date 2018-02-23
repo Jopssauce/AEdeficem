@@ -51,13 +51,17 @@ public class TurnManager : MonoBehaviour {
         {
             aqManager = AQManager.instance;
         }
+		
 		resManager.GetResourceSum();
 		victory = true;
 		defeat = true;
+		AdvanceTurn();
+		
 	}
 
 	public void AdvanceTurn()
 	{
+		currentTurn++;
 		sustainableRegions = 0;
 		if (isTurnEnded == true) 
 		{
@@ -170,9 +174,10 @@ public class TurnManager : MonoBehaviour {
                 ResourceManager.instance.ResourceSpent[i] = 0;
             }
 			//Begin Next Turn
-			currentTurn++;
+			
 			isTurnEnded = false;
 		}
+		
 	}
 	
 }

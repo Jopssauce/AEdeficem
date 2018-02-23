@@ -14,6 +14,10 @@ public class EventManager : MonoBehaviour
     public GameObject   EventPanel;
     public EventsList   eventsList;
     
+    public GameObject 		eventOutliner;
+    public GameObject 		eventOutlinerContent;
+	public List<GameObject> eventOutlinerTracker;
+
     private RegionManager RegionManagerInstance;
 
     public List<GameObject> eventTracker;
@@ -38,6 +42,7 @@ public class EventManager : MonoBehaviour
         EventPanel = Instantiate(EventsPanelPrefab) as GameObject;
         EventPanel.transform.SetParent(newCanvas.transform, false);
         EventPanel.SetActive(false);
+        eventOutliner = GameObject.FindGameObjectWithTag("Event Outliner");
     }
 
     public void SpawnEvent(EventData.EventTier eventTier)
@@ -51,10 +56,6 @@ public class EventManager : MonoBehaviour
 
 		newButton.GetComponent<EventPopUpBase>().regionOrigin = RegionManagerInstance.regionList[num];
 
-        if (eventTier == EventData.EventTier.Tier1)
-        {
-           
-        }
         switch (eventTier)
         {
              case EventData.EventTier.Tier1:
@@ -74,7 +75,14 @@ public class EventManager : MonoBehaviour
             break;
         }
 
-        newButton.GetComponent<EventPopUpBase>().turnsLeft    = newButton.GetComponent<EventPopUpBase>().eventData.turnsLeft;
+        GameObject newEventContent                                  = Instantiate(eventOutlinerContent);
+        newEventContent.GetComponent<EventContent>().eventOrigin    = newButton;
+        
+        newButton.GetComponent<EventPopUpBase>().turnsLeft          = newButton.GetComponent<EventPopUpBase>().eventData.turnsLeft;
+		eventOutlinerTracker.Add(newEventContent);
+
+		newEventContent.transform.SetParent(eventOutliner.transform, false);
+        
         eventTracker.Add(newButton);
     }
 

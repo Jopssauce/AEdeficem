@@ -20,13 +20,14 @@ public class MainUI : MonoBehaviour
     private ResourceManager resManager;
     private TurnManager 	turnManager;
     private RegionManager   regManager;
+    private EventManager    eventManager;
 
     public List<GameObject> regionUnderlayDisplayList;
 
     public GameObject regionUnderlayDisplay;
     public GameObject regionOutliner;
     public GameObject regionOutlinerContent;
-    
+
     public GameObject toggleUnderlayDisplay;
     public bool isUnderlayToggled;
     
@@ -37,6 +38,7 @@ public class MainUI : MonoBehaviour
         turnManager = TurnManager.instance;
         resManager  = ResourceManager.instance;
         regManager  = RegionManager.instance;
+        eventManager = EventManager.instance;
 
         foreach (var region in regManager.regionList)
         {

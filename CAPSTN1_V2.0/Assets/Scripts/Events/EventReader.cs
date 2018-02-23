@@ -39,8 +39,6 @@ public class EventReader : MonoBehaviour
             if (ResourceManager.instance.isEnoughRes(eventOrigin) == true)
             {
                 eventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
-                //Debug.Log(eventOrigin.GetComponent<EventPopUpBase>().isResolved);
-
                 aqManager.Panel.SetActive(true);
                 NewQueueItem = Instantiate(ActionQueue) as GameObject;
                 NewQueueItem.transform.SetParent(aqManager.ParentPrefab.transform, false);

@@ -57,4 +57,8 @@ MonoBehaviour:
     type: 2}
   EventPanel: {fileID: 0}
   eventsList: {fileID: 11400000, guid: 20d0749d5effc424a8b33d29e0b14c93, type: 2}
+  eventOutliner: {fileID: 0}
+  eventOutlinerContent: {fileID: 1423422371406542, guid: eba102482a4f0414ca8f227728e9d6b6,
+    type: 2}
+  eventOutlinerTracker: []
   eventTracker: []
