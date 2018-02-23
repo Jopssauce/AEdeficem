@@ -19,25 +19,25 @@ public class CameraController : MonoBehaviour {
 			transform.position += Vector3.forward * Input.GetAxisRaw("Vertical") * speed * Time.deltaTime;
 		}
 
-		if (Input.mousePosition.x > Screen.width - 100)
+		if (Input.mousePosition.x > Screen.width - 10)
 		{
 			transform.position += Vector3.right * 1 * speed * Time.deltaTime;
 		}
-		if (Input.mousePosition.x < 100)
+		if (Input.mousePosition.x < 10)
 		{
 			transform.position += Vector3.right * -1 * speed * Time.deltaTime;
 		}
-		if (Input.mousePosition.y > Screen.height - 100)
+		if (Input.mousePosition.y > Screen.height - 10)
 		{
 			transform.position += Vector3.forward * 1 * speed * Time.deltaTime;
 		}
-		if (Input.mousePosition.y < 50)
+		if (Input.mousePosition.y < 5)
 		{
 			transform.position += Vector3.forward * -1 * speed * Time.deltaTime;
 		}
 		Vector3 clampedPos = transform.position;
 		clampedPos.z = Mathf.Clamp(transform.position.z, -13f, 3f);
-		clampedPos.x = Mathf.Clamp(transform.position.x, -5f, 5f);
+		clampedPos.x = Mathf.Clamp(transform.position.x, -9f, 9f);
 		transform.position = clampedPos;
 	}
 }

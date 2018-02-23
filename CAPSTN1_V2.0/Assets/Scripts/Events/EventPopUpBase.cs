@@ -9,6 +9,7 @@ public class EventPopUpBase : MonoBehaviour
     public GameObject  regionOrigin;
     public int         turnsLeft;
     public bool        isResolved;
+    public Vector3     eventWorldPos;
     public List<Sprite> timerSprites;
 	void Start ()
     {

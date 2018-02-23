@@ -7,6 +7,7 @@ public class BindToRegion : MonoBehaviour {
 	public bool 		randomPoint;
 	public float 		offset;
 	public Vector3 		randPos;
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -21,12 +22,18 @@ public class BindToRegion : MonoBehaviour {
 			if (randomPoint == true) 
 			{
 				this.transform.position = Camera.main.WorldToScreenPoint(RandomPointInPolygon(regionOrigin.GetComponent<MeshCollider>().bounds.center, regionOrigin.GetComponent<MeshCollider>().bounds, randPos) );
+				if (this.GetComponent<EventPopUpBase>() != null )
+				{
+					this.GetComponent<EventPopUpBase>().eventWorldPos = (RandomPointInPolygon(regionOrigin.GetComponent<MeshCollider>().bounds.center, regionOrigin.GetComponent<MeshCollider>().bounds, randPos) );
+				}
 			}
 			if (randomPoint == false) 
 			{
 				this.transform.position = Camera.main.WorldToScreenPoint(PointInPolygon(regionOrigin.GetComponent<MeshCollider>().bounds.center, regionOrigin.GetComponent<MeshCollider>().bounds) );
 			}
 		}
+
+		
 	}
 	private Vector3 RandomPointInPolygon(Vector3 center, Bounds size, Vector3 randPos)
 	{
