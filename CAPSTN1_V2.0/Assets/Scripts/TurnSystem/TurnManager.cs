@@ -86,7 +86,7 @@ public class TurnManager : MonoBehaviour {
 						if (item.GetComponent<EventPopUpBase> ().isResolved == true)
 						{
 							eventPopUp.regionOrigin.GetComponent<RegionBase>().regionQuality += eventPopUp.eventData.qualityDecay * eventPopUp.regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
-
+							eventPopUp.turnsLeft = 0;
                         	Destroy(item.gameObject);
 
                            	eventManager.eventTracker.Remove(item);
