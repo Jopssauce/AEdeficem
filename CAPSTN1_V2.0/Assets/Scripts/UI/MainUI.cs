@@ -24,9 +24,12 @@ public class MainUI : MonoBehaviour
     public List<GameObject> regionUnderlayDisplayList;
 
     public GameObject regionUnderlayDisplay;
-
+    public GameObject regionOutliner;
+    public GameObject regionOutlinerContent;
+    
     public GameObject toggleUnderlayDisplay;
     public bool isUnderlayToggled;
+    
     
     // Use this for initialization
     void Start ()
@@ -37,10 +40,16 @@ public class MainUI : MonoBehaviour
 
         foreach (var region in regManager.regionList)
         {
-            GameObject ruBar = Instantiate(regionUnderlayDisplay);
-            ruBar.GetComponent<RegionUnderlayDisplay>().regionOrigin = region;
+            GameObject ruBar            = Instantiate(regionUnderlayDisplay);
+            GameObject ruBarOutliner    = Instantiate(regionOutlinerContent);
+
+            ruBar.GetComponent<RegionUnderlayDisplay>().regionOrigin            = region;
+            ruBar.GetComponent<BindToRegion>().regionOrigin 					= region;
+            ruBarOutliner.GetComponent<RegionUnderlayDisplay>().regionOrigin    = region;
+
             regionUnderlayDisplayList.Add(ruBar);
             ruBar.transform.SetParent(this.transform, false);
+            ruBarOutliner.transform.SetParent(regionOutliner.transform, false);
         }
 
        isUnderlayToggled = false;

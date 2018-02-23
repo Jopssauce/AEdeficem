@@ -7,11 +7,13 @@ public class RegionUnderlayDisplay : MonoBehaviour {
 	public GameObject regionOrigin;
 	public GameObject regionQualityBar;
 	public GameObject regionResources;
+	public Text regionName;
 	void Start ()
 	{
-		this.GetComponent<BindToRegion>().regionOrigin 					= this.regionOrigin;
+		
 		regionQualityBar.GetComponent<RegionQualityBar>().regionOrigin 	= regionOrigin;
 		regionResources.GetComponent<RegionResources>().regionOrigin 	= this.regionOrigin;
+		regionName.text = regionOrigin.name;
 	}
 
 }

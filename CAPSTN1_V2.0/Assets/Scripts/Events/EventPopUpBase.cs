@@ -9,15 +9,18 @@ public class EventPopUpBase : MonoBehaviour
     public GameObject  regionOrigin;
     public int         turnsLeft;
     public bool        isResolved;
+    public List<Sprite> timerSprites;
 	void Start ()
     {
         isResolved = false;
         
         this.GetComponent<Button>().onClick.AddListener(Click);
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
+
+        this.GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];
+        
 	}
 	
-
     void Click()
     {   
         EventManager.instance.EventPanel.GetComponent<EventReader>().eventOrigin                = this.gameObject;

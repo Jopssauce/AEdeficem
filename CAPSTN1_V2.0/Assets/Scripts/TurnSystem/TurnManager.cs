@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class TurnManager : MonoBehaviour {
 	public static TurnManager 	instance = null;
@@ -75,6 +77,8 @@ public class TurnManager : MonoBehaviour {
 					foreach (var item in eventManager.eventTracker.ToArray())
 					{
 						EventPopUpBase eventPopUp = item.GetComponent<EventPopUpBase>();
+						
+						
 						if (item.GetComponent<EventPopUpBase> ().isResolved == true)
 						{
 							eventPopUp.regionOrigin.GetComponent<RegionBase>().regionQuality += eventPopUp.eventData.qualityDecay * eventPopUp.regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
@@ -83,10 +87,15 @@ public class TurnManager : MonoBehaviour {
 
                            	eventManager.eventTracker.Remove(item);
 						}
-						if (item.GetComponent<EventPopUpBase> ().isResolved == false)
+						if (eventPopUp.isResolved == false)
 						{
-							item.GetComponent<EventPopUpBase> ().turnsLeft -= 1;
-							if (item.GetComponent<EventPopUpBase> ().turnsLeft <= 0)
+							eventPopUp.turnsLeft -= 1;
+
+							if (eventPopUp.turnsLeft > 0)
+							{
+								eventPopUp.GetComponent<Image>().sprite = eventPopUp.timerSprites[eventPopUp.turnsLeft - 1];	
+							}
+							if (eventPopUp.turnsLeft <= 0)
 							{
 								Destroy(item.gameObject);
 								eventManager.eventTracker.Remove(item);
