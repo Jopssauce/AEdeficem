@@ -5,17 +5,25 @@ using UnityEngine.EventSystems;
 
 public class ResolveButton : MonoBehaviour, IPointerClickHandler {
 	public EventPopUpBase eventOrigin;
-	
+	EventManager eventManager;
 
+  	void Start()
+    {
+        if (EventManager.instance != null)
+		{
+			eventManager = EventManager.instance;
+		}
+	}
 	#region IPointerClickHandler implementation
 	public void OnPointerClick(PointerEventData eventData)
     {
 		if (TurnManager.instance != null)
 		{
-			if ( eventOrigin.ResolvedEvent != null)
+			//eventOrigin.GetComponent<EventReader>().AddToActionQue();
+			eventOrigin.ResolveEvent();
+			if ( eventManager.ResolvedEvent != null)
 			{
-				eventOrigin.ResolvedEvent.Invoke();
-				eventOrigin.isResolved = true;
+				eventManager.ResolvedEvent.Invoke();
 			}
 		}
     }

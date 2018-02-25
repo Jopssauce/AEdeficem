@@ -13,9 +13,6 @@ public class EventPopUpBase : MonoBehaviour
     public Vector3     eventWorldPos;
     public List<Sprite> timerSprites;
 
-    public UnityEvent ResolvedEvent;
-    public UnityEvent IgnoredEvent;
-
     ResourceManager resManager;
 
 	void Start ()
@@ -31,8 +28,6 @@ public class EventPopUpBase : MonoBehaviour
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
 
         this.GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];
-        IgnoredEvent.AddListener(IgnoreEvent);
-        ResolvedEvent.AddListener(ResolveEvent);
 	}
 	
     void Click()
@@ -59,7 +54,7 @@ public class EventPopUpBase : MonoBehaviour
             resManager.AddResource(ResourceManager.ResourceType.Food,   eventData.foodCost);
         }
 
-        //GetComponent<EventPopUpBase>().isResolved = false;
+       isResolved = false;
         EventManager.instance.EventPanel.SetActive(false);
     }
 
@@ -69,7 +64,7 @@ public class EventPopUpBase : MonoBehaviour
         {
             if (ResourceManager.instance.isEnoughRes(this.gameObject) == true)
             {
-                //GetComponent<EventPopUpBase>().isResolved = true;
+                isResolved = true;
                 resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventData.actionCost);
                 resManager.DeductResource(ResourceManager.ResourceType.Water,	eventData.waterCost);
                 resManager.DeductResource(ResourceManager.ResourceType.Power, eventData.powerCost);

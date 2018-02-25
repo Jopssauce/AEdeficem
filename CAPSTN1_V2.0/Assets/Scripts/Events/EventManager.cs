@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class EventManager : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class EventManager : MonoBehaviour
 	public List<GameObject> eventOutlinerTracker;
 
     private RegionManager RegionManagerInstance;
-
+    public UnityEvent ResolvedEvent;
+    public UnityEvent IgnoredEvent;
     public List<GameObject> eventTracker;
 
     void Awake()

@@ -11,7 +11,7 @@ public class EventReader : MonoBehaviour
     public GameObject   ignoreButton;
     public GameObject   resolveButton;
     public Image        eventThumbnail;
-     EventManager eventManager;
+    EventManager        eventManager;
 
     private GameObject  NewQueueItem;
     public AQManager    aqManager;
@@ -26,10 +26,10 @@ public class EventReader : MonoBehaviour
         {
             aqManager = AQManager.instance;
         }
-        ignoreButton.GetComponent<IgnoreButton>().eventOrigin = this.eventOrigin.GetComponent<EventPopUpBase>();
-        resolveButton.GetComponent<ResolveButton>().eventOrigin = this.eventOrigin.GetComponent<EventPopUpBase>();
+        //ignoreButton.GetComponent<IgnoreButton>().eventOrigin = this.eventOrigin.GetComponent<EventPopUpBase>();
+        //resolveButton.GetComponent<ResolveButton>().eventOrigin = this.eventOrigin.GetComponent<EventPopUpBase>();
 
-        eventOrigin.GetComponent<EventPopUpBase>().ResolvedEvent.AddListener(AddToActionQue);
+        //eventOrigin.GetComponent<EventPopUpBase>().ResolvedEvent.AddListener(AddToActionQue);
     }
 
     public void AddToActionQue()

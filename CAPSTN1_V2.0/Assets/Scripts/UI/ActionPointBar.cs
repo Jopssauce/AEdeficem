@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ActionPointBar : MonoBehaviour {
 	ResourceManager 	resManager;
 	TurnManager			turnManager;
+	EventManager		eventManager;
 	public List<Sprite> actionPointBarSprites;
 	// Use this for initialization
 	void Start () 
@@ -18,6 +19,12 @@ public class ActionPointBar : MonoBehaviour {
 		{
 			turnManager = TurnManager.instance;
 		}
+		if (EventManager.instance != null)
+		{
+			eventManager = EventManager.instance;
+		}
+		eventManager.ResolvedEvent.AddListener(ChangeSprite);
+		eventManager.IgnoredEvent.AddListener(ChangeSprite);
 		turnManager.EndTurnEvent.AddListener(ChangeSprite);
 	}
 	

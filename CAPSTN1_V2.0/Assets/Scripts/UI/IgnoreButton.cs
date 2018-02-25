@@ -5,17 +5,24 @@ using UnityEngine.EventSystems;
 
 public class IgnoreButton : MonoBehaviour, IPointerClickHandler {
 	public EventPopUpBase eventOrigin;
+	EventManager eventManager;
+  	void Start()
+    {
+        if (EventManager.instance != null)
+		{
+			eventManager = EventManager.instance;
+		}
+	}
 	
-
 	#region IPointerClickHandler implementation
 	public void OnPointerClick(PointerEventData eventData)
     {
 		if (TurnManager.instance != null)
 		{
-			if ( eventOrigin.IgnoredEvent != null)
+			eventOrigin.IgnoreEvent();
+			if ( eventManager.IgnoredEvent != null)
 			{
-				eventOrigin.IgnoredEvent.Invoke();
-				eventOrigin.isResolved = false;
+				eventManager.IgnoredEvent.Invoke();
 			}
 		}
     }
