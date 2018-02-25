@@ -166,5 +166,10 @@ public class ResourceManager : MonoBehaviour {
 		}
 		
 	}
+	public void UpdateResources()
+	{
+		ReplenishResource();
+		GetResourceSum();
+	}
   
 }

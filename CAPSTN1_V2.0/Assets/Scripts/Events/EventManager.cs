@@ -7,7 +7,7 @@ public class EventManager : MonoBehaviour
 {
 
 	public static EventManager instance = null;
-
+    private TurnManager turnManager;
     public GameObject   prefab;
     public Canvas       newCanvas;
     public GameObject   EventsPanelPrefab;
@@ -43,6 +43,10 @@ public class EventManager : MonoBehaviour
         EventPanel.transform.SetParent(newCanvas.transform, false);
         EventPanel.SetActive(false);
         eventOutliner = GameObject.FindGameObjectWithTag("Event Outliner");
+        if (TurnManager.instance != null)
+        {
+            turnManager = TurnManager.instance;
+        }
     }
 
     public void SpawnEvent(EventData.EventTier eventTier)
@@ -89,6 +93,61 @@ public class EventManager : MonoBehaviour
     private Vector3 RandomPointInPolygon(Vector3 center, Bounds size)
     {
 		return center + new Vector3((Random.value - 0.55f) * size.extents.x,(Random.value - 0.55f) * size.extents.y, (Random.value - 0.55f) * size.extents.z);
+    }
+
+    public void UpdateEvents()
+    {
+        if (eventTracker != null)
+        {
+            foreach (var item in eventTracker.ToArray())
+            {
+                EventPopUpBase eventPopUp = item.GetComponent<EventPopUpBase>();
+                
+                
+                if (item.GetComponent<EventPopUpBase> ().isResolved == true)
+                {
+                    eventPopUp.regionOrigin.GetComponent<RegionBase>().regionQuality += eventPopUp.eventData.qualityDecay * eventPopUp.regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
+                    eventPopUp.turnsLeft = 0;
+                    Destroy(item.gameObject);
+
+                    eventTracker.Remove(item);
+                }
+                if (eventPopUp.isResolved == false)
+                {
+                    eventPopUp.turnsLeft -= 1;
+
+                    if (eventPopUp.turnsLeft > 0)
+                    {
+                        eventPopUp.GetComponent<Image>().sprite = eventPopUp.timerSprites[eventPopUp.turnsLeft - 1];	
+                    }
+                    if (eventPopUp.turnsLeft <= 0)
+                    {
+                        Destroy(item.gameObject);
+                        eventTracker.Remove(item);
+                    }
+                }
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                if (eventTracker.Count != 5)
+                {
+                    if (turnManager.currentTurn >= 0 && turnManager.currentTurn < 20)
+                    {
+                        SpawnEvent(EventData.EventTier.Tier1);
+                    }
+                    else if (turnManager.currentTurn >= 20 && turnManager.currentTurn < 40)
+                    {
+                        Debug.Log("SPawned tier2");
+                        SpawnEvent(EventData.EventTier.Tier2);
+                    }
+                    else if (turnManager.currentTurn >= 40)
+                    {
+                        SpawnEvent(EventData.EventTier.Tier3);
+                    }
+                    
+                }	
+            }					
+        }
     }
 		
 }

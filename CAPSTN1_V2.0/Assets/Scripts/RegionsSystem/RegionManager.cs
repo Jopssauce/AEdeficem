@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class RegionManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class RegionManager : MonoBehaviour
     private GameObject[] RegionHolder;
     private List<ResourceManager.ResourceType> TypeCheckList;
     private List<ResourceManager.ResourceType> MissingRegionType;
+
+    TurnManager turnManager;
 
     public static RegionManager instance = null;
 	void Awake()
@@ -44,6 +47,13 @@ public class RegionManager : MonoBehaviour
         FixRegionTypes();
 	}
 
+    void Start()
+    {
+        if (TurnManager.instance != null)
+        {
+            turnManager = TurnManager.instance;
+        }
+    }
 
     //This function assumes that the number of regions is greater than or equal to the number of resource types 
     //so having less than that will have the Unity Console an "Arguement Out of Range Error"
@@ -86,5 +96,44 @@ public class RegionManager : MonoBehaviour
         RegionStatUI = Instantiate(RegionStatsCanvasPrefab) as GameObject;
         RegionStatUI.transform.SetParent(EventManager.instance.newCanvas.transform, false);
         RegionStatUI.SetActive(false);
+    }
+
+    public void UpdateRegion()
+    {
+        foreach (var region in regionList)
+        {
+            RegionBase regionBase 				= region.GetComponent<RegionBase>();
+            regionBase.regionQuality 			-= regionBase.regionQualityDecay * regionBase.maxRegionQuality;
+            regionBase.regionResourceAmount 	= Mathf.RoundToInt( (regionBase.regionQuality / regionBase.maxRegionQuality) * regionBase.MaxRegionResource);
+            regionBase.material.color 			= Color.Lerp(Color.red, Color.cyan, regionBase.regionQuality / regionBase.maxRegionQuality);
+            if (regionBase.regionResourceAmount <= 0)
+            {
+                regionBase.regionResourceAmount = 0;
+            }
+            if (regionBase.regionQuality > regionBase.maxRegionQuality)
+            {
+                regionBase.regionQuality = regionBase.maxRegionQuality;
+            }
+        }
+
+        bool isVictory;
+        if (turnManager.currentTurn >= 50)
+        {
+        if (regionList.All(region => region.GetComponent<RegionBase>().regionQuality >= 90))
+            {
+                isVictory = true;
+                //Victory Scene
+                PlayerPrefs.SetString("isVictory", isVictory.ToString());
+                SceneManager.LoadScene("Victory Scene");
+            }
+        }
+        
+        if (regionList.All(region => region.GetComponent<RegionBase>().regionQuality <= 0))
+        {
+            isVictory = false;
+            //Defeat Scene
+            PlayerPrefs.SetString("isVictory", isVictory.ToString());
+            SceneManager.LoadScene("Victory Scene");
+        }
     }
 }
