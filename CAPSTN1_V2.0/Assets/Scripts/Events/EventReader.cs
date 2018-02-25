@@ -24,6 +24,7 @@ public class EventReader : MonoBehaviour
         }
         ignoreButton.GetComponent<IgnoreButton>().eventOrigin = this.eventOrigin.GetComponent<EventPopUpBase>();
         resolveButton.GetComponent<ResolveButton>().eventOrigin = this.eventOrigin.GetComponent<EventPopUpBase>();
+        
         eventOrigin.GetComponent<EventPopUpBase>().ResolvedEvent.AddListener(AddToActionQue);
     }
 
