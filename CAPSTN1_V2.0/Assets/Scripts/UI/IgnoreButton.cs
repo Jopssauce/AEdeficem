@@ -13,17 +13,18 @@ public class IgnoreButton : MonoBehaviour, IPointerClickHandler {
 			eventManager = EventManager.instance;
 		}
 	}
-	
+
 	#region IPointerClickHandler implementation
 	public void OnPointerClick(PointerEventData eventData)
     {
 		if (TurnManager.instance != null)
 		{
-			eventOrigin.IgnoreEvent();
+			
 			if ( eventManager.IgnoredEvent != null)
 			{
 				eventManager.IgnoredEvent.Invoke();
 			}
+			eventOrigin.IgnoreEvent();
 		}
     }
 	#endregion
