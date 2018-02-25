@@ -54,6 +54,14 @@ MonoBehaviour:
   resManager: {fileID: 0}
   eventManager: {fileID: 0}
   regionManager: {fileID: 0}
+  aqManager: {fileID: 0}
   currentTurn: 0
-  turns: 0
   isTurnEnded: 0
+  victory: 0
+  defeat: 0
+  sustainableRegions: 0
+  EndTurnEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

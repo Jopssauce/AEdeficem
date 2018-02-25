@@ -109,7 +109,6 @@ GameObject:
   - component: {fileID: 114424116369946936}
   - component: {fileID: 114787577333627072}
   - component: {fileID: 114314154024842420}
-  - component: {fileID: 114454906678981696}
   m_Layer: 5
   m_Name: Event Content
   m_TagString: Untagged
@@ -247,22 +246,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114454906678981696
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1423422371406542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd8f295ec7424ff4fa5fae907052c546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventOrigin: {fileID: 0}
-  waterCost: {fileID: 114760908882860938}
-  powerCost: {fileID: 114802166568356416}
-  foodCost: {fileID: 114839264190262912}
-  actionCost: {fileID: 114731939762554140}
 --- !u!114 &114510649282318084
 MonoBehaviour:
   m_ObjectHideFlags: 1

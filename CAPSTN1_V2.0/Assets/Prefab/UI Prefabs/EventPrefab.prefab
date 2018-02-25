@@ -96,12 +96,23 @@ MonoBehaviour:
   regionOrigin: {fileID: 0}
   turnsLeft: 0
   isResolved: 0
+  eventWorldPos: {x: 0, y: 0, z: 0}
   timerSprites:
   - {fileID: 21300000, guid: c33241570dffe69448dac6d8002bd771, type: 3}
   - {fileID: 21300000, guid: 6b0517e7f03bcd0499de7942fffb9877, type: 3}
   - {fileID: 21300000, guid: dae1476496ca6124ea01171c832635dd, type: 3}
   - {fileID: 21300000, guid: f76efb5a9a3146d4d98f16a2ae2a1b74, type: 3}
   - {fileID: 21300000, guid: f0e24e3f819ef6d4f9e5aacf7a4678eb, type: 3}
+  ResolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  IgnoredEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114572910853362570
 MonoBehaviour:
   m_ObjectHideFlags: 1

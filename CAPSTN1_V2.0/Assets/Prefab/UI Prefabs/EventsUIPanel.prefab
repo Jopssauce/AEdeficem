@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 222443196893036692}
   - component: {fileID: 114807384608107474}
   - component: {fileID: 114424693109961990}
+  - component: {fileID: 114890305157598670}
   m_Layer: 5
   m_Name: IgnoreButton
   m_TagString: Untagged
@@ -246,6 +247,7 @@ GameObject:
   - component: {fileID: 222172719272807720}
   - component: {fileID: 114199288612904436}
   - component: {fileID: 114468828814849498}
+  - component: {fileID: 114206614876095216}
   m_Layer: 5
   m_Name: ResolveButton
   m_TagString: Untagged
@@ -381,6 +383,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114206614876095216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1734895446881640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ef1ea02189a0d479043615d8126df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventOrigin: {fileID: 0}
 --- !u!114 &114288376466747498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -627,10 +641,10 @@ MonoBehaviour:
   ActionQueue: {fileID: 1204497150322772, guid: 3c8eb7fcb03b7a8418f18f8f8b7f0b46,
     type: 2}
   eventOrigin: {fileID: 0}
-  Unresolve: {fileID: 114424693109961990}
-  Resolve: {fileID: 114468828814849498}
+  ignoreButton: {fileID: 1329557075980106}
+  resolveButton: {fileID: 1734895446881640}
   eventThumbnail: {fileID: 114935491345573446}
-  resManager: {fileID: 0}
+  aqManager: {fileID: 0}
 --- !u!114 &114557425156643432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -817,6 +831,18 @@ MonoBehaviour:
 
 
 '
+--- !u!114 &114890305157598670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329557075980106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac0302502ca5b94e863a3b10e40aee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventOrigin: {fileID: 0}
 --- !u!114 &114895803357451714
 MonoBehaviour:
   m_ObjectHideFlags: 1
