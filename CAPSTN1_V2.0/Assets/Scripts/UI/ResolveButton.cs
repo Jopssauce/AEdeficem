@@ -20,12 +20,11 @@ public class ResolveButton : MonoBehaviour, IPointerClickHandler {
 		if (TurnManager.instance != null)
 		{
 			//eventOrigin.GetComponent<EventReader>().AddToActionQue();
-			
+			eventOrigin.ResolveEvent();
 			if ( eventManager.ResolvedEvent != null)
 			{
 				eventManager.ResolvedEvent.Invoke();
 			}
-			eventOrigin.ResolveEvent();
 		}
     }
 	#endregion
