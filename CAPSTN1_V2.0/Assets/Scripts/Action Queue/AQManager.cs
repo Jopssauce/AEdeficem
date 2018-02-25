@@ -28,8 +28,16 @@ public class AQManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
+    void Start()
+    {
+        
+    }
+
     public void RemoveActionUI()
     {
-        //Destroy(InstantiatedPrefab);
+        foreach (Transform child in ParentPrefab.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
     }
 }
