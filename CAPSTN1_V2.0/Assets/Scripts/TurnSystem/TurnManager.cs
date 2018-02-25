@@ -67,7 +67,7 @@ public class TurnManager : MonoBehaviour {
 
 	public void AdvanceTurn()
 	{
-		//resManager.actionPoints = 10;
+		resManager.AddResource(ResourceManager.ResourceType.ActionPoints, 10 - resManager.actionPoints );
 		currentTurn++;
 		sustainableRegions = 0;		
 	}

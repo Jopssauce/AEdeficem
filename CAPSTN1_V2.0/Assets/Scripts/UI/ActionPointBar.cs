@@ -23,14 +23,18 @@ public class ActionPointBar : MonoBehaviour {
 		{
 			eventManager = EventManager.instance;
 		}
-		eventManager.ResolvedEvent.AddListener(ChangeSprite);
-		eventManager.IgnoredEvent.AddListener(ChangeSprite);
-		turnManager.EndTurnEvent.AddListener(ChangeSprite);
+		//eventManager.ResolvedEvent.AddListener(ChangeSprite);
+		//eventManager.IgnoredEvent.AddListener(ChangeSprite);
+		//turnManager.EndTurnEvent.AddListener(ChangeSprite);
+		resManager.AdjustedAPEvent.AddListener(ChangeSprite);
 	}
 	
 	public void ChangeSprite()
 	{
-		GetComponent<Image>().sprite = actionPointBarSprites[resManager.actionPoints - 1];
+		if (resManager.actionPoints > 0)
+		{
+			GetComponent<Image>().sprite = actionPointBarSprites[resManager.actionPoints - 1];
+		}
 	}
 	
 }

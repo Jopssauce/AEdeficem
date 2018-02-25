@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ResourceManager : MonoBehaviour {
 
@@ -29,7 +30,7 @@ public class ResourceManager : MonoBehaviour {
 	public int maxRQSum;
 
     private RegionManager regManager;
-
+	public UnityEvent AdjustedAPEvent;
 	void Awake()
 	{
 		if (instance == null) 
@@ -69,6 +70,10 @@ public class ResourceManager : MonoBehaviour {
 		{
 		case ResourceType.ActionPoints:
 			actionPoints 	+= amount;
+			if (AdjustedAPEvent != null)
+			{
+				AdjustedAPEvent.Invoke();
+			}
 			break;
 		case ResourceType.Food:
 			food 			+= amount;
@@ -91,6 +96,10 @@ public class ResourceManager : MonoBehaviour {
 		{
 		case ResourceType.ActionPoints:
 			actionPoints 	-= amount;
+			if (AdjustedAPEvent != null)
+			{
+				AdjustedAPEvent.Invoke();
+			}
 			break;
 		case ResourceType.Food:
 			food 			-= amount;

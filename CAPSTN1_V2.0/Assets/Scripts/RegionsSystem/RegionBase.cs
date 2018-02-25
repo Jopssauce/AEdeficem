@@ -70,13 +70,6 @@ public class RegionBase : MonoBehaviour
         {
             this.regionType = ResourceManager.ResourceType.Food;
         }
-
-        //AdjustResourceByType();
-
     }
 
-    public void AdjustResourceByType()
-    {
-        
-    }
 }

@@ -42,7 +42,11 @@ public class RegionManager : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            MissingRegionType.Add((ResourceManager.ResourceType)i);
+            if ((ResourceManager.ResourceType)i != ResourceManager.ResourceType.ActionPoints)
+            {
+                MissingRegionType.Add((ResourceManager.ResourceType)i);
+            }
+            
         }
         FixRegionTypes();
 	}
@@ -83,7 +87,7 @@ public class RegionManager : MonoBehaviour
             if (!TypeCheckList.Contains(item))
             {
                 Duplicates[num].GetComponent<RegionBase>().regionType = item;
-                Duplicates[num].GetComponent<RegionBase>().AdjustResourceByType();
+                //Duplicates[num].GetComponent<RegionBase>().AdjustResourceByType();
                 num++;
             }
         }
