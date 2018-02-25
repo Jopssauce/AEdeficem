@@ -35,6 +35,7 @@ public class AQManager : MonoBehaviour {
 
     public void RemoveActionUI()
     {
+        Panel.SetActive(false);
         foreach (Transform child in ParentPrefab.transform)
         {
             GameObject.Destroy(child.gameObject);
