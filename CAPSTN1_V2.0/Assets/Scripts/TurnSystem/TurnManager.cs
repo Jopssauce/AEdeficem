@@ -54,7 +54,7 @@ public class TurnManager : MonoBehaviour {
         {
             aqManager = AQManager.instance;
         }
-
+		AdvanceTurn();
 		EndTurnEvent.AddListener(AdvanceTurn);
 		EndTurnEvent.AddListener(eventManager.UpdateEvents);
 		EndTurnEvent.AddListener(regionManager.UpdateRegion);
@@ -67,6 +67,7 @@ public class TurnManager : MonoBehaviour {
 
 	public void AdvanceTurn()
 	{
+		//resManager.actionPoints = 10;
 		currentTurn++;
 		sustainableRegions = 0;		
 	}

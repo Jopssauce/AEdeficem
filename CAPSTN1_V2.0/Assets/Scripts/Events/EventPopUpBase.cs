@@ -20,6 +20,7 @@ public class EventPopUpBase : MonoBehaviour
 
 	void Start ()
     {
+
         isResolved = false;
 
         if (ResourceManager.instance != null)
