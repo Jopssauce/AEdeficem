@@ -14,6 +14,7 @@ public class EventPopUpBase : MonoBehaviour
     public List<Sprite> timerSprites;
 
     ResourceManager resManager;
+    EventManager    eventManager;
 
 	void Start ()
     {
@@ -24,6 +25,10 @@ public class EventPopUpBase : MonoBehaviour
 		{
 			resManager = ResourceManager.instance;
 		}
+        if (EventManager.instance != null)
+		{
+			eventManager = EventManager.instance;
+		}
         this.GetComponent<Button>().onClick.AddListener(Click);
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
 
@@ -32,6 +37,7 @@ public class EventPopUpBase : MonoBehaviour
 	
     void Click()
     {   
+        eventManager.selectedEvent = this.GetComponent<EventPopUpBase>();
         EventManager.instance.EventPanel.GetComponent<EventReader>().eventOrigin                = this.gameObject;
         EventManager.instance.EventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<IgnoreButton>().eventOrigin      = this.GetComponent<EventPopUpBase>();
         EventManager.instance.EventPanel.GetComponent<EventReader>().resolveButton.GetComponent<ResolveButton>().eventOrigin    = this.GetComponent<EventPopUpBase>();

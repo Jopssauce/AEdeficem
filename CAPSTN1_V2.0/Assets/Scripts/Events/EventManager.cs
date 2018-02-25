@@ -24,6 +24,8 @@ public class EventManager : MonoBehaviour
     public UnityEvent IgnoredEvent;
     public List<GameObject> eventTracker;
 
+    public EventPopUpBase selectedEvent;
+
     void Awake()
 	{
         newCanvas = Canvas.FindObjectOfType<Canvas>();
@@ -150,6 +152,10 @@ public class EventManager : MonoBehaviour
                 }	
             }					
         }
+    }
+    public EventPopUpBase GetSelectedEvent()
+    {
+            return selectedEvent;
     }
 		
 }
