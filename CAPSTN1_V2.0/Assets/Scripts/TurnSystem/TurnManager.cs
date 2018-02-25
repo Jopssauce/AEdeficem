@@ -55,6 +55,7 @@ public class TurnManager : MonoBehaviour {
             aqManager = AQManager.instance;
         }
 		AdvanceTurn();
+		EndTurnEvent.AddListener(resManager.UpdateResources);
 		EndTurnEvent.AddListener(AdvanceTurn);
 		EndTurnEvent.AddListener(eventManager.UpdateEvents);
 		EndTurnEvent.AddListener(regionManager.UpdateRegion);
