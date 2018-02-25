@@ -9,11 +9,8 @@ public class AQManager : MonoBehaviour {
     public static AQManager instance = null;
     public GameObject Panel;
     public GameObject ParentPrefab;
-   // public GameObject EventOrigin;
-   // public GameObject InstantiatedPrefab;
 
-    //private UIActionElement uiAction;
-    // Use this for initialization
+	private TurnManager eventResolve;
 
     void Awake()
     {
@@ -30,7 +27,12 @@ public class AQManager : MonoBehaviour {
 
     void Start()
     {
-        
+		if (TurnManager.instance != null) 
+		{
+			eventResolve = TurnManager.instance;
+		}
+
+
     }
 
     public void RemoveActionUI()
