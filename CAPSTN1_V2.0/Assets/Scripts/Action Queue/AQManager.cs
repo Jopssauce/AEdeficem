@@ -9,6 +9,7 @@ public class AQManager : MonoBehaviour {
     public static AQManager instance = null;
     public GameObject Panel;
     public GameObject ParentPrefab;
+	public GameObject ActionQueue;
 
 	private TurnManager eventResolve;
 
@@ -43,4 +44,12 @@ public class AQManager : MonoBehaviour {
             GameObject.Destroy(child.gameObject);
         }
     }
+
+	public void InstantiateThePrefab()
+	{
+		GameObject NewQueueItem;
+		Panel.SetActive(true);
+		NewQueueItem = Instantiate(ActionQueue) as GameObject;
+		NewQueueItem.transform.SetParent(ParentPrefab.transform, false);
+	}
 }
