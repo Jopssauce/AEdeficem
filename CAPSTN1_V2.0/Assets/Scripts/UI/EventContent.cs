@@ -6,10 +6,11 @@ using UnityEngine.EventSystems;
 
 public class EventContent : MonoBehaviour, IPointerClickHandler  {
 	public GameObject 	eventOrigin;
-	//public GameObject	moveCameraButton;
+	public GameObject	particleEffect;
 	public Text 		eventTitle;
 	public int 			turnsLeft;
 	public Vector3 		eventWorldPos;
+	public Vector3		eventPosToCamera;
 	// Use this for initialization
 	void Start () 
 	{
@@ -23,8 +24,12 @@ public class EventContent : MonoBehaviour, IPointerClickHandler  {
 		{
 			turnsLeft = eventOrigin.GetComponent<EventPopUpBase>().turnsLeft;
 			eventWorldPos.x = eventOrigin.GetComponent<EventPopUpBase>().eventWorldPos.x;
-			eventWorldPos.y = Camera.main.transform.position.y;
-			eventWorldPos.z = eventOrigin.GetComponent<EventPopUpBase>().eventWorldPos.z - 3.5f;
+			eventWorldPos.y = eventOrigin.GetComponent<EventPopUpBase>().eventWorldPos.y + 0.5f;
+			eventWorldPos.z = eventOrigin.GetComponent<EventPopUpBase>().eventWorldPos.z;
+			
+			eventPosToCamera.x = eventOrigin.GetComponent<EventPopUpBase>().eventWorldPos.x;
+			eventPosToCamera.y = Camera.main.transform.position.y;
+			eventPosToCamera.z = eventOrigin.GetComponent<EventPopUpBase>().eventWorldPos.z - 3.5f;
 		}
 
 		if (turnsLeft <= 0)
@@ -36,7 +41,8 @@ public class EventContent : MonoBehaviour, IPointerClickHandler  {
 	public void OnPointerClick(PointerEventData eventData)
     {
 		Debug.Log("Clicked");
-		Camera.main.transform.position = eventWorldPos;
+		Instantiate(particleEffect, eventWorldPos, particleEffect.transform.rotation);
+		Camera.main.transform.position = eventPosToCamera;
     }
 	#endregion
 }

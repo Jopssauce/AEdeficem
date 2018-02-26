@@ -216,6 +216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventOrigin: {fileID: 0}
+  particleEffect: {fileID: 1981658593691660, guid: e9cf2f82349d93a418336068196edbc6,
+    type: 2}
   eventTitle: {fileID: 114510649282318084}
   turnsLeft: 0
   eventWorldPos: {x: 0, y: 0, z: 0}
