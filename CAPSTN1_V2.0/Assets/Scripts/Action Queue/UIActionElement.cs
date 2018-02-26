@@ -12,16 +12,6 @@ public class UIActionElement : MonoBehaviour
 
     public void RemoveAction()
 	{
-		if (eventOrigin.GetComponent<EventPopUpBase>().isResolved == true)
-		{
-			Debug.Log("Refund");
-			ResourceManager.instance.AddResource(ResourceManager.ResourceType.ActionPoints, eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost);
-			ResourceManager.instance.AddResource(ResourceManager.ResourceType.Water,	eventOrigin.GetComponent<EventPopUpBase>().eventData.waterCost);
-			ResourceManager.instance.AddResource(ResourceManager.ResourceType.Power, 	eventOrigin.GetComponent<EventPopUpBase>().eventData.powerCost);
-			ResourceManager.instance.AddResource(ResourceManager.ResourceType.Food, 	eventOrigin.GetComponent<EventPopUpBase>().eventData.foodCost);
-		}
-
-        eventOrigin.GetComponent<EventPopUpBase>().isResolved = false;
 		Destroy (this.gameObject);
 	}
 

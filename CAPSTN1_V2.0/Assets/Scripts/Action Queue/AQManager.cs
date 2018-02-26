@@ -12,8 +12,9 @@ public class AQManager : MonoBehaviour {
 	public GameObject ActionQueue;
     public GameObject EventOrigin;
 
-    private TurnManager eventResolve;
+    private TurnManager turnManagerInstance;
     private EventManager eventManagerInstance;
+    private GameObject NewQueueItem;
 
     void Awake()
     {
@@ -32,10 +33,15 @@ public class AQManager : MonoBehaviour {
     {
 		if (TurnManager.instance != null) 
 		{
-			eventResolve = TurnManager.instance;
+			turnManagerInstance = TurnManager.instance;
 		}
 
-        eventResolve.EndTurnEvent.AddListener(RemoveActionUI);
+        if (EventManager.instance != null)
+        {
+            eventManagerInstance = EventManager.instance;
+        }
+
+        turnManagerInstance.EndTurnEvent.AddListener(RemoveActionUI);
         eventManagerInstance.ResolvedEvent.AddListener(InstantiateThePrefab);
     }
 
@@ -50,10 +56,10 @@ public class AQManager : MonoBehaviour {
 
 	public void InstantiateThePrefab()
 	{
-		GameObject NewQueueItem;
+        Debug.Log("Spawned");
 		Panel.SetActive(true);
 		NewQueueItem = Instantiate(ActionQueue) as GameObject;
 		NewQueueItem.transform.SetParent(ParentPrefab.transform, false);
-        EventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
+        //EventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
 	}
 }
