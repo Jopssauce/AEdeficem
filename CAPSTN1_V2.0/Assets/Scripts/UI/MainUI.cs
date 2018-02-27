@@ -29,8 +29,6 @@ public class MainUI : MonoBehaviour
     public GameObject regionOutlinerContent;
 
     public GameObject toggleUnderlayDisplay;
-    public bool isUnderlayToggled;
-    
     
     // Use this for initialization
     void Start ()
@@ -54,8 +52,10 @@ public class MainUI : MonoBehaviour
             ruBarOutliner.transform.SetParent(regionOutliner.transform, false);
         }
 
-       isUnderlayToggled = false;
-
+        foreach (var underlay in regionUnderlayDisplayList)
+        {
+        underlay.SetActive(false);
+        }
     }
 
     void Update()
@@ -89,15 +89,14 @@ public class MainUI : MonoBehaviour
     {
         foreach (var underlay in regionUnderlayDisplayList)
         {
-            if (isUnderlayToggled == false)
-            {
-                underlay.SetActive(false);
-            }
-            else
+            if (underlay.activeInHierarchy == false)
             {
                 underlay.SetActive(true);
             }
+            else
+            {
+                underlay.SetActive(false);
+            }
         }
-        isUnderlayToggled = !isUnderlayToggled;
     }
 }
