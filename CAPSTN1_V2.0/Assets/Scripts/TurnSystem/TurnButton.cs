@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class TurnButton : MonoBehaviour, IPointerClickHandler {
 	public TurnManager 	turnManager;
 	public EventManager eventManager;
+	public Animator 	animator;
 	
 	void Start()
 	{
@@ -17,6 +18,7 @@ public class TurnButton : MonoBehaviour, IPointerClickHandler {
 		{
 			eventManager = EventManager.instance;
 		}
+		animator = GetComponent<Animator>();
 	}
 
 	#region IPointerClickHandler implementation
@@ -24,15 +26,17 @@ public class TurnButton : MonoBehaviour, IPointerClickHandler {
     {
 		if (TurnManager.instance != null)
 		{
-			if ( turnManager.EndTurnEvent != null)
-			{
+			//if (animator.isActiveAndEnabled == false)
+			//{
+				animator.SetTrigger("Active");
+				if (turnManager.EndTurnEvent != null)
+				{
 				turnManager.EndTurnEvent.Invoke();
-			}
-			turnManager.isTurnEnded = true;
-			//turnManager.AdvanceTurn();
-			//Debug.Log("Turn Button Clicked");
+				}
+				turnManager.isTurnEnded = true;
+			//}
+			
 		}
-        //throw new System.NotImplementedException();
     }
 	#endregion
 }
