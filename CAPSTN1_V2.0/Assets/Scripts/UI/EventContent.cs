@@ -19,7 +19,6 @@ public class EventContent : MonoBehaviour, IPointerClickHandler  {
 	}
 	void Update()
 	{
-		
 		if (eventOrigin != null)
 		{
 			turnsLeft = eventOrigin.GetComponent<EventPopUpBase>().turnsLeft;
