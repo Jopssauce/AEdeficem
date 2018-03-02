@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class MainUI : MonoBehaviour
 {
@@ -56,9 +57,10 @@ public class MainUI : MonoBehaviour
         {
         underlay.SetActive(false);
         }
+		turnManager.EndTurnEvent.AddListener(UpdateTheUI);
     }
 
-    void Update()
+    void UpdateTheUI()
     {
         WaterAmnt.text 	= resManager.water.ToString();
         PowerAmnt.text 	= resManager.power.ToString();
