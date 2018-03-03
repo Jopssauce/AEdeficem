@@ -19,9 +19,9 @@ public class EventManager : MonoBehaviour
     public GameObject 		eventOutlinerContent;
 	public List<GameObject> eventOutlinerTracker;
 
-    private RegionManager RegionManagerInstance;
-    public UnityEvent ResolvedEvent;
-    public UnityEvent IgnoredEvent;
+    private RegionManager 	RegionManagerInstance;
+    public UnityEvent 		ResolvedEvent;
+    public UnityEvent 		IgnoredEvent;
     public List<GameObject> eventTracker;
 
     public EventPopUpBase selectedEvent;
