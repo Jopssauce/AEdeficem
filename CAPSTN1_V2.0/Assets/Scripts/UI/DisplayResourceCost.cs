@@ -25,7 +25,8 @@ public class DisplayResourceCost : MonoBehaviour {
 		powerColor 	= powerCost.color;
 		foodColor 	= foodCost.color;
 		actionColor = actionCost.color;
-	}
+        resManager.AdjustedResourceEvent.AddListener(UpdateUiText);
+    }
 	// Update is called once per frame
 	void Update () 
 	{
@@ -53,4 +54,22 @@ public class DisplayResourceCost : MonoBehaviour {
 			cost.color = prevColor;
 		}
 	}
+
+    // Just needed to be invoked onclick event in eventPopupBase
+    // Had to seperate it for now
+    void UpdateUiText()
+    {
+        if (eventOrigin != null)
+        {
+            waterCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.waterCost.ToString();
+            powerCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.powerCost.ToString();
+            foodCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.foodCost.ToString();
+            actionCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost.ToString();
+
+            ChangeColor(waterCost, resManager.water, waterColor);
+            ChangeColor(powerCost, resManager.power, powerColor);
+            ChangeColor(foodCost, resManager.food, foodColor);
+            ChangeColor(actionCost, resManager.actionPoints, actionColor);
+        }
+    }
 }
