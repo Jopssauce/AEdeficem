@@ -25,3 +25,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a1536ac9a663914409a6196824de6d67, type: 2}
   - {fileID: 11400000, guid: 0af8c7a3d4261ac4b9e03ece7942bde5, type: 2}
   tier4Events: []
+  chainEvent:
+  - {fileID: 0}
+  globalEvent:
+  - {fileID: 0}

@@ -11,15 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7150299902151d64cb8f6e4ea23a1fb5, type: 3}
   m_Name: Road_Restructuring
   m_EditorClassIdentifier: 
-  eventName: 
-  turnsLeft: 0
+  eventName: Road_Restructuring
+  turnsLeft: 5
   eventSprite: {fileID: 0}
-  waterCost: 0
-  foodCost: 0
-  powerCost: 0
-  actionCost: 0
-  eventDetails: 
-  qualityDecay: 0
-  qualityReward: 0
+  waterCost: 10
+  foodCost: 10
+  powerCost: 20
+  actionCost: 4
+  eventDetails: The road infrastructure within the region is in need of maintenance.
+  qualityDecay: 0.1
+  qualityReward: 0.15
   eventTier: 0
-  eventType: 0
+  eventType: 2
