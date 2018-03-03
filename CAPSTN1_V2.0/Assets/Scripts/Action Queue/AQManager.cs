@@ -10,7 +10,8 @@ public class AQManager : MonoBehaviour {
     public GameObject Panel;
     public GameObject ParentPrefab;
 	public GameObject ActionQueue;
-    public GameObject EventOrigin;
+    public GameObject EventOrigin { get; set; }
+    public Text EventText;
 
     private TurnManager turnManagerInstance;
     private EventManager eventManagerInstance;
@@ -60,6 +61,7 @@ public class AQManager : MonoBehaviour {
 		Panel.SetActive(true);
 		NewQueueItem = Instantiate(ActionQueue) as GameObject;
 		NewQueueItem.transform.SetParent(ParentPrefab.transform, false);
+        eventManagerInstance.GetSelectedEvent(); // this should be able to get text
         //EventOrigin.GetComponent<EventPopUpBase>().isResolved = true;
 	}
 }
