@@ -34,6 +34,7 @@ public class TurnManager : MonoBehaviour {
 			Destroy (this.gameObject);
 		}
 		DontDestroyOnLoad (gameObject);
+		currentTurn = 1;
 	}
 	
 	void Start()
@@ -58,8 +59,8 @@ public class TurnManager : MonoBehaviour {
 		EndTurnEvent.AddListener(AdvanceTurn);
 		EndTurnEvent.AddListener(eventManager.UpdateEvents);
 		EndTurnEvent.AddListener(regionManager.UpdateRegion);
-		EndTurnEvent.Invoke ();
 		resManager.GetResourceSum();
+		EndTurnEvent.Invoke ();
 		
 		victory = true;
 		defeat = true;
