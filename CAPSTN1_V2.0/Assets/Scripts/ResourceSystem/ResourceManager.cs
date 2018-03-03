@@ -131,7 +131,6 @@ public class ResourceManager : MonoBehaviour {
 		waterSum 		= 0;
 		foodSum 		= 0;
 		powerSum 		= 0;
-		actionPointsSum = 0;
 		foreach (var region in regManager.regionList)
         {
           switch (region.GetComponent<RegionBase>().regionType)

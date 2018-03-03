@@ -57,10 +57,12 @@ public class MainUI : MonoBehaviour
         {
         underlay.SetActive(false);
         }
-		turnManager.EndTurnEvent.AddListener(UpdateTheUI);
+		turnManager.EndTurnEvent.AddListener(UpdateUiText);
+		eventManager.ResolvedEvent.AddListener (UpdateUiText);
+		eventManager.IgnoredEvent.AddListener (UpdateUiText);
     }
 
-    void UpdateTheUI()
+    void UpdateUiText()
     {
         WaterAmnt.text 	= resManager.water.ToString();
         PowerAmnt.text 	= resManager.power.ToString();

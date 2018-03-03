@@ -4304,6 +4304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionPointBarSprites:
+  - {fileID: 21300000, guid: 781943ab5e4aa5842b5b30092f4949ac, type: 3}
   - {fileID: 21300000, guid: 463013b645db6ec429b422f6c2113e9e, type: 3}
   - {fileID: 21300000, guid: 930c49456cd00bb4b85ef8196a0f3fe2, type: 3}
   - {fileID: 21300000, guid: 29bc081671800af428c67ce82a8cebf9, type: 3}
@@ -6785,7 +6786,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000016883016}
+  m_AnchoredPosition: {x: 0, y: 0.0000136345625}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2105874873
