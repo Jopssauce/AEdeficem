@@ -41,7 +41,7 @@ public class EventReader : MonoBehaviour
                 aqManager.Panel.SetActive(true);
                 NewQueueItem = Instantiate(ActionQueue) as GameObject;
                 NewQueueItem.transform.SetParent(aqManager.ParentPrefab.transform, false);
-                NewQueueItem.GetComponent<UIActionElement>().eventOrigin = this.eventOrigin;
+                //NewQueueItem.GetComponent<UIActionElement>().eventOrigin = this.eventOrigin;
             }
         }
        

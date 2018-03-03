@@ -7,17 +7,12 @@ using UnityEngine.UI;
 public class UIActionElement : MonoBehaviour
 {
 
-    public GameObject eventOrigin;
+    public EventPopUpBase eventOrigin;
     public Button CloseButton;
+    private EventManager eventManagerInstance;
 
     public void RemoveAction()
-	{
-		Destroy (this.gameObject);
-	}
-
-    public void RemoveOnEndTurn()
     {
-        this.gameObject.SetActive(false);
-        //destroy
+        Destroy(this.gameObject);
     }
 }
