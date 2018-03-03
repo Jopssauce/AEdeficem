@@ -17,7 +17,7 @@ public class EventData : ScriptableObject
 	{
 		Standard,
 		Global,
-		Multiple
+		Chain
 	}
 	public string  	eventName;
 	public int 		turnsLeft;
