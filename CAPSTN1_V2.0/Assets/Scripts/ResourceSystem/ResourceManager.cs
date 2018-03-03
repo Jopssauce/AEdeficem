@@ -30,7 +30,8 @@ public class ResourceManager : MonoBehaviour {
 	public int maxRQSum;
 
     private RegionManager regManager;
-	public UnityEvent AdjustedAPEvent;
+	public UnityEvent AdjustedResourceEvent;
+	
 	void Awake()
 	{
 		if (instance == null) 
@@ -70,10 +71,6 @@ public class ResourceManager : MonoBehaviour {
 		{
 		case ResourceType.ActionPoints:
 			actionPoints 	+= amount;
-			if (AdjustedAPEvent != null)
-			{
-				AdjustedAPEvent.Invoke();
-			}
 			break;
 		case ResourceType.Food:
 			food 			+= amount;
@@ -88,6 +85,7 @@ public class ResourceManager : MonoBehaviour {
 			Debug.Log ("Cant add Resource");
 			break;
 		}
+		AdjustedResourceEvent.Invoke ();
 	}
 
 	public void DeductResource(ResourceType type, int amount)
@@ -96,10 +94,6 @@ public class ResourceManager : MonoBehaviour {
 		{
 		case ResourceType.ActionPoints:
 			actionPoints 	-= amount;
-			if (AdjustedAPEvent != null)
-			{
-				AdjustedAPEvent.Invoke();
-			}
 			break;
 		case ResourceType.Food:
 			food 			-= amount;
@@ -114,18 +108,9 @@ public class ResourceManager : MonoBehaviour {
 			Debug.Log ("Cant deduct Resource");
 			break;
 		}
+		AdjustedResourceEvent.Invoke ();
 	}
-
-	public void GetRegionQualitySum()
-	{
 		
-		//Get list of regions
-		//Get get Max and Current Region Quality 
-		//Normalize/Percentage it
-	}
-
-
-
 	public void GetResourceSum()
 	{
 		waterSum 		= 0;
@@ -178,6 +163,7 @@ public class ResourceManager : MonoBehaviour {
 	{
 		ReplenishResource();
 		GetResourceSum();
+		AdjustedResourceEvent.Invoke ();
 	}
   
 }

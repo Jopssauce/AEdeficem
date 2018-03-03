@@ -57,6 +57,7 @@ public class MainUI : MonoBehaviour
         {
         underlay.SetActive(false);
         }
+		resManager.AdjustedResourceEvent.AddListener (UpdateUiText);
 		turnManager.EndTurnEvent.AddListener(UpdateUiText);
 		eventManager.ResolvedEvent.AddListener (UpdateUiText);
 		eventManager.IgnoredEvent.AddListener (UpdateUiText);

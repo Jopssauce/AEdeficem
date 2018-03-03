@@ -7,13 +7,21 @@ public class RegionResources : MonoBehaviour {
 	public Text 		resourceAmount;
 	public Image 		resourceImage;
 	public GameObject 	regionOrigin;
+	public ResourceManager	resManager;
 	
 	void Start ()
 	{
 		SetSprite(regionOrigin.GetComponent<RegionBase>().regionType);
+		if (ResourceManager.instance != null) 
+		{
+			resManager = ResourceManager.instance;
+		}
+		resManager.AdjustedResourceEvent.AddListener (UpdateUiText);
+		UpdateUiText ();
 	}
 
-	void Update () 
+
+	void UpdateUiText()
 	{
 		if (regionOrigin != null)
 		{

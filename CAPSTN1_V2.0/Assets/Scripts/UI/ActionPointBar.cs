@@ -23,7 +23,7 @@ public class ActionPointBar : MonoBehaviour {
 		{
 			eventManager = EventManager.instance;
 		}
-		resManager.AdjustedAPEvent.AddListener(ChangeSprite);
+		resManager.AdjustedResourceEvent.AddListener(ChangeSprite);
 	}
 	
 	public void ChangeSprite()
