@@ -9,4 +9,7 @@ public class EventsList : ScriptableObject
 	public List<EventData> tier3Events;
 	public List<EventData> tier4Events;
 
+    public List<EventData> chainEvent;
+    public List<EventData> globalEvent;
+
 }
