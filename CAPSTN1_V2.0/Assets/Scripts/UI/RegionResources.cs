@@ -25,19 +25,19 @@ public class RegionResources : MonoBehaviour {
 		switch (type) 
 		{
 		case ResourceManager.ResourceType.ActionPoints:
-			resourceImage.sprite = Resources.Load <Sprite>("ManpowerColored");
+			resourceImage.sprite = Resources.Load <Sprite>("ManpowerIcon");
 			resourceAmount.color = new Color32(253, 161, 3, 255);
 			break;
 		case ResourceManager.ResourceType.Water:
-			resourceImage.sprite = Resources.Load <Sprite>("WaterColored");
+			resourceImage.sprite = Resources.Load <Sprite>("WaterIcon");
 			resourceAmount.color = new Color32(0, 222, 255, 255);
 			break;
 		case ResourceManager.ResourceType.Power:
-			resourceImage.sprite = Resources.Load <Sprite>("EnergyColored");
+			resourceImage.sprite = Resources.Load <Sprite>("PowerIcon");
 			resourceAmount.color = new Color32(255, 228, 0, 255);
 			break;
 		case ResourceManager.ResourceType.Food:
-			resourceImage.sprite = Resources.Load <Sprite>("FoodColored");
+			resourceImage.sprite = Resources.Load <Sprite>("FoodIcon");
 			resourceAmount.color = new Color32(80, 195, 2, 255);
 			break;
 		default:
