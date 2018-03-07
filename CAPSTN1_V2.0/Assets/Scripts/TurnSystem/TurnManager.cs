@@ -64,7 +64,6 @@ public class TurnManager : MonoBehaviour {
 		
 		victory = true;
 		defeat = true;
-		//AdvanceTurn();
 	}
 
 	public void AdvanceTurn()

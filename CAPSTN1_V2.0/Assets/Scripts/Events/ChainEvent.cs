@@ -7,6 +7,14 @@ public class ChainEvent : EventPopUpBase
 {
 	public List<GameObject> persistentEvents;
 	public GameObject 		persistentEventPrefab;
+	public bool longTerm;
+	public bool shortTerm;
+	public override void Start ()
+	{
+		base.Start ();
+		longTerm = true;
+		shortTerm = true;
+	}
 	void OnClick()
 	{
 		eventManager.selectedEvent = this.GetComponent<EventPopUpBase>();
@@ -16,14 +24,15 @@ public class ChainEvent : EventPopUpBase
 	public override void ResolveEvent ()
 	{
 		base.ResolveEvent ();
-		Debug.Log ("Short Resolve");
+		shortTerm = false;
+		longTerm = true;
 	}
 
 	public void LongTermResolve()
 	{
 		base.ResolveEvent ();
-		SpawnChildEvents (3);
-		Debug.Log ("Long Resolve");
+		longTerm = false;
+		shortTerm = true;
 	}
 
 	public override void IgnoreEvent ()
@@ -44,14 +53,14 @@ public class ChainEvent : EventPopUpBase
 			if (persistentEvents.Count != 3) 
 			{
 				GameObject newEvent = Instantiate(persistentEventPrefab);
-				newEvent.GetComponent<ChildEvent>().regionOrigin = this.regionOrigin;
-				newEvent.GetComponent<ChildEvent>().eventOrigin = this.gameObject;
+				newEvent.GetComponent<ChainChildEvent>().regionOrigin = this.regionOrigin;
+				newEvent.GetComponent<ChainChildEvent>().eventOrigin = this.gameObject;
 				newEvent.transform.SetParent(Canvas.FindObjectOfType<Canvas>().transform);
+				newEvent.GetComponent<ChainChildEvent>().eventData    = eventManager.eventsList.tier1Events[Random.Range(0, eventManager.eventsList.tier1Events.Count)];
 				persistentEvents.Add (newEvent);
 			}
 
 		}
-
-	
 	}
+
 }

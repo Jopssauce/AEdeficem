@@ -20,7 +20,7 @@ public class EventPopUpBase : MonoBehaviour
     public EventManager    	eventManager;
 	public RegionManager	regionManager;
 
-	void Start ()
+	public virtual void Start ()
     {
 
         isResolved = false;

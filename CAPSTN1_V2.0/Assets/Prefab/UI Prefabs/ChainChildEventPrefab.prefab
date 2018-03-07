@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114642123551422334}
   - component: {fileID: 114477086138363790}
   - component: {fileID: 114755997092737074}
-  - component: {fileID: 114145811623349062}
+  - component: {fileID: 114286808087081358}
   m_Layer: 5
   m_Name: ChainChildEventPrefab
   m_TagString: Untagged
@@ -48,7 +48,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114145811623349062
+--- !u!114 &114286808087081358
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1851754591194924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 477c5fa150522564e81f6e398a1144e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 723f4099a48b902488e5828f3e7c7754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventData: {fileID: 0}
