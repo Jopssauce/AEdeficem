@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Region
   - Event Outliner
+  - Main UI
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,49 @@
+Event System Flow
+
+	1. On Turn Start the game will spawn 2 to 5 events
+		- 1 will be specific for a critical regions(region with extremely low quality)
+		- 3 will be reserved for Chain Type results or Domino Type results
+		- 1 will be random
+		- if none of the requirements exist spawned events will be random.
+		
+	2. Specifics on Chain Type
+		- this event will be similar to the standard type, but this time there will be 3 choices 2 are
+		  resolve choices that lead to different outcomes (i.e. Long Term and Short Term choices).
+		- Short Term Specifics:
+			> If chosen this will also appear as a standard type, but if this is chosen this same event
+			  will appear after X amount of turns with a small increase in cost.
+			> Its result and reward will always be the same.
+		- Long Term Specifics:
+			> If chosen an initial resource cost and resolution will be done to begin the event chain.
+			> After initial resolving is done another event will spawn, this will be called a "Persistent Event"
+			  -> Persistent Events are events that will not be counted on the event limit which is 5.
+			  -> These are always on the map and will only disappear when resolved.
+			  -> this also means that this event has no consequences.
+			> The number of Persistent Events required before fully resolving the event chain depends on
+			  the event details itself.
+			> There can only be one ongoing chain event at a time(like building mega structures in stellaris)
+			  this means that if another chain type appears the player will be unable to choose the long term
+			  choice.
+			> Once event chain is done the event will no longer spawn.
+		- The 3rd choice is the simple ignore, same idea applies where if turn timer is done fail effects
+		  will occur
+		
+	3. Specifics on Domino Type
+		- Like the Chain type, 3 choices; the 2 resolve choices will be ambiguous(vague) on its nature.
+		- will have a signifier that its a Domino Type.
+		- Specifics on Choices:
+			> The choices can end up simply with resolving the event or spawning a succeeding event
+			  with higher costs and flavor text relating to it.
+			> the other more unique outcome is persistent event and bound event is spawned.
+				-> The Persistent Event that spawns will be variant to the chain type
+				-> like the chain type variant it will stay indefinitely but this one requires the player's 
+				   attention because it will have a negative effect on the region it occurs in(i.e. Rallies,
+				   strikes, crime sprees, economical fluctuations).
+				-> To suppress the negative effects the player must expend the required manpower to negate
+				   the effect.
+				-> Depending on the event, the player can't indefinitely keep the allocated manpower to
+				   suppress the negative effects; there are events though that will require just that 
+				   to remove
+				-> Bound Events come in to play, for events that don't need a consistent allocation of
+				   manpower to suppress and resolve, where the player must spend resources and manpower
+				   to permanently resolve the Domino effect and remove the persistent event.

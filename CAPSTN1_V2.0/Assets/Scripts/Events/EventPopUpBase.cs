@@ -6,15 +6,19 @@ using UnityEngine.Events;
 
 public class EventPopUpBase : MonoBehaviour
 {
-    public EventData   eventData;
-    public GameObject  regionOrigin;
-    public int         turnsLeft;
-    public bool        isResolved;
-    public Vector3     eventWorldPos;
+    public EventData   	eventData;
+    public GameObject  	regionOrigin;
+    public int         	turnsLeft;
+    public bool        	isResolved;
+    public Vector3     	eventWorldPos;
     public List<Sprite> timerSprites;
 
-    ResourceManager resManager;
-    EventManager    eventManager;
+	public GameObject	eventPanel;
+	public GameObject	eventPanelPrefab;
+
+    public ResourceManager 	resManager;
+    public EventManager    	eventManager;
+	public RegionManager	regionManager;
 
 	void Start ()
     {
@@ -29,26 +33,38 @@ public class EventPopUpBase : MonoBehaviour
 		{
 			eventManager = EventManager.instance;
 		}
+		if (RegionManager.instance != null) 
+		{
+			regionManager = RegionManager.instance;
+		}
         this.GetComponent<Button>().onClick.AddListener(Click);
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
-
         this.GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];
 	}
 	
     void Click()
     {   
-        eventManager.selectedEvent = this.GetComponent<EventPopUpBase>();
-        EventManager.instance.EventPanel.GetComponent<EventReader>().eventOrigin                = this.gameObject;
-        EventManager.instance.EventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<IgnoreButton>().eventOrigin      = this.GetComponent<EventPopUpBase>();
-        EventManager.instance.EventPanel.GetComponent<EventReader>().resolveButton.GetComponent<ResolveButton>().eventOrigin    = this.GetComponent<EventPopUpBase>();
-        EventManager.instance.EventPanel.GetComponent<EventReader>().eventThumbnail.sprite      = eventData.eventSprite;
-        EventManager.instance.EventPanel.GetComponent<EventTextDisplay>().eventOrigin           = this.gameObject;
-        EventManager.instance.EventPanel.GetComponent<DisplayResourceCost>().eventOrigin        = this.gameObject;
-        EventManager.instance.EventPanel.SetActive(true);
-        EventManager.instance.EventPanel.transform.SetAsLastSibling();
+		eventPanel = Instantiate(eventPanelPrefab) as GameObject;
+		eventPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
+
+		eventManager.selectedEvent = this.GetComponent<EventPopUpBase>();
+		eventPanel.GetComponent<EventReader>().eventOrigin                = this.gameObject;
+		AssignButtons ();
+		eventPanel.GetComponent<EventReader>().eventThumbnail.sprite      = eventData.eventSprite;
+		eventPanel.GetComponent<EventTextDisplay>().eventOrigin           = this.gameObject;
+		eventPanel.GetComponent<DisplayResourceCost>().eventOrigin        = this.gameObject;
+		eventPanel.SetActive(true);
+		eventPanel.transform.SetAsLastSibling();
+		
     }
 
-    public void IgnoreEvent()
+	public virtual void AssignButtons()
+	{
+		eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<IgnoreButton>().eventOrigin      = this.GetComponent<EventPopUpBase>();
+		eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<ResolveButton>().eventOrigin    = this.GetComponent<EventPopUpBase>();
+	}
+
+	public virtual void IgnoreEvent()
     {
 
         if (GetComponent<EventPopUpBase>().isResolved == true)
@@ -60,11 +76,12 @@ public class EventPopUpBase : MonoBehaviour
             resManager.AddResource(ResourceManager.ResourceType.Food,   eventData.foodCost);
         }
 
-       isResolved = false;
-        EventManager.instance.EventPanel.SetActive(false);
+       	isResolved = false;
+        //EventManager.instance.EventPanel.SetActive(false);
+		Destroy(eventPanel);
     }
 
-    public void ResolveEvent()
+    public virtual void ResolveEvent()
     {
         if (isResolved == false)
         {
@@ -75,8 +92,8 @@ public class EventPopUpBase : MonoBehaviour
                 resManager.DeductResource(ResourceManager.ResourceType.Water,	eventData.waterCost);
                 resManager.DeductResource(ResourceManager.ResourceType.Power, eventData.powerCost);
                 resManager.DeductResource(ResourceManager.ResourceType.Food, eventData.foodCost);
-
-                EventManager.instance.EventPanel.SetActive(false);
+                //EventManager.instance.EventPanel.SetActive(false);
+				Destroy(eventPanel);
             }
             else
             {

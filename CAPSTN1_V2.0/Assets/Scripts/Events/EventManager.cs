@@ -9,7 +9,8 @@ public class EventManager : MonoBehaviour
 
 	public static EventManager instance = null;
     private TurnManager turnManager;
-    public GameObject   prefab;
+    public GameObject   baseEvent;
+	public GameObject	chainEventPrefab;
     public Canvas       newCanvas;
     public GameObject   EventsPanelPrefab;
     public GameObject   EventPanel;
@@ -43,9 +44,9 @@ public class EventManager : MonoBehaviour
 
     void Start()
     {
-        EventPanel = Instantiate(EventsPanelPrefab) as GameObject;
-        EventPanel.transform.SetParent(newCanvas.transform, false);
-        EventPanel.SetActive(false);
+        //EventPanel = Instantiate(EventsPanelPrefab) as GameObject;
+        //EventPanel.transform.SetParent(newCanvas.transform, false);
+        //EventPanel.SetActive(false);
         eventOutliner = GameObject.FindGameObjectWithTag("Event Outliner");
         if (TurnManager.instance != null)
         {
@@ -58,7 +59,7 @@ public class EventManager : MonoBehaviour
         RegionManagerInstance = RegionManager.instance;
 
 		int num 			    = Random.Range(0 , RegionManagerInstance.regionList.Count);
-        GameObject newButton    = Instantiate(prefab);
+		GameObject newButton    = Instantiate(baseEvent);
 
         newButton.transform.SetParent(newCanvas.transform, false);
 
@@ -131,7 +132,7 @@ public class EventManager : MonoBehaviour
                     }
                 }
             }
-            for (int i = 0; i < 3; i++)
+			for (int i = 0; i < Random.Range(1,3); i++)
             {
                 if (eventTracker.Count != 5)
                 {
