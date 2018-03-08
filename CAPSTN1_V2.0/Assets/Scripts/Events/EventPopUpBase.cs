@@ -74,7 +74,7 @@ public class EventPopUpBase : MonoBehaviour
             eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
             eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = true;
         }
-        else
+        if (isResolved == false)
         {
             eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = true;
             eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = false;
