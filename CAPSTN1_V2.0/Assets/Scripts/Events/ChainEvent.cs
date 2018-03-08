@@ -85,7 +85,7 @@ public class ChainEvent : EventPopUpBase
 
 	public override void AssignButtons ()
 	{
-		eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<ResolveButton>().eventOrigin      = this.GetComponent<ChainEvent>();
+		eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<ResolveButton>().eventOrigin      = this.GetComponent<EventPopUpBase>();
 		eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<LongResolveButton>().eventOrigin    = this.GetComponent<ChainEvent>();
 		if (longTerm == true)
         {

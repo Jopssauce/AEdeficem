@@ -10,6 +10,7 @@ public class EventReader : MonoBehaviour
     public GameObject   eventOrigin;
     public GameObject   ignoreButton;
     public GameObject   resolveButton;
+    public Button       exitButton;
     public Image        eventThumbnail;
     EventManager        eventManager;
 

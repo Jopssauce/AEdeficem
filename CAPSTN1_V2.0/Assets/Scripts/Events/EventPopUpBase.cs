@@ -55,6 +55,7 @@ public class EventPopUpBase : MonoBehaviour
 		eventManager.selectedEvent = this.GetComponent<EventPopUpBase>();
 		eventPanel.GetComponent<EventReader>().eventOrigin                = this.gameObject;
 		AssignButtons ();
+        eventPanel.GetComponent<EventReader>().exitButton.GetComponent<ExitButton>().eventOrigin = this.GetComponent<EventPopUpBase>();
 		eventPanel.GetComponent<EventReader>().eventThumbnail.sprite      = eventData.eventSprite;
 		eventPanel.GetComponent<EventTextDisplay>().eventOrigin           = this.gameObject;
 		eventPanel.GetComponent<DisplayResourceCost>().eventOrigin        = this.gameObject;
@@ -117,6 +118,11 @@ public class EventPopUpBase : MonoBehaviour
             }
             this.GetComponent<Button>().interactable = true;
         }
+    }
+    public virtual void ExitEvent()
+    {
+        Destroy(eventPanel);
+        this.GetComponent<Button>().interactable = true;
     }
     public virtual void UpdateEvent()
     {
