@@ -15,13 +15,8 @@ public class ChainEvent : EventPopUpBase
 		longTerm = false;
 		shortTerm = false;
 	}
-	void OnClick()
-	{
-		eventManager.selectedEvent = this.GetComponent<EventPopUpBase>();
-		eventPanel = Instantiate (eventPanelPrefab);
-	}
 
-	public override void ResolveEvent ()
+	public void ShortTermResolve ()
 	{
 		if (GetComponent<EventPopUpBase>().isResolved == true)
         {
@@ -78,24 +73,17 @@ public class ChainEvent : EventPopUpBase
 		this.GetComponent<Button>().interactable = true;
 	}
 
-	public override void IgnoreEvent ()
-	{
-		base.IgnoreEvent ();
-	}
-
 	public override void AssignButtons ()
 	{
-		eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<ResolveButton>().eventOrigin      = this.GetComponent<EventPopUpBase>();
-		eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<LongResolveButton>().eventOrigin    = this.GetComponent<ChainEvent>();
 		if (longTerm == true)
         {
-            eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
-            eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = true;
+            eventPanel.GetComponent<ChainEventPanel>().longResolve.GetComponent<Button>().interactable = false;
+            eventPanel.GetComponent<ChainEventPanel>().shortResolve.GetComponent<Button>().interactable = true;
         }
         if (shortTerm == true)
         {
-            eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = true;
-            eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = false;
+            eventPanel.GetComponent<ChainEventPanel>().longResolve.GetComponent<Button>().interactable = true;
+            eventPanel.GetComponent<ChainEventPanel>().shortResolve.GetComponent<Button>().interactable = false;
         }
 	}
 	

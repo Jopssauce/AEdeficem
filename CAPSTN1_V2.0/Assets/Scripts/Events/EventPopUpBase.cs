@@ -53,10 +53,10 @@ public class EventPopUpBase : MonoBehaviour
 		eventPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 
 		eventManager.selectedEvent = this.GetComponent<EventPopUpBase>();
-		eventPanel.GetComponent<EventReader>().eventOrigin                = this.gameObject;
+		eventPanel.GetComponent<EventPanel>().eventOrigin                = this.gameObject;
 		AssignButtons ();
-        eventPanel.GetComponent<EventReader>().exitButton.GetComponent<ExitButton>().eventOrigin = this.GetComponent<EventPopUpBase>();
-		eventPanel.GetComponent<EventReader>().eventThumbnail.sprite      = eventData.eventSprite;
+        eventPanel.GetComponent<EventPanel>().exitButton.GetComponent<ExitButton>().eventOrigin = this.GetComponent<EventPopUpBase>();
+		eventPanel.GetComponent<EventPanel>().eventThumbnail.sprite      = eventData.eventSprite;
 		eventPanel.GetComponent<EventTextDisplay>().eventOrigin           = this.gameObject;
 		eventPanel.GetComponent<DisplayResourceCost>().eventOrigin        = this.gameObject;
 		eventPanel.SetActive(true);
@@ -81,7 +81,7 @@ public class EventPopUpBase : MonoBehaviour
         }
 	}
 
-	public virtual void IgnoreEvent()
+	public void IgnoreEvent()
     {
 
         if (GetComponent<EventPopUpBase>().isResolved == true)
@@ -98,7 +98,7 @@ public class EventPopUpBase : MonoBehaviour
 		Destroy(eventPanel);
     }
 
-    public virtual void ResolveEvent()
+    public void ResolveEvent()
     {
         if (isResolved == false)
         {

@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224939469377661704}
   - component: {fileID: 222673340943719538}
-  - component: {fileID: 114037387595294414}
+  - component: {fileID: 114460318201007666}
   - component: {fileID: 114675417257373906}
   - component: {fileID: 95757052500714664}
   - component: {fileID: 114805613572912052}
@@ -244,7 +244,6 @@ GameObject:
   - component: {fileID: 222869319872342586}
   - component: {fileID: 114544568731135182}
   - component: {fileID: 114686561741780100}
-  - component: {fileID: 114294975349179250}
   m_Layer: 5
   m_Name: ResolveShortButton
   m_TagString: Untagged
@@ -280,7 +279,6 @@ GameObject:
   - component: {fileID: 222762575389268992}
   - component: {fileID: 114610891473260818}
   - component: {fileID: 114279012081020290}
-  - component: {fileID: 114103453824371898}
   m_Layer: 5
   m_Name: ResolveLongButton
   m_TagString: Untagged
@@ -407,25 +405,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114037387595294414
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1032759389003268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d033dc480b5a7c4eab46ce6b110f9c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionQueue: {fileID: 1204497150322772, guid: 3c8eb7fcb03b7a8418f18f8f8b7f0b46,
-    type: 2}
-  eventOrigin: {fileID: 0}
-  ignoreButton: {fileID: 1501934794382174}
-  resolveButton: {fileID: 1674588927197480}
-  exitButton: {fileID: 114062652080189284}
-  eventThumbnail: {fileID: 114940741879121126}
-  aqManager: {fileID: 0}
 --- !u!114 &114062652080189284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -511,18 +490,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Event Text
---- !u!114 &114103453824371898
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1674588927197480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92449fa0dcd4fa343a52ec35e0e05d44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventOrigin: {fileID: 0}
 --- !u!114 &114118890093310752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -673,8 +640,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114103453824371898}
-        m_MethodName: Click
+      - m_Target: {fileID: 114460318201007666}
+        m_MethodName: LongResolveCLick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -686,18 +653,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114294975349179250
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1501934794382174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4ef1ea02189a0d479043615d8126df4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventOrigin: {fileID: 0}
 --- !u!114 &114392423045048722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -772,6 +727,26 @@ MonoBehaviour:
   m_Script: {fileID: -146154839, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114460318201007666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1032759389003268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77aa3448c4adb74592ffddf349515e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionQueue: {fileID: 0}
+  eventOrigin: {fileID: 0}
+  exitButton: {fileID: 114062652080189284}
+  eventThumbnail: {fileID: 114940741879121126}
+  eventManager: {fileID: 0}
+  turnManager: {fileID: 0}
+  aqManager: {fileID: 0}
+  longResolve: {fileID: 114279012081020290}
+  shortResolve: {fileID: 114686561741780100}
 --- !u!114 &114474025069209892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1065,8 +1040,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114294975349179250}
-        m_MethodName: Click
+      - m_Target: {fileID: 114460318201007666}
+        m_MethodName: ShortResolveClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
