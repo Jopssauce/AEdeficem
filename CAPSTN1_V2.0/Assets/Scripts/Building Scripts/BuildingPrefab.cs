@@ -14,5 +14,9 @@ public class BuildingPrefab : MonoBehaviour {
 		pos.z = eventOrigin.eventWorldPos.z;
 		this.transform.position = pos;
 		this.transform.Rotate(Vector3.up * 50 * Time.deltaTime, Space.Self);
+		if (eventOrigin == null)
+		{
+			Destroy(this.gameObject);
+		}
 	}
 }
