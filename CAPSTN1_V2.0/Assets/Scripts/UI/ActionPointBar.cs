@@ -24,13 +24,14 @@ public class ActionPointBar : MonoBehaviour {
 			eventManager = EventManager.instance;
 		}
 		resManager.AdjustedResourceEvent.AddListener(ChangeSprite);
+		ChangeSprite();
 	}
 	
 	public void ChangeSprite()
 	{
 		if (resManager.actionPoints > 0)
 		{
-			GetComponent<Image>().sprite = actionPointBarSprites[resManager.actionPoints - 1];
+			GetComponent<Image>().sprite = actionPointBarSprites[resManager.actionPoints];
 		}
 	}
 	
