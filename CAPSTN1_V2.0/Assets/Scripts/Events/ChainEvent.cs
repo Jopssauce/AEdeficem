@@ -98,7 +98,7 @@ public class ChainEvent : EventPopUpBase
             eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = false;
         }
 	}
-
+	
 	public void SpawnChildEvents(int amount)
 	{
 		for (int i = 0; i < amount; i++) 
@@ -114,6 +114,42 @@ public class ChainEvent : EventPopUpBase
 			}
 
 		}
+	}
+	
+	public override void UpdateEvent()
+	{           
+			if (isResolved == true && longTerm == true)
+			{
+				longTerm = false;
+				regionOrigin.GetComponent<RegionBase>().regionQuality += eventData.qualityDecay * regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
+				turnsLeft = 0;
+				GetComponent<Button> ().interactable = false;
+				SpawnChildEvents (3);
+
+			}
+			if (isResolved == true && shortTerm == true)
+			{
+				regionOrigin.GetComponent<RegionBase>().regionQuality += eventData.qualityDecay * regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
+				turnsLeft = 0;
+				Destroy(this.gameObject);
+
+				eventManager.eventTracker.Remove(this.gameObject);
+			}
+			if (isResolved == false )
+			{
+				turnsLeft -= 1;
+
+				if (turnsLeft > 0)
+				{
+					GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];	
+				}
+				if (turnsLeft <= 0)
+				{
+					Destroy(this.gameObject);
+					eventManager.eventTracker.Remove(this.gameObject);
+				}
+		
+			}
 	}
 
 }

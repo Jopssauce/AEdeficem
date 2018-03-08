@@ -19,6 +19,7 @@ public class EventPopUpBase : MonoBehaviour
     public ResourceManager 	resManager;
     public EventManager    	eventManager;
 	public RegionManager	regionManager;
+    public TurnManager      turnManager;
 
 	public virtual void Start ()
     {
@@ -37,9 +38,14 @@ public class EventPopUpBase : MonoBehaviour
 		{
 			regionManager = RegionManager.instance;
 		}
+        if (TurnManager.instance != null) 
+		{
+			turnManager = TurnManager.instance;
+		}
         this.GetComponent<Button>().onClick.AddListener(Click);
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
         this.GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];
+        turnManager.EndTurnEvent.AddListener(UpdateEvent);
 	}
 	
     void Click()
@@ -112,5 +118,31 @@ public class EventPopUpBase : MonoBehaviour
             }
             this.GetComponent<Button>().interactable = true;
         }
+    }
+    public virtual void UpdateEvent()
+    {
+        if (isResolved == true)
+        {
+            regionOrigin.GetComponent<RegionBase>().regionQuality += eventData.qualityDecay *regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
+            turnsLeft = 0;
+            
+            Destroy(this.gameObject);
+            eventManager.eventTracker.Remove(this.gameObject);
+        }
+        if (isResolved == false)
+        {
+            turnsLeft -= 1;
+
+            if (turnsLeft > 0)
+            {
+            GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];	
+            }
+            if (turnsLeft <= 0)
+            {
+                Destroy(this.gameObject);
+                eventManager.eventTracker.Remove(this.gameObject);
+            }
+        }
+    
     }
 }
