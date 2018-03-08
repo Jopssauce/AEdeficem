@@ -14,6 +14,8 @@ MonoBehaviour:
   eventName: Rotating Black Out
   turnsLeft: 4
   eventSprite: {fileID: 21300000, guid: 872f252f2d3141d44b90ddd8622c62cd, type: 3}
+  buildingPrefab: {fileID: 1413300846774282, guid: be45f41bcb47a274bbd626291870586e,
+    type: 2}
   waterCost: 0
   foodCost: 0
   powerCost: 0

@@ -85,7 +85,8 @@ public class EventManager : MonoBehaviour
             Debug.Log("Error tier list");
             break;
         }
-
+        GameObject building = Instantiate(newButton.GetComponent<EventPopUpBase>().eventData.buildingPrefab);
+        building.GetComponent<BuildingPrefab>().eventOrigin = newButton.GetComponent<EventPopUpBase>();
         GameObject newEventContent                                  = Instantiate(eventOutlinerContent);
         newEventContent.GetComponent<EventContent>().eventOrigin    = newButton;
         

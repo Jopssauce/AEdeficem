@@ -14,6 +14,8 @@ MonoBehaviour:
   eventName: Damaged Water Station
   turnsLeft: 4
   eventSprite: {fileID: 21300000, guid: 66cf0daac1dd8dc42a369c1575726d32, type: 3}
+  buildingPrefab: {fileID: 1413300846774282, guid: be45f41bcb47a274bbd626291870586e,
+    type: 2}
   waterCost: 4
   foodCost: 0
   powerCost: 0

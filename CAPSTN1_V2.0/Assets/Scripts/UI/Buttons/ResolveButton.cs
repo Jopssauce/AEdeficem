@@ -18,7 +18,6 @@ public class ResolveButton : MonoBehaviour {
     {
 		if (TurnManager.instance != null)
 		{
-			//eventOrigin.GetComponent<EventReader>().AddToActionQue();
 			eventOrigin.ResolveEvent();
 			if ( eventManager.ResolvedEvent != null)
 			{

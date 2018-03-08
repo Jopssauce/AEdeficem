@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Event", menuName = "Event Object")]
+[CreateAssetMenu(fileName = "Event Type", menuName = "Event Type/Standard Event")]
 [System.Serializable]
 public class EventData : ScriptableObject
 {
@@ -23,6 +23,7 @@ public class EventData : ScriptableObject
 	public string  	eventName;
 	public int 		turnsLeft;
 	public Sprite 	eventSprite;
+	public GameObject buildingPrefab;
 	
 	[Header("Resource Costs")]
 	public int 		waterCost;
