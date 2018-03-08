@@ -55,6 +55,7 @@ public class EventPopUpBase : MonoBehaviour
 		eventPanel.GetComponent<DisplayResourceCost>().eventOrigin        = this.gameObject;
 		eventPanel.SetActive(true);
 		eventPanel.transform.SetAsLastSibling();
+        this.GetComponent<Button>().interactable = false;
 		
     }
 
@@ -87,7 +88,7 @@ public class EventPopUpBase : MonoBehaviour
         }
 
        	isResolved = false;
-
+        this.GetComponent<Button>().interactable = true;
 		Destroy(eventPanel);
     }
 
@@ -109,6 +110,7 @@ public class EventPopUpBase : MonoBehaviour
             {
                 Debug.Log("Not Enough Resources");
             }
+            this.GetComponent<Button>().interactable = true;
         }
     }
 }
