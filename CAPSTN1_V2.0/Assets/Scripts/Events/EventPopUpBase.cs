@@ -44,7 +44,6 @@ public class EventPopUpBase : MonoBehaviour
 		}
         this.GetComponent<Button>().onClick.AddListener(Click);
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
-        this.GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];
         turnManager.EndTurnEvent.AddListener(UpdateEvent);
 	}
 	

@@ -107,7 +107,7 @@ public class ChainEvent : EventPopUpBase
 			{
 				GameObject newEvent = Instantiate(persistentEventPrefab);
 				newEvent.GetComponent<ChainChildEvent>().regionOrigin = this.regionOrigin;
-				newEvent.GetComponent<ChainChildEvent>().eventOrigin = this.gameObject;
+				newEvent.GetComponent<ChainChildEvent>().eventOrigin = this.GetComponent<ChainEvent>();
 				newEvent.transform.SetParent(Canvas.FindObjectOfType<Canvas>().transform);
 				newEvent.GetComponent<ChainChildEvent>().eventData    = eventManager.eventsList.tier1Events[Random.Range(0, eventManager.eventsList.tier1Events.Count)];
 				persistentEvents.Add (newEvent);
@@ -149,6 +149,12 @@ public class ChainEvent : EventPopUpBase
 					eventManager.eventTracker.Remove(this.gameObject);
 				}
 		
+			}
+			if (persistentEvents.Count <= 0 && isResolved == true)
+			{
+				Destroy(this.gameObject);
+
+				eventManager.eventTracker.Remove(this.gameObject);
 			}
 	}
 
