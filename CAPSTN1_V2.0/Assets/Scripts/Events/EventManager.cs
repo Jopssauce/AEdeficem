@@ -11,6 +11,7 @@ public class EventManager : MonoBehaviour
     private TurnManager turnManager;
     public GameObject   baseEvent;
 	public GameObject	chainEventPrefab;
+    public List<GameObject> eventPrefabs;
     public Canvas       newCanvas;
     public GameObject   EventsPanelPrefab;
     public GameObject   EventPanel;
@@ -60,7 +61,7 @@ public class EventManager : MonoBehaviour
         RegionManagerInstance = RegionManager.instance;
 
 		int num 			    = Random.Range(0 , RegionManagerInstance.regionList.Count);
-		GameObject newButton    = Instantiate(baseEvent);
+		GameObject newButton    = Instantiate(eventPrefabs[(Random.Range(0, eventPrefabs.Count))] );
 
         newButton.transform.SetParent(newCanvas.transform, false);
 

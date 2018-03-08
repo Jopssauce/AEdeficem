@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 222131684078479016}
   - component: {fileID: 114498545736364298}
   - component: {fileID: 114062652080189284}
-  - component: {fileID: 114762541763399380}
+  - component: {fileID: 114733659138861660}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -423,6 +423,7 @@ MonoBehaviour:
   eventOrigin: {fileID: 0}
   ignoreButton: {fileID: 1501934794382174}
   resolveButton: {fileID: 1674588927197480}
+  exitButton: {fileID: 114062652080189284}
   eventThumbnail: {fileID: 114940741879121126}
   aqManager: {fileID: 0}
 --- !u!114 &114062652080189284
@@ -464,7 +465,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114762541763399380}
+      - m_Target: {fileID: 114733659138861660}
         m_MethodName: Click
         m_Mode: 1
         m_Arguments:
@@ -1104,7 +1105,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114762541763399380
+--- !u!114 &114733659138861660
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1115,6 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728f474b988b2d84188741ddf3faba48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventOrigin: {fileID: 0}
 --- !u!114 &114764006936199072
 MonoBehaviour:
   m_ObjectHideFlags: 1
