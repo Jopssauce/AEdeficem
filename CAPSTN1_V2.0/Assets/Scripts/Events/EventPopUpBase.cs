@@ -81,7 +81,7 @@ public class EventPopUpBase : MonoBehaviour
         }
 	}
 
-	public void IgnoreEvent()
+	public void RefundEvent()
     {
 
         if (GetComponent<EventPopUpBase>().isResolved == true)
