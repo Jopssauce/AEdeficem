@@ -18,7 +18,7 @@ public class IgnoreButton : MonoBehaviour {
     {
 		if (TurnManager.instance != null)
 		{
-			eventOrigin.IgnoreEvent();
+			eventOrigin.RefundEvent();
 			if ( eventManager.IgnoredEvent != null)
 			{
 				eventManager.IgnoredEvent.Invoke();
