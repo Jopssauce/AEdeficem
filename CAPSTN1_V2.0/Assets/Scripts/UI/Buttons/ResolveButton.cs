@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class IgnoreButton : MonoBehaviour, IPointerClickHandler {
+public class ResolveButton : MonoBehaviour {
 	public EventPopUpBase eventOrigin;
 	EventManager eventManager;
+
   	void Start()
     {
         if (EventManager.instance != null)
@@ -13,18 +13,18 @@ public class IgnoreButton : MonoBehaviour, IPointerClickHandler {
 			eventManager = EventManager.instance;
 		}
 	}
-	
-	#region IPointerClickHandler implementation
-	public void OnPointerClick(PointerEventData eventData)
+
+	public void Click()
     {
 		if (TurnManager.instance != null)
 		{
-			eventOrigin.IgnoreEvent();
-			if ( eventManager.IgnoredEvent != null)
+			//eventOrigin.GetComponent<EventReader>().AddToActionQue();
+			eventOrigin.ResolveEvent();
+			if ( eventManager.ResolvedEvent != null)
 			{
-				eventManager.IgnoredEvent.Invoke();
+				eventManager.ResolvedEvent.Invoke();
 			}
 		}
     }
-	#endregion
+
 }

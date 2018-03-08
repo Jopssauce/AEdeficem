@@ -62,6 +62,16 @@ public class EventPopUpBase : MonoBehaviour
 	{
 		eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<IgnoreButton>().eventOrigin      = this.GetComponent<EventPopUpBase>();
 		eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<ResolveButton>().eventOrigin    = this.GetComponent<EventPopUpBase>();
+        if (isResolved == true)
+        {
+            eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
+            eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = true;
+            eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = false;
+        }
 	}
 
 	public virtual void IgnoreEvent()
@@ -77,7 +87,7 @@ public class EventPopUpBase : MonoBehaviour
         }
 
        	isResolved = false;
-        //EventManager.instance.EventPanel.SetActive(false);
+
 		Destroy(eventPanel);
     }
 
@@ -92,7 +102,7 @@ public class EventPopUpBase : MonoBehaviour
                 resManager.DeductResource(ResourceManager.ResourceType.Water,	eventData.waterCost);
                 resManager.DeductResource(ResourceManager.ResourceType.Power, eventData.powerCost);
                 resManager.DeductResource(ResourceManager.ResourceType.Food, eventData.foodCost);
-                //EventManager.instance.EventPanel.SetActive(false);
+
 				Destroy(eventPanel);
             }
             else

@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class LongResolveButton : MonoBehaviour, IPointerClickHandler {
+
+public class LongResolveButton : MonoBehaviour {
 	public ChainEvent eventOrigin;
 	EventManager eventManager;
 
@@ -14,12 +14,11 @@ public class LongResolveButton : MonoBehaviour, IPointerClickHandler {
 			eventManager = EventManager.instance;
 		}
 	}
-	#region IPointerClickHandler implementation
-	public void OnPointerClick(PointerEventData eventData)
+
+	public void Click()
 	{
 		if (TurnManager.instance != null)
 		{
-			//eventOrigin.GetComponent<EventReader>().AddToActionQue();
 			eventOrigin.LongTermResolve();
 			if ( eventManager.ResolvedEvent != null)
 			{
@@ -27,5 +26,5 @@ public class LongResolveButton : MonoBehaviour, IPointerClickHandler {
 			}
 		}
 	}
-	#endregion
+
 }

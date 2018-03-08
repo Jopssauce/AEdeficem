@@ -26,10 +26,7 @@ public class EventReader : MonoBehaviour
         {
             aqManager = AQManager.instance;
         }
-        //ignoreButton.GetComponent<IgnoreButton>().eventOrigin = this.eventOrigin.GetComponent<EventPopUpBase>();
-        //resolveButton.GetComponent<ResolveButton>().eventOrigin = this.eventOrigin.GetComponent<EventPopUpBase>();
 
-        //eventOrigin.GetComponent<EventPopUpBase>().ResolvedEvent.AddListener(AddToActionQue);
     }
 
     public void AddToActionQue()

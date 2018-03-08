@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class ChainEvent : EventPopUpBase 
 {
@@ -12,8 +12,8 @@ public class ChainEvent : EventPopUpBase
 	public override void Start ()
 	{
 		base.Start ();
-		longTerm = true;
-		shortTerm = true;
+		longTerm = false;
+		shortTerm = false;
 	}
 	void OnClick()
 	{
@@ -23,16 +23,57 @@ public class ChainEvent : EventPopUpBase
 
 	public override void ResolveEvent ()
 	{
-		base.ResolveEvent ();
-		shortTerm = false;
-		longTerm = true;
+		if (GetComponent<EventPopUpBase>().isResolved == true)
+        {
+            Debug.Log("Refund");
+            resManager.AddResource(ResourceManager.ResourceType.ActionPoints,eventData.actionCost);
+            resManager.AddResource(ResourceManager.ResourceType.Water,  eventData.waterCost);
+            resManager.AddResource(ResourceManager.ResourceType.Power, 	eventData.powerCost);
+            resManager.AddResource(ResourceManager.ResourceType.Food,   eventData.foodCost);
+        }
+		if (ResourceManager.instance.isEnoughRes(this.gameObject) == true)
+        {
+			resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventData.actionCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Water,	eventData.waterCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Power, eventData.powerCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Food, eventData.foodCost);
+			Destroy(eventPanel);
+        }
+        else
+        {
+            Debug.Log("Not Enough Resources");
+        }
+		isResolved = true;
+		shortTerm = true;
+		longTerm = false;
 	}
 
 	public void LongTermResolve()
 	{
-		base.ResolveEvent ();
-		longTerm = false;
-		shortTerm = true;
+		if (GetComponent<EventPopUpBase>().isResolved == true)
+        {
+            Debug.Log("Refund");
+            resManager.AddResource(ResourceManager.ResourceType.ActionPoints,eventData.actionCost);
+            resManager.AddResource(ResourceManager.ResourceType.Water,  eventData.waterCost);
+            resManager.AddResource(ResourceManager.ResourceType.Power, 	eventData.powerCost);
+            resManager.AddResource(ResourceManager.ResourceType.Food,   eventData.foodCost);
+        }
+		if (ResourceManager.instance.isEnoughRes(this.gameObject) == true)
+        {
+			resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventData.actionCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Water,	eventData.waterCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Power, eventData.powerCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Food, eventData.foodCost);
+			Destroy(eventPanel);
+        }
+        else
+        {
+            Debug.Log("Not Enough Resources");
+        }
+		isResolved = true;
+		longTerm = true;
+		shortTerm = false;
+		eventManager.isChainEvent = true;
 	}
 
 	public override void IgnoreEvent ()
@@ -44,6 +85,16 @@ public class ChainEvent : EventPopUpBase
 	{
 		eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<ResolveButton>().eventOrigin      = this.GetComponent<ChainEvent>();
 		eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<LongResolveButton>().eventOrigin    = this.GetComponent<ChainEvent>();
+		if (longTerm == true)
+        {
+            eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
+            eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = true;
+        }
+        if (shortTerm == true)
+        {
+            eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = true;
+            eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = false;
+        }
 	}
 
 	public void SpawnChildEvents(int amount)

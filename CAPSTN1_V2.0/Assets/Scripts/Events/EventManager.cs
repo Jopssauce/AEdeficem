@@ -26,6 +26,7 @@ public class EventManager : MonoBehaviour
     public List<GameObject> eventTracker;
 
     public EventPopUpBase selectedEvent;
+    public bool isChainEvent;
 
     void Awake()
 	{
@@ -111,15 +112,24 @@ public class EventManager : MonoBehaviour
 				if (item.GetComponent<ChainEvent>()) 
 				{
 					ChainEvent chainEvent = item.GetComponent<ChainEvent> ();
-					if (chainEvent.isResolved == true && chainEvent.longTerm == false)
+					if (chainEvent.isResolved == true && chainEvent.longTerm == true)
 					{
+                        chainEvent.longTerm = false;
 						chainEvent.regionOrigin.GetComponent<RegionBase>().regionQuality += eventPopUp.eventData.qualityDecay * eventPopUp.regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
 						chainEvent.turnsLeft = 0;
 						chainEvent.GetComponent<Button> ().interactable = false;
 						chainEvent.SpawnChildEvents (3);
 
 					}
-					if (chainEvent.isResolved == false)
+                    if (chainEvent.isResolved == true && chainEvent.shortTerm == true)
+					{
+						chainEvent.regionOrigin.GetComponent<RegionBase>().regionQuality += eventPopUp.eventData.qualityDecay * eventPopUp.regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
+						chainEvent.turnsLeft = 0;
+						Destroy(item.gameObject);
+
+						eventTracker.Remove(item);
+					}
+					if (chainEvent.isResolved == false )
 					{
 						chainEvent.turnsLeft -= 1;
 
