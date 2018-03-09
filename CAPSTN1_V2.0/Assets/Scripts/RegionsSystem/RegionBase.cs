@@ -13,7 +13,7 @@ public class RegionBase : MonoBehaviour
         public int Food;
     }
 
-
+	public List<EventData> 				resolvedChainEvents;
 	public float                        regionQuality;
 	public float                        maxRegionQuality;
     public int                          regionResourceAmount;

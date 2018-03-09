@@ -18,8 +18,10 @@ public class EventData : ScriptableObject
 		Standard,
 		Global,
 		Chain,
-		Persistent
+		Persistent,
+		Domino
 	}
+
 	public string  	eventName;
 	public int 		turnsLeft;
 	public Sprite 	eventSprite;

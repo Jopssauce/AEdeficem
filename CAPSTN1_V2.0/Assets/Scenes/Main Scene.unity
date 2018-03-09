@@ -933,6 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968685080d56bb41ba51fd0cadf8e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolvedChainEvents: []
   regionQuality: 60
   maxRegionQuality: 0
   regionResourceAmount: 0
@@ -1156,6 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968685080d56bb41ba51fd0cadf8e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolvedChainEvents: []
   regionQuality: 75
   maxRegionQuality: 100
   regionResourceAmount: 0
@@ -3167,6 +3169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968685080d56bb41ba51fd0cadf8e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolvedChainEvents: []
   regionQuality: 100
   maxRegionQuality: 0
   regionResourceAmount: 0
@@ -4339,6 +4342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968685080d56bb41ba51fd0cadf8e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolvedChainEvents: []
   regionQuality: 45
   maxRegionQuality: 100
   regionResourceAmount: 0
@@ -6575,6 +6579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968685080d56bb41ba51fd0cadf8e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolvedChainEvents: []
   regionQuality: 60
   maxRegionQuality: 0
   regionResourceAmount: 0

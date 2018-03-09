@@ -1,49 +1,100 @@
 Event System Flow
 
 	1. On Turn Start the game will spawn 2 to 5 events
-		- 1 will be specific for a critical regions(region with extremely low quality)
-		- 3 will be reserved for Chain Type results or Domino Type results
-		- 1 will be random
-		- if none of the requirements exist spawned events will be random.
+		- 2 Events Spawn
+			-> 1 Event will spawn on the lowest quality region.
+			-> 1 will be for the priority of Short Term looping on Chain Type.
+			-> if no short term looping is found then Domino Type Child Event can spawn.
+		- 3 Events
+			-> 1 Event will spawn on the lowest quality region.
+			-> 1 will be for the priority of Short Term looping on Chain Type.
+			-> 1 will be for the priority of Domino Type Child Events.
+		- 4 Events
+			-> 1 Event will spawn on the lowest quality region.
+			-> 1 will be for the priority of Short Term looping on Chain Type.
+			-> 2 will be for the priority of Domino Type Child Events.
+		- 5 Events
+			-> 2 Event will spawn on the lowest quality region.
+			-> 1 will be for the priority of Short Term looping on Chain Type.
+			-> 2 will be for the priority of Domino Type Child Events.
+		
+		- *Should there be more than one Short Term looping on Chain Type, prioritize spawning by lowest quality(the region with the lowest quality will have the Short Term looped event).
+		- *Should there be more than one Domino Type Child Event
+		- *Should the checking for Short Term looping and Domino Type Child Events come out empty then the protocol would be a randomized an event spawn.
 		
 	2. Specifics on Chain Type
-		- this event will be similar to the standard type, but this time there will be 3 choices 2 are
-		  resolve choices that lead to different outcomes (i.e. Long Term and Short Term choices).
-		- Short Term Specifics:
-			> If chosen this will also appear as a standard type, but if this is chosen this same event
-			  will appear after X amount of turns with a small increase in cost.
-			> Its result and reward will always be the same.
-		- Long Term Specifics:
-			> If chosen an initial resource cost and resolution will be done to begin the event chain.
-			> After initial resolving is done another event will spawn, this will be called a "Persistent Event"
-			  -> Persistent Events are events that will not be counted on the event limit which is 5.
-			  -> These are always on the map and will only disappear when resolved.
-			  -> this also means that this event has no consequences.
-			> The number of Persistent Events required before fully resolving the event chain depends on
-			  the event details itself.
-			> There can only be one ongoing chain event at a time(like building mega structures in stellaris)
-			  this means that if another chain type appears the player will be unable to choose the long term
-			  choice.
-			> Once event chain is done the event will no longer spawn.
-		- The 3rd choice is the simple ignore, same idea applies where if turn timer is done fail effects
-		  will occur
+		- Appearance:
+			-> will be shown as a standard event(including color and symbol)
+			-> its type by the inspector and code though should be Chain Type NOT standard type
+		- Choices:
+			-> Long Term Choice(resolve button)
+			-> Short Term Choice(resolve button)
+			-> Cancel(X button)
+		- Short Term Choice
+			-> when chosen by the player, the event loop back after X amount of turns(depends on the event details).
+			-> upon looping back the short term cost will have an increase in cost(Ex: Initial cost is only 4 food, Loop 1 cost is now 5 food)
+			-> its reward is like the standard type rewards; a one time increase in Region Quality
+		- Long Term Choice
+			-> when chosen by the player, the event must be initially resolved like any other event.
+			-> the initial resolve will only give +1% to region quality.
+			-> after the initial resolve, this will then spawn X number of child events(Persistent Events::Chain Variant; scroll down/look down for specifics)
+			-> after all the child events have been resolved the reward will be instead increasing Region Quality over X amount of turns instead of the regular loss of quality
+			
+		- Persistent Events::Chain Variant
+			-> these will spawn after the initial resolve from the Long Term Choice.
+			-> these events are persistent, meaning they have no turn expiration.
+			-> these events have no negative effects or repercussions.
+			-> as per sir David's request add an overall cancel should the player decide to just to flat out stop
+			-> these also give out no quality reward or any sort of reward
+		
+		- *Only one Chain Type can be on the field(like the mega-structures in stellaris but unlike stellaris there can only be on the field/scene since stellaris can have multiple unbuilt
+		   mega-structures).
+		- *Only on the phase where the Persistent Event::Chain Variant have spawned is when the "No Negative Effects" point come in, if the event is still on the choice between the long term
+		   and short term then the turn timer and its subsequent negative effects apply.
+		- *Only the Persistent Event::Chain Variants will have the appearance(color and symbol) of the Chain Type.
+			
 		
 	3. Specifics on Domino Type
-		- Like the Chain type, 3 choices; the 2 resolve choices will be ambiguous(vague) on its nature.
-		- will have a signifier that its a Domino Type.
-		- Specifics on Choices:
-			> The choices can end up simply with resolving the event or spawning a succeeding event
-			  with higher costs and flavor text relating to it.
-			> the other more unique outcome is persistent event and bound event is spawned.
-				-> The Persistent Event that spawns will be variant to the chain type
-				-> like the chain type variant it will stay indefinitely but this one requires the player's 
-				   attention because it will have a negative effect on the region it occurs in(i.e. Rallies,
-				   strikes, crime sprees, economical fluctuations).
-				-> To suppress the negative effects the player must expend the required manpower to negate
-				   the effect.
-				-> Depending on the event, the player can't indefinitely keep the allocated manpower to
-				   suppress the negative effects; there are events though that will require just that 
-				   to remove
-				-> Bound Events come in to play, for events that don't need a consistent allocation of
-				   manpower to suppress and resolve, where the player must spend resources and manpower
-				   to permanently resolve the Domino effect and remove the persistent event.
+		- Appearance:
+			-> it will be shown as its type design(color and symbol)
+		- Choices:
+			-> Resolve A
+			-> Resolve B
+			-> Cancel (X button)
+		
+		- *Up to the assignment in the inspector whether Resolve A or B will lead to Domino Type Child Event
+		
+		- Choice That Leads to Domino Type Child Event
+			-> when chosen by the player, the event will go through an initial resolve(like standard types).
+			-> after the initial resolve, the event may spawn a Persistent Event::Domino Variant with a bound event or a solo Persistent Event::Domino Variant or a just another 
+			   Event with the Domino Type.
+			-> resolving any of the child events it spawns may spawn another child event(this depends on the event details on the inspector).
+			-> once the "Domino Effect" has ended depending whether the player has successfully run down through all of the child events and choices that came up without prematurely ending the
+			   "Domino Effect", then the reward will be like the Chain Type's reward; increasing Region Quality over X amount of turns instead of the regular loss of quality as well as
+			   a one-time reward of resources.
+		
+		- The choice that doesn't lead to Domino Type Child Event
+			-> this choice is considered as the premature ending of the Domino Effect.
+			-> the rewards of this will be like the standard type.
+			-> the presentation of this event isn't just tied to the format of the standard type, this can appear as any of the possible Child Events that can spawn(Persistent Event::Domino Variant with 
+			   a bound event or a solo Persistent Event::Domino Variant or a just another Event with the Domino Type)
+		
+		- Persistent Event::Domino Variant
+			-> spawns as a Child Event of a Domino Type
+			-> these are persistent as well but not all are indefinite(no expiration).
+			-> the properties are like global events; they have a constant negative effect on the region
+			-> will require the player to constantly allocate manpower to suppress the negative effect
+			-> once manpower is allocated the player will have to manually remove the allocation to free up manpower
+			-> this will only disappear after the bound event is resolved(if there is a bound event) or if it has an expiration.
+		
+		- Bound Events
+			-> the format of this is like the standard event
+			-> this will only spawn if a Persistent Event::Domino Variant is specified to spawn with it(determined via unity inspector)
+			-> when this is resolved the Persistent Event::Domino Variant it's tied to will disappear
+		
+		- Child Events
+			-> Persistent Event::Domino Variant with a bound event
+			-> Solo Persistent Event::Domino Variant
+				+ this is the instance where a Persistent Event::Domino Variant spawns without a bound event and has an expiration.
+			-> Event with the Domino Type
+				+ standard format

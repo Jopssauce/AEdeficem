@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 222684160096063212}
   - component: {fileID: 114053895251197294}
   - component: {fileID: 114114486318344082}
-  - component: {fileID: 114538743301173868}
   - component: {fileID: 114930626845975130}
+  - component: {fileID: 114794543482989276}
   m_Layer: 5
   m_Name: DominoEventPrefab
   m_TagString: Untagged
@@ -149,7 +149,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!114 &114538743301173868
+--- !u!114 &114794543482989276
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1119296044836900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 630e2e760b9d98f418d23b37f103b330, type: 3}
+  m_Script: {fileID: 11500000, guid: b065ab9c6b627e84993340f6df6e167c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventData: {fileID: 0}
@@ -172,12 +172,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f76efb5a9a3146d4d98f16a2ae2a1b74, type: 3}
   - {fileID: 21300000, guid: f0e24e3f819ef6d4f9e5aacf7a4678eb, type: 3}
   eventPanel: {fileID: 0}
-  eventPanelPrefab: {fileID: 1688351182550100, guid: a3df83e487d81fc4283515c6d2765ef0,
+  eventPanelPrefab: {fileID: 1682479331008660, guid: f3cc0a5491badb1418ccb210f97a1ad9,
     type: 2}
   resManager: {fileID: 0}
   eventManager: {fileID: 0}
   regionManager: {fileID: 0}
   turnManager: {fileID: 0}
+  firstChoice: 0
+  secondChoice: 0
 --- !u!114 &114930626845975130
 MonoBehaviour:
   m_ObjectHideFlags: 1
