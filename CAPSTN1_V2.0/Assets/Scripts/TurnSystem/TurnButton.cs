@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class TurnButton : MonoBehaviour, IPointerClickHandler {
+public class TurnButton : MonoBehaviour {
 	public TurnManager 	turnManager;
 	public EventManager eventManager;
-	public Animator 	animator;
+	//public Animator 	animator;
 	
 	void Start()
 	{
@@ -18,17 +19,15 @@ public class TurnButton : MonoBehaviour, IPointerClickHandler {
 		{
 			eventManager = EventManager.instance;
 		}
-		animator = GetComponent<Animator>();
+		//animator = GetComponent<Animator>();
 	}
-
-	#region IPointerClickHandler implementation
-	public void OnPointerClick(PointerEventData eventData)
+	public void OnClick()
     {
 		if (TurnManager.instance != null)
 		{
 			//if (animator.isActiveAndEnabled == false)
 			//{
-				animator.SetTrigger("Active");
+				//animator.SetTrigger("Active");
 				if (turnManager.EndTurnEvent != null)
 				{
 				turnManager.EndTurnEvent.Invoke();
@@ -38,5 +37,4 @@ public class TurnButton : MonoBehaviour, IPointerClickHandler {
 			
 		}
     }
-	#endregion
 }

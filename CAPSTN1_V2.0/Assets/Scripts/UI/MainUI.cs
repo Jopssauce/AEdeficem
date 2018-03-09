@@ -18,6 +18,11 @@ public class MainUI : MonoBehaviour
 
     public Text Turn;
 
+    public Button TurnButton;
+
+    public UnityEvent EventSelected;
+    public UnityEvent EventClosed;
+
     private ResourceManager resManager;
     private TurnManager 	turnManager;
     private RegionManager   regManager;
@@ -61,6 +66,8 @@ public class MainUI : MonoBehaviour
 		turnManager.EndTurnEvent.AddListener(UpdateUiText);
 		eventManager.ResolvedEvent.AddListener (UpdateUiText);
 		eventManager.IgnoredEvent.AddListener (UpdateUiText);
+        EventSelected.AddListener(DisableButtons);
+        EventClosed.AddListener(EnableButtons);
     }
 
     void UpdateUiText()
@@ -87,6 +94,24 @@ public class MainUI : MonoBehaviour
         if (sum < 0)
         {
             text.text = "-" + sum.ToString();
+        }
+    }
+
+    public void DisableButtons()
+    {
+        TurnButton.interactable = false;
+        for(int i = 0; i < eventManager.eventTracker.Count; i++)
+        {
+            eventManager.eventTracker[i].GetComponent<Button>().interactable = false;
+        }
+    }
+
+    public void EnableButtons()
+    {
+        TurnButton.interactable = true;
+        for (int i = 0; i < eventManager.eventTracker.Count; i++)
+        {
+            eventManager.eventTracker[i].GetComponent<Button>().interactable = true;
         }
     }
 
