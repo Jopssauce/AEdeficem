@@ -7,7 +7,6 @@ public class CityBase : MonoBehaviour
 	[System.Serializable]
 	 public class CityResources
     {
-        public int Ap;
         public int Water;
         public int Power;
         public int Food;
@@ -40,6 +39,7 @@ public class CityBase : MonoBehaviour
 			turnManager = TurnManager.instance;
 		}
 		turnManager.EndTurnEvent.AddListener(UpdateCity);
+		UpdateCity();
 	}
 
 	public void UpdateCity()
@@ -89,5 +89,11 @@ public class CityBase : MonoBehaviour
 			Debug.Log("Error tier list");
 			break;
 		}
+	}
+
+	public void SpawnStatsPanel()
+	{
+		cityPanel = Instantiate(cityPanelPrefab);
+		cityPanelPrefab.GetComponent<StatsPanel>().cityOrigin = this.GetComponent<CityBase>();
 	}
 }

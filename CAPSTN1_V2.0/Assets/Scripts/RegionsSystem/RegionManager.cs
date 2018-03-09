@@ -62,34 +62,6 @@ public class RegionManager : MonoBehaviour
     //so having less than that will have the Unity Console an "Arguement Out of Range Error"
     void FixRegionTypes()
     {
-        /*foreach (var item in RegionHolder)
-        {
-            regionList.Add(item);
-        }
-
-        foreach (var item in regionList)
-        {
-            //Adds existing region types and disregards duplicates
-            if (!TypeCheckList.Contains(item.GetComponent<RegionBase>().regionType))
-            {
-                TypeCheckList.Add(item.GetComponent<RegionBase>().regionType);
-            }
-            else
-            {
-                Duplicates.Add(item);
-            }
-        }
-
-        int num = 0;
-        foreach (var item in MissingRegionType)
-        {
-            if (!TypeCheckList.Contains(item))
-            {
-                Duplicates[num].GetComponent<RegionBase>().regionType = item;
-                //Duplicates[num].GetComponent<RegionBase>().AdjustResourceByType();
-                num++;
-            }
-        }*/
         foreach (var item in RegionHolder)
         {
             regionList.Add(item.GetComponent<RegionBase>());

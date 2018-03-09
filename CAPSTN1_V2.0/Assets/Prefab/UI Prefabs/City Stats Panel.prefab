@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 224645415967715930}
   - component: {fileID: 222501209017081720}
   - component: {fileID: 114261772925289162}
-  - component: {fileID: 114221670175516682}
+  - component: {fileID: 114978279705578414}
   m_Layer: 5
   m_Name: City Stats Panel
   m_TagString: Untagged
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 222299418285677512}
   - component: {fileID: 114717413917530876}
   m_Layer: 5
-  m_Name: RegionName
+  m_Name: City Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -325,7 +325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114153154218667326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -432,21 +432,6 @@ MonoBehaviour:
   m_Text: '0
 
 '
---- !u!114 &114221670175516682
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1473796447379942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 434e79658acb64447b77bb5a6795f018, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RegionName: {fileID: 114717413917530876}
-  ResourceAmount: {fileID: 114493974208388860}
-  RegionQuality: {fileID: 114352143450589632}
-  Close: {fileID: 114510697364240640}
 --- !u!114 &114261772925289162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -843,6 +828,26 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114978279705578414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1473796447379942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa17c78020778c429208c6f0542b18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regionOrigin: {fileID: 0}
+  cityOrigin: {fileID: 0}
+  cityName: {fileID: 114717413917530876}
+  waterAmount: {fileID: 114394966552602298}
+  foodAmount: {fileID: 114153154218667326}
+  powerAmount: {fileID: 114635788853609352}
+  waterImage: {fileID: 0}
+  foodImage2: {fileID: 0}
+  powerImage3: {fileID: 0}
 --- !u!222 &222085695427253820
 CanvasRenderer:
   m_ObjectHideFlags: 1

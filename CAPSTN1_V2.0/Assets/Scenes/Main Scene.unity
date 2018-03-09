@@ -1006,6 +1006,12 @@ Prefab:
       propertyPath: secondProduction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: cityPanelPrefab
+      value: 
+      objectReference: {fileID: 1473796447379942, guid: 599152d270834a044a9ba5e4af30038b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6542f92a3851c7749889e3c4164c7ac5, type: 2}
   m_IsPrefabParent: 0
@@ -2195,6 +2201,12 @@ Prefab:
       propertyPath: secondProduction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: cityPanelPrefab
+      value: 
+      objectReference: {fileID: 1473796447379942, guid: 599152d270834a044a9ba5e4af30038b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94898287935255c42940fdc585224552, type: 2}
   m_IsPrefabParent: 0
@@ -2252,6 +2264,12 @@ Prefab:
       propertyPath: secondProduction
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: cityPanelPrefab
+      value: 
+      objectReference: {fileID: 1473796447379942, guid: 599152d270834a044a9ba5e4af30038b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12e78861a162aa4687cda64b643e350, type: 2}
   m_IsPrefabParent: 0
@@ -2904,6 +2922,12 @@ Prefab:
       propertyPath: secondProduction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
+        type: 2}
+      propertyPath: cityPanelPrefab
+      value: 
+      objectReference: {fileID: 1473796447379942, guid: 599152d270834a044a9ba5e4af30038b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 465cd92417f316749871fefa33d17937, type: 2}
   m_IsPrefabParent: 0
@@ -5599,6 +5623,12 @@ Prefab:
       propertyPath: secondProduction
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: cityPanelPrefab
+      value: 
+      objectReference: {fileID: 1473796447379942, guid: 599152d270834a044a9ba5e4af30038b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614455dfb6c81bb4689bef7ffdd5ce8a, type: 2}
   m_IsPrefabParent: 0
