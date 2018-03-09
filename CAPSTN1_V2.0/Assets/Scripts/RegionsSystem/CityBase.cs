@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CityBase : MonoBehaviour 
 {
@@ -31,7 +32,7 @@ public class CityBase : MonoBehaviour
 	public int secondCurrentProduction;
 
 	TurnManager turnManager;
-
+	public UnityEvent AdjustedCityResource;
 	public void Start()
 	{
 		if (TurnManager.instance != null)
@@ -89,6 +90,7 @@ public class CityBase : MonoBehaviour
 			Debug.Log("Error tier list");
 			break;
 		}
+		AdjustedCityResource.Invoke();
 	}
 
 	public void SpawnStatsPanel()

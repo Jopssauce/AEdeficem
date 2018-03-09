@@ -60,7 +60,7 @@ public class MainUI : MonoBehaviour
 
         foreach (var underlay in regionUnderlayDisplayList)
         {
-        underlay.SetActive(false);
+        underlay.SetActive(true);
         }
 		resManager.AdjustedResourceEvent.AddListener (UpdateUiText);
 		turnManager.EndTurnEvent.AddListener(UpdateUiText);

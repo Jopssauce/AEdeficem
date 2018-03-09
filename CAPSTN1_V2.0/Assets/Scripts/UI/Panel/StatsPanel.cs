@@ -30,6 +30,7 @@ public class StatsPanel : MonoBehaviour
 			turnManager = TurnManager.instance;
 		}
 		turnManager.EndTurnEvent.AddListener(SetUIText);
+		cityOrigin.AdjustedCityResource.AddListener(SetUIText);
 		SetUIText();
 	}
 

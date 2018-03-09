@@ -42,7 +42,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1154843416011966
 GameObject:
   m_ObjectHideFlags: 1
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 222952044497011496}
   - component: {fileID: 114290167413483216}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Water Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 222849899960158654}
   - component: {fileID: 114213171256762748}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Food Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 222175184188872716}
   - component: {fileID: 114770851714778662}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Power Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
