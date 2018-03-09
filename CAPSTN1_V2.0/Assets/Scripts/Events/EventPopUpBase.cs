@@ -21,6 +21,8 @@ public class EventPopUpBase : MonoBehaviour
 	public RegionManager	regionManager;
     public TurnManager      turnManager;
 
+    private MainUI disableButtons;
+
 	public virtual void Start ()
     {
 
@@ -62,7 +64,6 @@ public class EventPopUpBase : MonoBehaviour
 		eventPanel.SetActive(true);
 		eventPanel.transform.SetAsLastSibling();
         this.GetComponent<Button>().interactable = false;
-		
     }
 
 	public virtual void AssignButtons()
