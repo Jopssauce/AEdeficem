@@ -21,12 +21,13 @@ public class RegionResources : MonoBehaviour {
 		}
 		resManager.AdjustedResourceEvent.AddListener (UpdateUiText);
 		UpdateUiText ();
+		cityOrigin = regionOrigin.cityOrigin;
 	}
 
 
 	void UpdateUiText()
 	{
-		if (regionOrigin != null)
+		if (cityOrigin != null)
 		{
 			resourceAmount.text = "+" + cityOrigin.firstCurrentProduction.ToString();
 			resourceAmount2.text = "+" + cityOrigin.secondCurrentProduction.ToString();

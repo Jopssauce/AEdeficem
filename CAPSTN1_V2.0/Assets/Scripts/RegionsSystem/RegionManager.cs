@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class RegionManager : MonoBehaviour
 {
     public List<RegionBase> regionList;
-
     public GameObject RegionStatsCanvasPrefab;
     public GameObject RegionStatUI;
 
@@ -90,9 +89,12 @@ public class RegionManager : MonoBehaviour
                 //Duplicates[num].GetComponent<RegionBase>().AdjustResourceByType();
                 num++;
             }
+        }*/
+        foreach (var item in RegionHolder)
+        {
+            regionList.Add(item.GetComponent<RegionBase>());
         }
-
-        regionList = regionList.OrderBy(t => t.name).ToList();*/
+        regionList = regionList.OrderBy(t => t.name).ToList();
     }
 
     void MakeRegionStatsCanvas()

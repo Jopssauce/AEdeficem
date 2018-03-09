@@ -948,11 +948,9 @@ MonoBehaviour:
   resolvedChainEvents: []
   regionQuality: 60
   maxRegionQuality: 0
-  regionResourceAmount: 0
   material: {fileID: 0}
   MaxRegionResource: 0
   regionQualityDecay: 0
-  regionType: 0
   cityOrigin: {fileID: 346399615}
 --- !u!1001 &270880163
 Prefab:
@@ -998,6 +996,16 @@ Prefab:
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 1328886627}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: firstProduction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: secondProduction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6542f92a3851c7749889e3c4164c7ac5, type: 2}
   m_IsPrefabParent: 0
@@ -1178,11 +1186,9 @@ MonoBehaviour:
   resolvedChainEvents: []
   regionQuality: 75
   maxRegionQuality: 100
-  regionResourceAmount: 0
   material: {fileID: 0}
   MaxRegionResource: 0
   regionQualityDecay: 0
-  regionType: 0
   cityOrigin: {fileID: 30346402}
 --- !u!114 &346399615 stripped
 MonoBehaviour:
@@ -1867,7 +1873,7 @@ MonoBehaviour:
   regionOutliner: {fileID: 562764160}
   regionOutlinerContent: {fileID: 1292236568973542, guid: ceff0669d45eef64e85ca67df4e52954,
     type: 2}
-  toggleUnderlayDisplay: {fileID: 0}
+  toggleUnderlayDisplay: {fileID: 1595428770}
 --- !u!212 &474264068
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2179,6 +2185,16 @@ Prefab:
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 987226821}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: firstProduction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: secondProduction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94898287935255c42940fdc585224552, type: 2}
   m_IsPrefabParent: 0
@@ -2226,6 +2242,16 @@ Prefab:
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 195183814}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: firstProduction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: secondProduction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12e78861a162aa4687cda64b643e350, type: 2}
   m_IsPrefabParent: 0
@@ -2873,6 +2899,11 @@ Prefab:
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 1941507192}
+    - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
+        type: 2}
+      propertyPath: secondProduction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 465cd92417f316749871fefa33d17937, type: 2}
   m_IsPrefabParent: 0
@@ -3151,11 +3182,9 @@ MonoBehaviour:
   resolvedChainEvents: []
   regionQuality: 100
   maxRegionQuality: 0
-  regionResourceAmount: 0
   material: {fileID: 0}
   MaxRegionResource: 0
   regionQualityDecay: 0
-  regionType: 0
   cityOrigin: {fileID: 1853856}
 --- !u!1 &1003633986
 GameObject:
@@ -4324,11 +4353,9 @@ MonoBehaviour:
   resolvedChainEvents: []
   regionQuality: 45
   maxRegionQuality: 100
-  regionResourceAmount: 0
   material: {fileID: 0}
   MaxRegionResource: 0
   regionQualityDecay: 0
-  regionType: 0
   cityOrigin: {fileID: 948175419}
 --- !u!1 &1336135550
 GameObject:
@@ -5567,6 +5594,11 @@ Prefab:
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 330569765}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: secondProduction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614455dfb6c81bb4689bef7ffdd5ce8a, type: 2}
   m_IsPrefabParent: 0
@@ -6553,11 +6585,9 @@ MonoBehaviour:
   resolvedChainEvents: []
   regionQuality: 60
   maxRegionQuality: 0
-  regionResourceAmount: 0
   material: {fileID: 0}
   MaxRegionResource: 0
   regionQualityDecay: 0
-  regionType: 0
   cityOrigin: {fileID: 853099801}
 --- !u!1 &1964526278
 GameObject:
