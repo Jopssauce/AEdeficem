@@ -56,77 +56,143 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public void SpawnEvent(EventData.EventTier eventTier)
+	public void SpawnEvent(EventData.EventTier eventTier, EventData.EventType eventType)
     {
         RegionManagerInstance = RegionManager.instance;
 
 		int num 			    = Random.Range(0 , RegionManagerInstance.regionList.Count);
-		GameObject newButton    = Instantiate(eventPrefabs[(Random.Range(0, eventPrefabs.Count))] );
+		if (eventTracker.Count != 5) 
+		{
+			GameObject newButton = null;
+			if (eventType == EventData.EventType.Standard) 
+			{
+				newButton = Instantiate(eventPrefabs[0]);	
+			}
+			else if (eventType == EventData.EventType.Chain) 
+			{
+				newButton = Instantiate(eventPrefabs[1]);	
+			}
+			else if (eventType == EventData.EventType.Domino) 
+			{
+				newButton = Instantiate(eventPrefabs[2]);	
+			}
 
-        newButton.transform.SetParent(newCanvas.transform, false);
 
-		newButton.GetComponent<EventPopUpBase>().regionOrigin = RegionManagerInstance.regionList[num];
+			newButton.transform.SetParent(newCanvas.transform, false);
 
-        switch (eventTier)
-        {
-             case EventData.EventTier.Tier1:
-            newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier1Events[Random.Range(0, eventsList.tier1Events.Count)];
-            break;
-             case EventData.EventTier.Tier2:
-            newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier2Events[Random.Range(0, eventsList.tier2Events.Count)];
-            break;
-             case EventData.EventTier.Tier3:
-            newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier3Events[Random.Range(0, eventsList.tier3Events.Count)];
-            break;
-             case EventData.EventTier.Tier4:
-            newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier4Events[Random.Range(0, eventsList.tier4Events.Count)];
-            break;
-            default:
-            Debug.Log("Error tier list");
-            break;
-        }
-        GameObject building = Instantiate(newButton.GetComponent<EventPopUpBase>().eventData.buildingPrefab);
-        building.GetComponent<BuildingPrefab>().eventOrigin = newButton.GetComponent<EventPopUpBase>();
-        GameObject newEventContent                                  = Instantiate(eventOutlinerContent);
-        newEventContent.GetComponent<EventContent>().eventOrigin    = newButton;
-        
-        newButton.GetComponent<EventPopUpBase>().turnsLeft          = newButton.GetComponent<EventPopUpBase>().eventData.turnsLeft;
-		eventOutlinerTracker.Add(newEventContent);
+			newButton.GetComponent<EventPopUpBase>().regionOrigin = RegionManagerInstance.regionList[num];
 
-		newEventContent.transform.SetParent(eventOutliner.transform, false);
-        
-        eventTracker.Add(newButton);
+			switch (eventTier)
+			{
+			case EventData.EventTier.Tier1:
+				newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier1Events[Random.Range(0, eventsList.tier1Events.Count)];
+				break;
+			case EventData.EventTier.Tier2:
+				newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier2Events[Random.Range(0, eventsList.tier2Events.Count)];
+				break;
+			case EventData.EventTier.Tier3:
+				newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier3Events[Random.Range(0, eventsList.tier3Events.Count)];
+				break;
+			case EventData.EventTier.Tier4:
+				newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier4Events[Random.Range(0, eventsList.tier4Events.Count)];
+				break;
+			default:
+				Debug.Log("Error tier list");
+				break;
+			}
+			GameObject building = Instantiate(newButton.GetComponent<EventPopUpBase>().eventData.buildingPrefab);
+			building.GetComponent<BuildingPrefab>().eventOrigin = newButton.GetComponent<EventPopUpBase>();
+			GameObject newEventContent                                  = Instantiate(eventOutlinerContent);
+			newEventContent.GetComponent<EventContent>().eventOrigin    = newButton;
+
+			newButton.GetComponent<EventPopUpBase>().turnsLeft          = newButton.GetComponent<EventPopUpBase>().eventData.turnsLeft;
+			eventOutlinerTracker.Add(newEventContent);
+
+			newEventContent.transform.SetParent(eventOutliner.transform, false);
+
+			eventTracker.Add(newButton);
+		}
+		
     }
-
-    private Vector3 RandomPointInPolygon(Vector3 center, Bounds size)
-    {
-		return center + new Vector3((Random.value - 0.55f) * size.extents.x,(Random.value - 0.55f) * size.extents.y, (Random.value - 0.55f) * size.extents.z);
-    }
-
+		
     public void UpdateEvents()
     {
+		int standard 	= 0;
+		int chain 		= 0;
+		int domino 		= 0;
+		int eventNum 	= Random.Range (2, 5);
+		eventNum = 3;
+		if (eventNum == 2) 
+		{
+			standard = 1;
+			chain 	= 1;
+			domino 	= 0;
+		}
+		if (eventNum == 3) 
+		{
+			standard = 1;
+			chain 	= 1;
+			domino 	= 1;
+		}
+		if (eventNum == 4) 
+		{
+			standard = 1;
+			chain 	= 1;
+			domino 	= 2;
+		}
+		if (eventNum == 5) 
+		{
+			standard = 2;
+			chain 	= 1;
+			domino 	= 2;
+		}
         if (eventTracker != null)
-        {
-			for (int i = 0; i < Random.Range(1,3); i++)
-            {
-                if (eventTracker.Count != 5)
-                {
-                    if (turnManager.currentTurn >= 0 && turnManager.currentTurn < 20)
-                    {
-                        SpawnEvent(EventData.EventTier.Tier1);
-                    }
-                    else if (turnManager.currentTurn >= 20 && turnManager.currentTurn < 40)
-                    {
-                        Debug.Log("SPawned tier2");
-                        SpawnEvent(EventData.EventTier.Tier2);
-                    }
-                    else if (turnManager.currentTurn >= 40)
-                    {
-                        SpawnEvent(EventData.EventTier.Tier3);
-                    }
-                    
-                }	
-            }					
+        {	
+			for (int i = 0; i < standard; i++) 
+			{
+				if (turnManager.currentTurn >= 0 && turnManager.currentTurn < 20)
+				{
+					SpawnEvent(EventData.EventTier.Tier1, EventData.EventType.Standard);
+				}
+				else if (turnManager.currentTurn >= 20 && turnManager.currentTurn < 40)
+				{
+					SpawnEvent(EventData.EventTier.Tier2, EventData.EventType.Standard);
+				}
+				else if (turnManager.currentTurn >= 40)
+				{
+					SpawnEvent(EventData.EventTier.Tier3, EventData.EventType.Standard);
+				}   
+			}
+			for (int i = 0; i < chain; i++) 
+			{
+				if (turnManager.currentTurn >= 0 && turnManager.currentTurn < 20)
+				{
+					SpawnEvent(EventData.EventTier.Tier1, EventData.EventType.Chain);
+				}
+				else if (turnManager.currentTurn >= 20 && turnManager.currentTurn < 40)
+				{
+					SpawnEvent(EventData.EventTier.Tier2, EventData.EventType.Chain);
+				}
+				else if (turnManager.currentTurn >= 40)
+				{
+					SpawnEvent(EventData.EventTier.Tier3, EventData.EventType.Chain);
+				}   
+			}
+			for (int i = 0; i < domino; i++) 
+			{
+				if (turnManager.currentTurn >= 0 && turnManager.currentTurn < 20)
+				{
+					SpawnEvent(EventData.EventTier.Tier1, EventData.EventType.Domino);
+				}
+				else if (turnManager.currentTurn >= 20 && turnManager.currentTurn < 40)
+				{
+					SpawnEvent(EventData.EventTier.Tier2, EventData.EventType.Domino);
+				}
+				else if (turnManager.currentTurn >= 40)
+				{
+					SpawnEvent(EventData.EventTier.Tier3, EventData.EventType.Domino);
+				}   
+			}
         }
     }
     public EventPopUpBase GetSelectedEvent()

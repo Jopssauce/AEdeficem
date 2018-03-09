@@ -47,7 +47,7 @@ public class EventPopUpBase : MonoBehaviour
         turnManager.EndTurnEvent.AddListener(UpdateEvent);
 	}
 	
-    void Click()
+    public void Click()
     {   
 		eventPanel = Instantiate(eventPanelPrefab) as GameObject;
 		eventPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
@@ -67,17 +67,15 @@ public class EventPopUpBase : MonoBehaviour
 
 	public virtual void AssignButtons()
 	{
-		eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<IgnoreButton>().eventOrigin      = this.GetComponent<EventPopUpBase>();
-		eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<ResolveButton>().eventOrigin    = this.GetComponent<EventPopUpBase>();
         if (isResolved == true)
         {
             eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
-            eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = true;
+            eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = true;
         }
         if (isResolved == false)
         {
             eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = true;
-            eventPanel.GetComponent<EventReader>().ignoreButton.GetComponent<Button>().interactable = false;
+            eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = false;
         }
 	}
 

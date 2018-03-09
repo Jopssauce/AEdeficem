@@ -54,8 +54,9 @@ MonoBehaviour:
   baseEvent: {fileID: 1419573078965202, guid: d21987b1c508b4b4fb13f005459f866e, type: 2}
   chainEventPrefab: {fileID: 0}
   eventPrefabs:
-  - {fileID: 1419573078965202, guid: d21987b1c508b4b4fb13f005459f866e, type: 2}
   - {fileID: 1652539101088490, guid: efa80f62a0bcd1741848b9059ef061a8, type: 2}
+  - {fileID: 1419573078965202, guid: d21987b1c508b4b4fb13f005459f866e, type: 2}
+  - {fileID: 1119296044836900, guid: b32585bbef10c7d49a28622f97f74701, type: 2}
   newCanvas: {fileID: 0}
   EventsPanelPrefab: {fileID: 1688351182550100, guid: a3df83e487d81fc4283515c6d2765ef0,
     type: 2}
