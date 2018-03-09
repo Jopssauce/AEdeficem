@@ -100,11 +100,19 @@ public class MainUI : MonoBehaviour
     public void DisableButtons()
     {
         TurnButton.interactable = false;
+        for(int i = 0; i < eventManager.eventTracker.Count; i++)
+        {
+            eventManager.eventTracker[i].GetComponent<Button>().interactable = false;
+        }
     }
 
     public void EnableButtons()
     {
         TurnButton.interactable = true;
+        for (int i = 0; i < eventManager.eventTracker.Count; i++)
+        {
+            eventManager.eventTracker[i].GetComponent<Button>().interactable = true;
+        }
     }
 
     public void toggleRegionUnderlayDisplay()
