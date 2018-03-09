@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BindToRegion : MonoBehaviour {
-	public GameObject 	regionOrigin;
+	public RegionBase 	regionOrigin;
 	public bool 		randomPoint;
 	public float 		offset;
 	public Vector3 		randPos;

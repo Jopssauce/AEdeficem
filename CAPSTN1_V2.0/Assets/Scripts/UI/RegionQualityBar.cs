@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RegionQualityBar : MonoBehaviour {
-	public GameObject 	regionOrigin;
+	public RegionBase 	regionOrigin;
 	public Slider 		slider;
 	void Start () 
 	{

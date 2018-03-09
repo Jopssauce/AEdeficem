@@ -113,7 +113,7 @@ public class ResourceManager : MonoBehaviour {
 		
 	public void GetResourceSum()
 	{
-		waterSum 		= 0;
+		/*waterSum 		= 0;
 		foodSum 		= 0;
 		powerSum 		= 0;
 		foreach (var region in regManager.regionList)
@@ -136,14 +136,14 @@ public class ResourceManager : MonoBehaviour {
 			  Debug.Log ("error region quality sum");
 			  break;
 		  }  
-        }
+        }*/
 	}
 
 	public void ReplenishResource()
 	{
         foreach (var item in regManager.regionList)
         {
-            AddResource(item.GetComponent<RegionBase>().regionType, item.GetComponent<RegionBase>().regionResourceAmount);
+            //AddResource(item.GetComponent<RegionBase>().regionType, item.GetComponent<RegionBase>().regionResourceAmount);
         }
 	}
 	public bool isEnoughRes(GameObject Event)

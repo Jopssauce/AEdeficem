@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class RegionManager : MonoBehaviour
 {
-    public List<GameObject> regionList;
+    public List<RegionBase> regionList;
 
     public GameObject RegionStatsCanvasPrefab;
     public GameObject RegionStatUI;
@@ -63,7 +63,7 @@ public class RegionManager : MonoBehaviour
     //so having less than that will have the Unity Console an "Arguement Out of Range Error"
     void FixRegionTypes()
     {
-        foreach (var item in RegionHolder)
+        /*foreach (var item in RegionHolder)
         {
             regionList.Add(item);
         }
@@ -92,7 +92,7 @@ public class RegionManager : MonoBehaviour
             }
         }
 
-        regionList = regionList.OrderBy(t => t.name).ToList();
+        regionList = regionList.OrderBy(t => t.name).ToList();*/
     }
 
     void MakeRegionStatsCanvas()

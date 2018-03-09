@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RegionUnderlayDisplay : MonoBehaviour {
-	public GameObject regionOrigin;
+	public RegionBase regionOrigin;
 	public GameObject regionQualityBar;
 	public GameObject regionResources;
 	public Text regionName;

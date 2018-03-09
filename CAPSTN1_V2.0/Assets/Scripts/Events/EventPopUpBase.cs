@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class EventPopUpBase : MonoBehaviour
 {
     public EventData   	eventData;
-    public GameObject  	regionOrigin;
+    public RegionBase  	regionOrigin;
     public int         	turnsLeft;
     public bool        	isResolved;
     public Vector3     	eventWorldPos;

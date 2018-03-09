@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CityBase : MonoBehaviour 
 {
-	 public class Resources
+	[System.Serializable]
+	 public class CityResources
     {
         public int Ap;
         public int Water;
@@ -18,12 +19,14 @@ public class CityBase : MonoBehaviour
         Power,
         Food
     }
+
 	public RegionBase regionOrigin;
 	public GameObject cityPanelPrefab;
 	public GameObject cityPanel;
 
-	public ProductionType firstProduction;
-    public ProductionType secondProduction;	
+	public CityResources 	cityResources;
+	public ProductionType 	firstProduction;
+    public ProductionType 	secondProduction;	
 
 	public int firstCurrentProduction;
 	public int secondCurrentProduction;
@@ -42,6 +45,7 @@ public class CityBase : MonoBehaviour
 	public void UpdateCity()
 	{
 		firstCurrentProduction = Mathf.RoundToInt( (regionOrigin.regionQuality / regionOrigin.maxRegionQuality) * regionOrigin.MaxRegionResource);
+		secondCurrentProduction = Mathf.RoundToInt( (regionOrigin.regionQuality / regionOrigin.maxRegionQuality) * regionOrigin.MaxRegionResource);
 
 		if (firstCurrentProduction <= 0)
 		{
@@ -50,6 +54,40 @@ public class CityBase : MonoBehaviour
 		if (secondCurrentProduction <= 0)
 		{
 			secondCurrentProduction = 0;
+		}
+
+		switch (firstProduction)
+		{
+		case ProductionType.Food:
+			cityResources.Food += firstCurrentProduction;
+			break;
+		case ProductionType.Power:
+			cityResources.Power += firstCurrentProduction;
+			break;
+		case ProductionType.Water:
+			cityResources.Water += firstCurrentProduction;
+			break;
+
+		default:
+			Debug.Log("Error tier list");
+			break;
+		}
+
+		switch (secondProduction)
+		{
+		case ProductionType.Food:
+			cityResources.Food += secondCurrentProduction;
+			break;
+		case ProductionType.Power:
+			cityResources.Power += secondCurrentProduction;
+			break;
+		case ProductionType.Water:
+			cityResources.Water += secondCurrentProduction;
+			break;
+
+		default:
+			Debug.Log("Error tier list");
+			break;
 		}
 	}
 }
