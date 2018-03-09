@@ -94,6 +94,8 @@ public class CityBase : MonoBehaviour
 	public void SpawnStatsPanel()
 	{
 		cityPanel = Instantiate(cityPanelPrefab);
-		cityPanelPrefab.GetComponent<StatsPanel>().cityOrigin = this.GetComponent<CityBase>();
+		cityPanel.GetComponent<StatsPanel>().cityOrigin = this.GetComponent<CityBase>();
+		cityPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
+		cityPanel.transform.SetAsLastSibling();
 	}
 }

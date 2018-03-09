@@ -197,6 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4090915961016996}
   - component: {fileID: 114313301969230612}
+  - component: {fileID: 114000905504637082}
   m_Layer: 0
   m_Name: Region 1 City
   m_TagString: Untagged
@@ -920,6 +921,18 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114000905504637082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1835391313421958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fbca09bb92e0a440b0dd347e49ca1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cityOrigin: {fileID: 0}
 --- !u!114 &114313301969230612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -932,15 +945,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionOrigin: {fileID: 0}
-  cityPanelPrefab: {fileID: 0}
+  cityPanelPrefab: {fileID: 1473796447379942, guid: 599152d270834a044a9ba5e4af30038b,
+    type: 2}
   cityPanel: {fileID: 0}
   cityResources:
-    Ap: 0
     Water: 0
     Power: 0
     Food: 0
   firstProduction: 0
-  secondProduction: 0
+  secondProduction: 1
   firstCurrentProduction: 0
   secondCurrentProduction: 0
 --- !u!114 &114605085224990234
