@@ -121,7 +121,6 @@ public class EventManager : MonoBehaviour
 		int chain 		= 0;
 		int domino 		= 0;
 		int eventNum 	= Random.Range (2, 5);
-		eventNum = 3;
 		if (eventNum == 2) 
 		{
 			standard = 1;

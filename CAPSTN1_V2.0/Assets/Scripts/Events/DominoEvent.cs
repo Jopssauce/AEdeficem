@@ -6,19 +6,21 @@ public class DominoEvent : EventPopUpBase
 {
 	public bool firstChoice;
 	public bool secondChoice;
+
+
 	public override void Start ()
 	{
 		base.Start ();
 		firstChoice 	= false;
 		secondChoice 	= false;
 	}
-	public void ResolveChoice1()
+	public void StandardChoice()
 	{
-		
+		base.ResolveEvent ();
 	}
-	public void ResolveChoice2()
+	public void DominoChoice()
 	{
-		
+		base.ResolveEvent ();
 	}	
 	public override void AssignButtons ()
 	{

@@ -845,8 +845,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LongResolveCLick
+      - m_Target: {fileID: 114127118763153224}
+        m_MethodName: DominoChoice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1096,8 +1096,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ShortResolveClick
+      - m_Target: {fileID: 114127118763153224}
+        m_MethodName: StandardChoice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

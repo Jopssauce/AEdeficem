@@ -96,7 +96,7 @@ public class EventPopUpBase : MonoBehaviour
 		Destroy(eventPanel);
     }
 
-    public void ResolveEvent()
+	public virtual void ResolveEvent()
     {
         if (isResolved == false)
         {
