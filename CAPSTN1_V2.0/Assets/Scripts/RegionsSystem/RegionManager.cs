@@ -106,18 +106,7 @@ public class RegionManager : MonoBehaviour
     {
         foreach (var region in regionList)
         {
-            RegionBase regionBase 				= region.GetComponent<RegionBase>();
-            regionBase.regionQuality 			-= regionBase.regionQualityDecay * regionBase.maxRegionQuality;
-            regionBase.regionResourceAmount 	= Mathf.RoundToInt( (regionBase.regionQuality / regionBase.maxRegionQuality) * regionBase.MaxRegionResource);
-            regionBase.material.color 			= Color.Lerp(Color.red, Color.cyan, regionBase.regionQuality / regionBase.maxRegionQuality);
-            if (regionBase.regionResourceAmount <= 0)
-            {
-                regionBase.regionResourceAmount = 0;
-            }
-            if (regionBase.regionQuality > regionBase.maxRegionQuality)
-            {
-                regionBase.regionQuality = regionBase.maxRegionQuality;
-            }
+       
         }
 
         bool isVictory;

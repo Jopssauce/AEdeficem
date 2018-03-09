@@ -1825,6 +1825,17 @@ MonoBehaviour:
   foodAmntSum: {fileID: 1608804028}
   apAmntSum: {fileID: 1474767954}
   Turn: {fileID: 2000939583}
+  TurnButton: {fileID: 0}
+  EventSelected:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventClosed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   regionUnderlayDisplayList: []
   regionUnderlayDisplay: {fileID: 1832858713281702, guid: bff0c58464bde9d478374e211883e3bb,
     type: 2}
@@ -2388,6 +2399,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 1605462628403836, guid: 9b0f24e41f855434eb3d4f916fa7cafb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b0f24e41f855434eb3d4f916fa7cafb, type: 2}
   m_IsPrefabParent: 0
@@ -2708,6 +2723,10 @@ Prefab:
     - target: {fileID: 4066895844996058, guid: d5d71b450573d044aa00ca005be11ec1, type: 2}
       propertyPath: m_RootOrder
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323693906173346, guid: d5d71b450573d044aa00ca005be11ec1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5d71b450573d044aa00ca005be11ec1, type: 2}
@@ -3964,7 +3983,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnManager: {fileID: 0}
   eventManager: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!1 &1304390032
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,7 +5020,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnManager: {fileID: 0}
   eventManager: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!114 &1556408329
 MonoBehaviour:
   m_ObjectHideFlags: 0

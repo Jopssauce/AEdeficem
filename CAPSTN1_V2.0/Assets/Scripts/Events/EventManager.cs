@@ -181,15 +181,15 @@ public class EventManager : MonoBehaviour
 			{
 				if (turnManager.currentTurn >= 0 && turnManager.currentTurn < 20)
 				{
-					SpawnEvent(EventData.EventTier.Tier1, EventData.EventType.Domino);
+					SpawnEvent(EventData.EventTier.Tier1, EventData.EventType.Standard);
 				}
 				else if (turnManager.currentTurn >= 20 && turnManager.currentTurn < 40)
 				{
-					SpawnEvent(EventData.EventTier.Tier2, EventData.EventType.Domino);
+					SpawnEvent(EventData.EventTier.Tier2, EventData.EventType.Standard);
 				}
 				else if (turnManager.currentTurn >= 40)
 				{
-					SpawnEvent(EventData.EventTier.Tier3, EventData.EventType.Domino);
+					SpawnEvent(EventData.EventTier.Tier3, EventData.EventType.Standard);
 				}   
 			}
         }

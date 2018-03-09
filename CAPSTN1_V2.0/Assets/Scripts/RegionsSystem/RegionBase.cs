@@ -13,6 +13,7 @@ public class RegionBase : MonoBehaviour
         public int Food;
     }
 
+    
 	public List<EventData> 				resolvedChainEvents;
 	public float                        regionQuality;
 	public float                        maxRegionQuality;
@@ -21,11 +22,7 @@ public class RegionBase : MonoBehaviour
     public int                          MaxRegionResource;
     public float                        regionQualityDecay;
     public ResourceManager.ResourceType regionType;
-
-    void Awake()
-    {
-        //AssignRegionType();
-    }
+    private TurnManager                 turnManager;
 
     // Use this for initialization
     void Start()
@@ -36,8 +33,11 @@ public class RegionBase : MonoBehaviour
         regionResourceAmount = Mathf.RoundToInt( ( regionQuality / maxRegionQuality) * MaxRegionResource);
         material            = this.GetComponent<Renderer>().material;
         material.shader = Shader.Find("SFHologram/HologramShader");
-        //material.color = Color.Lerp(Color.red, Color.green, regionQuality / maxRegionQuality);
-        
+        if (TurnManager.instance != null)
+        {
+            turnManager = TurnManager.instance;
+        }
+        turnManager.EndTurnEvent.AddListener(UpdateRegion);
     }
 
     // Update is called once per frame
@@ -70,6 +70,21 @@ public class RegionBase : MonoBehaviour
         {
             this.regionType = ResourceManager.ResourceType.Food;
         }
+    }
+
+    public void UpdateRegion()
+    {
+            regionQuality 			-= regionQualityDecay * maxRegionQuality;
+            regionResourceAmount 	= Mathf.RoundToInt( (regionQuality / maxRegionQuality) * MaxRegionResource);
+            material.color 			= Color.Lerp(Color.red, Color.cyan, regionQuality / maxRegionQuality);
+            if (regionResourceAmount <= 0)
+            {
+                regionResourceAmount = 0;
+            }
+            if (regionQuality > maxRegionQuality)
+            {
+                regionQuality = maxRegionQuality;
+            }
     }
 
 }
