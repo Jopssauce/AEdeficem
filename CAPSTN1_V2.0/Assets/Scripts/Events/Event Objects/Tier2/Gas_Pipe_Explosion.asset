@@ -14,7 +14,7 @@ MonoBehaviour:
   eventName: Gas Pipe Explosion
   turnsLeft: 3
   eventSprite: {fileID: 21300000, guid: 0973ead74db72514dae298a1c01fcf23, type: 3}
-  buildingPrefab: {fileID: 1413300846774282, guid: be45f41bcb47a274bbd626291870586e,
+  buildingPrefab: {fileID: 1273934592567322, guid: 458400ac70756234bbea4ac59eb20f4a,
     type: 2}
   waterCost: 0
   foodCost: 0

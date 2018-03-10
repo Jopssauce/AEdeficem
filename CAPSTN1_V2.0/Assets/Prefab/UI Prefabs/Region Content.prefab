@@ -60,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1380795073270628
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,8 +236,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceAmount: {fileID: 114081523151395414}
+  resourceAmount2: {fileID: 0}
   resourceImage: {fileID: 114528643609877052}
+  resourceImage2: {fileID: 0}
   regionOrigin: {fileID: 0}
+  cityOrigin: {fileID: 0}
+  resManager: {fileID: 0}
 --- !u!114 &114081523151395414
 MonoBehaviour:
   m_ObjectHideFlags: 1

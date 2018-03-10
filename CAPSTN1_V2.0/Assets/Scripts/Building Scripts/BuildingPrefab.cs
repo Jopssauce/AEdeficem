@@ -9,7 +9,7 @@ public class BuildingPrefab : MonoBehaviour {
 	void Update () 
 	{
 		Vector3 pos;
-		pos.x = eventOrigin.eventWorldPos.x - 0.2f;
+		pos.x = eventOrigin.eventWorldPos.x;
 		pos.y = this.transform.position.y;
 		pos.z = eventOrigin.eventWorldPos.z;
 		this.transform.position = pos;

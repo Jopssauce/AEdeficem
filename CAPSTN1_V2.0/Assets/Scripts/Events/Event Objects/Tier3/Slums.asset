@@ -14,7 +14,7 @@ MonoBehaviour:
   eventName: Slums
   turnsLeft: 4
   eventSprite: {fileID: 21300000, guid: 346b1ee2d196774448eb4dd2c9848ad4, type: 3}
-  buildingPrefab: {fileID: 1413300846774282, guid: be45f41bcb47a274bbd626291870586e,
+  buildingPrefab: {fileID: 1209049137058192, guid: aed53223dcf02c64da35812d7d91b85a,
     type: 2}
   waterCost: 25
   foodCost: 30
