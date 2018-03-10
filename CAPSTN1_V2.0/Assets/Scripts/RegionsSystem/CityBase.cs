@@ -23,6 +23,9 @@ public class CityBase : MonoBehaviour
 	public RegionBase regionOrigin;
 	public GameObject cityPanelPrefab;
 	public GameObject cityPanel;
+	public GameObject baseUnitPrefab;
+
+	public List<GameObject> units;
 
 	public CityResources 	cityResources;
 	public ProductionType 	firstProduction;
@@ -139,4 +142,16 @@ public class CityBase : MonoBehaviour
 		}
 		AdjustedCityResource.Invoke ();
 	}
+	public void SpawnUnit(EventPopUpBase eventBase)
+	{
+		Vector3 spawnPos;
+		spawnPos.x = this.transform.position.x;
+		spawnPos.y = baseUnitPrefab.transform.position.y;
+		spawnPos.z = this.transform.position.z;
+		GameObject currentUnit = Instantiate(baseUnitPrefab, spawnPos, this.transform.rotation);
+		currentUnit.GetComponent<UnitBase>().cityOrigin = this;
+		currentUnit.GetComponent<UnitBase>().eventOrigin = eventBase;
+		units.Add(currentUnit);
+	}
+
 }

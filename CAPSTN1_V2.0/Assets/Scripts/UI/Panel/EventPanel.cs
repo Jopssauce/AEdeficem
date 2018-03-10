@@ -10,6 +10,7 @@ public class EventPanel : MonoBehaviour
     public GameObject   eventOrigin;
 
     public Button       exitButton;
+    public Button       unitButton;
     public Image        eventThumbnail;
     public EventManager eventManager;
     public TurnManager  turnManager;
