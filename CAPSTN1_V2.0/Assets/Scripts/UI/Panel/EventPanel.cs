@@ -45,9 +45,8 @@ public class EventPanel : MonoBehaviour
         }
        
     }*/
-    public virtual void SendUnitButtonClick()
+    public void RequestUnitClick()
     {
-        eventOrigin.cityOrign.SpawnUnit(eventOrigin);
-        Destroy(eventOrigin.eventPanel);
+       eventOrigin.SpawnUnit();
     }
 }

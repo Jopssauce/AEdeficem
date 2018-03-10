@@ -52,11 +52,11 @@ public class UnitBase : MonoBehaviour
 	public void MoveTowards()
 	{
 		 velocity = distance.normalized * 2;
-		 if (distance.magnitude <= 0.2f && isArrived == false)
+		 if (distance.magnitude <= 0.3f && isArrived == false)
 		 {
 			 isArrived = true;
 		 }
-		  if (distance.magnitude <= 0.2f && isReturned == false)
+		  if (distance.magnitude <= 0.3f && isReturned == false)
 		 {
 			 isReturned = true;
 		 }

@@ -166,5 +166,11 @@ public class EventPopUpBase : MonoBehaviour
 		}
 		
 	}
+    public virtual void SpawnUnit()
+    {
+        cityOrign.SpawnUnit(this);
+        this.GetComponent<Button>().interactable = true;
+        Destroy(eventPanel);   
+    }
     
 }
