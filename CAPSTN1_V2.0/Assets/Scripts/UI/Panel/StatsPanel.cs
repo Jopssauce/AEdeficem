@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 
 public class StatsPanel : MonoBehaviour 
 {
-	public RegionBase 	regionOrigin;
-	public CityBase 	cityOrigin;
+	public RegionBase regionOrigin;
+	public CityBase   cityOrigin;
 
 	public Text cityName;
 
@@ -22,6 +22,8 @@ public class StatsPanel : MonoBehaviour
 	public Button exitButton;
 
 	TurnManager turnManager;
+
+	public RegionUnderlayDisplay regionUnderlayDisplay;
 	
 	public void Start()
 	{
@@ -32,6 +34,7 @@ public class StatsPanel : MonoBehaviour
 		turnManager.EndTurnEvent.AddListener(SetUIText);
 		cityOrigin.AdjustedCityResource.AddListener(SetUIText);
 		SetUIText();
+		regionUnderlayDisplay.regionOrigin = this.regionOrigin;
 	}
 
 	public void SetUIText()

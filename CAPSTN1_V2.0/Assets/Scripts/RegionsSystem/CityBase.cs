@@ -100,6 +100,7 @@ public class CityBase : MonoBehaviour
 	{
 		cityPanel = Instantiate(cityPanelPrefab);
 		cityPanel.GetComponent<StatsPanel>().cityOrigin = this.GetComponent<CityBase>();
+		cityPanel.GetComponent<StatsPanel>().regionOrigin = regionOrigin;
 		cityPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 		cityPanel.transform.SetAsLastSibling();
 	}

@@ -48,6 +48,10 @@ public class UnitBase : MonoBehaviour
 		{
 			Destroy(this.gameObject);
 		}*/
+		if (eventOrigin == null)
+		{
+			Destroy(this.gameObject);
+		}
 	}
 
 	public void MoveTowards()
