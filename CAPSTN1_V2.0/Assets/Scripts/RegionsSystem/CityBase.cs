@@ -100,4 +100,43 @@ public class CityBase : MonoBehaviour
 		cityPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 		cityPanel.transform.SetAsLastSibling();
 	}
+
+	public void DeductCityResource(CityBase.ProductionType type, int amount)
+	{
+		switch (type) 
+		{
+		case CityBase.ProductionType.Food:
+			cityResources.Food -= amount;
+			break;
+		case CityBase.ProductionType.Power:
+			cityResources.Power -= amount;
+			break;
+		case CityBase.ProductionType.Water:
+			cityResources.Water -= amount;
+			break;
+		default:
+			Debug.Log ("Cant deduct Resource");
+			break;
+		}
+		AdjustedCityResource.Invoke ();
+	}
+	public void AddCityResource(CityBase.ProductionType type, int amount)
+	{
+		switch (type) 
+		{
+		case CityBase.ProductionType.Food:
+			cityResources.Food += amount;
+			break;
+		case CityBase.ProductionType.Power:
+			cityResources.Power += amount;
+			break;
+		case CityBase.ProductionType.Water:
+			cityResources.Water += amount;
+			break;
+		default:
+			Debug.Log ("Cant add Resource");
+			break;
+		}
+		AdjustedCityResource.Invoke ();
+	}
 }

@@ -12,6 +12,7 @@ public class EventPopUpBase : MonoBehaviour
     public bool        	isResolved;
     public Vector3     	eventWorldPos;
     public List<Sprite> timerSprites;
+    public CityBase     cityOrign;
 
 	public GameObject	eventPanel;
 	public GameObject	eventPanelPrefab;
@@ -47,6 +48,7 @@ public class EventPopUpBase : MonoBehaviour
         this.GetComponent<Button>().onClick.AddListener(Click);
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
         turnManager.EndTurnEvent.AddListener(UpdateEvent);
+        cityOrign = regionOrigin.cityOrigin;
 	}
 	
     public void Click()
@@ -88,9 +90,9 @@ public class EventPopUpBase : MonoBehaviour
         {
             Debug.Log("Refund");
             resManager.AddResource(ResourceManager.ResourceType.ActionPoints,eventData.actionCost);
-            resManager.AddResource(ResourceManager.ResourceType.Water,  eventData.waterCost);
-            resManager.AddResource(ResourceManager.ResourceType.Power, 	eventData.powerCost);
-            resManager.AddResource(ResourceManager.ResourceType.Food,   eventData.foodCost);
+            cityOrign.AddCityResource(CityBase.ProductionType.Water,  eventData.waterCost);
+            cityOrign.AddCityResource(CityBase.ProductionType.Power, 	eventData.powerCost);
+            cityOrign.AddCityResource(CityBase.ProductionType.Food,   eventData.foodCost);
         }
 
        	isResolved = false;
@@ -106,9 +108,9 @@ public class EventPopUpBase : MonoBehaviour
             {
                 isResolved = true;
                 resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventData.actionCost);
-                resManager.DeductResource(ResourceManager.ResourceType.Water,	eventData.waterCost);
-                resManager.DeductResource(ResourceManager.ResourceType.Power, eventData.powerCost);
-                resManager.DeductResource(ResourceManager.ResourceType.Food, eventData.foodCost);
+                cityOrign.AddCityResource(CityBase.ProductionType.Water,	eventData.waterCost);
+                cityOrign.AddCityResource(CityBase.ProductionType.Power, eventData.powerCost);
+                cityOrign.AddCityResource(CityBase.ProductionType.Food, eventData.foodCost);
 
 				Destroy(eventPanel);
             }
@@ -164,4 +166,5 @@ public class EventPopUpBase : MonoBehaviour
 		}
 		
 	}
+    
 }
