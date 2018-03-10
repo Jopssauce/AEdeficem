@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114572910853362570}
   - component: {fileID: 114406298388919078}
   - component: {fileID: 114891892703524064}
+  - component: {fileID: 223664313692311696}
   m_Layer: 5
   m_Name: EventPrefab
   m_TagString: Untagged
@@ -106,6 +107,7 @@ MonoBehaviour:
   eventPanel: {fileID: 0}
   eventPanelPrefab: {fileID: 1688351182550100, guid: a3df83e487d81fc4283515c6d2765ef0,
     type: 2}
+  CoverPanel: {fileID: 1504014433623238, guid: c836bfb220169cf42b1abeba7184f768, type: 2}
   resManager: {fileID: 0}
   eventManager: {fileID: 0}
   regionManager: {fileID: 0}
@@ -205,6 +207,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1612306165102182}
+--- !u!223 &223664313692311696
+Canvas:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1652539101088490}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!224 &224536203980505692
 RectTransform:
   m_ObjectHideFlags: 1

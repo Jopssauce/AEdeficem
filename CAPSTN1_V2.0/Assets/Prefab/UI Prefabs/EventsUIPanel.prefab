@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 114751909832198936}
   - component: {fileID: 95512730817207316}
   - component: {fileID: 114364694879827256}
+  - component: {fileID: 223679985226671772}
   m_Layer: 5
   m_Name: EventsUIPanel
   m_TagString: Untagged
@@ -1300,6 +1301,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1952320683520764}
+--- !u!223 &223679985226671772
+Canvas:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1688351182550100}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!224 &224044664569981290
 RectTransform:
   m_ObjectHideFlags: 1
