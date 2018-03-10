@@ -927,7 +927,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 59cb34abb82f0c6438d19092d10eb347, type: 3}
     m_FontSize: 20
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 59cb34abb82f0c6438d19092d10eb347, type: 3}
     m_FontSize: 20
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -1255,7 +1255,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114525732506363584}
-        m_MethodName: SendUnitButtonClick
+        m_MethodName: RequestUnitClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1314,6 +1314,7 @@ MonoBehaviour:
   ActionQueue: {fileID: 1204497150322772, guid: 3c8eb7fcb03b7a8418f18f8f8b7f0b46,
     type: 2}
   eventOrigin: {fileID: 0}
+  sendUnitButton: {fileID: 114468828814849498}
   exitButton: {fileID: 114042109845371626}
   unitButton: {fileID: 114468828814849498}
   eventThumbnail: {fileID: 114935491345573446}
@@ -1701,7 +1702,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 59cb34abb82f0c6438d19092d10eb347, type: 3}
     m_FontSize: 20
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40

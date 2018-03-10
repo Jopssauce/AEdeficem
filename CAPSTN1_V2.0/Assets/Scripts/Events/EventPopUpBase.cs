@@ -16,6 +16,7 @@ public class EventPopUpBase : MonoBehaviour
 
 	public GameObject	eventPanel;
 	public GameObject	eventPanelPrefab;
+    public UnitBase     unit;
 
     public ResourceManager 	resManager;
     public EventManager    	eventManager;
@@ -71,15 +72,25 @@ public class EventPopUpBase : MonoBehaviour
 
 	public virtual void AssignButtons()
 	{
-        if (isResolved == true)
+        eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
+        eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = false;
+        if (isResolved == true && unit != null && unit.isArrived == true)
         {
             eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
             eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = true;
         }
-        if (isResolved == false)
+        if (isResolved == false && unit != null  && unit.isArrived == true)
         {
             eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = true;
             eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = false;
+        }
+        if (unit != null)
+        {
+            eventPanel.GetComponent<EventPanel>().sendUnitButton.interactable = false;
+        }
+         if (unit == null)
+        {
+            eventPanel.GetComponent<EventPanel>().sendUnitButton.interactable = true;
         }
 	}
 
@@ -169,6 +180,7 @@ public class EventPopUpBase : MonoBehaviour
     public virtual void SpawnUnit()
     {
         cityOrign.SpawnUnit(this);
+        resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 1);
         this.GetComponent<Button>().interactable = true;
         Destroy(eventPanel);   
     }

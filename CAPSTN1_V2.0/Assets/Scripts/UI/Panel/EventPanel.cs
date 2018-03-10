@@ -9,6 +9,7 @@ public class EventPanel : MonoBehaviour
 
     public EventPopUpBase   eventOrigin;
 
+    public Button       sendUnitButton;
     public Button       exitButton;
     public Button       unitButton;
     public Image        eventThumbnail;

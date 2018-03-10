@@ -30,6 +30,7 @@ public class UnitBase : MonoBehaviour
 		destPos.x = eventOrigin.eventWorldPos.x;
 		destPos.y = this.transform.position.y;
 		destPos.z = eventOrigin.eventWorldPos.z;
+		eventOrigin.unit = this;
 	}
 
 	void Update()
