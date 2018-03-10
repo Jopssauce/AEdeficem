@@ -60,7 +60,8 @@ public class EventPopUpBase : MonoBehaviour
         eventPanel.GetComponent<EventPanel>().exitButton.GetComponent<ExitButton>().eventOrigin = this.GetComponent<EventPopUpBase>();
 		eventPanel.GetComponent<EventPanel>().eventThumbnail.sprite      = eventData.eventSprite;
 		eventPanel.GetComponent<EventTextDisplay>().eventOrigin           = this.gameObject;
-		eventPanel.GetComponent<DisplayResourceCost>().eventOrigin        = this.gameObject;
+		eventPanel.GetComponent<DisplayResourceCost>().eventOrigin        = this.GetComponent<EventPopUpBase>();
+        eventPanel.GetComponent<DisplayCityResources>().eventOrigin       = this.GetComponent<EventPopUpBase>();
 		eventPanel.SetActive(true);
 		eventPanel.transform.SetAsLastSibling();
         this.GetComponent<Button>().interactable = false;
@@ -149,4 +150,18 @@ public class EventPopUpBase : MonoBehaviour
         }
     
     }
+    public bool isEnoughRes(GameObject Event)
+	{
+        CityBase cityOrigin = regionOrigin.cityOrigin;
+		if (cityOrigin.cityResources.Water < Event.GetComponent<EventPopUpBase>().eventData.waterCost || cityOrigin.cityResources.Food < Event.GetComponent<EventPopUpBase>().eventData.foodCost 
+		 || cityOrigin.cityResources.Power < Event.GetComponent<EventPopUpBase>().eventData.powerCost || resManager.actionPoints < Event.GetComponent<EventPopUpBase>().eventData.actionCost)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+		
+	}
 }

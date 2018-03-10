@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DisplayResourceCost : MonoBehaviour {
-	public GameObject eventOrigin;
+	public EventPopUpBase eventOrigin;
 	private ResourceManager resManager;
 	public Text waterCost;
 	public Text powerCost;
@@ -30,6 +30,7 @@ public class DisplayResourceCost : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		CityBase cityOrgin = eventOrigin.regionOrigin.cityOrigin;
 		if (eventOrigin != null)
 		{
 			waterCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.waterCost.ToString();
@@ -37,9 +38,9 @@ public class DisplayResourceCost : MonoBehaviour {
 			foodCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.foodCost.ToString();
 			actionCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost.ToString();
 			
-			ChangeColor(waterCost, resManager.water, waterColor);
-			ChangeColor(powerCost, resManager.power, powerColor);
-			ChangeColor(foodCost, resManager.food, foodColor);
+			ChangeColor(waterCost, cityOrgin.cityResources.Water, waterColor);
+			ChangeColor(powerCost, cityOrgin.cityResources.Power, powerColor);
+			ChangeColor(foodCost,  cityOrgin.cityResources.Power, foodColor);
 			ChangeColor(actionCost, resManager.actionPoints, actionColor);
 		}
 	}

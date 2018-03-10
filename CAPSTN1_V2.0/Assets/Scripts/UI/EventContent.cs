@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class EventContent : MonoBehaviour, IPointerClickHandler  {
-	public GameObject 	eventOrigin;
+	public EventPopUpBase 	eventOrigin;
 	public GameObject	particleEffect;
 	public Text 		eventTitle;
 	public int 			turnsLeft;
