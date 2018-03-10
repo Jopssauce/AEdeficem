@@ -174,7 +174,6 @@ MonoBehaviour:
   eventPanel: {fileID: 0}
   eventPanelPrefab: {fileID: 1682479331008660, guid: f3cc0a5491badb1418ccb210f97a1ad9,
     type: 2}
-  CoverPanel: {fileID: 1504014433623238, guid: c836bfb220169cf42b1abeba7184f768, type: 2}
   resManager: {fileID: 0}
   eventManager: {fileID: 0}
   regionManager: {fileID: 0}

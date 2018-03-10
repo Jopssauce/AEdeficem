@@ -41,7 +41,7 @@ public class ChainEvent : EventPopUpBase
 		isResolved = true;
 		shortTerm = true;
 		longTerm = false;
-        this.GetComponent<Button>().interactable = true;
+		this.GetComponent<Button>().interactable = true;
 	}
 
 	public void LongTermResolve()

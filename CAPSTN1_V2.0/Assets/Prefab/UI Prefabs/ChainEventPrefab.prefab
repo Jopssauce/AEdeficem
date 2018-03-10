@@ -148,16 +148,12 @@ MonoBehaviour:
   eventPanel: {fileID: 0}
   eventPanelPrefab: {fileID: 1032759389003268, guid: 691c287e4a1d37340806a189ee09387b,
     type: 2}
-  CoverPanel: {fileID: 1504014433623238, guid: c836bfb220169cf42b1abeba7184f768, type: 2}
   resManager: {fileID: 0}
   eventManager: {fileID: 0}
   regionManager: {fileID: 0}
-  turnManager: {fileID: 0}
   persistentEvents: []
   persistentEventPrefab: {fileID: 1851754591194924, guid: 8b9d2548fd92b89439b5c2117e175c16,
     type: 2}
-  longTerm: 0
-  shortTerm: 0
 --- !u!114 &114946305147582094
 MonoBehaviour:
   m_ObjectHideFlags: 1

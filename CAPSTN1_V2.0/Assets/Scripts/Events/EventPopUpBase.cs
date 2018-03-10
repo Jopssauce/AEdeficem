@@ -15,7 +15,6 @@ public class EventPopUpBase : MonoBehaviour
 
 	public GameObject	eventPanel;
 	public GameObject	eventPanelPrefab;
-    public GameObject   CoverPanel;
 
     public ResourceManager 	resManager;
     public EventManager    	eventManager;
@@ -23,7 +22,6 @@ public class EventPopUpBase : MonoBehaviour
     public TurnManager      turnManager;
 
     private MainUI disableButtons;
-    protected GameObject BlockPanel;
 
 	public virtual void Start ()
     {
@@ -52,10 +50,8 @@ public class EventPopUpBase : MonoBehaviour
 	}
 	
     public void Click()
-    {
-        BlockPanel = Instantiate(CoverPanel) as GameObject;
-        BlockPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
-        eventPanel = Instantiate(eventPanelPrefab) as GameObject;
+    {   
+		eventPanel = Instantiate(eventPanelPrefab) as GameObject;
 		eventPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 
 		eventManager.selectedEvent = this.GetComponent<EventPopUpBase>();
