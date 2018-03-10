@@ -20,6 +20,7 @@ public class StatsPanel : MonoBehaviour
 	public Image powerImage3;
 
 	public Button exitButton;
+	public Button transferButton;
 
 	TurnManager turnManager;
 
