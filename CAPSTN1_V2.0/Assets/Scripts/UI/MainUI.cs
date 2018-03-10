@@ -31,7 +31,6 @@ public class MainUI : MonoBehaviour
     public List<GameObject> regionUnderlayDisplayList;
 
     public GameObject regionUnderlayDisplay;
-    public GameObject regionOutliner;
     public GameObject regionOutlinerContent;
 
     public GameObject toggleUnderlayDisplay;
@@ -55,7 +54,7 @@ public class MainUI : MonoBehaviour
 
             regionUnderlayDisplayList.Add(ruBar);
             ruBar.transform.SetParent(this.transform, false);
-            ruBarOutliner.transform.SetParent(regionOutliner.transform, false);
+            //ruBarOutliner.transform.SetParent(regionOutliner.transform, false);
         }
 
         foreach (var underlay in regionUnderlayDisplayList)
