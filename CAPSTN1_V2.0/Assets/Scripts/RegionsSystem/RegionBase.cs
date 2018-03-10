@@ -5,7 +5,7 @@ using UnityEngine;
 public class RegionBase : MonoBehaviour
 {
 
-    
+    public List<GameObject> spawnAreas;
 	public List<EventData> 				resolvedChainEvents;
 	public float                        regionQuality;
 	public float                        maxRegionQuality;

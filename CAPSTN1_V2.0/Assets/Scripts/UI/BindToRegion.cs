@@ -7,29 +7,31 @@ public class BindToRegion : MonoBehaviour {
 	public bool 		randomPoint;
 	public float 		offset;
 	public Vector3 		randPos;
+	public GameObject	spawnArea;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		randPos = new Vector3 (Random.value, Random.value, Random.value);
+		spawnArea = regionOrigin.spawnAreas[ Random.Range(0, regionOrigin.spawnAreas.Count)];
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
-		if (regionOrigin != null)
+		if (spawnArea != null)
 		{
 			if (randomPoint == true) 
 			{
-				this.transform.position = Camera.main.WorldToScreenPoint(RandomPointInPolygon(regionOrigin.GetComponent<MeshCollider>().bounds.center, regionOrigin.GetComponent<MeshCollider>().bounds, randPos) );
+				this.transform.position = Camera.main.WorldToScreenPoint(RandomPointInPolygon(spawnArea.GetComponent<BoxCollider>().bounds.center, spawnArea.GetComponent<BoxCollider>().bounds, randPos) );
 				if (this.GetComponent<EventPopUpBase>() != null )
 				{
-					this.GetComponent<EventPopUpBase>().eventWorldPos = (RandomPointInPolygon(regionOrigin.GetComponent<MeshCollider>().bounds.center, regionOrigin.GetComponent<MeshCollider>().bounds, randPos) );
+					this.GetComponent<EventPopUpBase>().eventWorldPos = (RandomPointInPolygon(spawnArea.GetComponent<BoxCollider>().bounds.center, spawnArea.GetComponent<BoxCollider>().bounds, randPos) );
 				}
 			}
 			if (randomPoint == false) 
 			{
-				this.transform.position = Camera.main.WorldToScreenPoint(PointInPolygon(regionOrigin.GetComponent<MeshCollider>().bounds.center, regionOrigin.GetComponent<MeshCollider>().bounds) );
+				this.transform.position = Camera.main.WorldToScreenPoint(PointInPolygon(spawnArea.GetComponent<BoxCollider>().bounds.center, spawnArea.GetComponent<BoxCollider>().bounds) );
 			}
 		}
 
