@@ -57,7 +57,7 @@ public class EventPopUpBase : MonoBehaviour
 		eventPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 
 		eventManager.selectedEvent = this.GetComponent<EventPopUpBase>();
-		eventPanel.GetComponent<EventPanel>().eventOrigin                = this.gameObject;
+		eventPanel.GetComponent<EventPanel>().eventOrigin                = this;
 		AssignButtons ();
         eventPanel.GetComponent<EventPanel>().exitButton.GetComponent<ExitButton>().eventOrigin = this.GetComponent<EventPopUpBase>();
 		eventPanel.GetComponent<EventPanel>().eventThumbnail.sprite      = eventData.eventSprite;

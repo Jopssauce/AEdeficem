@@ -7,7 +7,7 @@ public class EventPanel : MonoBehaviour
 {
 	public GameObject ActionQueue;
 
-    public GameObject   eventOrigin;
+    public EventPopUpBase   eventOrigin;
 
     public Button       exitButton;
     public Button       unitButton;
@@ -31,11 +31,11 @@ public class EventPanel : MonoBehaviour
 
     }
 
-    public virtual void AddToActionQue()
+    /*public virtual void AddToActionQue()
     {
         if (eventOrigin.GetComponent<EventPopUpBase>().isResolved == false)
         {
-            if (ResourceManager.instance.isEnoughRes(eventOrigin) == true)
+            if (ResourceManager.instance.isEnoughRes(eventOrigin.gameObject) == true)
             {           
                 aqManager.Panel.SetActive(true);
                 NewQueueItem = Instantiate(ActionQueue) as GameObject;
@@ -44,5 +44,10 @@ public class EventPanel : MonoBehaviour
             }
         }
        
+    }*/
+    public virtual void SendUnitButtonClick()
+    {
+        eventOrigin.cityOrign.SpawnUnit(eventOrigin);
+        Destroy(eventOrigin.eventPanel);
     }
 }

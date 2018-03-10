@@ -27,7 +27,9 @@ public class UnitBase : MonoBehaviour
 		}
 		turnManager.EndTurnEvent.AddListener(Initiate);
 		turnManager.EndTurnEvent.AddListener(ReturnToCity);
-		destPos = eventOrigin.transform.position;
+		destPos.x = eventOrigin.eventWorldPos.x;
+		destPos.y = this.transform.position.y;
+		destPos.z = eventOrigin.eventWorldPos.z;
 	}
 
 	void Update()
@@ -37,28 +39,28 @@ public class UnitBase : MonoBehaviour
 		{
 			MoveTowards();
 		}
-		if (isSend == false && isArrived == true)
+		/*if (isSend == false && isArrived == true)
 		{
 			MoveTowards();
 		}
 		if (isReturned == true)
 		{
 			Destroy(this.gameObject);
-		}
+		}*/
 	}
 
 	public void MoveTowards()
 	{
-		 velocity = distance.normalized * 5;
-		 if (distance.magnitude <= 1 && isArrived == false)
+		 velocity = distance.normalized * 2;
+		 if (distance.magnitude <= 0.2f && isArrived == false)
 		 {
 			 isArrived = true;
 		 }
-		  if (distance.magnitude <= 1 && isReturned == false)
+		  if (distance.magnitude <= 0.2f && isReturned == false)
 		 {
 			 isReturned = true;
 		 }
-		 transform.position += velocity;
+		 transform.position += velocity * Time.deltaTime;
 	}
 	
 	public void ReturnToCity()

@@ -1255,7 +1255,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114525732506363584}
-        m_MethodName: resolveClick
+        m_MethodName: SendUnitButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1315,6 +1315,7 @@ MonoBehaviour:
     type: 2}
   eventOrigin: {fileID: 0}
   exitButton: {fileID: 114042109845371626}
+  unitButton: {fileID: 114468828814849498}
   eventThumbnail: {fileID: 114935491345573446}
   eventManager: {fileID: 0}
   turnManager: {fileID: 0}
