@@ -14,12 +14,14 @@ public class RegionResources : MonoBehaviour {
 	
 	void Start ()
 	{
+		cityOrigin = regionOrigin.cityOrigin;
 		SetSprite(regionOrigin.cityOrigin.firstProduction, regionOrigin.cityOrigin.secondProduction);
 		if (ResourceManager.instance != null) 
 		{
 			resManager = ResourceManager.instance;
 		}
 		resManager.AdjustedResourceEvent.AddListener (UpdateUiText);
+		cityOrigin.AdjustedCityResource.AddListener (UpdateUiText);
 		UpdateUiText ();
 		cityOrigin = regionOrigin.cityOrigin;
 	}
@@ -58,16 +60,16 @@ public class RegionResources : MonoBehaviour {
 		switch (type2) 
 		{
 		case CityBase.ProductionType.Water:
-			resourceImage.sprite = Resources.Load <Sprite>("WaterIcon");
-			resourceAmount.color = new Color32(0, 222, 255, 255);
+			resourceImage2.sprite = Resources.Load <Sprite>("WaterIcon");
+			resourceAmount2.color = new Color32(0, 222, 255, 255);
 			break;
 		case CityBase.ProductionType.Power:
-			resourceImage.sprite = Resources.Load <Sprite>("PowerIcon");
-			resourceAmount.color = new Color32(255, 228, 0, 255);
+			resourceImage2.sprite = Resources.Load <Sprite>("PowerIcon");
+			resourceAmount2.color = new Color32(255, 228, 0, 255);
 			break;
 		case CityBase.ProductionType.Food:
-			resourceImage.sprite = Resources.Load <Sprite>("FoodIcon");
-			resourceAmount.color = new Color32(80, 195, 2, 255);
+			resourceImage2.sprite = Resources.Load <Sprite>("FoodIcon");
+			resourceAmount2.color = new Color32(80, 195, 2, 255);
 			break;
 		default:
 			Debug.Log ("Cant add Sprite");
