@@ -61,7 +61,7 @@ public class TurnManager : MonoBehaviour {
 		EndTurnEvent.AddListener(regionManager.UpdateRegion);
 		resManager.GetResourceSum();
 		EndTurnEvent.Invoke ();
-		GameObject.FindGameObjectWithTag("Main UI").GetComponent<MainUI>().UpdateUiText();
+		
 		victory = true;
 		defeat = true;
 	}
@@ -71,6 +71,7 @@ public class TurnManager : MonoBehaviour {
 		resManager.AddResource(ResourceManager.ResourceType.ActionPoints, 10 - resManager.actionPoints );
 		currentTurn++;
 		sustainableRegions = 0;		
+		GameObject.FindGameObjectWithTag("Main UI").GetComponent<MainUI>().UpdateUiText();
 	}
 	
 }
