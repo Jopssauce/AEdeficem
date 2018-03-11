@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fdaacca8ffbb22d49929045835327aac, type: 2}
+  - {fileID: 2100000, guid: 4f5b874f642eccf4e9595abde3648d53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341896ded3c6d3742ab30de7bdccec0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnManager: {fileID: 0}
   cityOrigin: {fileID: 0}
   eventOrigin: {fileID: 0}
   destPos: {x: 0, y: 0, z: 0}

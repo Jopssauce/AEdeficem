@@ -9,7 +9,10 @@ public class TransferPanel : MonoBehaviour
 
 	public CityBase   	cityOrigin;
 	public CityBase		cityTarget;
-	public List<string> cityNames;
+
+	public List<RegionBase> regionListCopy;
+	public List<string> cityName;
+
 
 	public Dropdown dropdown;
 	public Button exitButton;
@@ -32,15 +35,22 @@ public class TransferPanel : MonoBehaviour
 		foreach (var region in regionManager.regionList)
 		{
 			//GameObject dropdownOptionPrefab = Instantiate();
-		
 		}
-		cityTarget = regionManager.regionList[0].cityOrigin;
+		regionListCopy = new List<RegionBase>(regionManager.regionList);
+		regionListCopy.Remove(regionOrigin);
+
+		foreach (var item in regionListCopy)
+		{
+			cityName.Add(item.cityOrigin.name);
+		}
+		dropdown.AddOptions(cityName);
+		
 	}
 
 	public void SpawnUnit()
     {
-        cityOrigin.SpawnResourceSender(regionManager.regionList[dropdown.value].cityOrigin);
-        resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 1);
+        cityOrigin.SpawnResourceSender(regionListCopy[dropdown.value].cityOrigin);
+        resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 2);
 
         Destroy(this.gameObject);   
     }

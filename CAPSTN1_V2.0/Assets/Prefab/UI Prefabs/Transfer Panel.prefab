@@ -584,7 +584,8 @@ MonoBehaviour:
   regionOrigin: {fileID: 0}
   cityOrigin: {fileID: 0}
   cityTarget: {fileID: 0}
-  cityNames: []
+  regionListCopy: []
+  cityName: []
   dropdown: {fileID: 114818263843867586}
   exitButton: {fileID: 114605160982014964}
   cityDropdownContentPrefab: {fileID: 0}
@@ -871,7 +872,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: 
 --- !u!114 &114727665564963702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1002,17 +1003,7 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: Option A
-      m_Image: {fileID: 0}
-    - m_Text: Option B
-      m_Image: {fileID: 0}
-    - m_Text: Option C
-      m_Image: {fileID: 0}
-    - m_Text: Option D
-      m_Image: {fileID: 0}
-    - m_Text: Option E
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
