@@ -11,6 +11,11 @@ public class Tooltip : MonoBehaviour
 
 	private GameObject hoverTip;
 
+	void Update()
+	{
+		hoverTip.transform.position = Input.mousePosition + new Vector3 (10.0f, 10.0f, 0.0f);
+	}
+
 	public void HoverMouse()
 	{
 		if (IsHover == false) 
@@ -19,13 +24,13 @@ public class Tooltip : MonoBehaviour
 			IsHover = true;
 			hoverTip = Instantiate (HoverTip) as GameObject;
 			hoverTip.transform.SetParent (GameObject.FindGameObjectWithTag ("Main UI").transform, false);
-			hoverTip.transform.position = new Vector2(transform.position.x, transform.position.y + 100.0f);
+			hoverTip.transform.position = Input.mousePosition + new Vector3 (10.0f, 10.0f, 0.0f);
 		}
 	}
 
 	public void ExitMouse()
 	{
-		if (IsHover == true) 
+		if (IsHover == true)
 		{
 			IsHover = false;
 		}
