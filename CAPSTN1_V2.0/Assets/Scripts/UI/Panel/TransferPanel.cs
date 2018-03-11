@@ -39,7 +39,7 @@ public class TransferPanel : MonoBehaviour
 
 	public void SpawnUnit()
     {
-        cityOrigin.SpawnResourceSender(cityTarget);
+        cityOrigin.SpawnResourceSender(regionManager.regionList[dropdown.value].cityOrigin);
         resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 1);
 
         Destroy(this.gameObject);   
