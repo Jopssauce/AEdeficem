@@ -169,7 +169,7 @@ public class CityBase : MonoBehaviour
 		baseUnits.Add(currentUnit);
 	}
 	
-	public void SpawnResourceSender(CityBase cityTarget)
+	public void SpawnResourceSender(CityBase cityTarget, int water, int food, int power)
 	{
 		Vector3 spawnPos;
 		spawnPos.x = this.transform.position.x;
@@ -180,9 +180,9 @@ public class CityBase : MonoBehaviour
 		resourceSender.cityOrigin = this;
 		resourceSender.target = cityTarget;
 
-		resourceSender.StoreResource(ProductionType.Water, 1);
-		resourceSender.StoreResource(ProductionType.Food, 1);
-		resourceSender.StoreResource(ProductionType.Power, 1);
+		resourceSender.StoreResource(ProductionType.Water, water);
+		resourceSender.StoreResource(ProductionType.Food, food);
+		resourceSender.StoreResource(ProductionType.Power, power);
 		
 		unitResourceSenders.Add(currentUnit);
 	}

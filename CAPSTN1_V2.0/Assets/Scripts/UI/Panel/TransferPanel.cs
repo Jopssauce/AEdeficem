@@ -13,6 +13,9 @@ public class TransferPanel : MonoBehaviour
 	public List<RegionBase> regionListCopy;
 	public List<string> cityName;
 
+	public InputField waterInput;
+	public InputField foodInput;
+	public InputField powerInput;
 
 	public Dropdown dropdown;
 	public Button exitButton;
@@ -49,7 +52,7 @@ public class TransferPanel : MonoBehaviour
 
 	public void SpawnUnit()
     {
-        cityOrigin.SpawnResourceSender(regionListCopy[dropdown.value].cityOrigin);
+        cityOrigin.SpawnResourceSender(regionListCopy[dropdown.value].cityOrigin, int.Parse(waterInput.text), int.Parse(foodInput.text), int.Parse(powerInput.text));
         resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 2);
 
         Destroy(this.gameObject);   
