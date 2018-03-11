@@ -75,8 +75,8 @@ public class UnitResourceSender : UnitBase {
 	{
 		if (isSend == true)
 		{
-			target.AddCityResource(CityBase.ProductionType.Food, unitResources.Water);
-			target.AddCityResource(CityBase.ProductionType.Water, unitResources.Food);
+			target.AddCityResource(CityBase.ProductionType.Water, unitResources.Water);
+			target.AddCityResource(CityBase.ProductionType.Food, unitResources.Food);
 			target.AddCityResource(CityBase.ProductionType.Power, unitResources.Power);
 		}
 	}
