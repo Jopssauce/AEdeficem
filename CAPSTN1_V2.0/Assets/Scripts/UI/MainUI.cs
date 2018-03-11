@@ -36,6 +36,7 @@ public class MainUI : MonoBehaviour
     public GameObject toggleUnderlayDisplay;
     
     // Use this for initialization
+    
     void Start ()
     {
         turnManager = TurnManager.instance;
@@ -56,20 +57,21 @@ public class MainUI : MonoBehaviour
             ruBar.transform.SetParent(this.transform, false);
             //ruBarOutliner.transform.SetParent(regionOutliner.transform, false);
         }
-
+        
         foreach (var underlay in regionUnderlayDisplayList)
         {
         underlay.SetActive(true);
         }
 		resManager.AdjustedResourceEvent.AddListener (UpdateUiText);
-		turnManager.EndTurnEvent.AddListener(UpdateUiText);
 		eventManager.ResolvedEvent.AddListener (UpdateUiText);
 		eventManager.IgnoredEvent.AddListener (UpdateUiText);
         EventSelected.AddListener(DisableButtons);
         EventClosed.AddListener(EnableButtons);
+        turnManager.EndTurnEvent.AddListener(UpdateUiText);
+    
     }
 
-    void UpdateUiText()
+    public void UpdateUiText()
     {
         WaterAmnt.text 	= resManager.water.ToString();
         PowerAmnt.text 	= resManager.power.ToString();

@@ -10,13 +10,13 @@ public class UnitBase : MonoBehaviour
 
 	public Vector3 destPos;
 	public Vector3 velocity;
-	Vector3 distance;
+	public Vector3 distance;
 	public bool isArrived;
 	public bool isReturn;
 	public bool isReturned;
 	public bool isSend;
 
-	void Start()
+	public virtual void Start()
 	{
 		isArrived = false;
 		isSend = false;
@@ -27,13 +27,17 @@ public class UnitBase : MonoBehaviour
 		}
 		turnManager.EndTurnEvent.AddListener(Initiate);
 		turnManager.EndTurnEvent.AddListener(ReturnToCity);
-		destPos.x = eventOrigin.eventWorldPos.x;
-		destPos.y = this.transform.position.y;
-		destPos.z = eventOrigin.eventWorldPos.z;
-		eventOrigin.unit = this;
+		if (eventOrigin != null)
+		{
+			destPos.x = eventOrigin.eventWorldPos.x;
+			destPos.y = this.transform.position.y;
+			destPos.z = eventOrigin.eventWorldPos.z;
+			eventOrigin.unit = this;
+		}
+		
 	}
 
-	void Update()
+	public virtual void Update()
 	{
 		distance = destPos - this.transform.position;
 		if (isSend == true && isArrived == false)

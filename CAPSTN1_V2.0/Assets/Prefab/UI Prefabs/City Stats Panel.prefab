@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1451,7 +1451,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114515022190699952}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114978279705578414}
+        m_MethodName: transferButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114804968279067476
@@ -1542,6 +1553,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regionOrigin: {fileID: 0}
   cityOrigin: {fileID: 0}
+  transferPanelPrefab: {fileID: 1444206224178272, guid: af5324bd99ac2ba49888511d90f3a755,
+    type: 2}
+  transferPanel: {fileID: 0}
   cityName: {fileID: 114717413917530876}
   waterAmount: {fileID: 114185810742869364}
   foodAmount: {fileID: 114196565706120688}

@@ -24,8 +24,10 @@ public class CityBase : MonoBehaviour
 	public GameObject cityPanelPrefab;
 	public GameObject cityPanel;
 	public GameObject baseUnitPrefab;
+	public GameObject unitResourceSenderPrefab;
 
-	public List<GameObject> units;
+	public List<GameObject> baseUnits;
+	public List<GameObject> unitResourceSenders;
 
 	public CityResources 	cityResources;
 	public ProductionType 	firstProduction;
@@ -152,7 +154,25 @@ public class CityBase : MonoBehaviour
 		GameObject currentUnit = Instantiate(baseUnitPrefab, spawnPos, this.transform.rotation);
 		currentUnit.GetComponent<UnitBase>().cityOrigin = this;
 		currentUnit.GetComponent<UnitBase>().eventOrigin = eventBase;
-		units.Add(currentUnit);
+		baseUnits.Add(currentUnit);
+	}
+	
+	public void SpawnResourceSender(CityBase cityTarget)
+	{
+		Vector3 spawnPos;
+		spawnPos.x = this.transform.position.x;
+		spawnPos.y = baseUnitPrefab.transform.position.y;
+		spawnPos.z = this.transform.position.z;
+		GameObject currentUnit = Instantiate(unitResourceSenderPrefab, spawnPos, this.transform.rotation);
+		UnitResourceSender resourceSender = currentUnit.GetComponent<UnitResourceSender>();
+		resourceSender.cityOrigin = this;
+		resourceSender.target = cityTarget;
+
+		resourceSender.StoreResource(ProductionType.Food, 1);
+		resourceSender.StoreResource(ProductionType.Food, 1);
+		resourceSender.StoreResource(ProductionType.Food, 1);
+		
+		unitResourceSenders.Add(currentUnit);
 	}
 
 }

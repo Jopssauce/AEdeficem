@@ -6,14 +6,18 @@ using UnityEngine.UI;
 public class TransferPanel : MonoBehaviour 
 {
 	public RegionBase regionOrigin;
-	public CityBase   cityOrigin;
+
+	public CityBase   	cityOrigin;
+	public CityBase		cityTarget;
 	public List<string> cityNames;
 
 	public Dropdown dropdown;
+	public Button exitButton;
 
 	public GameObject cityDropdownContentPrefab;
 	
 	RegionManager regionManager;
+	ResourceManager resourceManager;
 
 	void Start()
 	{
@@ -21,10 +25,28 @@ public class TransferPanel : MonoBehaviour
 		{
 			regionManager = RegionManager.instance;
 		}
+		if (ResourceManager.instance != null)
+		{
+			resourceManager = ResourceManager.instance;
+		}
 		foreach (var region in regionManager.regionList)
 		{
 			//GameObject dropdownOptionPrefab = Instantiate();
 		
 		}
+		cityTarget = regionManager.regionList[0].cityOrigin;
 	}
+
+	public void SpawnUnit()
+    {
+        cityOrigin.SpawnResourceSender(cityTarget);
+        resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 1);
+        Destroy(this.gameObject);   
+    }
+
+	public void exitClick()
+	{
+		Destroy(this.gameObject);
+	}
+
 }

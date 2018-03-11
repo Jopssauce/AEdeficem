@@ -9,8 +9,10 @@ public class StatsPanel : MonoBehaviour
 	public RegionBase regionOrigin;
 	public CityBase   cityOrigin;
 
-	public Text cityName;
+	public GameObject transferPanelPrefab;
+	public GameObject transferPanel;
 
+	public Text cityName;
 	public Text waterAmount;
 	public Text	foodAmount;
 	public Text powerAmount;
@@ -47,6 +49,15 @@ public class StatsPanel : MonoBehaviour
 
 	public void exitClick()
 	{
+		Destroy(this.gameObject);
+	}
+	public void transferButtonClick()
+	{
+		transferPanel = Instantiate(transferPanelPrefab);
+		transferPanel.GetComponent<TransferPanel>().cityOrigin = this.cityOrigin;
+		transferPanel.GetComponent<TransferPanel>().regionOrigin = regionOrigin;
+		transferPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
+		transferPanel.transform.SetAsLastSibling();
 		Destroy(this.gameObject);
 	}
 }
