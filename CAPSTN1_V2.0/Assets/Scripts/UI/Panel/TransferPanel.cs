@@ -13,6 +13,10 @@ public class TransferPanel : MonoBehaviour
 	public List<RegionBase> regionListCopy;
 	public List<string> cityName;
 
+	public Text waterAmount;
+	public Text	foodAmount;
+	public Text powerAmount;
+
 	public InputField waterInput;
 	public InputField foodInput;
 	public InputField powerInput;
@@ -24,6 +28,8 @@ public class TransferPanel : MonoBehaviour
 	
 	RegionManager regionManager;
 	ResourceManager resourceManager;
+	TurnManager turnManager;
+	
 
 	void Start()
 	{
@@ -39,6 +45,11 @@ public class TransferPanel : MonoBehaviour
 		{
 			//GameObject dropdownOptionPrefab = Instantiate();
 		}
+		if (TurnManager.instance != null)
+		{
+			turnManager = TurnManager.instance;
+		}
+		turnManager.EndTurnEvent.AddListener(SetUIText);
 		regionListCopy = new List<RegionBase>(regionManager.regionList);
 		regionListCopy.Remove(regionOrigin);
 
@@ -47,20 +58,46 @@ public class TransferPanel : MonoBehaviour
 			cityName.Add(item.cityOrigin.name);
 		}
 		dropdown.AddOptions(cityName);
+		SetUIText();
 		
 	}
 
 	public void SpawnUnit()
     {
-        cityOrigin.SpawnResourceSender(regionListCopy[dropdown.value].cityOrigin, int.Parse(waterInput.text), int.Parse(foodInput.text), int.Parse(powerInput.text));
-        resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 2);
-
-        Destroy(this.gameObject);   
+		if (isEnoughRes() == true)
+		{
+			cityOrigin.SpawnResourceSender(regionListCopy[dropdown.value].cityOrigin, int.Parse(waterInput.text), int.Parse(foodInput.text), int.Parse(powerInput.text));
+        	resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 2);
+			SetUIText();
+			Destroy(this.gameObject);   
+		}
+        
     }
 
 	public void exitClick()
 	{
 		Destroy(this.gameObject);
+	}
+	  public bool isEnoughRes()
+	{
+        CityBase cityOrigin = regionOrigin.cityOrigin;
+		if (cityOrigin.cityResources.Water < int.Parse(waterInput.text) || cityOrigin.cityResources.Food < int.Parse(foodInput.text) 
+		 || cityOrigin.cityResources.Power < int.Parse(powerInput.text) )
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+		
+	}
+
+	public void SetUIText()
+	{
+		waterAmount.text 	= cityOrigin.cityResources.Water.ToString();
+		foodAmount.text 	= cityOrigin.cityResources.Food.ToString();
+		powerAmount.text 	= cityOrigin.cityResources.Power.ToString();
 	}
 
 }

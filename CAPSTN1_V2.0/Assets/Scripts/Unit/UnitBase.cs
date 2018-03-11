@@ -8,6 +8,8 @@ public class UnitBase : MonoBehaviour
 	public CityBase 		cityOrigin;
 	public EventPopUpBase	 eventOrigin;
 
+	public LineRenderer lineRenderer;
+
 	public Vector3 destPos;
 	public Vector3 velocity;
 	public Vector3 distance;
@@ -34,11 +36,17 @@ public class UnitBase : MonoBehaviour
 			destPos.z = eventOrigin.eventWorldPos.z;
 			eventOrigin.unit = this;
 		}
+		lineRenderer.GetComponent<LineRenderer>();
+		lineRenderer.startWidth = .07f;
+		lineRenderer.endWidth = .07f;
+		
 		
 	}
 
 	public virtual void Update()
 	{
+		lineRenderer.SetPosition(0, this.transform.position);
+		lineRenderer.SetPosition(1, destPos);
 		distance = destPos - this.transform.position;
 		if (isSend == true && isArrived == false)
 		{

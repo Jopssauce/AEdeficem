@@ -26,6 +26,8 @@ public class UnitResourceSender : UnitBase {
 
 	public override void Update()
 	{
+		lineRenderer.SetPosition(0, this.transform.position);
+		lineRenderer.SetPosition(1, destPos);
 		distance = destPos - this.transform.position;
 		if (isSend == true && isArrived == false)
 		{

@@ -199,4 +199,5 @@ public class EventPopUpBase : MonoBehaviour
 		Destroy (blockerPanel);
 	}
     
+    
 }
