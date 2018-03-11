@@ -64,14 +64,14 @@ public class CityBase : MonoBehaviour
 
 		switch (firstProduction)
 		{
+		case ProductionType.Water:
+			cityResources.Water += firstCurrentProduction;
+			break;
 		case ProductionType.Food:
 			cityResources.Food += firstCurrentProduction;
 			break;
 		case ProductionType.Power:
 			cityResources.Power += firstCurrentProduction;
-			break;
-		case ProductionType.Water:
-			cityResources.Water += firstCurrentProduction;
 			break;
 
 		default:
@@ -81,19 +81,31 @@ public class CityBase : MonoBehaviour
 
 		switch (secondProduction)
 		{
+		case ProductionType.Water:
+			cityResources.Water += secondCurrentProduction;
+			break;
 		case ProductionType.Food:
 			cityResources.Food += secondCurrentProduction;
 			break;
 		case ProductionType.Power:
 			cityResources.Power += secondCurrentProduction;
 			break;
-		case ProductionType.Water:
-			cityResources.Water += secondCurrentProduction;
-			break;
 
 		default:
 			Debug.Log("Error tier list");
 			break;
+		}
+		if (cityResources.Water <= 0)
+		{
+			cityResources.Water = 0;
+		}
+		if (cityResources.Food <= 0)
+		{
+			cityResources.Food = 0;
+		}
+		if (cityResources.Power <= 0)
+		{
+			cityResources.Power = 0;
 		}
 		AdjustedCityResource.Invoke();
 	}
@@ -168,9 +180,9 @@ public class CityBase : MonoBehaviour
 		resourceSender.cityOrigin = this;
 		resourceSender.target = cityTarget;
 
+		resourceSender.StoreResource(ProductionType.Water, 1);
 		resourceSender.StoreResource(ProductionType.Food, 1);
-		resourceSender.StoreResource(ProductionType.Food, 1);
-		resourceSender.StoreResource(ProductionType.Food, 1);
+		resourceSender.StoreResource(ProductionType.Power, 1);
 		
 		unitResourceSenders.Add(currentUnit);
 	}

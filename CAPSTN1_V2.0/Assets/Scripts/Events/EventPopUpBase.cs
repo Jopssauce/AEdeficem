@@ -123,13 +123,13 @@ public class EventPopUpBase : MonoBehaviour
     {
         if (isResolved == false)
         {
-            if (ResourceManager.instance.isEnoughRes(this.gameObject) == true)
+            if (isEnoughRes() == true)
             {
                 isResolved = true;
                 resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventData.actionCost);
-                cityOrign.AddCityResource(CityBase.ProductionType.Water,	eventData.waterCost);
-                cityOrign.AddCityResource(CityBase.ProductionType.Power, eventData.powerCost);
-                cityOrign.AddCityResource(CityBase.ProductionType.Food, eventData.foodCost);
+                cityOrign.DeductCityResource(CityBase.ProductionType.Water,	eventData.waterCost);
+                cityOrign.DeductCityResource(CityBase.ProductionType.Power, eventData.powerCost);
+                cityOrign.DeductCityResource(CityBase.ProductionType.Food, eventData.foodCost);
 
 				Destroy(eventPanel);
             }
@@ -172,11 +172,11 @@ public class EventPopUpBase : MonoBehaviour
         }
     
     }
-    public bool isEnoughRes(GameObject Event)
+    public bool isEnoughRes()
 	{
         CityBase cityOrigin = regionOrigin.cityOrigin;
-		if (cityOrigin.cityResources.Water < Event.GetComponent<EventPopUpBase>().eventData.waterCost || cityOrigin.cityResources.Food < Event.GetComponent<EventPopUpBase>().eventData.foodCost 
-		 || cityOrigin.cityResources.Power < Event.GetComponent<EventPopUpBase>().eventData.powerCost || resManager.actionPoints < Event.GetComponent<EventPopUpBase>().eventData.actionCost)
+		if (cityOrigin.cityResources.Water < eventData.waterCost || cityOrigin.cityResources.Food < eventData.foodCost 
+		 || cityOrigin.cityResources.Power < eventData.powerCost || resManager.actionPoints < eventData.actionCost)
 		{
 			return false;
 		}

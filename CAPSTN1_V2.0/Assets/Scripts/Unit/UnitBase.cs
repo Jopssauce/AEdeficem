@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitBase : MonoBehaviour 
 {
-	TurnManager 			turnManager;
+	public TurnManager 		turnManager;
 	public CityBase 		cityOrigin;
 	public EventPopUpBase	 eventOrigin;
 
@@ -80,7 +80,7 @@ public class UnitBase : MonoBehaviour
 		}
 	}
 
-	public void Initiate()
+	public virtual void Initiate()
 	{
 		if (eventOrigin != null && isArrived == false)
 		{

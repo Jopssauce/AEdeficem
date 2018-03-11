@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4453024506011512}
   - component: {fileID: 114398707487080528}
   - component: {fileID: 114992266592678466}
+  - component: {fileID: 65398410426028584}
   m_Layer: 0
   m_Name: Region 5 City
   m_TagString: Untagged
@@ -285,7 +286,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1238048783729992}
   m_LocalRotation: {x: -0, y: 0.73222286, z: -0, w: 0.68106514}
-  m_LocalPosition: {x: 9.94, y: 0.04673, z: -4.48}
+  m_LocalPosition: {x: 10.91, y: 0.04673, z: -4.15}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4769110091807820}
@@ -813,6 +814,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65398410426028584
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1238048783729992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.6688907, y: 2.511811, z: 2.6487849}
+  m_Center: {x: 0.44539627, y: 0.7559043, z: -0.26006967}
 --- !u!65 &65418596249643314
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -936,14 +949,25 @@ MonoBehaviour:
   cityPanelPrefab: {fileID: 1473796447379942, guid: 599152d270834a044a9ba5e4af30038b,
     type: 2}
   cityPanel: {fileID: 0}
+  baseUnitPrefab: {fileID: 1867621791035172, guid: bb948f2276af0e5489116bdcf8c87f5c,
+    type: 2}
+  unitResourceSenderPrefab: {fileID: 1481451113407924, guid: 465b33357a22f224fa8f00b5b7ddc1a7,
+    type: 2}
+  baseUnits: []
+  unitResourceSenders: []
   cityResources:
-    Water: 0
-    Power: 0
-    Food: 0
+    Water: 9
+    Power: 9
+    Food: 9
   firstProduction: 0
   secondProduction: 2
   firstCurrentProduction: 0
   secondCurrentProduction: 0
+  AdjustedCityResource:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114423128276120476
 MonoBehaviour:
   m_ObjectHideFlags: 1

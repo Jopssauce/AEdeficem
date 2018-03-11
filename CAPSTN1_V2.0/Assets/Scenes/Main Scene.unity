@@ -822,6 +822,27 @@ Prefab:
       value: 
       objectReference: {fileID: 1867621791035172, guid: bb948f2276af0e5489116bdcf8c87f5c,
         type: 2}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: unitResourceSenderPrefab
+      value: 
+      objectReference: {fileID: 1481451113407924, guid: 465b33357a22f224fa8f00b5b7ddc1a7,
+        type: 2}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: cityResources.Water
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: cityResources.Power
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: cityResources.Food
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6542f92a3851c7749889e3c4164c7ac5, type: 2}
   m_IsPrefabParent: 0
@@ -1999,6 +2020,27 @@ Prefab:
       value: 
       objectReference: {fileID: 1867621791035172, guid: bb948f2276af0e5489116bdcf8c87f5c,
         type: 2}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: unitResourceSenderPrefab
+      value: 
+      objectReference: {fileID: 1481451113407924, guid: 465b33357a22f224fa8f00b5b7ddc1a7,
+        type: 2}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: cityResources.Water
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: cityResources.Power
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: cityResources.Food
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94898287935255c42940fdc585224552, type: 2}
   m_IsPrefabParent: 0
@@ -2092,6 +2134,27 @@ Prefab:
       value: 
       objectReference: {fileID: 1867621791035172, guid: bb948f2276af0e5489116bdcf8c87f5c,
         type: 2}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: unitResourceSenderPrefab
+      value: 
+      objectReference: {fileID: 1481451113407924, guid: 465b33357a22f224fa8f00b5b7ddc1a7,
+        type: 2}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: cityResources.Water
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: cityResources.Power
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: cityResources.Food
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12e78861a162aa4687cda64b643e350, type: 2}
   m_IsPrefabParent: 0
@@ -2540,29 +2603,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 845202672}
---- !u!1 &853099800 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1835391313421958, guid: 465cd92417f316749871fefa33d17937,
-    type: 2}
-  m_PrefabInternal: {fileID: 917513347}
 --- !u!114 &853099801 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
     type: 2}
   m_PrefabInternal: {fileID: 917513347}
   m_Script: {fileID: 11500000, guid: 3262dfb8b8c827c45a5d914b05b8d52b, type: 3}
---- !u!65 &853099802
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 853099800}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.6688907, y: 2.511811, z: 2.6487849}
-  m_Center: {x: 0.44539627, y: 0.7559043, z: -0.26006967}
 --- !u!1 &865463404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2758,10 +2804,19 @@ Prefab:
       objectReference: {fileID: 1941507192}
     - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
         type: 2}
-      propertyPath: baseUnitPrefab
-      value: 
-      objectReference: {fileID: 1867621791035172, guid: bb948f2276af0e5489116bdcf8c87f5c,
+      propertyPath: cityResources.Water
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
         type: 2}
+      propertyPath: cityResources.Power
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
+        type: 2}
+      propertyPath: cityResources.Food
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 465cd92417f316749871fefa33d17937, type: 2}
   m_IsPrefabParent: 0
@@ -5542,6 +5597,27 @@ Prefab:
       value: 
       objectReference: {fileID: 1867621791035172, guid: bb948f2276af0e5489116bdcf8c87f5c,
         type: 2}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: unitResourceSenderPrefab
+      value: 
+      objectReference: {fileID: 1481451113407924, guid: 465b33357a22f224fa8f00b5b7ddc1a7,
+        type: 2}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: cityResources.Water
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: cityResources.Power
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: cityResources.Food
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614455dfb6c81bb4689bef7ffdd5ce8a, type: 2}
   m_IsPrefabParent: 0

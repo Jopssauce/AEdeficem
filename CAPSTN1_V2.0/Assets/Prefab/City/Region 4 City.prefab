@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 4792627125048868}
   - component: {fileID: 114176567413964334}
   - component: {fileID: 114200637209777504}
+  - component: {fileID: 65427575476251838}
   m_Layer: 0
   m_Name: Region 4 City
   m_TagString: Untagged
@@ -789,6 +790,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1254878142485736}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65427575476251838
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1418640291452768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.6688907, y: 2.511811, z: 2.6487849}
+  m_Center: {x: 0.44539627, y: 0.7559043, z: -0.26006967}
 --- !u!65 &65635109824275580
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -936,14 +949,25 @@ MonoBehaviour:
   cityPanelPrefab: {fileID: 1473796447379942, guid: 599152d270834a044a9ba5e4af30038b,
     type: 2}
   cityPanel: {fileID: 0}
+  baseUnitPrefab: {fileID: 1867621791035172, guid: bb948f2276af0e5489116bdcf8c87f5c,
+    type: 2}
+  unitResourceSenderPrefab: {fileID: 1481451113407924, guid: 465b33357a22f224fa8f00b5b7ddc1a7,
+    type: 2}
+  baseUnits: []
+  unitResourceSenders: []
   cityResources:
-    Water: 0
-    Power: 0
-    Food: 0
+    Water: 9
+    Power: 9
+    Food: 9
   firstProduction: 2
   secondProduction: 1
   firstCurrentProduction: 0
   secondCurrentProduction: 0
+  AdjustedCityResource:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114200637209777504
 MonoBehaviour:
   m_ObjectHideFlags: 1

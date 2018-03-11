@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 4011759156912592}
   - component: {fileID: 114751372656499930}
   - component: {fileID: 114540775389164684}
+  - component: {fileID: 65618183143255250}
   m_Layer: 0
   m_Name: Region 2 City
   m_TagString: Untagged
@@ -260,7 +261,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180617349385670}
   m_LocalRotation: {x: -0, y: 0.4159946, z: -0, w: 0.90936714}
-  m_LocalPosition: {x: -2.05, y: 0.04673, z: 4.57}
+  m_LocalPosition: {x: -4.98, y: 0.04673, z: 4.6}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4474860034439448}
@@ -837,6 +838,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65618183143255250
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1180617349385670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.6688907, y: 2.511811, z: 2.6487849}
+  m_Center: {x: 0.44539627, y: 0.7559043, z: -0.26006967}
 --- !u!65 &65811371223662632
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -959,14 +972,25 @@ MonoBehaviour:
   cityPanelPrefab: {fileID: 1473796447379942, guid: 599152d270834a044a9ba5e4af30038b,
     type: 2}
   cityPanel: {fileID: 0}
+  baseUnitPrefab: {fileID: 1867621791035172, guid: bb948f2276af0e5489116bdcf8c87f5c,
+    type: 2}
+  unitResourceSenderPrefab: {fileID: 1481451113407924, guid: 465b33357a22f224fa8f00b5b7ddc1a7,
+    type: 2}
+  baseUnits: []
+  unitResourceSenders: []
   cityResources:
-    Water: 0
-    Power: 0
-    Food: 0
+    Water: 9
+    Power: 9
+    Food: 9
   firstProduction: 2
   secondProduction: 1
   firstCurrentProduction: 0
   secondCurrentProduction: 0
+  AdjustedCityResource:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!136 &136320106369128756
 CapsuleCollider:
   m_ObjectHideFlags: 1

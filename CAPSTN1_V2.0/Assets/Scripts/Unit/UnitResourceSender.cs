@@ -21,9 +21,7 @@ public class UnitResourceSender : UnitBase {
 		destPos.x = target.transform.position.x;
 		destPos.y = this.transform.position.y;
 		destPos.z = target.transform.position.z;
-		unitResources.Water = 0;
-		unitResources.Power = 0;
-		unitResources.Food 	= 0;
+		turnManager.EndTurnEvent.AddListener(SendResource);
 	}
 
 	public override void Update()
@@ -41,16 +39,21 @@ public class UnitResourceSender : UnitBase {
 		{
 			Destroy(this.gameObject);
 		}*/
-		if (eventOrigin == null)
+		if (isArrived == true)
 		{
 			Destroy(this.gameObject);
 		}
+		
 	}
 
 	public void StoreResource(CityBase.ProductionType type, int amount)
 	{
 		switch (type) 
 		{
+		case CityBase.ProductionType.Water:
+			cityOrigin.cityResources.Water -= amount;
+			unitResources.Water += amount;
+			break;
 		case CityBase.ProductionType.Food:
 			cityOrigin.cityResources.Food -= amount;
 			unitResources.Food += amount;
@@ -58,10 +61,6 @@ public class UnitResourceSender : UnitBase {
 		case CityBase.ProductionType.Power:
 			cityOrigin.cityResources.Power -= amount;
 			unitResources.Power += amount;
-			break;
-		case CityBase.ProductionType.Water:
-			cityOrigin.cityResources.Water -= amount;
-			unitResources.Water += amount;
 			break;
 		default:
 			Debug.Log ("Cant add Resource");
@@ -72,9 +71,18 @@ public class UnitResourceSender : UnitBase {
 
 	public void SendResource()
 	{
-		if (isArrived == true)
+		if (isSend == true)
 		{
-			
+			target.AddCityResource(CityBase.ProductionType.Food, unitResources.Water);
+			target.AddCityResource(CityBase.ProductionType.Water, unitResources.Food);
+			target.AddCityResource(CityBase.ProductionType.Power, unitResources.Power);
+		}
+	}
+	public override void Initiate()
+	{
+		if (isArrived == false)
+		{
+			isSend = true;
 		}
 	}
 }

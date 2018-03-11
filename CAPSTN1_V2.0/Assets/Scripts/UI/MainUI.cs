@@ -47,11 +47,11 @@ public class MainUI : MonoBehaviour
         foreach (var region in regManager.regionList)
         {
             GameObject ruBar            = Instantiate(regionUnderlayDisplay);
-            GameObject ruBarOutliner    = Instantiate(regionOutlinerContent);
+            //GameObject ruBarOutliner    = Instantiate(regionOutlinerContent);
 
             ruBar.GetComponent<RegionUnderlayDisplay>().regionOrigin            = region.GetComponent<RegionBase>();
             ruBar.GetComponent<BindToRegion>().regionOrigin 					= region.GetComponent<RegionBase>();
-            ruBarOutliner.GetComponent<RegionUnderlayDisplay>().regionOrigin    = region.GetComponent<RegionBase>();
+            //ruBarOutliner.GetComponent<RegionUnderlayDisplay>().regionOrigin    = region.GetComponent<RegionBase>();
 
             regionUnderlayDisplayList.Add(ruBar);
             ruBar.transform.SetParent(this.transform, false);
