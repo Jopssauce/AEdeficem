@@ -29,7 +29,6 @@ public class EventPanel : MonoBehaviour
         {
             aqManager = AQManager.instance;
         }
-
     }
 
     /*public virtual void AddToActionQue()
@@ -47,7 +46,8 @@ public class EventPanel : MonoBehaviour
        
     }*/
     public void RequestUnitClick()
-    {
+	{
+	   eventManager.SentUnitEvent.Invoke ();
        eventOrigin.SpawnUnit();
     }
 }

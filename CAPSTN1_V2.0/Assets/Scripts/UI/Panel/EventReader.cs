@@ -10,10 +10,12 @@ public class EventReader : EventPanel
 
 	public void refundClick()
 	{
+		eventManager.IgnoredEvent.Invoke ();
 		eventOrigin.GetComponent<EventPopUpBase> ().RefundEvent ();
 	}
 	public void resolveClick()
 	{
+		eventManager.ResolvedEvent.Invoke ();
 		eventOrigin.GetComponent<EventPopUpBase> ().ResolveEvent ();
 	}
 

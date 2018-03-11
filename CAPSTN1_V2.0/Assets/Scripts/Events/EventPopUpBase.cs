@@ -23,6 +23,9 @@ public class EventPopUpBase : MonoBehaviour
 	public RegionManager	regionManager;
     public TurnManager      turnManager;
 
+	public GameObject BlockerPanel;
+	public GameObject blockerPanel { get; set;}
+
     private MainUI disableButtons;
 
 	public virtual void Start ()
@@ -49,11 +52,16 @@ public class EventPopUpBase : MonoBehaviour
         this.GetComponent<Button>().onClick.AddListener(Click);
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
         turnManager.EndTurnEvent.AddListener(UpdateEvent);
+		eventManager.SentUnitEvent.AddListener (DestroyPanel);
+		eventManager.ResolvedEvent.AddListener (DestroyPanel);
+		eventManager.IgnoredEvent.AddListener (DestroyPanel);
         cityOrign = regionOrigin.cityOrigin;
 	}
 	
     public void Click()
     {   
+		blockerPanel = Instantiate (BlockerPanel) as GameObject;
+		blockerPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 		eventPanel = Instantiate(eventPanelPrefab) as GameObject;
 		eventPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 
@@ -135,6 +143,7 @@ public class EventPopUpBase : MonoBehaviour
     public virtual void ExitEvent()
     {
         Destroy(eventPanel);
+		DestroyPanel ();
         this.GetComponent<Button>().interactable = true;
     }
     public virtual void UpdateEvent()
@@ -184,5 +193,10 @@ public class EventPopUpBase : MonoBehaviour
         this.GetComponent<Button>().interactable = true;
         Destroy(eventPanel);   
     }
+
+	public void DestroyPanel()
+	{
+		Destroy (blockerPanel);
+	}
     
 }
