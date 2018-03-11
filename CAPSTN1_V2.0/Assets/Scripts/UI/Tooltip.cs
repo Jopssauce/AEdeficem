@@ -11,11 +11,6 @@ public class Tooltip : MonoBehaviour
 
 	private GameObject hoverTip;
 
-	void Update()
-	{
-		hoverTip.transform.position = Input.mousePosition + new Vector3 (10.0f, 10.0f, 0.0f);
-	}
-
 	public void HoverMouse()
 	{
 		if (IsHover == false) 
