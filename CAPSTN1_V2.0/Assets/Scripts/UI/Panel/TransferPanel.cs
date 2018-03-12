@@ -69,13 +69,15 @@ public class TransferPanel : MonoBehaviour
 			cityOrigin.SpawnResourceSender(regionListCopy[dropdown.value].cityOrigin, int.Parse(waterInput.text), int.Parse(foodInput.text), int.Parse(powerInput.text));
         	resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 2);
 			SetUIText();
-			//Destroy(this.gameObject);   
+			Destroy (CityBase.blockerPanel);
+			Destroy(this.gameObject);   
 		}
         
     }
 
 	public void exitClick()
 	{
+		Destroy (CityBase.blockerPanel);
 		Destroy(this.gameObject);
 	}
 	  public bool isEnoughRes()
