@@ -138,5 +138,6 @@ public class MainUI : MonoBehaviour
     {
         researchPanel = Instantiate(researchPanelPrefab);
         researchPanel.transform.SetParent(this.transform, false);
+        researchPanel.transform.SetAsLastSibling();
     }
 }

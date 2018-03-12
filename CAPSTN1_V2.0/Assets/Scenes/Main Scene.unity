@@ -1611,7 +1611,8 @@ MonoBehaviour:
   regionOutlinerContent: {fileID: 1292236568973542, guid: ceff0669d45eef64e85ca67df4e52954,
     type: 2}
   toggleUnderlayDisplay: {fileID: 1595428770}
-  researchPanelPrefab: {fileID: 0}
+  researchPanelPrefab: {fileID: 1366422060424752, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
+    type: 2}
   researchPanel: {fileID: 0}
 --- !u!212 &474264068
 SpriteRenderer:
@@ -2939,7 +2940,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 474264067}
-        m_MethodName: toggleRegionUnderlayDisplay
+        m_MethodName: openResearchPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5350,7 +5351,8 @@ MonoBehaviour:
     type: 2}
   turnManager: {fileID: 1830540796842406, guid: d6744ee24e952a54db9c8b0df01e7d82,
     type: 2}
-  managers: []
+  researchManager: {fileID: 1594095237365684, guid: 7b0042e8981e481468523276c7d56e36,
+    type: 2}
 --- !u!1 &1645632519
 GameObject:
   m_ObjectHideFlags: 0
