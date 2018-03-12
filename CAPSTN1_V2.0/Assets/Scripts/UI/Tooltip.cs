@@ -9,6 +9,9 @@ public class Tooltip : MonoBehaviour
 	public Text HoverTipInfo;
 	public static bool IsHover = false;
 
+	[TextArea]
+	public string InformationOfUI;
+
 	private GameObject hoverTip;
 
 	void Update()
@@ -21,7 +24,7 @@ public class Tooltip : MonoBehaviour
 	{
 		if (IsHover == false) 
 		{
-			HoverTipInfo.text = "SOme Text";
+			HoverTipInfo.text = InformationOfUI;
 			IsHover = true;
 			hoverTip = Instantiate (HoverTip) as GameObject;
 			hoverTip.transform.SetParent (GameObject.FindGameObjectWithTag ("Main UI").transform, false);

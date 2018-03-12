@@ -4644,6 +4644,7 @@ MonoBehaviour:
   HoverTip: {fileID: 1603924815874924, guid: a11455a291512e4439fbd282f183fade, type: 2}
   HoverTipInfo: {fileID: 114989961023610828, guid: a11455a291512e4439fbd282f183fade,
     type: 2}
+  InformationOfUI: Ends The Turn
 --- !u!1 &1575162191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,6 +4925,7 @@ MonoBehaviour:
   HoverTip: {fileID: 1603924815874924, guid: a11455a291512e4439fbd282f183fade, type: 2}
   HoverTipInfo: {fileID: 114989961023610828, guid: a11455a291512e4439fbd282f183fade,
     type: 2}
+  InformationOfUI: Click to Hide/Reveal the Region Display
 --- !u!1 &1608804026
 GameObject:
   m_ObjectHideFlags: 0
