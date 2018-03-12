@@ -62,7 +62,7 @@ public class EventManager : MonoBehaviour
         RegionManagerInstance = RegionManager.instance;
 
 		int num 			    = Random.Range(0 , RegionManagerInstance.regionList.Count);
-		if (eventTracker.Count != 5) 
+		if (eventTracker.Count != 8) 
 		{
 			GameObject newButton = null;
 			if (eventType == EventData.EventType.Standard) 
