@@ -115,8 +115,8 @@ public class CityBase : MonoBehaviour
 
 	public void SpawnStatsPanel()
 	{
-		blockerPanel = Instantiate (BlockerPanel) as GameObject;
-		blockerPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
+		//blockerPanel = Instantiate (BlockerPanel) as GameObject;
+		//blockerPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 		cityPanel = Instantiate(cityPanelPrefab);
 		cityPanel.GetComponent<StatsPanel>().cityOrigin = this.GetComponent<CityBase>();
 		cityPanel.GetComponent<StatsPanel>().regionOrigin = regionOrigin;

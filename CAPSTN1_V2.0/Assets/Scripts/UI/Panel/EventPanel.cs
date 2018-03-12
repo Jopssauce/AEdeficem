@@ -54,5 +54,6 @@ public class EventPanel : MonoBehaviour
     public void OnDestroy()
     {
         eventOrigin.GetComponent<Button>().interactable = true;
+        Destroy(eventOrigin.blockerPanel);
     }
 }
