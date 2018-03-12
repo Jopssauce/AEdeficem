@@ -24,7 +24,7 @@ public class EventPopUpBase : MonoBehaviour
     public TurnManager      turnManager;
 
 	public GameObject BlockerPanel;
-	public GameObject blockerPanel { get; set;}
+	private GameObject blockerPanel;
 
     private MainUI disableButtons;
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class StatsPanel : MonoBehaviour 
 {
@@ -24,7 +25,9 @@ public class StatsPanel : MonoBehaviour
 	public Button exitButton;
 	public Button transferButton;
 
-	TurnManager turnManager;
+	public GameObject BlockerPanel;
+
+	private TurnManager turnManager;
 
 	public RegionUnderlayDisplay regionUnderlayDisplay;
 	
@@ -50,9 +53,13 @@ public class StatsPanel : MonoBehaviour
 	public void exitClick()
 	{
 		Destroy(this.gameObject);
+		Destroy (CityBase.blockerPanel);
 	}
 	public void transferButtonClick()
 	{
+		Destroy (CityBase.blockerPanel);
+		CityBase.blockerPanel = Instantiate (BlockerPanel) as GameObject;
+		CityBase.blockerPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 		transferPanel = Instantiate(transferPanelPrefab);
 		transferPanel.GetComponent<TransferPanel>().cityOrigin = this.cityOrigin;
 		transferPanel.GetComponent<TransferPanel>().regionOrigin = regionOrigin;

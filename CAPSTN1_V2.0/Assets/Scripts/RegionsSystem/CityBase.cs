@@ -36,7 +36,10 @@ public class CityBase : MonoBehaviour
 	public int firstCurrentProduction;
 	public int secondCurrentProduction;
 
-	TurnManager turnManager;
+	public GameObject BlockerPanel;
+	public static GameObject blockerPanel { get; set;}
+
+	private TurnManager turnManager;
 	public UnityEvent AdjustedCityResource;
 	public void Start()
 	{
@@ -112,6 +115,8 @@ public class CityBase : MonoBehaviour
 
 	public void SpawnStatsPanel()
 	{
+		blockerPanel = Instantiate (BlockerPanel) as GameObject;
+		blockerPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 		cityPanel = Instantiate(cityPanelPrefab);
 		cityPanel.GetComponent<StatsPanel>().cityOrigin = this.GetComponent<CityBase>();
 		cityPanel.GetComponent<StatsPanel>().regionOrigin = regionOrigin;

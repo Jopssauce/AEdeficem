@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 public class CityClick : MonoBehaviour {
 	public CityBase cityOrigin;
+	public GameObject BlockPanel;
+
+	private GameObject blockPanel;
 
 	void Start()
 	{
