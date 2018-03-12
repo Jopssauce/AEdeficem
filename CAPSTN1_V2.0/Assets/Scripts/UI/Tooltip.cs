@@ -9,13 +9,22 @@ public class Tooltip : MonoBehaviour
 	public Text HoverTipInfo;
 	public static bool IsHover = false;
 
+	[TextArea]
+	public string InformationOfUI;
+
 	private GameObject hoverTip;
+
+	void Update()
+	{
+		if(hoverTip != null)
+			hoverTip.transform.position = Input.mousePosition + new Vector3 (10.0f, 10.0f, 0.0f);
+	}
 
 	public void HoverMouse()
 	{
 		if (IsHover == false) 
 		{
-			HoverTipInfo.text = "SOme Text";
+			HoverTipInfo.text = InformationOfUI;
 			IsHover = true;
 			hoverTip = Instantiate (HoverTip) as GameObject;
 			hoverTip.transform.SetParent (GameObject.FindGameObjectWithTag ("Main UI").transform, false);

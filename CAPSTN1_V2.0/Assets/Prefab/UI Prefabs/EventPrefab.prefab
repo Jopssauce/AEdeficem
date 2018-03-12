@@ -144,6 +144,7 @@ MonoBehaviour:
   HoverTip: {fileID: 1603924815874924, guid: a11455a291512e4439fbd282f183fade, type: 2}
   HoverTipInfo: {fileID: 114989961023610828, guid: a11455a291512e4439fbd282f183fade,
     type: 2}
+  InformationOfUI: Click to show Event
 --- !u!114 &114406298388919078
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -678,6 +678,7 @@ MonoBehaviour:
   HoverTip: {fileID: 1603924815874924, guid: a11455a291512e4439fbd282f183fade, type: 2}
   HoverTipInfo: {fileID: 114989961023610828, guid: a11455a291512e4439fbd282f183fade,
     type: 2}
+  InformationOfUI: Sends a unit for dispatch.
 --- !u!114 &114103199259670512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1496,6 +1497,7 @@ MonoBehaviour:
   HoverTip: {fileID: 1603924815874924, guid: a11455a291512e4439fbd282f183fade, type: 2}
   HoverTipInfo: {fileID: 114989961023610828, guid: a11455a291512e4439fbd282f183fade,
     type: 2}
+  InformationOfUI: Refund to get back your resources.
 --- !u!114 &114751909832198936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1664,6 +1666,7 @@ MonoBehaviour:
   HoverTip: {fileID: 1603924815874924, guid: a11455a291512e4439fbd282f183fade, type: 2}
   HoverTipInfo: {fileID: 114989961023610828, guid: a11455a291512e4439fbd282f183fade,
     type: 2}
+  InformationOfUI: Resolves the Event. Depending on Resources available.
 --- !u!114 &114847168874438072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1932,6 +1935,7 @@ MonoBehaviour:
   HoverTip: {fileID: 1603924815874924, guid: a11455a291512e4439fbd282f183fade, type: 2}
   HoverTipInfo: {fileID: 114989961023610828, guid: a11455a291512e4439fbd282f183fade,
     type: 2}
+  InformationOfUI: Close
 --- !u!114 &114980444148662172
 MonoBehaviour:
   m_ObjectHideFlags: 1
