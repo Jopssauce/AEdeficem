@@ -68,7 +68,7 @@ public class EventPopUpBase : MonoBehaviour
 		eventManager.selectedEvent = this.GetComponent<EventPopUpBase>();
 		eventPanel.GetComponent<EventPanel>().eventOrigin                = this;
 		AssignButtons ();
-        eventPanel.GetComponent<EventPanel>().exitButton.GetComponent<ExitButton>().eventOrigin = this.GetComponent<EventPopUpBase>();
+        //eventPanel.GetComponent<EventPanel>().exitButton.GetComponent<ExitButton>().eventOrigin = this.GetComponent<EventPopUpBase>();
 		eventPanel.GetComponent<EventPanel>().eventThumbnail.sprite      = eventData.eventSprite;
 		eventPanel.GetComponent<EventTextDisplay>().eventOrigin           = this.gameObject;
 		eventPanel.GetComponent<DisplayResourceCost>().eventOrigin        = this.GetComponent<EventPopUpBase>();

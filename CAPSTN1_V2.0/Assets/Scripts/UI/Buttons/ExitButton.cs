@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ExitButton : MonoBehaviour {
-	public EventPopUpBase eventOrigin;
+	public GameObject panel;
 	public void Click()
 	{
-		Destroy(this.gameObject);
+		Destroy(panel);
 	}
 }
