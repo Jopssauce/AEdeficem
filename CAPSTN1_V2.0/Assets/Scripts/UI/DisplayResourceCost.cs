@@ -26,21 +26,22 @@ public class DisplayResourceCost : MonoBehaviour {
 		foodColor 	= foodCost.color;
 		actionColor = actionCost.color;
         resManager.AdjustedResourceEvent.AddListener(UpdateUiText);
+	;
     }
 	// Update is called once per frame
 	void Update () 
 	{
-		CityBase cityOrgin = eventOrigin.regionOrigin.cityOrigin;
-		if (eventOrigin != null)
+		
+		if (eventOrigin.regionOrigin.cityOrigin != null && eventOrigin != null)
 		{
 			waterCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.waterCost.ToString();
 			powerCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.powerCost.ToString();
 			foodCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.foodCost.ToString();
 			actionCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost.ToString();
 			
-			ChangeColor(waterCost, cityOrgin.cityResources.Water, waterColor);
-			ChangeColor(powerCost, cityOrgin.cityResources.Power, powerColor);
-			ChangeColor(foodCost,  cityOrgin.cityResources.Power, foodColor);
+			ChangeColor(waterCost, eventOrigin.regionOrigin.cityOrigin.cityResources.Water, waterColor);
+			ChangeColor(powerCost, eventOrigin.regionOrigin.cityOrigin.cityResources.Power, powerColor);
+			ChangeColor(foodCost,  eventOrigin.regionOrigin.cityOrigin.cityResources.Power, foodColor);
 			ChangeColor(actionCost, resManager.actionPoints, actionColor);
 		}
 	}
