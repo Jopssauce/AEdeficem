@@ -19,6 +19,7 @@ public class MainUI : MonoBehaviour
     public Text Turn;
 
     public Button TurnButton;
+    public Button researchButton;
 
     public UnityEvent EventSelected;
     public UnityEvent EventClosed;
@@ -34,6 +35,8 @@ public class MainUI : MonoBehaviour
     public GameObject regionOutlinerContent;
 
     public GameObject toggleUnderlayDisplay;
+    public GameObject researchPanelPrefab;
+    public GameObject researchPanel;
     
     // Use this for initialization
     
@@ -129,5 +132,10 @@ public class MainUI : MonoBehaviour
                 underlay.SetActive(false);
             }
         }
+    }
+
+    public void openResearchPanel()
+    {
+        researchPanel = Instantiate(researchPanelPrefab);
     }
 }

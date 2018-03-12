@@ -1565,8 +1565,7 @@ MonoBehaviour:
   powerImage3: {fileID: 0}
   exitButton: {fileID: 114510697364240640}
   transferButton: {fileID: 114770493967125784}
-  BlockerPanel: {fileID: 1207186711684236, guid: 946db4e2aa0ca954793923421972a533,
-    type: 2}
+  BlockerPanel: {fileID: 0}
   regionUnderlayDisplay: {fileID: 114050142924421690}
 --- !u!222 &222003653534494504
 CanvasRenderer:

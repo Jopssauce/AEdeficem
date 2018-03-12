@@ -6,6 +6,6 @@ public class ExitButton : MonoBehaviour {
 	public EventPopUpBase eventOrigin;
 	public void Click()
 	{
-		eventOrigin.ExitEvent();
+		Destroy(this.gameObject);
 	}
 }
