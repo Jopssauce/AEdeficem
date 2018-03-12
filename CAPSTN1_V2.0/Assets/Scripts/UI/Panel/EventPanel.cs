@@ -50,4 +50,9 @@ public class EventPanel : MonoBehaviour
 	   eventManager.SentUnitEvent.Invoke ();
        eventOrigin.SpawnUnit();
     }
+
+    public void OnDestroy()
+    {
+        eventOrigin.GetComponent<Button>().interactable = true;
+    }
 }

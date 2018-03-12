@@ -137,5 +137,6 @@ public class MainUI : MonoBehaviour
     public void openResearchPanel()
     {
         researchPanel = Instantiate(researchPanelPrefab);
+        researchPanel.transform.SetParent(this.transform, false);
     }
 }

@@ -19,4 +19,5 @@ public class EventReader : EventPanel
 		eventOrigin.GetComponent<EventPopUpBase> ().ResolveEvent ();
 	}
 
+
 }
