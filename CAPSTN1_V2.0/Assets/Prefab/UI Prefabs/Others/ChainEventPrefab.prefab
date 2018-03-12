@@ -63,6 +63,7 @@ MonoBehaviour:
   randomPoint: 1
   offset: 0
   randPos: {x: 0, y: 0, z: 0}
+  spawnArea: {fileID: 0}
 --- !u!114 &114446600389467276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,15 +146,20 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dae1476496ca6124ea01171c832635dd, type: 3}
   - {fileID: 21300000, guid: f76efb5a9a3146d4d98f16a2ae2a1b74, type: 3}
   - {fileID: 21300000, guid: f0e24e3f819ef6d4f9e5aacf7a4678eb, type: 3}
+  cityOrign: {fileID: 0}
   eventPanel: {fileID: 0}
   eventPanelPrefab: {fileID: 1032759389003268, guid: 691c287e4a1d37340806a189ee09387b,
     type: 2}
+  unit: {fileID: 0}
   resManager: {fileID: 0}
   eventManager: {fileID: 0}
   regionManager: {fileID: 0}
+  turnManager: {fileID: 0}
   persistentEvents: []
   persistentEventPrefab: {fileID: 1851754591194924, guid: 8b9d2548fd92b89439b5c2117e175c16,
     type: 2}
+  longTerm: 0
+  shortTerm: 0
 --- !u!114 &114946305147582094
 MonoBehaviour:
   m_ObjectHideFlags: 1

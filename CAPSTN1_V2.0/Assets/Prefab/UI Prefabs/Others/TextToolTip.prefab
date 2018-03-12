@@ -151,7 +151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Click to Open Research Tab
 --- !u!222 &222271974052951354
 CanvasRenderer:
   m_ObjectHideFlags: 1

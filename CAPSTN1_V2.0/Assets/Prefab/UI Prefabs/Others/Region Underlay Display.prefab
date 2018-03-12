@@ -480,6 +480,7 @@ MonoBehaviour:
   randomPoint: 0
   offset: 0
   randPos: {x: 0, y: 0, z: 0}
+  spawnArea: {fileID: 0}
 --- !u!114 &114726420689218020
 MonoBehaviour:
   m_ObjectHideFlags: 1
