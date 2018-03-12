@@ -77,8 +77,7 @@ public class TransferPanel : MonoBehaviour
 
 	public void exitClick()
 	{
-		//Destroy (CityBase.blockerPanel);
-		//Destroy(this.gameObject);
+		Destroy(this.gameObject);
 	}
 	  public bool isEnoughRes()
 	{

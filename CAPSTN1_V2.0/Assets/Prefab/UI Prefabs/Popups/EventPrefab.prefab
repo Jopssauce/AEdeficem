@@ -169,15 +169,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f0e24e3f819ef6d4f9e5aacf7a4678eb, type: 3}
   cityOrign: {fileID: 0}
   eventPanel: {fileID: 0}
-  eventPanelPrefab: {fileID: 1688351182550100, guid: a3df83e487d81fc4283515c6d2765ef0,
+  eventPanelPrefab: {fileID: 1656635624576436, guid: f8e39175af335414eae240c437e990b3,
     type: 2}
   unit: {fileID: 0}
   resManager: {fileID: 0}
   eventManager: {fileID: 0}
   regionManager: {fileID: 0}
   turnManager: {fileID: 0}
-  BlockerPanel: {fileID: 1207186711684236, guid: 946db4e2aa0ca954793923421972a533,
-    type: 2}
 --- !u!114 &114572910853362570
 MonoBehaviour:
   m_ObjectHideFlags: 1

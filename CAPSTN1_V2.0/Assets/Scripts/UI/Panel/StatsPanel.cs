@@ -53,13 +53,9 @@ public class StatsPanel : MonoBehaviour
 	public void exitClick()
 	{
 		Destroy(this.gameObject);
-		Destroy (CityBase.blockerPanel);
 	}
 	public void transferButtonClick()
 	{
-		Destroy (CityBase.blockerPanel);
-		CityBase.blockerPanel = Instantiate (BlockerPanel) as GameObject;
-		CityBase.blockerPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 		transferPanel = Instantiate(transferPanelPrefab);
 		transferPanel.GetComponent<TransferPanel>().cityOrigin = this.cityOrigin;
 		transferPanel.GetComponent<TransferPanel>().regionOrigin = regionOrigin;
