@@ -42,8 +42,8 @@ public class AQManager : MonoBehaviour {
             eventManagerInstance = EventManager.instance;
         }
 
-        turnManagerInstance.EndTurnEvent.AddListener(RemoveActionUI);
-        eventManagerInstance.ResolvedEvent.AddListener(InstantiateThePrefab);
+        //turnManagerInstance.EndTurnEvent.AddListener(RemoveActionUI);
+        //eventManagerInstance.ResolvedEvent.AddListener(InstantiateThePrefab);
     }
 
     public void RemoveActionUI()
