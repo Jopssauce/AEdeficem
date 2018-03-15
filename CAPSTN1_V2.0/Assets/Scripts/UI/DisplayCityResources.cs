@@ -58,9 +58,9 @@ public class DisplayCityResources : MonoBehaviour {
     {
         if (eventOrigin != null)
         {
-            water.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.waterCost.ToString();
-            power.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.powerCost.ToString();
-            food.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.foodCost.ToString();
+            water.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.waterCost.ToString();
+            power.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.powerCost.ToString();
+            food.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.foodCost.ToString();
 			
             ChangeColor(water, resManager.water, waterColor);
             ChangeColor(power, resManager.power, powerColor);

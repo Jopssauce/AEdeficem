@@ -21,17 +21,17 @@ public class ChainEvent : EventPopUpBase
 		if (GetComponent<EventPopUpBase>().isResolved == true)
         {
             Debug.Log("Refund");
-            resManager.AddResource(ResourceManager.ResourceType.ActionPoints,eventData.actionCost);
-            resManager.AddResource(ResourceManager.ResourceType.Water,  eventData.waterCost);
-            resManager.AddResource(ResourceManager.ResourceType.Power, 	eventData.powerCost);
-            resManager.AddResource(ResourceManager.ResourceType.Food,   eventData.foodCost);
+            resManager.AddResource(ResourceManager.ResourceType.ActionPoints,eventDataCopy.actionCost);
+            resManager.AddResource(ResourceManager.ResourceType.Water,  eventDataCopy.waterCost);
+            resManager.AddResource(ResourceManager.ResourceType.Power, 	eventDataCopy.powerCost);
+            resManager.AddResource(ResourceManager.ResourceType.Food,   eventDataCopy.foodCost);
         }
 		if (ResourceManager.instance.isEnoughRes(this.gameObject) == true)
         {
-			resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventData.actionCost);
-			resManager.DeductResource(ResourceManager.ResourceType.Water,	eventData.waterCost);
-			resManager.DeductResource(ResourceManager.ResourceType.Power, eventData.powerCost);
-			resManager.DeductResource(ResourceManager.ResourceType.Food, eventData.foodCost);
+			resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventDataCopy.actionCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Water,	eventDataCopy.waterCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Power, eventDataCopy.powerCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Food, eventDataCopy.foodCost);
 			Destroy(eventPanel);
         }
         else
@@ -49,17 +49,17 @@ public class ChainEvent : EventPopUpBase
 		if (GetComponent<EventPopUpBase>().isResolved == true)
         {
             Debug.Log("Refund");
-            resManager.AddResource(ResourceManager.ResourceType.ActionPoints,eventData.actionCost);
-            resManager.AddResource(ResourceManager.ResourceType.Water,  eventData.waterCost);
-            resManager.AddResource(ResourceManager.ResourceType.Power, 	eventData.powerCost);
-            resManager.AddResource(ResourceManager.ResourceType.Food,   eventData.foodCost);
+            resManager.AddResource(ResourceManager.ResourceType.ActionPoints,eventDataCopy.actionCost);
+            resManager.AddResource(ResourceManager.ResourceType.Water,  eventDataCopy.waterCost);
+            resManager.AddResource(ResourceManager.ResourceType.Power, 	eventDataCopy.powerCost);
+            resManager.AddResource(ResourceManager.ResourceType.Food,   eventDataCopy.foodCost);
         }
 		if (ResourceManager.instance.isEnoughRes(this.gameObject) == true)
         {
-			resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventData.actionCost);
-			resManager.DeductResource(ResourceManager.ResourceType.Water,	eventData.waterCost);
-			resManager.DeductResource(ResourceManager.ResourceType.Power, eventData.powerCost);
-			resManager.DeductResource(ResourceManager.ResourceType.Food, eventData.foodCost);
+			resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventDataCopy.actionCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Water,	eventDataCopy.waterCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Power, eventDataCopy.powerCost);
+			resManager.DeductResource(ResourceManager.ResourceType.Food, eventDataCopy.foodCost);
 			Destroy(eventPanel);
         }
         else
@@ -97,7 +97,7 @@ public class ChainEvent : EventPopUpBase
 				newEvent.GetComponent<ChainChildEvent>().regionOrigin = this.regionOrigin;
 				newEvent.GetComponent<ChainChildEvent>().eventOrigin = this.GetComponent<ChainEvent>();
 				newEvent.transform.SetParent(Canvas.FindObjectOfType<Canvas>().transform);
-				newEvent.GetComponent<ChainChildEvent>().eventData    = eventManager.eventsList.tier1Events[Random.Range(0, eventManager.eventsList.tier1Events.Count)];
+				newEvent.GetComponent<ChainChildEvent>().eventDataCopy    = eventManager.eventsList.tier1Events[Random.Range(0, eventManager.eventsList.tier1Events.Count)];
 				persistentEvents.Add (newEvent);
 			}
 
@@ -109,7 +109,7 @@ public class ChainEvent : EventPopUpBase
 			if (isResolved == true && longTerm == true)
 			{
 				longTerm = false;
-				regionOrigin.GetComponent<RegionBase>().regionQuality += eventData.qualityDecay * regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
+				regionOrigin.GetComponent<RegionBase>().regionQuality += eventDataCopy.qualityDecay * regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
 				turnsLeft = 0;
 				GetComponent<Button> ().interactable = false;
 				SpawnChildEvents (3);
@@ -117,7 +117,7 @@ public class ChainEvent : EventPopUpBase
 			}
 			if (isResolved == true && shortTerm == true)
 			{
-				regionOrigin.GetComponent<RegionBase>().regionQuality += eventData.qualityDecay * regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
+				regionOrigin.GetComponent<RegionBase>().regionQuality += eventDataCopy.qualityDecay * regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
 				turnsLeft = 0;
 				Destroy(this.gameObject);
 

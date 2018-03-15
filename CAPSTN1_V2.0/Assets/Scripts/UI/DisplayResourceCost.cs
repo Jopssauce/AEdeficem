@@ -35,10 +35,10 @@ public class DisplayResourceCost : MonoBehaviour {
 		
 		if (eventOrigin.regionOrigin.cityOrigin != null && eventOrigin != null)
 		{
-			waterCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.waterCost.ToString();
-			powerCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.powerCost.ToString();
-			foodCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.foodCost.ToString();
-			actionCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost.ToString();
+			waterCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.waterCost.ToString();
+			powerCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.powerCost.ToString();
+			foodCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.foodCost.ToString();
+			actionCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.actionCost.ToString();
 			turnsLeft.text = eventOrigin.turnsLeft.ToString() + " Turns Left";
 			
 			ChangeColor(waterCost, eventOrigin.regionOrigin.cityOrigin.cityResources.Water, waterColor);
@@ -65,10 +65,10 @@ public class DisplayResourceCost : MonoBehaviour {
     {
         if (eventOrigin != null)
         {
-            waterCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.waterCost.ToString();
-            powerCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.powerCost.ToString();
-            foodCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.foodCost.ToString();
-            actionCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost.ToString();
+            waterCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.waterCost.ToString();
+            powerCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.powerCost.ToString();
+            foodCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.foodCost.ToString();
+            actionCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.actionCost.ToString();
 
             ChangeColor(waterCost, resManager.water, waterColor);
             ChangeColor(powerCost, resManager.power, powerColor);

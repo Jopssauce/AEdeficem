@@ -11,7 +11,7 @@ public class ChainChildEvent : EventPopUpBase
 	{
 		if (isResolved == true)
         {
-            regionOrigin.GetComponent<RegionBase>().regionQuality += eventData.qualityDecay *regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
+            regionOrigin.GetComponent<RegionBase>().regionQuality += eventDataCopy.qualityDecay *regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
             turnsLeft = 0;
             Destroy(this.gameObject);
            	eventOrigin.persistentEvents.Remove(this.gameObject);

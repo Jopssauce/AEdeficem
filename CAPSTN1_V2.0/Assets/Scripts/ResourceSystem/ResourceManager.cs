@@ -148,8 +148,8 @@ public class ResourceManager : MonoBehaviour {
 	}
 	public bool isEnoughRes(GameObject Event)
 	{
-		if (water < Event.GetComponent<EventPopUpBase>().eventData.waterCost || food < Event.GetComponent<EventPopUpBase>().eventData.foodCost 
-		 || power < Event.GetComponent<EventPopUpBase>().eventData.powerCost || actionPoints < Event.GetComponent<EventPopUpBase>().eventData.actionCost)
+		if (water < Event.GetComponent<EventPopUpBase>().eventDataCopy.waterCost || food < Event.GetComponent<EventPopUpBase>().eventDataCopy.foodCost 
+		 || power < Event.GetComponent<EventPopUpBase>().eventDataCopy.powerCost || actionPoints < Event.GetComponent<EventPopUpBase>().eventDataCopy.actionCost)
 		{
 			return false;
 		}

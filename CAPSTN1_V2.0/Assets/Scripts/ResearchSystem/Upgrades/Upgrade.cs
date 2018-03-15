@@ -15,6 +15,7 @@ public class Upgrade : MonoBehaviour
 			turnManager = TurnManager.instance;
 		}
 		turnManager.EndTurnEvent.AddListener(DoEffect);
+		cityBase = GetComponent<CityBase>();
 	}
 
 	public virtual void UpgradeEffect()
@@ -24,10 +25,10 @@ public class Upgrade : MonoBehaviour
 
 	public virtual void DoEffect()
 	{
-		if (technology.isUnlocked)
-		{
+		//if (technology.isUnlocked)
+		//{
 			UpgradeEffect();
-		}
+		//}
 	}
 
 }

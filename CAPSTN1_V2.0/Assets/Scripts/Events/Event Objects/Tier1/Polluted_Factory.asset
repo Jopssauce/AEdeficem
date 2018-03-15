@@ -17,8 +17,8 @@ MonoBehaviour:
   buildingPrefab: {fileID: 1860774217617404, guid: 518128833c5db0942afa39e6eb917c50,
     type: 2}
   waterCost: 5
-  foodCost: 0
-  powerCost: 0
+  foodCost: 1
+  powerCost: 1
   actionCost: 5
   eventDetails: A factory has been polluting the region for quite some time.
   qualityDecay: 0.09

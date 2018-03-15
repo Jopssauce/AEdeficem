@@ -90,15 +90,19 @@ public class EventManager : MonoBehaviour
 			{
 			case EventData.EventTier.Tier1:
 				newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier1Events[Random.Range(0, eventsList.tier1Events.Count)];
+				newButton.GetComponent<EventPopUpBase>().eventDataCopy    	  = Instantiate(newButton.GetComponent<EventPopUpBase>().eventData);
 				break;
 			case EventData.EventTier.Tier2:
 				newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier2Events[Random.Range(0, eventsList.tier2Events.Count)];
+				newButton.GetComponent<EventPopUpBase>().eventDataCopy    	  = Instantiate(newButton.GetComponent<EventPopUpBase>().eventData);
 				break;
 			case EventData.EventTier.Tier3:
 				newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier3Events[Random.Range(0, eventsList.tier3Events.Count)];
+				newButton.GetComponent<EventPopUpBase>().eventDataCopy    	  = Instantiate(newButton.GetComponent<EventPopUpBase>().eventData);
 				break;
 			case EventData.EventTier.Tier4:
 				newButton.GetComponent<EventPopUpBase>().eventData    = eventsList.tier4Events[Random.Range(0, eventsList.tier4Events.Count)];
+				newButton.GetComponent<EventPopUpBase>().eventDataCopy    	  = Instantiate(newButton.GetComponent<EventPopUpBase>().eventData);
 				break;
 			default:
 				Debug.Log("Error tier list");

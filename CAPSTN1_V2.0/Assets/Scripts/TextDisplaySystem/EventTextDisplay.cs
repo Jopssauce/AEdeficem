@@ -18,7 +18,7 @@ public class EventTextDisplay : MonoBehaviour {
 		details = new Queue<string> ();
 		if (eventOrigin != null)
 		{
-			StartText(eventOrigin.GetComponent<EventPopUpBase>().eventData);
+			StartText(eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy);
 		}
     }
 
@@ -53,7 +53,7 @@ public class EventTextDisplay : MonoBehaviour {
 		details = new Queue<string> ();
 		if (eventOrigin != null)
 		{
-			StartText(eventOrigin.GetComponent<EventPopUpBase>().eventData);
+			StartText(eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy);
 		}
 		if (animator != null)
 		{

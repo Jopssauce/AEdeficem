@@ -14,7 +14,7 @@ public class EventContent : MonoBehaviour, IPointerClickHandler  {
 	// Use this for initialization
 	void Start () 
 	{
-		eventTitle.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.eventName;
+		eventTitle.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.eventName;
 		this.GetComponent<DisplayResourceCost>().eventOrigin = this.eventOrigin;
 	}
 	void Update()

@@ -60,7 +60,6 @@ public class Technology : ScriptableObject
 			researchManager.selectedResearch = null;
 			foreach (var item in regionManager.regionList)
 			{
-				item.cityOrigin.gameObject.AddComponent<Upgrade>().technology = this;
 			}
 		}
 	}

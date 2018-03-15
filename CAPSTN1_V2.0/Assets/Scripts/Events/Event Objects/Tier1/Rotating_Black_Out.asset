@@ -16,9 +16,9 @@ MonoBehaviour:
   eventSprite: {fileID: 21300000, guid: 872f252f2d3141d44b90ddd8622c62cd, type: 3}
   buildingPrefab: {fileID: 1860774217617404, guid: 518128833c5db0942afa39e6eb917c50,
     type: 2}
-  waterCost: 0
-  foodCost: 0
-  powerCost: 0
+  waterCost: 1
+  foodCost: 1
+  powerCost: 1
   actionCost: 4
   eventDetails: The region's power plant has been damaged due to an unexpected technical
     failure.
