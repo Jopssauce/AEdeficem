@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 public class RightClickEvent : MonoBehaviour, IPointerClickHandler {
 	
+	public GameObject	rightClickPanel { get; set;}
+	public GameObject	RightClickPanelPrefab;
+
 	// Update is called once per frame
 	void Update () 
 	{
@@ -15,7 +18,7 @@ public class RightClickEvent : MonoBehaviour, IPointerClickHandler {
 	{
 		if (eventData.button == PointerEventData.InputButton.Right)
 		{
-			Debug.Log("Right");
+			
 		}
 	}
 }

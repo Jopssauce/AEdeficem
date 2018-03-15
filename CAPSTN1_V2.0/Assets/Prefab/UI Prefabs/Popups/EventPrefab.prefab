@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7a1a107c560e24fae4fd4a14988aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RightClickPanelPrefab: {fileID: 0}
 --- !u!222 &222557057826905708
 CanvasRenderer:
   m_ObjectHideFlags: 1

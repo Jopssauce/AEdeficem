@@ -7,7 +7,6 @@ public class ResearchTabs : MonoBehaviour, IPointerClickHandler {
 
     public void ShowTab()
     {
-        Debug.Log("ButtonClicked");
 		this.transform.parent.SetAsLastSibling ();
     }
 
