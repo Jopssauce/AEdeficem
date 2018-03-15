@@ -12,8 +12,9 @@ public class UpgradeResourceProduction : Upgrade
 	public override void UpgradeEffect()
 	{
 		base.UpgradeEffect();
-		IncreaseFirstProduction();
-		IncreaseSecondProduction();
+		IncreaseProduction();
+		//IncreaseFirstProduction();
+		//IncreaseSecondProduction();
 	}
 
 	public void IncreaseFirstProduction()
@@ -67,6 +68,47 @@ public class UpgradeResourceProduction : Upgrade
 			default:
 			break;
 		}
+	}
+	public void IncreaseProduction()
+	{
+			if (researchManager.tierProgress.resourceProdTier >= 1)
+			{
+				if (cityBase.firstProduction == CityBase.ProductionType.Water)
+				{
+					cityBase.bonusFirstProd = 1;
+				}
+				if (cityBase.secondProduction == CityBase.ProductionType.Water)
+				{
+					cityBase.bonusSecondProd = 1;
+				}
+			}
+			if (researchManager.tierProgress.resourceProdTier >= 2)
+			{
+				if (cityBase.firstProduction == CityBase.ProductionType.Food)
+				{
+					cityBase.bonusFirstProd = 1;
+				}
+				if (cityBase.secondProduction == CityBase.ProductionType.Food)
+				{
+					cityBase.bonusSecondProd = 1;
+				}
+			}
+			if (researchManager.tierProgress.resourceProdTier >= 3)
+			{
+				if (cityBase.firstProduction == CityBase.ProductionType.Power)
+				{
+					cityBase.bonusFirstProd = 1;
+				}
+				if (cityBase.secondProduction == CityBase.ProductionType.Power)
+				{
+					cityBase.bonusSecondProd = 1;
+				}
+			}
+			if (researchManager.tierProgress.resourceProdTier >= 4)
+			{	
+				cityBase.bonusFirstProd = 2;
+				cityBase.bonusSecondProd = 2;
+			}
 	}
 	
 }
