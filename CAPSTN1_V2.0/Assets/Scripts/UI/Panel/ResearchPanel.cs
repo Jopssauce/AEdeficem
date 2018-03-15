@@ -51,22 +51,22 @@ public class ResearchPanel : MonoBehaviour
 		{
 			switch (button.type)
 			{
-				case ResearchManager.ResearchTypes.Disaster:
+				case Technology.TechType.Disaster:
 				researchManager.selectedResearch = researchManager.disasterPrepTechCopy[button.tierNum - 1];
 				researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
 				turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
 				break;
-				case ResearchManager.ResearchTypes.Resource:
+				case Technology.TechType.Resource:
 				researchManager.selectedResearch = researchManager.disasterPrepTechCopy[button.tierNum - 1];
 				researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
 				turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
 				break;
-				case ResearchManager.ResearchTypes.Transport:
+				case Technology.TechType.Transport:
 				researchManager.selectedResearch = researchManager.disasterPrepTechCopy[button.tierNum - 1];
 				researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
 				turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
 				break;
-				case ResearchManager.ResearchTypes.Regional:
+				case Technology.TechType.Regional:
 				researchManager.selectedResearch = researchManager.disasterPrepTechCopy[button.tierNum - 1];
 				researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
 				turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
