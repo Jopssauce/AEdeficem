@@ -10,6 +10,7 @@ public class DisplayResourceCost : MonoBehaviour {
 	public Text powerCost;
 	public Text foodCost;
 	public Text actionCost;
+	public Text turnsLeft;
 
 	Color waterColor;
 	Color powerColor;
@@ -38,6 +39,7 @@ public class DisplayResourceCost : MonoBehaviour {
 			powerCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.powerCost.ToString();
 			foodCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.foodCost.ToString();
 			actionCost.text = eventOrigin.GetComponent<EventPopUpBase>().eventData.actionCost.ToString();
+			turnsLeft.text = eventOrigin.turnsLeft.ToString() + " Turns Left";
 			
 			ChangeColor(waterCost, eventOrigin.regionOrigin.cityOrigin.cityResources.Water, waterColor);
 			ChangeColor(powerCost, eventOrigin.regionOrigin.cityOrigin.cityResources.Power, powerColor);
