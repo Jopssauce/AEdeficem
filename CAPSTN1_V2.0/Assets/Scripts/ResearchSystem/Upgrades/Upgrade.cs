@@ -6,10 +6,20 @@ public class Upgrade : MonoBehaviour
 {
 	public Technology technology;
 	public CityBase   cityBase;
+	public TurnManager turnManager;
+
+	public virtual void Start()
+	{
+		if (TurnManager.instance != null)
+		{
+			turnManager = TurnManager.instance;
+		}
+		turnManager.EndTurnEvent.AddListener(DoEffect);
+	}
 
 	public virtual void UpgradeEffect()
 	{
-
+		Debug.Log("Effect");
 	}
 
 	public virtual void DoEffect()
