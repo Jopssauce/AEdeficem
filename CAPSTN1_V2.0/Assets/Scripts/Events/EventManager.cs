@@ -61,8 +61,10 @@ public class EventManager : MonoBehaviour
     {
         RegionManagerInstance = RegionManager.instance;
 
-		int num 			    = Random.Range(0 , RegionManagerInstance.regionList.Count);
-		if (eventTracker.Count != 8) 
+		int num 	= Random.Range(0 , RegionManagerInstance.regionList.Count);
+		int spawnNum = Random.Range(0 ,  RegionManagerInstance.regionList[num].spawnAreas.Count);
+		SpawnArea spawnArea = RegionManagerInstance.regionList[num].spawnAreas[spawnNum].GetComponent<SpawnArea>();
+		if (eventTracker.Count != 8 && spawnArea.eventOrigin == null) 
 		{
 			GameObject newButton = null;
 			if (eventType == EventData.EventType.Standard) 
@@ -80,8 +82,9 @@ public class EventManager : MonoBehaviour
 
 
 			newButton.transform.SetParent(newCanvas.transform, false);
-
 			newButton.GetComponent<EventPopUpBase>().regionOrigin = RegionManagerInstance.regionList[num];
+			newButton.GetComponent<EventPopUpBase>().regionOrigin.spawnAreas[spawnNum].GetComponent<SpawnArea>().eventOrigin = newButton.GetComponent<EventPopUpBase>();
+			newButton.GetComponent<BindToRegion>().spawnArea 	  = RegionManagerInstance.regionList[num].spawnAreas[spawnNum];
 
 			switch (eventTier)
 			{
@@ -122,7 +125,26 @@ public class EventManager : MonoBehaviour
 		int chain 		= 0;
 		int domino 		= 0;
 		int eventNum 	= Random.Range (2, 5);
-		if (eventNum == 2) 
+	
+		if (eventTracker != null)
+        {
+			for (int i = 0; i < eventNum; i++) 
+			{
+				if (turnManager.currentTurn >= 0 && turnManager.currentTurn < 20)
+				{
+					SpawnEvent(EventData.EventTier.Tier1, EventData.EventType.Standard);
+				}
+				else if (turnManager.currentTurn >= 20 && turnManager.currentTurn < 40)
+				{
+					SpawnEvent(EventData.EventTier.Tier2, EventData.EventType.Standard);
+				}
+				else if (turnManager.currentTurn >= 40)
+				{
+					SpawnEvent(EventData.EventTier.Tier3, EventData.EventType.Standard);
+				}   
+			}
+		}
+		/*if (eventNum == 2) 
 		{
 			standard = 1;
 			chain 	= 1;
@@ -193,7 +215,7 @@ public class EventManager : MonoBehaviour
 					SpawnEvent(EventData.EventTier.Tier3, EventData.EventType.Standard);
 				}   
 			}
-        }
+		}*/
     }
     public EventPopUpBase GetSelectedEvent()
     {
