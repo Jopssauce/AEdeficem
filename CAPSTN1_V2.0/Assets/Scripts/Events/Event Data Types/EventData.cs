@@ -24,6 +24,7 @@ public class EventData : ScriptableObject
 
 	public string  	eventName;
 	public int 		turnsLeft;
+	public int 		turnsToResolve;
 	public Sprite 	eventSprite;
 	public GameObject buildingPrefab;
 	
