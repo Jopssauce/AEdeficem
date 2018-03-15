@@ -19,9 +19,25 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4066398117165180}
-  - component: {fileID: 65418664829646858}
+  - component: {fileID: 114644623742045334}
   m_Layer: 0
   m_Name: Spawn Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1123799282444744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4328984641297610}
+  - component: {fileID: 114984383230045762}
+  m_Layer: 0
+  m_Name: Spawn Area (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,9 +51,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4603162962729000}
-  - component: {fileID: 65869328042811914}
+  - component: {fileID: 114713332218207094}
   m_Layer: 0
-  m_Name: Spawn Area (1)
+  m_Name: Spawn Area (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 1111672755017630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.039, y: 0.7, z: -2.791}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 4150305525189580}
   m_RootOrder: 0
@@ -87,9 +103,23 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4066398117165180}
+  - {fileID: 4328984641297610}
   - {fileID: 4603162962729000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4328984641297610
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123799282444744}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.59, y: 0.7, z: -4.91}
+  m_LocalScale: {x: 1, y: 0.9, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4150305525189580}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4603162962729000
 Transform:
@@ -98,11 +128,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1442742914754188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.59, y: 0.7, z: -4.91}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.93, y: 0.7, z: -1.5}
+  m_LocalScale: {x: 1, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 4150305525189580}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23660232283771980
 MeshRenderer:
@@ -159,30 +189,30 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 3bc2a3c64f537a94e9cfa95ea4ac29e3, type: 3}
---- !u!65 &65418664829646858
-BoxCollider:
+--- !u!114 &114644623742045334
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1111672755017630}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.2855873, y: 0.041127145, z: 2.6351714}
-  m_Center: {x: -1.2654985, y: -0.47943643, z: 0.8175857}
---- !u!65 &65869328042811914
-BoxCollider:
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b0c04dad5be054ea965940c20442ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventOrigin: {fileID: 0}
+--- !u!114 &114713332218207094
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1442742914754188}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.1343148, y: 0.030078823, z: 1.9272637}
-  m_Center: {x: -1.2654986, y: -0.4794364, z: 0.46363187}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b0c04dad5be054ea965940c20442ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventOrigin: {fileID: 0}
 --- !u!114 &114762099471301906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,6 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnAreas:
   - {fileID: 1111672755017630}
+  - {fileID: 1123799282444744}
   - {fileID: 1442742914754188}
   resolvedChainEvents: []
   regionQuality: 100
@@ -215,3 +246,15 @@ MonoBehaviour:
   MaxRegionResource: 0
   regionQualityDecay: 0
   cityOrigin: {fileID: 0}
+--- !u!114 &114984383230045762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123799282444744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b0c04dad5be054ea965940c20442ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventOrigin: {fileID: 0}

@@ -14,13 +14,7 @@ public class ResearchManager : MonoBehaviour
         public int regionalPlanTier;
     }
 
-    public enum ResearchTypes
-    {
-        Disaster,
-        Resource,
-        Transport,
-        Regional
-    }
+    
 
     public List<Technology> disasterPrepTech;
     public List<Technology> disasterPrepTechCopy;
@@ -41,7 +35,7 @@ public class ResearchManager : MonoBehaviour
 
     public Technology selectedResearch;
 
-    public class ProgressResearchTier : UnityEvent<ResearchManager.ResearchTypes>{} 
+    public class ProgressResearchTier : UnityEvent<Technology.TechType>{} 
     public ProgressResearchTier progressResearchTier;
     public UnityEvent ResearchFinished;
     void Awake()
@@ -88,20 +82,20 @@ public class ResearchManager : MonoBehaviour
         
     }
 
-    public void AddTier(ResearchManager.ResearchTypes type)
+    public void AddTier(Technology.TechType type)
     {
         switch (type)
         {
-            case ResearchManager.ResearchTypes.Disaster :
+            case Technology.TechType.Disaster :
             tierProgress.disasterPrepTier++;
             break;
-            case ResearchManager.ResearchTypes.Resource :
+            case Technology.TechType.Resource :
             tierProgress.disasterPrepTier++;
             break;
-            case ResearchManager.ResearchTypes.Transport :
+            case Technology.TechType.Transport :
             tierProgress.disasterPrepTier++;
             break;
-            case ResearchManager.ResearchTypes.Regional :
+            case Technology.TechType.Regional :
             tierProgress.disasterPrepTier++;
             break;
             default:

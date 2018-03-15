@@ -11,8 +11,16 @@ public class Technology : ScriptableObject
 		Tier3,
 		Tier4
 	}
+
+	public enum TechType
+    {
+        Disaster,
+        Resource,
+        Transport,
+        Regional
+    }
 	public TechTier techTier;
-	public ResearchManager.ResearchTypes type;
+	public Technology.TechType type;
 	public bool isUnlocked;
 	public bool isResearching;
 
@@ -41,15 +49,11 @@ public class Technology : ScriptableObject
 		{
 			isResearching = false;
 			isUnlocked = true;
-			researchManager.progressResearchTier.Invoke(ResearchManager.ResearchTypes.Disaster);
+			researchManager.progressResearchTier.Invoke(Technology.TechType.Disaster);
 			researchManager.ResearchFinished.Invoke();
 			researchManager.unlockedTech.Add(Instantiate(this));
 			researchManager.selectedResearch = null;
 		}
 	}
 
-	public virtual void TechEffect()
-	{
-		
-	}
 }

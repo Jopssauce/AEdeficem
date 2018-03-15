@@ -6,7 +6,7 @@ public class ResearchButton : MonoBehaviour
 {
 	public int tierNum;
 	public ResearchPanel researchPanel;
-	public ResearchManager.ResearchTypes type;
+	public Technology.TechType type;
 
 	public void Select()
 	{
