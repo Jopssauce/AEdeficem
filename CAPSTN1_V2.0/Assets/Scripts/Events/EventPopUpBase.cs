@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
-public class EventPopUpBase : MonoBehaviour
+public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 {
     public EventData   	eventData;
     public RegionBase  	regionOrigin;
@@ -183,6 +184,14 @@ public class EventPopUpBase : MonoBehaviour
         resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 1);
         this.GetComponent<Button>().interactable = true;
         Destroy(eventPanel);   
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            Debug.Log("Right");
+        }
     }
     
 }

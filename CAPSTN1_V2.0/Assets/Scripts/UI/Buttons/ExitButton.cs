@@ -4,7 +4,18 @@ using UnityEngine;
 
 public class ExitButton : MonoBehaviour {
 	public GameObject panel;
-	public void Click()
+
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+    }
+
+    public void Click()
 	{
 		Destroy(panel);
 	}
