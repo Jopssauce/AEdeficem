@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ResearchTabs : MonoBehaviour {
+public class ResearchTabs : MonoBehaviour, IPointerClickHandler {
 
     public void ShowTab()
     {
         Debug.Log("ButtonClicked");
-		this.transform.parent.transform.SetAsLastSibling ();
+		this.transform.parent.SetAsLastSibling ();
     }
+
+	#region IPointerDownHandler implementation
+	public void OnPointerClick (PointerEventData eventData)
+	{
+		ShowTab ();
+	}
+	#endregion
 }
