@@ -58,9 +58,6 @@ public class Technology : ScriptableObject
 			researchManager.ResearchFinished.Invoke();
 			researchManager.unlockedTech.Add(Instantiate(this));
 			researchManager.selectedResearch = null;
-			foreach (var item in regionManager.regionList)
-			{
-			}
 		}
 	}
 

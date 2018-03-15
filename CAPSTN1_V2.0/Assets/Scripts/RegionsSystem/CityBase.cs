@@ -36,6 +36,12 @@ public class CityBase : MonoBehaviour
 	public int firstCurrentProduction;
 	public int secondCurrentProduction;
 
+	public int maxFirstProd;
+	public int maxSecondProd;
+
+	public int bonusFirstProd;
+	public int bonusSecondProd;
+
 	private TurnManager turnManager;
 	public UnityEvent AdjustedCityResource;
 	public void Start()
@@ -46,12 +52,14 @@ public class CityBase : MonoBehaviour
 		}
 		turnManager.EndTurnEvent.AddListener(UpdateCity);
 		UpdateCity();
+		maxFirstProd = 6;
+		maxSecondProd = 6;
 	}
 
 	public void UpdateCity()
 	{
-		firstCurrentProduction = Mathf.RoundToInt( (regionOrigin.regionQuality / regionOrigin.maxRegionQuality) * regionOrigin.MaxRegionResource);
-		secondCurrentProduction = Mathf.RoundToInt( (regionOrigin.regionQuality / regionOrigin.maxRegionQuality) * regionOrigin.MaxRegionResource);
+		firstCurrentProduction = Mathf.RoundToInt( (regionOrigin.regionQuality / regionOrigin.maxRegionQuality) * maxFirstProd);
+		secondCurrentProduction = Mathf.RoundToInt( (regionOrigin.regionQuality / regionOrigin.maxRegionQuality) * maxSecondProd);
 
 		if (firstCurrentProduction <= 0)
 		{
@@ -65,13 +73,13 @@ public class CityBase : MonoBehaviour
 		switch (firstProduction)
 		{
 		case ProductionType.Water:
-			cityResources.Water += firstCurrentProduction;
+			cityResources.Water += firstCurrentProduction + bonusFirstProd;
 			break;
 		case ProductionType.Food:
-			cityResources.Food += firstCurrentProduction;
+			cityResources.Food += firstCurrentProduction + bonusFirstProd;
 			break;
 		case ProductionType.Power:
-			cityResources.Power += firstCurrentProduction;
+			cityResources.Power += firstCurrentProduction + bonusFirstProd;
 			break;
 
 		default:
@@ -82,13 +90,13 @@ public class CityBase : MonoBehaviour
 		switch (secondProduction)
 		{
 		case ProductionType.Water:
-			cityResources.Water += secondCurrentProduction;
+			cityResources.Water += secondCurrentProduction + bonusSecondProd;
 			break;
 		case ProductionType.Food:
-			cityResources.Food += secondCurrentProduction;
+			cityResources.Food += secondCurrentProduction + bonusSecondProd;
 			break;
 		case ProductionType.Power:
-			cityResources.Power += secondCurrentProduction;
+			cityResources.Power += secondCurrentProduction + bonusSecondProd;
 			break;
 
 		default:

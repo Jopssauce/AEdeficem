@@ -31,8 +31,8 @@ public class RegionResources : MonoBehaviour {
 	{
 		if (cityOrigin != null)
 		{
-			resourceAmount.text = "+" + cityOrigin.firstCurrentProduction.ToString();
-			resourceAmount2.text = "+" + cityOrigin.secondCurrentProduction.ToString();
+			resourceAmount.text = "+" + (cityOrigin.firstCurrentProduction + cityOrigin.bonusFirstProd).ToString();
+			resourceAmount2.text = "+" + (cityOrigin.secondCurrentProduction + cityOrigin.bonusSecondProd).ToString();
 		}
 	}
 	   

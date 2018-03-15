@@ -136,6 +136,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6688907, y: 2.511811, z: 2.6487849}
   m_Center: {x: 0.44539627, y: 0.7559043, z: -0.26006967}
+--- !u!114 &1853858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e204c8576369d458691fb4668312d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
 --- !u!1 &30346401 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1238048783729992, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
@@ -159,6 +174,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6688907, y: 2.511811, z: 2.6487849}
   m_Center: {x: 0.44539627, y: 0.7559043, z: -0.26006967}
+--- !u!114 &30346404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 30346401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e204c8576369d458691fb4668312d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
 --- !u!1 &57169580
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,6 +963,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6688907, y: 2.511811, z: 2.6487849}
   m_Center: {x: 0.44539627, y: 0.7559043, z: -0.26006967}
+--- !u!114 &346399617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 346399614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e204c8576369d458691fb4668312d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
 --- !u!1 &356065372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2735,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6688907, y: 2.511811, z: 2.6487849}
   m_Center: {x: 0.44539627, y: 0.7559043, z: -0.26006967}
+--- !u!114 &948175421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948175418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e204c8576369d458691fb4668312d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
 --- !u!1 &959331987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,6 +3045,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027642700}
+--- !u!1 &1037550988 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1835391313421958, guid: 465cd92417f316749871fefa33d17937,
+    type: 2}
+  m_PrefabInternal: {fileID: 917513347}
+--- !u!114 &1037550989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037550988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e204c8576369d458691fb4668312d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
 --- !u!1 &1063820210
 GameObject:
   m_ObjectHideFlags: 0
