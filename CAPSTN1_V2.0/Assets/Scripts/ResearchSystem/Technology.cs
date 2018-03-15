@@ -30,12 +30,17 @@ public class Technology : ScriptableObject
 
 	public CityBase cityBase;
 	public ResearchManager researchManager;
+	public RegionManager   regionManager;
 
 	public void Awake()
 	{
 		if (ResearchManager.instance != null)
 		{
 			researchManager = ResearchManager.instance;
+		}
+		if (RegionManager.instance != null)
+		{
+			regionManager = RegionManager.instance;
 		}
 	}
 
@@ -53,6 +58,10 @@ public class Technology : ScriptableObject
 			researchManager.ResearchFinished.Invoke();
 			researchManager.unlockedTech.Add(Instantiate(this));
 			researchManager.selectedResearch = null;
+			foreach (var item in regionManager.regionList)
+			{
+				item.cityOrigin.gameObject.AddComponent<Upgrade>().technology = this;
+			}
 		}
 	}
 
