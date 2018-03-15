@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class ResearchManager : MonoBehaviour 
 {
-
+    [System.Serializable]
     public struct TierProgress
     {
         public int disasterPrepTier;
