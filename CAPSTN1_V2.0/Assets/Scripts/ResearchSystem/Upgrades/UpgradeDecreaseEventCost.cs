@@ -14,7 +14,6 @@ public class UpgradeDecreaseEventCost : Upgrade
 			
 			if (spawnArea.GetComponent<SpawnArea>().eventOrigin != null)
 			{
-				Debug.Log(spawnArea.GetComponent<SpawnArea>().eventOrigin);
 				spawnArea.GetComponent<SpawnArea>().eventOrigin.eventDataCopy.waterCost = (int)(spawnArea.GetComponent<SpawnArea>().eventOrigin.eventData.waterCost * decrease);
 				spawnArea.GetComponent<SpawnArea>().eventOrigin.eventDataCopy.foodCost =  (int)(spawnArea.GetComponent<SpawnArea>().eventOrigin.eventData.foodCost * decrease);
 				spawnArea.GetComponent<SpawnArea>().eventOrigin.eventDataCopy.powerCost = (int)(spawnArea.GetComponent<SpawnArea>().eventOrigin.eventData.powerCost * decrease);

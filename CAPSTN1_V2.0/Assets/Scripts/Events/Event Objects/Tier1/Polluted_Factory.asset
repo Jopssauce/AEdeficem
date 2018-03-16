@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: Polluted Factory
   turnsLeft: 4
+  turnsToResolve: 2
   eventSprite: {fileID: 21300000, guid: 40fa836cd62e33a468961c5566a6df52, type: 3}
   buildingPrefab: {fileID: 1860774217617404, guid: 518128833c5db0942afa39e6eb917c50,
     type: 2}

@@ -9,7 +9,7 @@ public class ChainChildEvent : EventPopUpBase
 
 	public override void UpdateEvent()
 	{
-		if (isResolved == true)
+		if (isResolving == true)
         {
             regionOrigin.GetComponent<RegionBase>().regionQuality += eventDataCopy.qualityDecay *regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
             turnsLeft = 0;

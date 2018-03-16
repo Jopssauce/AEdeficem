@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: Intercultural Appreciation
   turnsLeft: 5
+  turnsToResolve: 2
   eventSprite: {fileID: 21300000, guid: 0973ead74db72514dae298a1c01fcf23, type: 3}
   buildingPrefab: {fileID: 1209049137058192, guid: aed53223dcf02c64da35812d7d91b85a,
     type: 2}

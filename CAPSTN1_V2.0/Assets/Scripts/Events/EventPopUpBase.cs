@@ -11,10 +11,13 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
     public EventData   	eventData;
     public RegionBase  	regionOrigin;
     public int         	turnsLeft;
-    public bool        	isResolved;
+    public bool        	isResolving;
+    public bool         isResolved;
     public Vector3     	eventWorldPos;
     public List<Sprite> timerSprites;
     public CityBase     cityOrign;
+
+    public Text         turnsToResolve;
 
 	public GameObject	eventPanel;
 	public GameObject	eventPanelPrefab;
@@ -30,6 +33,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 	public virtual void Start ()
     {
         //eventData = Instantiate(eventDataCopy);
+        isResolving = false;
         isResolved = false;
 
         if (ResourceManager.instance != null)
@@ -76,12 +80,12 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 	{
         eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
         eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = false;
-        if (isResolved == true && unit != null && unit.isArrived == true)
+        if (isResolving == true && unit != null && unit.isArrived == true)
         {
             eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
             eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = true;
         }
-        if (isResolved == false && unit != null  && unit.isArrived == true)
+        if (isResolving == false && unit != null  && unit.isArrived == true)
         {
             eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = true;
             eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = false;
@@ -99,7 +103,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 	public void RefundEvent()
     {
 
-        if (GetComponent<EventPopUpBase>().isResolved == true)
+        if (GetComponent<EventPopUpBase>().isResolving == true)
         {
             Debug.Log("Refund");
             resManager.AddResource(ResourceManager.ResourceType.ActionPoints,eventDataCopy.actionCost);
@@ -108,18 +112,20 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
             cityOrign.AddCityResource(CityBase.ProductionType.Food,   eventDataCopy.foodCost);
         }
 
-       	isResolved = false;
+       	isResolving = false;
         this.GetComponent<Button>().interactable = true;
 		Destroy(eventPanel);
     }
 
 	public virtual void ResolveEvent()
     {
-        if (isResolved == false)
+        if (isResolving == false)
         {
             if (isEnoughRes() == true)
             {
-                isResolved = true;
+                turnsToResolve.gameObject.SetActive(true);
+                turnsToResolve.text = eventDataCopy.turnsToResolve.ToString();
+                isResolving = true;
                 resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, eventDataCopy.actionCost);
                 cityOrign.DeductCityResource(CityBase.ProductionType.Water,	eventDataCopy.waterCost);
                 cityOrign.DeductCityResource(CityBase.ProductionType.Power, eventDataCopy.powerCost);
@@ -134,13 +140,18 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
             this.GetComponent<Button>().interactable = true;
         }
     }
-    public virtual void ExitEvent()
-    {
-        Destroy(eventPanel);
-        this.GetComponent<Button>().interactable = true;
-    }
     public virtual void UpdateEvent()
     {
+        if (isResolving == true)
+        {
+            eventDataCopy.turnsToResolve--;
+           
+            turnsToResolve.text = eventDataCopy.turnsToResolve.ToString();
+            if (eventDataCopy.turnsToResolve <= 0)
+            {
+                isResolved = true;
+            }
+        }
         if (isResolved == true)
         {
             regionOrigin.GetComponent<RegionBase>().regionQuality += eventDataCopy.qualityDecay *regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
@@ -149,8 +160,9 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
             Destroy(this.gameObject);
             eventManager.eventTracker.Remove(this.gameObject);
         }
-        if (isResolved == false)
+        if (isResolving == false)
         {
+            turnsToResolve.gameObject.SetActive(false);
             turnsLeft -= 1;
 
             if (turnsLeft > 0)

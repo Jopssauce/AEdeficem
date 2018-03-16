@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: Rotating Black Out
   turnsLeft: 4
+  turnsToResolve: 2
   eventSprite: {fileID: 21300000, guid: 872f252f2d3141d44b90ddd8622c62cd, type: 3}
   buildingPrefab: {fileID: 1860774217617404, guid: 518128833c5db0942afa39e6eb917c50,
     type: 2}

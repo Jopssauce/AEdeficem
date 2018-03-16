@@ -18,7 +18,7 @@ public class ChainEvent : EventPopUpBase
 
 	public void ShortTermResolve ()
 	{
-		if (GetComponent<EventPopUpBase>().isResolved == true)
+		if (GetComponent<EventPopUpBase>().isResolving == true)
         {
             Debug.Log("Refund");
             resManager.AddResource(ResourceManager.ResourceType.ActionPoints,eventDataCopy.actionCost);
@@ -38,7 +38,7 @@ public class ChainEvent : EventPopUpBase
         {
             Debug.Log("Not Enough Resources");
         }
-		isResolved = true;
+		isResolving = true;
 		shortTerm = true;
 		longTerm = false;
 		this.GetComponent<Button>().interactable = true;
@@ -46,7 +46,7 @@ public class ChainEvent : EventPopUpBase
 
 	public void LongTermResolve()
 	{
-		if (GetComponent<EventPopUpBase>().isResolved == true)
+		if (GetComponent<EventPopUpBase>().isResolving == true)
         {
             Debug.Log("Refund");
             resManager.AddResource(ResourceManager.ResourceType.ActionPoints,eventDataCopy.actionCost);
@@ -66,7 +66,7 @@ public class ChainEvent : EventPopUpBase
         {
             Debug.Log("Not Enough Resources");
         }
-		isResolved = true;
+		isResolving = true;
 		longTerm = true;
 		shortTerm = false;
 		eventManager.isChainEvent = true;
@@ -106,7 +106,7 @@ public class ChainEvent : EventPopUpBase
 	
 	public override void UpdateEvent()
 	{           
-			if (isResolved == true && longTerm == true)
+			if (isResolving == true && longTerm == true)
 			{
 				longTerm = false;
 				regionOrigin.GetComponent<RegionBase>().regionQuality += eventDataCopy.qualityDecay * regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
@@ -115,7 +115,7 @@ public class ChainEvent : EventPopUpBase
 				SpawnChildEvents (3);
 
 			}
-			if (isResolved == true && shortTerm == true)
+			if (isResolving == true && shortTerm == true)
 			{
 				regionOrigin.GetComponent<RegionBase>().regionQuality += eventDataCopy.qualityDecay * regionOrigin.GetComponent<RegionBase>().maxRegionQuality;
 				turnsLeft = 0;
@@ -123,7 +123,7 @@ public class ChainEvent : EventPopUpBase
 
 				eventManager.eventTracker.Remove(this.gameObject);
 			}
-			if (isResolved == false )
+			if (isResolving == false )
 			{
 				turnsLeft -= 1;
 
@@ -138,7 +138,7 @@ public class ChainEvent : EventPopUpBase
 				}
 		
 			}
-			if (persistentEvents.Count <= 0 && isResolved == true)
+			if (persistentEvents.Count <= 0 && isResolving == true)
 			{
 				Destroy(this.gameObject);
 
