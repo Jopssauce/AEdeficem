@@ -42,7 +42,10 @@ public class EventManager : MonoBehaviour
 		{
 			Destroy (gameObject);
 		}
-		DontDestroyOnLoad (gameObject);
+	}
+	void OnDestroy()
+	{
+		instance = null;
 	}
 
     void Start()

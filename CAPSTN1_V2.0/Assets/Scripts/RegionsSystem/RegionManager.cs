@@ -29,7 +29,6 @@ public class RegionManager : MonoBehaviour
 		{
 			Destroy (gameObject);
 		}
-		DontDestroyOnLoad (gameObject);
 
         RegionHolder = GameObject.FindGameObjectsWithTag("Region");
 
@@ -48,6 +47,10 @@ public class RegionManager : MonoBehaviour
             
         }
         FixRegionTypes();
+	}
+	void OnDestroy()
+	{
+		instance = null;
 	}
 
     void Start()

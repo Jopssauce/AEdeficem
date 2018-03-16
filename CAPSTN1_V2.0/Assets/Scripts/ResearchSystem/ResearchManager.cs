@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class ResearchManager : MonoBehaviour 
 {
@@ -48,10 +49,35 @@ public class ResearchManager : MonoBehaviour
 		{
 			Destroy (gameObject);
 		}
-		DontDestroyOnLoad (gameObject);
         progressResearchTier = new ProgressResearchTier();
         progressResearchTier.AddListener(AddTier);
-    }
+    
+		//StartCoroutine (LoadScene ());	
+	}
+
+	void OnDestroy()
+	{
+		instance = null;
+	}
+
+	IEnumerator LoadScene()
+	{
+		AsyncOperation op = SceneManager.LoadSceneAsync ("test", LoadSceneMode.Additive);
+
+
+		while (!op.isDone) {
+			Debug.Log (op.progress);
+			yield return new WaitForEndOfFrame();
+		}
+
+		// Loaded scene
+		Scene scene = SceneManager.GetSceneByName("test");
+		SceneManager.SetActiveScene (scene);
+
+		// Unload previous scene
+		SceneManager.UnloadSceneAsync("current-scene");
+		
+	}
 
     void Start()
     {

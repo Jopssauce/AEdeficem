@@ -42,7 +42,7 @@ public class ResourceManager : MonoBehaviour {
 		{
 			Destroy (gameObject);
 		}
-		DontDestroyOnLoad (gameObject);
+	
 
         ResourceSpent = new List<int>();
         ResourceSpent.Add(0);
@@ -51,6 +51,10 @@ public class ResourceManager : MonoBehaviour {
         ResourceSpent.Add(0);
 
     }
+	void OnDestroy()
+	{
+		instance = null;
+	}
 
     void Start()
     {

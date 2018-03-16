@@ -33,10 +33,12 @@ public class TurnManager : MonoBehaviour {
 		{
 			Destroy (this.gameObject);
 		}
-		DontDestroyOnLoad (gameObject);
 		currentTurn = 0;
 	}
-	
+	void OnDestroy()
+	{
+		instance = null;
+	}
 	void Start()
 	{
 		if (ResourceManager.instance != null)
