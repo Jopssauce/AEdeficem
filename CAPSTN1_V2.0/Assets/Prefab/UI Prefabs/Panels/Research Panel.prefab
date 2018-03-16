@@ -116,7 +116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1089764002111176
 GameObject:
   m_ObjectHideFlags: 1
@@ -133,7 +133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1094957223488936
 GameObject:
   m_ObjectHideFlags: 1
@@ -572,7 +572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1465970610648924
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1771826053434630
 GameObject:
   m_ObjectHideFlags: 1
@@ -1815,7 +1815,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: '
+
+'
 --- !u!114 &114273851170474148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1977,6 +1979,7 @@ MonoBehaviour:
   tierNum: 1
   researchPanel: {fileID: 114407034268546702}
   type: 0
+  ResearchIcon: {fileID: 21300000, guid: 44e2cd806d0a6f242bbfaf809beb4870, type: 3}
 --- !u!114 &114327868352027790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2051,6 +2054,7 @@ MonoBehaviour:
   tierNum: 3
   researchPanel: {fileID: 0}
   type: 0
+  ResearchIcon: {fileID: 21300000, guid: 44e2cd806d0a6f242bbfaf809beb4870, type: 3}
 --- !u!114 &114373471281872726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2105,6 +2109,11 @@ MonoBehaviour:
   regionalPlanButtons: []
   currentResearch: {fileID: 114179893804532334}
   currentResearchTurns: {fileID: 114055686775102034}
+  TierIcons:
+  - {fileID: 21300000, guid: f2ebdd73d6b4adf459d2b90f19fa73d2, type: 3}
+  - {fileID: 21300000, guid: b6eaa1e1d3ce9f94fbf95814c2e1ae58, type: 3}
+  - {fileID: 21300000, guid: b7a2f388449d0ca42ab0df8ca09727cc, type: 3}
+  - {fileID: 21300000, guid: 0be761161958b2f4a82b8b27e42a7b45, type: 3}
 --- !u!114 &114409615216044860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2321,8 +2330,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2415,7 +2424,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: '
+
+'
 --- !u!114 &114544912573221852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2822,6 +2833,7 @@ MonoBehaviour:
   tierNum: 2
   researchPanel: {fileID: 0}
   type: 0
+  ResearchIcon: {fileID: 21300000, guid: 44e2cd806d0a6f242bbfaf809beb4870, type: 3}
 --- !u!114 &114777414281934942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3030,8 +3042,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3145,8 +3157,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3259,7 +3271,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: '
+
+'
 --- !u!114 &114896670503540890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3334,6 +3348,7 @@ MonoBehaviour:
   tierNum: 4
   researchPanel: {fileID: 0}
   type: 0
+  ResearchIcon: {fileID: 21300000, guid: 44e2cd806d0a6f242bbfaf809beb4870, type: 3}
 --- !u!114 &114915210840843616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3483,7 +3498,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: '
+
+'
 --- !u!114 &114940571499376466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3503,8 +3520,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4174,8 +4191,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -104.469604}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 138.03021, y: -164}
+  m_SizeDelta: {x: 155.23, y: 133.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224200392191862234
 RectTransform:
@@ -4260,8 +4277,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -217}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -64, y: -259}
+  m_SizeDelta: {x: 155.23, y: 133.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224248328982938470
 RectTransform:
@@ -4741,8 +4758,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -10.6}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -54, y: -57}
+  m_SizeDelta: {x: 155.23, y: 133.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224665654389421832
 RectTransform:
@@ -5158,8 +5175,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 75.2}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 114, y: 60}
+  m_SizeDelta: {x: 155.23, y: 133.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224994644063397312
 RectTransform:

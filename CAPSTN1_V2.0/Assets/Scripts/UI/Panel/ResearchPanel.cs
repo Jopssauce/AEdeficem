@@ -13,6 +13,8 @@ public class ResearchPanel : MonoBehaviour
 
 	public Text currentResearch;
 	public Text currentResearchTurns;
+
+	public List<Sprite> TierIcons;
 	
 
 	ResearchManager researchManager;
@@ -90,6 +92,12 @@ public class ResearchPanel : MonoBehaviour
 			else
 			{
 				item.interactable = true;
+			}
+
+			if (researchManager.tierProgress.disasterPrepTier + 1 > item.GetComponent<ResearchButton> ().tierNum)
+			{
+				item.interactable = false;
+				item.GetComponent<ResearchButton> ().GetComponent<Image> ().sprite = TierIcons [item.GetComponent<ResearchButton> ().tierNum - 1];
 			}
 		}
 		
