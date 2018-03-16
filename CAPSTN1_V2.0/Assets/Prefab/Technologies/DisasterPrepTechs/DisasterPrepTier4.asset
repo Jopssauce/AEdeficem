@@ -17,5 +17,7 @@ MonoBehaviour:
   isResearching: 0
   turnsLeft: 2
   techName: Disaster Tier 4
+  techDescription: fagfafhdghshdnhjtryurghdfs
   cityBase: {fileID: 0}
   researchManager: {fileID: 0}
+  regionManager: {fileID: 0}

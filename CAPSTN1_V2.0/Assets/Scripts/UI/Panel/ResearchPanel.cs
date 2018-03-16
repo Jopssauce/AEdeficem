@@ -13,6 +13,7 @@ public class ResearchPanel : MonoBehaviour
 
 	public Text currentResearch;
 	public Text currentResearchTurns;
+	public Text currentResearchDetails;
 
 	public List<Sprite> TierIcons;
 	
@@ -88,17 +89,17 @@ public class ResearchPanel : MonoBehaviour
 			if (item.GetComponent<ResearchButton>().tierNum != researchManager.tierProgress.disasterPrepTier + 1)
 			{
 				item.interactable = false;
+				if (researchManager.tierProgress.disasterPrepTier + 1 > item.GetComponent<ResearchButton> ().tierNum)
+				{
+					item.GetComponent<ResearchButton> ().GetComponent<Image> ().sprite = TierIcons [item.GetComponent<ResearchButton> ().tierNum - 1];
+				}
 			}
 			else
 			{
 				item.interactable = true;
 			}
 
-			if (researchManager.tierProgress.disasterPrepTier + 1 > item.GetComponent<ResearchButton> ().tierNum)
-			{
-				item.interactable = false;
-				item.GetComponent<ResearchButton> ().GetComponent<Image> ().sprite = TierIcons [item.GetComponent<ResearchButton> ().tierNum - 1];
-			}
+
 		}
 		
 	}
@@ -111,6 +112,7 @@ public class ResearchPanel : MonoBehaviour
 			{
 				currentResearch.text = researchManager.selectedResearch.techName;
 				currentResearchTurns.text =  "Status: " + researchManager.selectedResearch.turnsLeft + " Turns left";
+				currentResearchDetails.text = researchManager.selectedResearch.techDescription;
 			}
 		}
 	}

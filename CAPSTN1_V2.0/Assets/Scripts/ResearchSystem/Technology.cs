@@ -27,6 +27,8 @@ public class Technology : ScriptableObject
 	public int turnsLeft;
 
 	public string techName;
+	[TextArea]
+	public string techDescription;
 
 	public CityBase cityBase;
 	public ResearchManager researchManager;

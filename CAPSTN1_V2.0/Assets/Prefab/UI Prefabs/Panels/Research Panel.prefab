@@ -2109,6 +2109,7 @@ MonoBehaviour:
   regionalPlanButtons: []
   currentResearch: {fileID: 114179893804532334}
   currentResearchTurns: {fileID: 114055686775102034}
+  currentResearchDetails: {fileID: 114728604758418312}
   TierIcons:
   - {fileID: 21300000, guid: f2ebdd73d6b4adf459d2b90f19fa73d2, type: 3}
   - {fileID: 21300000, guid: b6eaa1e1d3ce9f94fbf95814c2e1ae58, type: 3}
