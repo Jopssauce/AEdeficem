@@ -25,6 +25,8 @@ public class CityBase : MonoBehaviour
 	public GameObject cityPanel;
 	public GameObject baseUnitPrefab;
 	public GameObject unitResourceSenderPrefab;
+	public GameObject RightClickPanel;
+	public GameObject rightClickPanel { get; set;}
 
 	public List<GameObject> baseUnits;
 	public List<GameObject> unitResourceSenders;
@@ -125,6 +127,14 @@ public class CityBase : MonoBehaviour
 		cityPanel.GetComponent<StatsPanel>().regionOrigin = regionOrigin;
 		cityPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 		cityPanel.transform.SetAsLastSibling();
+	}
+		
+	public void SpawnRightClickPanel()
+	{
+		rightClickPanel = Instantiate (RightClickPanel);
+		rightClickPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
+		rightClickPanel.transform.SetAsLastSibling();
+		rightClickPanel.GetComponent<BindToRegion> ().regionOrigin = this.regionOrigin;
 	}
 
 	public void DeductCityResource(CityBase.ProductionType type, int amount)

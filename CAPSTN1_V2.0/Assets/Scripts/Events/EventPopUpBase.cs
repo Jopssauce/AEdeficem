@@ -191,6 +191,9 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 	{
 		if (eventData.button == PointerEventData.InputButton.Right)
 		{
+			cityOrign.SpawnUnit(this);
+			resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 1);
+			this.GetComponent<Button>().interactable = true;
 		}
 	}
 }

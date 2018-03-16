@@ -15,12 +15,21 @@ public class CityClick : MonoBehaviour {
 	}
 
 	
-	void OnMouseDown()
+	void OnMouseOver()
 	{
 		if (!EventSystem.current.IsPointerOverGameObject ())
 		{
-			Debug.Log(cityOrigin.name);
-			cityOrigin.SpawnStatsPanel();
+			if (Input.GetMouseButtonDown (0))
+			{
+				Debug.Log (cityOrigin.name);
+				cityOrigin.SpawnStatsPanel ();
+			}
+
+			if (Input.GetMouseButtonDown (1)) 
+			{
+				Debug.Log ("Lul");
+				cityOrigin.SpawnRightClickPanel ();
+			}
 		}
 	}
 	

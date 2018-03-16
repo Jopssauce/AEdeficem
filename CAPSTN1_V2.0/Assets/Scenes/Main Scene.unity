@@ -914,6 +914,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1347291314237722, guid: 8cc1b0aa05b70e84abbaf25f22228714,
         type: 2}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: RightClickPanel
+      value: 
+      objectReference: {fileID: 1118168814956574, guid: 3a9707ae463a789429fddda6bd3073c8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6542f92a3851c7749889e3c4164c7ac5, type: 2}
   m_IsPrefabParent: 0
@@ -1733,7 +1739,7 @@ RectTransform:
   - {fileID: 1556408324}
   - {fileID: 96232702}
   - {fileID: 745277289}
-  - {fileID: 1474037843}
+  - {fileID: 902523586}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2057,6 +2063,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1347291314237722, guid: 8cc1b0aa05b70e84abbaf25f22228714,
         type: 2}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: RightClickPanel
+      value: 
+      objectReference: {fileID: 1118168814956574, guid: 3a9707ae463a789429fddda6bd3073c8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94898287935255c42940fdc585224552, type: 2}
   m_IsPrefabParent: 0
@@ -2176,6 +2188,12 @@ Prefab:
       propertyPath: cityPanelPrefab
       value: 
       objectReference: {fileID: 1347291314237722, guid: 8cc1b0aa05b70e84abbaf25f22228714,
+        type: 2}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: RightClickPanel
+      value: 
+      objectReference: {fileID: 1118168814956574, guid: 3a9707ae463a789429fddda6bd3073c8,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12e78861a162aa4687cda64b643e350, type: 2}
@@ -2903,6 +2921,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!1 &902523585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 902523586}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &902523586
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 902523585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 474264066}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &917513347
 Prefab:
   m_ObjectHideFlags: 0
@@ -2967,6 +3018,12 @@ Prefab:
       propertyPath: cityPanelPrefab
       value: 
       objectReference: {fileID: 1347291314237722, guid: 8cc1b0aa05b70e84abbaf25f22228714,
+        type: 2}
+    - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
+        type: 2}
+      propertyPath: RightClickPanel
+      value: 
+      objectReference: {fileID: 1118168814956574, guid: 3a9707ae463a789429fddda6bd3073c8,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 465cd92417f316749871fefa33d17937, type: 2}
@@ -3531,110 +3588,6 @@ RectTransform:
   m_AnchoredPosition: {x: -775, y: 474}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &1110728888
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 474264066}
-    m_Modifications:
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.6800537
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -21.599976
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1366422060424752, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1135873041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4860,11 +4813,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1461566591}
---- !u!224 &1474037843 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
-    type: 2}
-  m_PrefabInternal: {fileID: 1110728888}
 --- !u!1 &1474767952
 GameObject:
   m_ObjectHideFlags: 0
@@ -6048,6 +5996,12 @@ Prefab:
       propertyPath: cityPanelPrefab
       value: 
       objectReference: {fileID: 1347291314237722, guid: 8cc1b0aa05b70e84abbaf25f22228714,
+        type: 2}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: RightClickPanel
+      value: 
+      objectReference: {fileID: 1118168814956574, guid: 3a9707ae463a789429fddda6bd3073c8,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614455dfb6c81bb4689bef7ffdd5ce8a, type: 2}
