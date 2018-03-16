@@ -46,7 +46,7 @@ public class Technology : ScriptableObject
 		}
 	}
 
-	public void ResearchTech()
+	public virtual void ResearchTech()
 	{
 		if (isResearching == true && turnsLeft > 0)
 		{

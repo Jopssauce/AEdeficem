@@ -116,13 +116,13 @@ public class ResearchManager : MonoBehaviour
             tierProgress.disasterPrepTier++;
             break;
             case Technology.TechType.Resource :
-            tierProgress.disasterPrepTier++;
+            tierProgress.resourceProdTier++;
             break;
             case Technology.TechType.Transport :
-            tierProgress.disasterPrepTier++;
+            tierProgress.transportEffTier++;
             break;
             case Technology.TechType.Regional :
-            tierProgress.disasterPrepTier++;
+            tierProgress.regionalPlanTier++;
             break;
             default:
             break;

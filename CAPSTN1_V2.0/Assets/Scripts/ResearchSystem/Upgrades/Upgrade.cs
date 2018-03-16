@@ -25,7 +25,7 @@ public class Upgrade : MonoBehaviour
 
 	public virtual void UpgradeEffect()
 	{
-		Debug.Log("Effect");
+		//Debug.Log("Effect");
 	}
 
 	public virtual void DoEffect()
