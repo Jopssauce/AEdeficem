@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class EventPopUpBase : MonoBehaviour
+public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 {
     public EventData   	eventDataCopy;
     public EventData   	eventData;
@@ -186,4 +186,11 @@ public class EventPopUpBase : MonoBehaviour
         this.GetComponent<Button>().interactable = true;
         Destroy(eventPanel);   
     }
+
+	public void OnPointerClick(PointerEventData eventData)
+	{
+		if (eventData.button == PointerEventData.InputButton.Right)
+		{
+		}
+	}
 }

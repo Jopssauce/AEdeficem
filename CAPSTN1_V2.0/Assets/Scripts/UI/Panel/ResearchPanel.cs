@@ -12,6 +12,7 @@ public class ResearchPanel : MonoBehaviour
 	public List<Button> regionalPlanButtons;
 
 	public Text currentResearch;
+	public Text currentResearchTurns;
 	
 
 	ResearchManager researchManager;
@@ -100,11 +101,8 @@ public class ResearchPanel : MonoBehaviour
 		{
 			if (researchManager.selectedResearch.isResearching == true)
 			{
-				currentResearch.text = "Current Research: " + researchManager.selectedResearch.techName + "    " + researchManager.selectedResearch.turnsLeft + " Turns left";
-			}
-			else
-			{
-				currentResearch.text = "Current Research: ";
+				currentResearch.text = researchManager.selectedResearch.techName;
+				currentResearchTurns.text =  "Status: " + researchManager.selectedResearch.turnsLeft + " Turns left";
 			}
 		}
 	}
