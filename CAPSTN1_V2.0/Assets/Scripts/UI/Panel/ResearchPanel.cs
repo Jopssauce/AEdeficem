@@ -61,7 +61,7 @@ public class ResearchPanel : MonoBehaviour
 				turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
 				break;
 				case Technology.TechType.Resource:
-				researchManager.selectedResearch = researchManager.disasterPrepTechCopy[button.tierNum - 1];
+				researchManager.selectedResearch = researchManager.resourceProdTechCopy[button.tierNum - 1];
 				researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
 				turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
 				break;
@@ -101,7 +101,24 @@ public class ResearchPanel : MonoBehaviour
 
 
 		}
-		
+
+		foreach (var item in resourceProdButtons)
+		{
+			if (item.GetComponent<ResearchButton>().tierNum != researchManager.tierProgress.resourceProdTier + 1)
+			{
+				item.interactable = false;
+				if (researchManager.tierProgress.resourceProdTier + 1 > item.GetComponent<ResearchButton> ().tierNum)
+				{
+					item.GetComponent<ResearchButton> ().GetComponent<Image> ().sprite = TierIcons [item.GetComponent<ResearchButton> ().tierNum - 1];
+				}
+			}
+			else
+			{
+				item.interactable = true;
+			}
+
+
+		}
 	}
 
 	public void SetSelectedResearchText()

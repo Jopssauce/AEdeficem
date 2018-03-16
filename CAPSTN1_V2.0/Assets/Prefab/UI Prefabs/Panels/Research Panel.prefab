@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 222852553368995398}
   - component: {fileID: 114048999839916574}
   - component: {fileID: 114786733608623144}
+  - component: {fileID: 114064694958636986}
   m_Layer: 5
   m_Name: Tier1
   m_TagString: Untagged
@@ -442,6 +443,7 @@ GameObject:
   - component: {fileID: 222705150476104124}
   - component: {fileID: 114736097127614004}
   - component: {fileID: 114747365485546906}
+  - component: {fileID: 114757774548862082}
   m_Layer: 5
   m_Name: Tier3
   m_TagString: Untagged
@@ -665,6 +667,7 @@ GameObject:
   - component: {fileID: 222791562242084852}
   - component: {fileID: 114104285849879390}
   - component: {fileID: 114465030830152362}
+  - component: {fileID: 114045622436445136}
   m_Layer: 5
   m_Name: Tier4
   m_TagString: Untagged
@@ -869,6 +872,7 @@ GameObject:
   - component: {fileID: 222751940497561172}
   - component: {fileID: 114915210840843616}
   - component: {fileID: 114312990816265402}
+  - component: {fileID: 114821585447610322}
   m_Layer: 5
   m_Name: Tier2
   m_TagString: Untagged
@@ -1097,6 +1101,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Disaster Preparedness
+--- !u!114 &114045622436445136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1552560877463004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7572222836533974fb30a305206c4638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tierNum: 4
+  researchPanel: {fileID: 114407034268546702}
+  type: 1
+  ResearchIcon: {fileID: 21300000, guid: 44e2cd806d0a6f242bbfaf809beb4870, type: 3}
 --- !u!114 &114048999839916574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1116,8 +1135,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1157,6 +1176,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Status
+--- !u!114 &114064694958636986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1316707631891458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7572222836533974fb30a305206c4638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tierNum: 1
+  researchPanel: {fileID: 114407034268546702}
+  type: 1
+  ResearchIcon: {fileID: 21300000, guid: 44e2cd806d0a6f242bbfaf809beb4870, type: 3}
 --- !u!114 &114071998712586212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1307,8 +1341,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1603,7 +1637,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!114 &114219060976296750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1962,7 +1996,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114915210840843616}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114821585447610322}
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114314511928028278
@@ -2012,7 +2057,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!114 &114345095684692208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2104,7 +2149,11 @@ MonoBehaviour:
   - {fileID: 114784445544500200}
   - {fileID: 114223283930060894}
   - {fileID: 114926553841417870}
-  resourceProdButtons: []
+  resourceProdButtons:
+  - {fileID: 114786733608623144}
+  - {fileID: 114312990816265402}
+  - {fileID: 114747365485546906}
+  - {fileID: 114465030830152362}
   transportEffButtons: []
   regionalPlanButtons: []
   currentResearch: {fileID: 114179893804532334}
@@ -2241,7 +2290,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114104285849879390}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114045622436445136}
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114480688065274448
@@ -2691,7 +2751,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!114 &114728604758418312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2744,8 +2804,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2790,9 +2850,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114736097127614004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114757774548862082}
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114757774548862082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351616956901424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7572222836533974fb30a305206c4638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tierNum: 3
+  researchPanel: {fileID: 114407034268546702}
+  type: 1
+  ResearchIcon: {fileID: 21300000, guid: 44e2cd806d0a6f242bbfaf809beb4870, type: 3}
 --- !u!114 &114762432750747870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2988,7 +3074,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114048999839916574}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114064694958636986}
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114802845045996098
@@ -3023,7 +3120,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!114 &114811944858609154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3078,6 +3175,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114821585447610322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736314084647924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7572222836533974fb30a305206c4638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tierNum: 2
+  researchPanel: {fileID: 114407034268546702}
+  type: 1
+  ResearchIcon: {fileID: 21300000, guid: 44e2cd806d0a6f242bbfaf809beb4870, type: 3}
 --- !u!114 &114832778370750468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3369,8 +3481,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4132,8 +4244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 41.800003}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -128, y: 53}
+  m_SizeDelta: {x: 194, y: 167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224100707932992826
 RectTransform:
@@ -4211,8 +4323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -250.4}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -354, y: -285}
+  m_SizeDelta: {x: 194, y: 167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224200874622457798
 RectTransform:
@@ -4259,8 +4371,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -137.8696}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -128, y: -145}
+  m_SizeDelta: {x: 194, y: 167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224237312954261098
 RectTransform:
@@ -5082,8 +5194,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -44}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -354, y: -63}
+  m_SizeDelta: {x: 194, y: 167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224932028564770682
 RectTransform:
