@@ -65,7 +65,11 @@ MonoBehaviour:
   resourceProdTechCopy: []
   transportEffTech: []
   transportEffTechCopy: []
-  regionalPlanTech: []
+  regionalPlanTech:
+  - {fileID: 11400000, guid: 4ebc8ea49e823b64cb5b74d19208f8c0, type: 2}
+  - {fileID: 11400000, guid: c1467fa19e70795448b4e4819878b948, type: 2}
+  - {fileID: 11400000, guid: 5f85f3b113ec66e418140dd2860f732e, type: 2}
+  - {fileID: 11400000, guid: f7acf62128542a54585554a32a3ffbf7, type: 2}
   regionalPlanTechCopy: []
   unlockedTech: []
   tierProgress:

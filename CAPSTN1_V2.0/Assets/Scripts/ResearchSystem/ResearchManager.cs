@@ -15,7 +15,7 @@ public class ResearchManager : MonoBehaviour
         public int regionalPlanTier;
     }
 
-    
+    public ResearchButton selectedButton;
 
     public List<Technology> disasterPrepTech;
     public List<Technology> disasterPrepTechCopy;
@@ -103,7 +103,7 @@ public class ResearchManager : MonoBehaviour
         
         foreach (var item in regionalPlanTech)
         {
-            regionalPlanTech.Add(Instantiate(item));
+            regionalPlanTechCopy.Add(Instantiate(item));
         }
         
     }

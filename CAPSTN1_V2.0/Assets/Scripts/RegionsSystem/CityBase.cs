@@ -41,8 +41,17 @@ public class CityBase : MonoBehaviour
 	public int maxFirstProd;
 	public int maxSecondProd;
 
+	public int bonusWater;
+	public int bonusFood;
+	public int bonusPower;
+
 	public int bonusFirstProd;
 	public int bonusSecondProd;
+
+	public int bonusResourceSlots;
+
+	
+
 
 	private TurnManager turnManager;
 	public UnityEvent AdjustedCityResource;
@@ -56,13 +65,14 @@ public class CityBase : MonoBehaviour
 		UpdateCity();
 		maxFirstProd = 6;
 		maxSecondProd = 6;
+		
 	}
 
 	public void UpdateCity()
 	{
 		firstCurrentProduction = Mathf.RoundToInt( (regionOrigin.regionQuality / regionOrigin.maxRegionQuality) * maxFirstProd);
 		secondCurrentProduction = Mathf.RoundToInt( (regionOrigin.regionQuality / regionOrigin.maxRegionQuality) * maxSecondProd);
-
+		ApplyBonusResource();
 		if (firstCurrentProduction <= 0)
 		{
 			firstCurrentProduction = 0;
@@ -203,6 +213,34 @@ public class CityBase : MonoBehaviour
 		resourceSender.StoreResource(ProductionType.Power, power);
 		
 		unitResourceSenders.Add(currentUnit);
+	}
+
+	public void ApplyBonusResource()
+	{
+		if (firstProduction == CityBase.ProductionType.Water)
+		{
+			bonusFirstProd = bonusWater;
+		}
+		if (secondProduction == CityBase.ProductionType.Water)
+		{
+			bonusSecondProd = bonusWater;
+		}
+		if (firstProduction == CityBase.ProductionType.Food)
+		{
+			bonusFirstProd = bonusFood;
+		}
+		if (secondProduction == CityBase.ProductionType.Food)
+		{
+			bonusSecondProd = bonusFood;
+		}
+		if (firstProduction == CityBase.ProductionType.Power)
+		{
+			bonusFirstProd = bonusPower;
+		}
+		if (secondProduction == CityBase.ProductionType.Power)
+		{
+			bonusSecondProd = bonusPower;
+		}
 	}
 
 }

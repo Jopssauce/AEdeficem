@@ -17,8 +17,9 @@ public class ResearchPanel : MonoBehaviour
 
 	public List<Sprite> TierIcons;
 	
+	
 
-	ResearchManager researchManager;
+	public ResearchManager researchManager;
 	TurnManager turnManager;
 
 	public class DisasterPrepClick : UnityEvent<int, int>{}
@@ -51,35 +52,37 @@ public class ResearchPanel : MonoBehaviour
 	}
 	public void SelectResearch(ResearchButton button)
 	{
-		if (researchManager.selectedResearch == null)
+	
+		switch (button.type)
 		{
-			switch (button.type)
-			{
-				case Technology.TechType.Disaster:
-				researchManager.selectedResearch = researchManager.disasterPrepTechCopy[button.tierNum - 1];
-				researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
-				turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
-				break;
-				case Technology.TechType.Resource:
-				researchManager.selectedResearch = researchManager.resourceProdTechCopy[button.tierNum - 1];
-				researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
-				turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
-				break;
-				case Technology.TechType.Transport:
-				researchManager.selectedResearch = researchManager.transportEffTechCopy[button.tierNum - 1];
-				researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
-				turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
-				break;
-				case Technology.TechType.Regional:
-				researchManager.selectedResearch = researchManager.regionalPlanTechCopy[button.tierNum - 1];
-				researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
-				turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
-				break;
-				default:
-				break;
-			}
+			case Technology.TechType.Disaster:
+			researchManager.selectedResearch = researchManager.disasterPrepTechCopy[button.tierNum - 1];
+
+			break;
+			case Technology.TechType.Resource:
+			researchManager.selectedResearch = researchManager.resourceProdTechCopy[button.tierNum - 1];
+
+			break;
+			case Technology.TechType.Transport:
+			researchManager.selectedResearch = researchManager.transportEffTechCopy[button.tierNum - 1];
+
+			break;
+			case Technology.TechType.Regional:
+			researchManager.selectedResearch = researchManager.regionalPlanTechCopy[button.tierNum - 1];
+			
+			break;
+			default:
+			break;
+		}
+
+		if (researchManager.selectedResearch != null)
+		{
+			researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
+			turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);	
 		}
 		
+		researchManager.selectedButton = button;
+		SetButtonInteractable();
 	}
 
 	public void SetButtonInteractable()
@@ -89,17 +92,21 @@ public class ResearchPanel : MonoBehaviour
 			if (item.GetComponent<ResearchButton>().tierNum != researchManager.tierProgress.disasterPrepTier + 1)
 			{
 				item.interactable = false;
+				
 				if (researchManager.tierProgress.disasterPrepTier + 1 > item.GetComponent<ResearchButton> ().tierNum)
 				{
 					item.GetComponent<ResearchButton> ().GetComponent<Image> ().sprite = TierIcons [item.GetComponent<ResearchButton> ().tierNum - 1];
 				}
 			}
+			
 			else
 			{
 				item.interactable = true;
 			}
-
-
+			if (researchManager.selectedResearch != null && researchManager.selectedResearch.type != Technology.TechType.Disaster)
+			{
+					item.interactable = false;
+			}
 		}
 
 		foreach (var item in resourceProdButtons)
@@ -116,8 +123,49 @@ public class ResearchPanel : MonoBehaviour
 			{
 				item.interactable = true;
 			}
+			if (researchManager.selectedResearch != null && researchManager.selectedResearch.type != Technology.TechType.Resource)
+			{
+					item.interactable = false;
+			}
+		}
 
-
+		foreach (var item in regionalPlanButtons)
+		{
+			if (item.GetComponent<ResearchButton>().tierNum != researchManager.tierProgress.regionalPlanTier + 1)
+			{
+				item.interactable = false;
+				if (researchManager.tierProgress.regionalPlanTier + 1 > item.GetComponent<ResearchButton> ().tierNum)
+				{
+					item.GetComponent<ResearchButton> ().GetComponent<Image> ().sprite = TierIcons [item.GetComponent<ResearchButton> ().tierNum - 1];
+				}
+			}
+			else
+			{
+				item.interactable = true;
+			}
+			if (researchManager.selectedResearch != null && researchManager.selectedResearch.type != Technology.TechType.Regional)
+			{
+					item.interactable = false;
+			}
+		}
+		foreach (var item in transportEffButtons)
+		{
+			if (item.GetComponent<ResearchButton>().tierNum != researchManager.tierProgress.transportEffTier + 1)
+			{
+				item.interactable = false;
+				if (researchManager.tierProgress.transportEffTier + 1 > item.GetComponent<ResearchButton> ().tierNum)
+				{
+					item.GetComponent<ResearchButton> ().GetComponent<Image> ().sprite = TierIcons [item.GetComponent<ResearchButton> ().tierNum - 1];
+				}
+			}
+			else
+			{
+				item.interactable = true;
+			}
+			if (researchManager.selectedResearch != null && researchManager.selectedResearch.type != Technology.TechType.Transport)
+			{
+					item.interactable = false;
+			}
 		}
 	}
 
@@ -125,12 +173,15 @@ public class ResearchPanel : MonoBehaviour
 	{
 		if (researchManager.selectedResearch != null)
 		{
-			if (researchManager.selectedResearch.isResearching == true)
-			{
-				currentResearch.text = researchManager.selectedResearch.techName;
-				currentResearchTurns.text =  "Status: " + researchManager.selectedResearch.turnsLeft + " Turns left";
-				currentResearchDetails.text = researchManager.selectedResearch.techDescription;
-			}
+			currentResearch.text = researchManager.selectedResearch.techName;
+			currentResearchTurns.text =  "Status: " + researchManager.selectedResearch.turnsLeft + " Turns left";
+			currentResearchDetails.text = researchManager.selectedResearch.techDescription;
+		}
+		if (researchManager.selectedResearch == null)
+		{
+			currentResearch.text = "";
+			currentResearchTurns.text =  "";
+			currentResearchDetails.text = "";
 		}
 	}
 
