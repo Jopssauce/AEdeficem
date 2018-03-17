@@ -103,7 +103,7 @@ public class ResearchManager : MonoBehaviour
         
         foreach (var item in regionalPlanTech)
         {
-            regionalPlanTech.Add(Instantiate(item));
+            regionalPlanTechCopy.Add(Instantiate(item));
         }
         
     }

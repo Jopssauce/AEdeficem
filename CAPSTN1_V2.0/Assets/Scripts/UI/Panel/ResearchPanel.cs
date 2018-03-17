@@ -116,8 +116,22 @@ public class ResearchPanel : MonoBehaviour
 			{
 				item.interactable = true;
 			}
+		}
 
-
+		foreach (var item in regionalPlanButtons)
+		{
+			if (item.GetComponent<ResearchButton>().tierNum != researchManager.tierProgress.regionalPlanTier + 1)
+			{
+				item.interactable = false;
+				if (researchManager.tierProgress.regionalPlanTier + 1 > item.GetComponent<ResearchButton> ().tierNum)
+				{
+					item.GetComponent<ResearchButton> ().GetComponent<Image> ().sprite = TierIcons [item.GetComponent<ResearchButton> ().tierNum - 1];
+				}
+			}
+			else
+			{
+				item.interactable = true;
+			}
 		}
 	}
 

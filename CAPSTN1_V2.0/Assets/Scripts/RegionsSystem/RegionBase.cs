@@ -14,10 +14,12 @@ public class RegionBase : MonoBehaviour
     public float                        regionQualityDecay;
     private TurnManager                 turnManager;
     public CityBase                     cityOrigin;
+    public int                          maxEvents;
 
     // Use this for initialization
     void Start()
     {
+        maxEvents = 0;
         MaxRegionResource 	= 6;
         maxRegionQuality    = 100;
         regionQualityDecay  = 0.05f;

@@ -151,6 +151,29 @@ MonoBehaviour:
   cityBase: {fileID: 0}
   turnManager: {fileID: 0}
   researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
+--- !u!114 &1853859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4b19c5096145c4294b6b10da24e1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &1853862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +228,29 @@ MonoBehaviour:
   cityBase: {fileID: 0}
   turnManager: {fileID: 0}
   researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
+--- !u!114 &30346405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 30346401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4b19c5096145c4294b6b10da24e1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &30346408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,6 +1136,29 @@ MonoBehaviour:
   cityBase: {fileID: 0}
   turnManager: {fileID: 0}
   researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
+--- !u!114 &346399618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 346399614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4b19c5096145c4294b6b10da24e1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &346399621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3136,6 +3205,29 @@ MonoBehaviour:
   cityBase: {fileID: 0}
   turnManager: {fileID: 0}
   researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
+--- !u!114 &948175422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948175418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4b19c5096145c4294b6b10da24e1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &948175425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3467,6 +3559,29 @@ MonoBehaviour:
   cityBase: {fileID: 0}
   turnManager: {fileID: 0}
   researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
+--- !u!114 &1037550990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037550988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4b19c5096145c4294b6b10da24e1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &1037550993
 MonoBehaviour:
   m_ObjectHideFlags: 0

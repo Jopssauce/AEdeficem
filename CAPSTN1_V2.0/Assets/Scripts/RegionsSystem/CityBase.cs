@@ -48,6 +48,11 @@ public class CityBase : MonoBehaviour
 	public int bonusFirstProd;
 	public int bonusSecondProd;
 
+	public int bonusResourceSlots;
+
+	public int regionDecayTimer;
+
+
 	private TurnManager turnManager;
 	public UnityEvent AdjustedCityResource;
 	public void Start()
@@ -60,6 +65,7 @@ public class CityBase : MonoBehaviour
 		UpdateCity();
 		maxFirstProd = 6;
 		maxSecondProd = 6;
+		
 	}
 
 	public void UpdateCity()

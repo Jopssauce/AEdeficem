@@ -8,10 +8,10 @@ public class UpgradeResourceProduction : Upgrade
 	public bool tier2;
 	public bool tier3;
 	public bool tier4;
+	
 	public override void Start()
 	{
 		base.Start();
-		turnManager.EndTurnEvent.AddListener(UpgradeEffect);
 		tier1 = false;
 		tier2 = false;
 		tier3 = false;
@@ -98,6 +98,7 @@ public class UpgradeResourceProduction : Upgrade
 				tier4 = true;
 			}
 		}
+	
 	}
 	
 }
