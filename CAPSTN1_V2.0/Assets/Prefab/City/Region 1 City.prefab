@@ -974,9 +974,9 @@ MonoBehaviour:
   baseUnits: []
   unitResourceSenders: []
   cityResources:
-    Water: 3
-    Power: 3
-    Food: 3
+    Water: 15
+    Power: 15
+    Food: 15
   firstProduction: 0
   secondProduction: 1
   firstCurrentProduction: 0
@@ -989,7 +989,6 @@ MonoBehaviour:
   bonusFirstProd: 0
   bonusSecondProd: 0
   bonusResourceSlots: 0
-  regionDecayTimer: 0
   AdjustedCityResource:
     m_PersistentCalls:
       m_Calls: []

@@ -785,6 +785,21 @@ Prefab:
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 1328886627}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: cityResources.Water
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: cityResources.Power
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: cityResources.Food
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6542f92a3851c7749889e3c4164c7ac5, type: 2}
   m_IsPrefabParent: 0
@@ -864,126 +879,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 304198411}
---- !u!1001 &329513805
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 474264066}
-    m_Modifications:
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 187.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 211
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 234.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 62.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224722514170563000, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -70.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 224047487898112642, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -48.54991
-      objectReference: {fileID: 0}
-    - target: {fileID: 224465579867477180, guid: eba102482a4f0414ca8f227728e9d6b6,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -25.2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: eba102482a4f0414ca8f227728e9d6b6, type: 2}
-  m_IsPrefabParent: 0
---- !u!224 &329513806 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224737988144382604, guid: eba102482a4f0414ca8f227728e9d6b6,
-    type: 2}
-  m_PrefabInternal: {fileID: 329513805}
 --- !u!1001 &330569761
 Prefab:
   m_ObjectHideFlags: 0
@@ -1677,7 +1572,6 @@ RectTransform:
   - {fileID: 96232702}
   - {fileID: 745277289}
   - {fileID: 902523586}
-  - {fileID: 329513806}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1968,6 +1862,21 @@ Prefab:
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 987226821}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: cityResources.Water
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: cityResources.Power
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: cityResources.Food
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94898287935255c42940fdc585224552, type: 2}
   m_IsPrefabParent: 0
@@ -2015,6 +1924,21 @@ Prefab:
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 195183814}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: cityResources.Water
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: cityResources.Power
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: cityResources.Food
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12e78861a162aa4687cda64b643e350, type: 2}
   m_IsPrefabParent: 0
@@ -2818,6 +2742,21 @@ Prefab:
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 1941507192}
+    - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
+        type: 2}
+      propertyPath: cityResources.Water
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
+        type: 2}
+      propertyPath: cityResources.Power
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
+        type: 2}
+      propertyPath: cityResources.Food
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 465cd92417f316749871fefa33d17937, type: 2}
   m_IsPrefabParent: 0
@@ -5673,6 +5612,21 @@ Prefab:
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 330569765}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: cityResources.Water
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: cityResources.Power
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: cityResources.Food
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614455dfb6c81bb4689bef7ffdd5ce8a, type: 2}
   m_IsPrefabParent: 0
