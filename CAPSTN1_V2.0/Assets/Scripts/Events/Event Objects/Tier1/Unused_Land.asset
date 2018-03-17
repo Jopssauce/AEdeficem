@@ -14,8 +14,9 @@ MonoBehaviour:
   eventName: Unused Land
   turnsLeft: 4
   turnsToResolve: 4
-  eventSprite: {fileID: 0}
-  buildingPrefab: {fileID: 0}
+  eventSprite: {fileID: 21300000, guid: 0973ead74db72514dae298a1c01fcf23, type: 3}
+  buildingPrefab: {fileID: 1299868656066620, guid: 29478b1a251b6c14d8ccaa84ac78b79e,
+    type: 2}
   waterCost: 10
   foodCost: 10
   powerCost: 10
