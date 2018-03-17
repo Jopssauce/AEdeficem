@@ -89,6 +89,10 @@ public class ResourceManager : MonoBehaviour {
 			Debug.Log ("Cant add Resource");
 			break;
 		}
+		if (actionPoints > 10)
+		{
+			actionPoints = 10;
+		}
 		AdjustedResourceEvent.Invoke ();
 	}
 
@@ -111,6 +115,10 @@ public class ResourceManager : MonoBehaviour {
 		default:
 			Debug.Log ("Cant deduct Resource");
 			break;
+		}
+			if (actionPoints < 0)
+		{
+			actionPoints = 0;
 		}
 		AdjustedResourceEvent.Invoke ();
 	}

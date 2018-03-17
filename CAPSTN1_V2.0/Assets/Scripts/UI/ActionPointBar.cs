@@ -29,7 +29,7 @@ public class ActionPointBar : MonoBehaviour {
 	
 	public void ChangeSprite()
 	{
-		if (resManager.actionPoints > 0)
+		if (resManager.actionPoints >= 0)
 		{
 			GetComponent<Image>().sprite = actionPointBarSprites[resManager.actionPoints];
 		}
