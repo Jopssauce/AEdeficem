@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7150299902151d64cb8f6e4ea23a1fb5, type: 3}
+  m_Name: Excessive_Land_Abuse
+  m_EditorClassIdentifier: 
+  eventName: Land Abuse
+  turnsLeft: 6
+  turnsToResolve: 5
+  eventSprite: {fileID: 0}
+  buildingPrefab: {fileID: 0}
+  waterCost: 20
+  foodCost: 20
+  powerCost: 10
+  actionCost: 8
+  eventDetails: "A popular tourist spot has been abused by the numerous resort companies
+    and owners. Numerous resort companies and owners have violated the building laws
+    of the local government to\r increase revenue at the cost of the environment.
+    Sewage systems have begun to block, districts have become cramp and waste has
+    begun liter most of the areas. Action must be taken\r otherwise you risk endangering
+    the region and a piece of the country's natural heritage."
+  qualityDecay: 0.15
+  qualityReward: 0.15
+  eventTier: 1
+  eventType: 0

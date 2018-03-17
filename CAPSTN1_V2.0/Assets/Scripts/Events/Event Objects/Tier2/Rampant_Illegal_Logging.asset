@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Name: Rampant_Illegal_Logging
   m_EditorClassIdentifier: 
   eventName: Rampant Illegal Logging
-  turnsLeft: 3
+  turnsLeft: 4
+  turnsToResolve: 5
   eventSprite: {fileID: 21300000, guid: e02b84c354fb84e4c8c3b622e9d7dd20, type: 3}
   buildingPrefab: {fileID: 1273934592567322, guid: 458400ac70756234bbea4ac59eb20f4a,
     type: 2}
   waterCost: 15
-  foodCost: 0
-  powerCost: 0
-  actionCost: 7
-  eventDetails: Illegal logging has become rampant within the region. The culprits
-    and their associated organization have been caught and put to death due to the
-    extreme magnitude of lost forests that are the effect of their illegal actions.
-    The flora will evetaully return but one must still take action otherwise this
-    will have a negative effect on the country's reputation.
+  foodCost: 5
+  powerCost: 15
+  actionCost: 6
+  eventDetails: "Illegal logging has transpired the regions forested area, the damage
+    was great more than half of the forest was cut down. The suspect have been arrested
+    and there associated employer,\r but the damage to the forest must rectified else
+    the biodiversity will suffer."
   qualityDecay: 0.2
-  qualityReward: 0.2
+  qualityReward: 0.17
   eventTier: 1
   eventType: 0

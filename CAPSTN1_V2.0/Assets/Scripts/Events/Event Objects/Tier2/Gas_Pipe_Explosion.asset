@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Name: Gas_Pipe_Explosion
   m_EditorClassIdentifier: 
   eventName: Gas Pipe Explosion
-  turnsLeft: 3
+  turnsLeft: 4
+  turnsToResolve: 5
   eventSprite: {fileID: 21300000, guid: 0973ead74db72514dae298a1c01fcf23, type: 3}
   buildingPrefab: {fileID: 1273934592567322, guid: 458400ac70756234bbea4ac59eb20f4a,
     type: 2}
-  waterCost: 0
-  foodCost: 0
-  powerCost: 0
-  actionCost: 7
-  eventDetails: An unforseen gas pipe explosion has occured. The explosion has damaged
-    the road infrastructure of the region, posing a significant hindrance to the population.
-    Though no known casualties are reported, action must still be take to alleviate
-    the stress to population and region.
-  qualityDecay: 0.15
-  qualityReward: 0.17
+  waterCost: 10
+  foodCost: 10
+  powerCost: 10
+  actionCost: 5
+  eventDetails: A gas pipe exploded along the outskirts of the city, fortunately no
+    one was hurt due to it but it has left a massive crater thats hindering the traffic
+    flow between rural areas.
+  qualityDecay: 0.17
+  qualityReward: 0.15
   eventTier: 1
   eventType: 0
