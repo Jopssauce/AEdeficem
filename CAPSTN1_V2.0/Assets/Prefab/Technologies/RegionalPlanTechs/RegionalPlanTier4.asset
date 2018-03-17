@@ -17,7 +17,7 @@ MonoBehaviour:
   isResearching: 0
   turnsLeft: 2
   techName: 
-  techDescription: 
+  techDescription: Only 1 one event can spawn per region
   cityBase: {fileID: 0}
   researchManager: {fileID: 0}
   regionManager: {fileID: 0}
