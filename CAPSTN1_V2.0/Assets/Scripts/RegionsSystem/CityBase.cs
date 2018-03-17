@@ -41,6 +41,10 @@ public class CityBase : MonoBehaviour
 	public int maxFirstProd;
 	public int maxSecondProd;
 
+	public int bonusWater;
+	public int bonusFood;
+	public int bonusPower;
+
 	public int bonusFirstProd;
 	public int bonusSecondProd;
 
