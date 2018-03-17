@@ -135,8 +135,9 @@ public class MainUI : MonoBehaviour
 
     public void openResearchPanel()
     {
-        researchPanel.SetActive(true);
+        //researchPanel.GetComponent<ResearchPanel>().SetButtonInteractable();
         researchPanel.transform.SetParent(this.transform, false);
         researchPanel.transform.SetAsLastSibling();
+        researchPanel.SetActive(true);
     }
 }

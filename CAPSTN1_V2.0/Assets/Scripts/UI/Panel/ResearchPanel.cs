@@ -53,7 +53,7 @@ public class ResearchPanel : MonoBehaviour
 
 	void OnEnable()
 	{
-		SetButtonInteractable();
+		//SetButtonInteractable();
 	}
 	public void SelectResearch(ResearchButton button)
 	{
@@ -83,7 +83,6 @@ public class ResearchPanel : MonoBehaviour
 		if (researchManager.selectedResearch != null)
 		{
 			researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
-			turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
 		}
 		
 		researchManager.selectedButton = button;
@@ -92,7 +91,7 @@ public class ResearchPanel : MonoBehaviour
 
 	public void DeselectResearch()
 	{
-		turnManager.EndTurnEvent.RemoveListener(researchManager.selectedResearch.ResearchTech);
+		researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
 		researchManager.selectedResearch = null;
 	}
 

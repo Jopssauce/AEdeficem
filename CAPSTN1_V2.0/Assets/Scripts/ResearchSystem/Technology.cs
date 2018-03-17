@@ -33,6 +33,7 @@ public class Technology : ScriptableObject
 	public CityBase cityBase;
 	public ResearchManager researchManager;
 	public RegionManager   regionManager;
+	public TurnManager 		turnManager;
 
 	public Sprite Thumbnail;
 
@@ -46,7 +47,13 @@ public class Technology : ScriptableObject
 		{
 			regionManager = RegionManager.instance;
 		}
+		if (TurnManager.instance != null)
+		{
+			turnManager = TurnManager.instance;
+		}
+		turnManager.EndTurnEvent.AddListener(ResearchTech);
 	}
+
 
 	public virtual void ResearchTech()
 	{
@@ -58,7 +65,8 @@ public class Technology : ScriptableObject
 		{
 			isResearching = false;
 			isUnlocked = true;
-			researchManager.progressResearchTier.Invoke(Technology.TechType.Disaster);
+			//researchManager.progressResearchTier.Invoke(Technology.TechType.Disaster);
+			researchManager.tierProgress.disasterPrepTier += 1;
 			researchManager.ResearchFinished.Invoke();
 			researchManager.unlockedTech.Add(Instantiate(this));
 			researchManager.selectedResearch = null;
