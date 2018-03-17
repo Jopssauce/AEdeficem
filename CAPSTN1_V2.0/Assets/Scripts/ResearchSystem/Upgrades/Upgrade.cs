@@ -32,6 +32,7 @@ public class Upgrade : MonoBehaviour
 	{
 		//if (technology.isUnlocked)
 		//{
+			
 			UpgradeEffect();
 		//}
 	}

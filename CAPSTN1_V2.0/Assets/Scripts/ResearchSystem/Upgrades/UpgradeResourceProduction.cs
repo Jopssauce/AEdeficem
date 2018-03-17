@@ -34,7 +34,7 @@ public class UpgradeResourceProduction : Upgrade
 					cityBase.bonusWater += 1;
 					tier1 = true;
 				}
-				cityBase.bonusFirstProd = cityBase.bonusWater;
+				
 			}
 			if (cityBase.secondProduction == CityBase.ProductionType.Water)
 			{
@@ -43,7 +43,7 @@ public class UpgradeResourceProduction : Upgrade
 					cityBase.bonusWater += 1;
 					tier1 = true;
 				}
-				cityBase.bonusSecondProd = cityBase.bonusWater;
+				
 			}
 		}
 		if (researchManager.tierProgress.resourceProdTier >= 2)
@@ -55,7 +55,7 @@ public class UpgradeResourceProduction : Upgrade
 					cityBase.bonusFood += 1;
 					tier2 = true;
 				}
-				cityBase.bonusFirstProd = cityBase.bonusFood;
+				
 			}
 			if (cityBase.secondProduction == CityBase.ProductionType.Food)
 			{
@@ -64,7 +64,7 @@ public class UpgradeResourceProduction : Upgrade
 					cityBase.bonusFood += 1;
 					tier2 = true;
 				}
-				cityBase.bonusSecondProd = cityBase.bonusFood;
+				
 			}
 		}
 		if (researchManager.tierProgress.resourceProdTier >= 3)
@@ -76,7 +76,7 @@ public class UpgradeResourceProduction : Upgrade
 					cityBase.bonusPower += 1;
 					tier3 = true;
 				}
-				cityBase.bonusFirstProd = cityBase.bonusPower;
+				
 			}
 			if (cityBase.secondProduction == CityBase.ProductionType.Power)
 			{
@@ -85,7 +85,7 @@ public class UpgradeResourceProduction : Upgrade
 					cityBase.bonusPower += 1;
 					tier3 = true;
 				}
-				cityBase.bonusSecondProd = cityBase.bonusPower;
+				
 			}
 		}
 		if (researchManager.tierProgress.resourceProdTier >= 4)

@@ -72,7 +72,7 @@ public class CityBase : MonoBehaviour
 	{
 		firstCurrentProduction = Mathf.RoundToInt( (regionOrigin.regionQuality / regionOrigin.maxRegionQuality) * maxFirstProd);
 		secondCurrentProduction = Mathf.RoundToInt( (regionOrigin.regionQuality / regionOrigin.maxRegionQuality) * maxSecondProd);
-
+		ApplyBonusResource();
 		if (firstCurrentProduction <= 0)
 		{
 			firstCurrentProduction = 0;
@@ -213,6 +213,34 @@ public class CityBase : MonoBehaviour
 		resourceSender.StoreResource(ProductionType.Power, power);
 		
 		unitResourceSenders.Add(currentUnit);
+	}
+
+	public void ApplyBonusResource()
+	{
+		if (firstProduction == CityBase.ProductionType.Water)
+		{
+			bonusFirstProd = bonusWater;
+		}
+		if (secondProduction == CityBase.ProductionType.Water)
+		{
+			bonusSecondProd = bonusWater;
+		}
+		if (firstProduction == CityBase.ProductionType.Food)
+		{
+			bonusFirstProd = bonusFood;
+		}
+		if (secondProduction == CityBase.ProductionType.Food)
+		{
+			bonusSecondProd = bonusFood;
+		}
+		if (firstProduction == CityBase.ProductionType.Power)
+		{
+			bonusFirstProd = bonusPower;
+		}
+		if (secondProduction == CityBase.ProductionType.Power)
+		{
+			bonusSecondProd = bonusPower;
+		}
 	}
 
 }

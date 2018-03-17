@@ -12,7 +12,6 @@ public class UpgradeRegionPlan : Upgrade {
 	public override void UpgradeEffect()
 	{
 		base.UpgradeEffect();
-
 		if (researchManager.tierProgress.regionalPlanTier >= 1)
 		{
 			if (tier1 == false)
@@ -22,6 +21,7 @@ public class UpgradeRegionPlan : Upgrade {
 				cityBase.bonusPower += 1;
 				tier1 = true;
 			}
+			
 		}
 		if (researchManager.tierProgress.regionalPlanTier >= 2)
 		{

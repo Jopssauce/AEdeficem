@@ -199,6 +199,9 @@ GameObject:
   - component: {fileID: 114313301969230612}
   - component: {fileID: 114000905504637082}
   - component: {fileID: 65471956779971292}
+  - component: {fileID: 114433359098971118}
+  - component: {fileID: 114679881685006476}
+  - component: {fileID: 114326246979462522}
   m_Layer: 0
   m_Name: Region 1 City
   m_TagString: Untagged
@@ -946,6 +949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityOrigin: {fileID: 0}
+  BlockPanel: {fileID: 0}
 --- !u!114 &114313301969230612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -958,28 +962,77 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionOrigin: {fileID: 0}
-  cityPanelPrefab: {fileID: 1473796447379942, guid: 599152d270834a044a9ba5e4af30038b,
+  cityPanelPrefab: {fileID: 1347291314237722, guid: 8cc1b0aa05b70e84abbaf25f22228714,
     type: 2}
   cityPanel: {fileID: 0}
   baseUnitPrefab: {fileID: 1867621791035172, guid: bb948f2276af0e5489116bdcf8c87f5c,
     type: 2}
   unitResourceSenderPrefab: {fileID: 1481451113407924, guid: 465b33357a22f224fa8f00b5b7ddc1a7,
     type: 2}
+  RightClickPanel: {fileID: 1118168814956574, guid: 3a9707ae463a789429fddda6bd3073c8,
+    type: 2}
   baseUnits: []
   unitResourceSenders: []
   cityResources:
-    Water: 9
-    Power: 9
-    Food: 9
+    Water: 3
+    Power: 3
+    Food: 3
   firstProduction: 0
   secondProduction: 1
   firstCurrentProduction: 0
   secondCurrentProduction: 0
+  maxFirstProd: 0
+  maxSecondProd: 0
+  bonusWater: 0
+  bonusFood: 0
+  bonusPower: 0
+  bonusFirstProd: 0
+  bonusSecondProd: 0
+  bonusResourceSlots: 0
+  regionDecayTimer: 0
   AdjustedCityResource:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114326246979462522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1835391313421958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4b19c5096145c4294b6b10da24e1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
+--- !u!114 &114433359098971118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1835391313421958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e204c8576369d458691fb4668312d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &114605085224990234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -991,6 +1044,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5d912ea037b7d40aa257581604854f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114679881685006476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1835391313421958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d75a4ba49931c45a22f45957d1b536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technology: {fileID: 0}
+  cityBase: {fileID: 0}
+  turnManager: {fileID: 0}
+  researchManager: {fileID: 0}
+  decrease: 0
 --- !u!136 &136732529211352962
 CapsuleCollider:
   m_ObjectHideFlags: 1
