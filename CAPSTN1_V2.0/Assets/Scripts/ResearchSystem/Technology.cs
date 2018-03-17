@@ -34,6 +34,8 @@ public class Technology : ScriptableObject
 	public ResearchManager researchManager;
 	public RegionManager   regionManager;
 
+	public Sprite Thumbnail;
+
 	public void Awake()
 	{
 		if (ResearchManager.instance != null)
