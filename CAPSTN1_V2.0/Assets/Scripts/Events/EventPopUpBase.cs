@@ -21,6 +21,8 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 
 	public GameObject	eventPanel;
 	public GameObject	eventPanelPrefab;
+	public GameObject 	RightClickPanelPrefab;
+	public GameObject 	rightClickPanel { get; set;}
     public UnitBase     unit;
 
     public ResourceManager 	resManager;
@@ -203,9 +205,18 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 	{
 		if (eventData.button == PointerEventData.InputButton.Right)
 		{
-			cityOrign.SpawnUnit(this);
-			resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 1);
-			this.GetComponent<Button>().interactable = true;
+			rightClickPanel = Instantiate (RightClickPanelPrefab);
+			rightClickPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
+			rightClickPanel.transform.SetAsLastSibling();
+			rightClickPanel.transform.position = this.transform.position + new Vector3 (50.0f, 50.0f, 0.0f);
+		}
+	}
+
+	void Update()
+	{
+		if (rightClickPanel != null) 
+		{
+			rightClickPanel.transform.position = this.transform.position + new Vector3 (50.0f, 50.0f, 0.0f);
 		}
 	}
 }
