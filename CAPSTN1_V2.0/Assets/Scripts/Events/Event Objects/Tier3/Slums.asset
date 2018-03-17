@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: Slums
   turnsLeft: 4
+  turnsToResolve: 8
   eventSprite: {fileID: 21300000, guid: 346b1ee2d196774448eb4dd2c9848ad4, type: 3}
   buildingPrefab: {fileID: 1209049137058192, guid: aed53223dcf02c64da35812d7d91b85a,
     type: 2}
@@ -20,10 +21,12 @@ MonoBehaviour:
   foodCost: 30
   powerCost: 20
   actionCost: 10
-  eventDetails: Slums have begun appearing on the region capital. Streets are getting
-    crowded and liter is also becoming rampant. The reputation of the city and region
-    will only stand to decay unless an action is taken.
+  eventDetails: "A slum area has appeared on the city limits. The less fortunate populace
+    have setup slum homes, due to this nearby districts are being affected by less
+    \"adequate\" cleanliness standards\r of those living in the slums. We can provide
+    alternative housing for those living in the slums but their practices have to
+    be rectified themselves."
   qualityDecay: 0.25
-  qualityReward: 0.27
+  qualityReward: 0.2
   eventTier: 2
-  eventType: 2
+  eventType: 0

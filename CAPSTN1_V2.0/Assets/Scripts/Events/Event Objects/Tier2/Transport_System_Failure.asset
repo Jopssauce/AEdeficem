@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee573be906b29b41b20f1fe5d0b0537, type: 3}
+  m_Name: Transport_System_Failure
+  m_EditorClassIdentifier: 
+  eventName: Transport System Failure
+  turnsLeft: 3
+  turnsToResolve: 3
+  eventSprite: {fileID: 0}
+  buildingPrefab: {fileID: 0}
+  waterCost: 8
+  foodCost: 5
+  powerCost: 12
+  actionCost: 6
+  eventDetails: "The local rail infrastructure has suffered mechanical failure. The
+    Railway transit is owned by a private corporation however steps can be taken so
+    ownership can be shifted to the\r government for better management."
+  qualityDecay: 0.15
+  qualityReward: 0.07
+  eventTier: 1
+  eventType: 2

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7150299902151d64cb8f6e4ea23a1fb5, type: 3}
+  m_Name: Unused_Land
+  m_EditorClassIdentifier: 
+  eventName: Unused Land
+  turnsLeft: 4
+  turnsToResolve: 4
+  eventSprite: {fileID: 0}
+  buildingPrefab: {fileID: 0}
+  waterCost: 10
+  foodCost: 10
+  powerCost: 10
+  actionCost: 5
+  eventDetails: A plot of land is available for use, we can use this to setup an environmental
+    reserve for the country's endangered flora and fauna.
+  qualityDecay: 0.01
+  qualityReward: 0.15
+  eventTier: 0
+  eventType: 0
