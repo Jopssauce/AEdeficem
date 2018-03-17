@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4338968915962134}
   - component: {fileID: 33866548140737006}
   - component: {fileID: 23015856530524866}
+  - component: {fileID: 114298911421799768}
   m_Layer: 0
   m_Name: Farm
   m_TagString: Untagged
@@ -148,3 +149,15 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114298911421799768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1299868656066620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82fe20fce30e89b41821815ba9afb491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventOrigin: {fileID: 0}
