@@ -50,7 +50,7 @@ public class CityBase : MonoBehaviour
 
 	public int bonusResourceSlots;
 
-	public int regionDecayTimer;
+	
 
 
 	private TurnManager turnManager;

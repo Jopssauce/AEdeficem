@@ -35,7 +35,7 @@ public class UpgradeRegionPlan : Upgrade {
 		{
 			if (tier3 == false)
 			{
-				cityBase.regionDecayTimer += 2;
+				cityBase.regionOrigin.regionDecayTimer += 2;
 				tier3 = true;
 			}
 		}
