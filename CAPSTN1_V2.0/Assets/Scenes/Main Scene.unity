@@ -151,6 +151,10 @@ MonoBehaviour:
   cityBase: {fileID: 0}
   turnManager: {fileID: 0}
   researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &1853862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +209,10 @@ MonoBehaviour:
   cityBase: {fileID: 0}
   turnManager: {fileID: 0}
   researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &30346408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,6 +1098,10 @@ MonoBehaviour:
   cityBase: {fileID: 0}
   turnManager: {fileID: 0}
   researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &346399621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3136,6 +3148,10 @@ MonoBehaviour:
   cityBase: {fileID: 0}
   turnManager: {fileID: 0}
   researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &948175425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3467,6 +3483,10 @@ MonoBehaviour:
   cityBase: {fileID: 0}
   turnManager: {fileID: 0}
   researchManager: {fileID: 0}
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  tier4: 0
 --- !u!114 &1037550993
 MonoBehaviour:
   m_ObjectHideFlags: 0
