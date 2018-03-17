@@ -35,7 +35,6 @@ public class MainUI : MonoBehaviour
     public GameObject regionOutlinerContent;
 
     public GameObject toggleUnderlayDisplay;
-    public GameObject researchPanelPrefab;
     public GameObject researchPanel;
     
     // Use this for initialization
@@ -136,7 +135,7 @@ public class MainUI : MonoBehaviour
 
     public void openResearchPanel()
     {
-        researchPanel = Instantiate(researchPanelPrefab);
+        researchPanel.SetActive(true);
         researchPanel.transform.SetParent(this.transform, false);
         researchPanel.transform.SetAsLastSibling();
     }

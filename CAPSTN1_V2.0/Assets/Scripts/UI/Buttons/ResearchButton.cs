@@ -8,6 +8,7 @@ public class ResearchButton : MonoBehaviour
 	public int tierNum;
 	public ResearchPanel 		researchPanel;
 	public Technology.TechType  type;
+	public Technology 			technology;
 
 	public Sprite selectedResearchIcon;
 	public Sprite unSelectedResearchIcon;
@@ -15,6 +16,7 @@ public class ResearchButton : MonoBehaviour
 	public bool isSelected;
 	
 	ResourceManager resourceManager;
+	public TurnManager turnManager;
 
 	void Start()
 	{
@@ -22,14 +24,16 @@ public class ResearchButton : MonoBehaviour
 		{
 			resourceManager = ResourceManager.instance;
 		}
+		if (TurnManager.instance != null)
+		{
+			turnManager = TurnManager.instance;
+		}
 	}
+
 
 	public void Select()
 	{
 		isSelected = !isSelected;
-		
-		
-		
 		if (isSelected == true)
 		{
 			if (resourceManager.actionPoints >= 10)
@@ -41,9 +45,9 @@ public class ResearchButton : MonoBehaviour
 		}
 		if (isSelected == false)
 		{
-			if (resourceManager.actionPoints <= 0)
+			//if (resourceManager.actionPoints <= 0)
 			{
-				researchPanel.researchManager.selectedResearch = null;
+				researchPanel.DeselectResearch();
 				GetComponent<Image> ().sprite = unSelectedResearchIcon;
 				resourceManager.AddResource(ResourceManager.ResourceType.ActionPoints,10);
 			}	

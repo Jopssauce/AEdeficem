@@ -20,7 +20,7 @@ public class ResearchPanel : MonoBehaviour
 	
 
 	public ResearchManager researchManager;
-	TurnManager turnManager;
+	public TurnManager turnManager;
 
 	public class DisasterPrepClick : UnityEvent<int, int>{}
 
@@ -50,6 +50,11 @@ public class ResearchPanel : MonoBehaviour
 	{
 		SetSelectedResearchText();
 	}
+
+	void OnEnable()
+	{
+		SetButtonInteractable();
+	}
 	public void SelectResearch(ResearchButton button)
 	{
 	
@@ -57,7 +62,7 @@ public class ResearchPanel : MonoBehaviour
 		{
 			case Technology.TechType.Disaster:
 			researchManager.selectedResearch = researchManager.disasterPrepTechCopy[button.tierNum - 1];
-
+			
 			break;
 			case Technology.TechType.Resource:
 			researchManager.selectedResearch = researchManager.resourceProdTechCopy[button.tierNum - 1];
@@ -78,11 +83,17 @@ public class ResearchPanel : MonoBehaviour
 		if (researchManager.selectedResearch != null)
 		{
 			researchManager.selectedResearch.isResearching = !researchManager.selectedResearch.isResearching;
-			turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);	
+			turnManager.EndTurnEvent.AddListener(researchManager.selectedResearch.ResearchTech);
 		}
 		
 		researchManager.selectedButton = button;
 		SetButtonInteractable();
+	}
+
+	public void DeselectResearch()
+	{
+		turnManager.EndTurnEvent.RemoveListener(researchManager.selectedResearch.ResearchTech);
+		researchManager.selectedResearch = null;
 	}
 
 	public void SetButtonInteractable()
@@ -99,7 +110,7 @@ public class ResearchPanel : MonoBehaviour
 				}
 			}
 			
-			else
+			if (item.GetComponent<ResearchButton>().tierNum == researchManager.tierProgress.disasterPrepTier + 1)
 			{
 				item.interactable = true;
 			}
@@ -185,6 +196,9 @@ public class ResearchPanel : MonoBehaviour
 		}
 	}
 
-
+	public void exitClick()
+	{
+		this.gameObject.SetActive(false);
+	}
 
 }

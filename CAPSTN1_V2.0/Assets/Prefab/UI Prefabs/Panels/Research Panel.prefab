@@ -73,10 +73,8 @@ GameObject:
   - component: {fileID: 222547770370764868}
   - component: {fileID: 114498275800792288}
   - component: {fileID: 114782797069706080}
-  - component: {fileID: 114409615216044860}
   - component: {fileID: 114153643224095474}
   - component: {fileID: 114071998712586212}
-  - component: {fileID: 114929570640215980}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -508,7 +506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1369872013229928
 GameObject:
   m_ObjectHideFlags: 1
@@ -1123,6 +1121,7 @@ MonoBehaviour:
   tierNum: 2
   researchPanel: {fileID: 114407034268546702}
   type: 3
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -1142,6 +1141,7 @@ MonoBehaviour:
   tierNum: 4
   researchPanel: {fileID: 114407034268546702}
   type: 1
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -1221,6 +1221,7 @@ MonoBehaviour:
   tierNum: 1
   researchPanel: {fileID: 114407034268546702}
   type: 1
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -2103,6 +2104,7 @@ MonoBehaviour:
   tierNum: 1
   researchPanel: {fileID: 114407034268546702}
   type: 0
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -2182,6 +2184,7 @@ MonoBehaviour:
   tierNum: 3
   researchPanel: {fileID: 0}
   type: 0
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -2260,18 +2263,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b7a2f388449d0ca42ab0df8ca09727cc, type: 3}
   - {fileID: 21300000, guid: 0be761161958b2f4a82b8b27e42a7b45, type: 3}
   researchManager: {fileID: 0}
---- !u!114 &114409615216044860
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1060576008610448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728f474b988b2d84188741ddf3faba48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 1366422060424752}
 --- !u!114 &114422720292216174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2286,6 +2277,7 @@ MonoBehaviour:
   tierNum: 3
   researchPanel: {fileID: 114407034268546702}
   type: 2
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -2903,6 +2895,7 @@ MonoBehaviour:
   tierNum: 3
   researchPanel: {fileID: 114407034268546702}
   type: 3
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -2955,6 +2948,7 @@ MonoBehaviour:
   tierNum: 1
   researchPanel: {fileID: 114407034268546702}
   type: 2
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -3053,6 +3047,7 @@ MonoBehaviour:
   tierNum: 3
   researchPanel: {fileID: 114407034268546702}
   type: 1
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -3099,6 +3094,7 @@ MonoBehaviour:
   tierNum: 2
   researchPanel: {fileID: 0}
   type: 0
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -3121,7 +3117,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060576008610448}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -3154,8 +3150,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114409615216044860}
-        m_MethodName: Click
+      - m_Target: {fileID: 114407034268546702}
+        m_MethodName: exitClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3345,6 +3341,7 @@ MonoBehaviour:
   tierNum: 4
   researchPanel: {fileID: 114407034268546702}
   type: 3
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -3391,6 +3388,7 @@ MonoBehaviour:
   tierNum: 1
   researchPanel: {fileID: 114407034268546702}
   type: 3
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -3410,6 +3408,7 @@ MonoBehaviour:
   tierNum: 2
   researchPanel: {fileID: 114407034268546702}
   type: 1
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -3490,6 +3489,7 @@ MonoBehaviour:
   tierNum: 2
   researchPanel: {fileID: 114407034268546702}
   type: 2
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -3716,6 +3716,7 @@ MonoBehaviour:
   tierNum: 4
   researchPanel: {fileID: 0}
   type: 0
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
@@ -3827,17 +3828,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114929570640215980
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1060576008610448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f6c9969bd3ebf0429e7d1918b33eaf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114938510968173854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3887,6 +3877,7 @@ MonoBehaviour:
   tierNum: 4
   researchPanel: {fileID: 114407034268546702}
   type: 2
+  technology: {fileID: 0}
   selectedResearchIcon: {fileID: 21300000, guid: 969dc8939e060d34a9a402e04fd4c5d1,
     type: 3}
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
