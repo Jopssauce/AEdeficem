@@ -9,21 +9,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7150299902151d64cb8f6e4ea23a1fb5, type: 3}
-  m_Name: Rampant_Littering
+  m_Name: Crime_Surge
   m_EditorClassIdentifier: 
-  eventName: Rampant Littering
-  turnsLeft: 4
-  turnsToResolve: 5
+  eventName: Crime Surge
+  turnsLeft: 3
+  turnsToResolve: 10
   eventSprite: {fileID: 21300000, guid: 743fccb353150f840b43f4a2996d1eb8, type: 3}
   buildingPrefab: {fileID: 1273934592567322, guid: 458400ac70756234bbea4ac59eb20f4a,
     type: 2}
-  waterCost: 15
-  foodCost: 10
-  powerCost: 10
-  actionCost: 6
-  eventDetails: The people have begun littering to an extreme extent. Much of streets
-    of cities and event outlying unurbanized areas are becoming unsighly filthy.
+  waterCost: 20
+  foodCost: 16
+  powerCost: 18
+  actionCost: 8
+  eventDetails: "Local crime is spreading throughout the city, drug trading in daylight,
+    shoot outs; you name it. Local law enforcement is struggling to keep up, police
+    from neighboring regions\r can be called up to help but operations in the scale
+    will be costly."
   qualityDecay: 0.25
-  qualityReward: 0.15
-  eventTier: 1
+  qualityReward: 0.2
+  eventTier: 2
   eventType: 0

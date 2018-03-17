@@ -15,7 +15,7 @@ public class ResearchManager : MonoBehaviour
         public int regionalPlanTier;
     }
 
-    
+    public ResearchButton selectedButton;
 
     public List<Technology> disasterPrepTech;
     public List<Technology> disasterPrepTechCopy;

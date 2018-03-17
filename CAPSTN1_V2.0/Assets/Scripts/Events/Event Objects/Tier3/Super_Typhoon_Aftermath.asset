@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: Super Typhoon Aftermath
   turnsLeft: 3
+  turnsToResolve: 15
   eventSprite: {fileID: 21300000, guid: 0973ead74db72514dae298a1c01fcf23, type: 3}
   buildingPrefab: {fileID: 1209049137058192, guid: aed53223dcf02c64da35812d7d91b85a,
     type: 2}

@@ -12,17 +12,20 @@ MonoBehaviour:
   m_Name: Polluted_Factory
   m_EditorClassIdentifier: 
   eventName: Polluted Factory
-  turnsLeft: 4
+  turnsLeft: 3
   turnsToResolve: 2
   eventSprite: {fileID: 21300000, guid: 40fa836cd62e33a468961c5566a6df52, type: 3}
   buildingPrefab: {fileID: 1860774217617404, guid: 518128833c5db0942afa39e6eb917c50,
     type: 2}
-  waterCost: 5
-  foodCost: 1
-  powerCost: 1
-  actionCost: 5
-  eventDetails: A factory has been polluting the region for quite some time.
-  qualityDecay: 0.09
-  qualityReward: 0.1
-  eventTier: 0
+  waterCost: 10
+  foodCost: 8
+  powerCost: 12
+  actionCost: 6
+  eventDetails: " A factory producing industrial goods is spreading pollution on the
+    area. The areas near the factory are in a state of degradation and the environment
+    is suffering. Shutting down the factory,\r is an option to stop this or we can
+    begin a complete overhaul of the factory's systems and production."
+  qualityDecay: 0.2
+  qualityReward: 0.15
+  eventTier: 1
   eventType: 0

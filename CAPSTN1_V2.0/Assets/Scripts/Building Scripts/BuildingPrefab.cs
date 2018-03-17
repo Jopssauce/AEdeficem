@@ -18,5 +18,13 @@ public class BuildingPrefab : MonoBehaviour {
 		{
 			Destroy(this.gameObject);
 		}
+		if (eventOrigin.isResolving)
+		{
+			GetComponent<Renderer>().material.color = Color.green;
+		}
+		else
+		{
+			GetComponent<Renderer>().material.color = new Color32(220, 225, 0, 255);
+		}
 	}
 }
