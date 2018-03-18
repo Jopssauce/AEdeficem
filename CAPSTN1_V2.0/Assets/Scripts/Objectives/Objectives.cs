@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Objectives : MonoBehaviour {
+[CreateAssetMenu(fileName = "Objective", menuName = "Objective/Objective")]
+[System.Serializable]
+public class Objectives : ScriptableObject 
+{
+    public GameObject objectivesPrefab;
+	public Vector3 	  uiPos;
+	public bool 	  isObjectiveDone;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	[TextArea(3,10)]
+	public string objectiveDescription;
+
+    public void ObjectiveDone()
+    {
+        isObjectiveDone = false;
+    }
 }
