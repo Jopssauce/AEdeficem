@@ -20,7 +20,7 @@ MonoBehaviour:
   waterCost: 5
   foodCost: 5
   powerCost: 10
-  actionCost: 4
+  actionCost: 3
   eventDetails: "The local power plant is experiencing technical problems. There have
     been rotating black outs due to an unforeseen damage on a small section of the
     power plant. Rectifying this\r is a minor problem will be quick but the local
