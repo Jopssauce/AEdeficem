@@ -18,8 +18,8 @@ MonoBehaviour:
   buildingPrefab: {fileID: 1829880561345358, guid: 6a145d13451959f4d892cdef71d15cee,
     type: 2}
   waterCost: 10
-  foodCost: 5
-  powerCost: 5
+  foodCost: 0
+  powerCost: 10
   actionCost: 3
   eventDetails: "A Water Filter Station in the region has experienced hardware problems.
     A section in the station was apparently aging and gave out just recently, water
