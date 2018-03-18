@@ -20,7 +20,7 @@ MonoBehaviour:
   waterCost: 10
   foodCost: 5
   powerCost: 5
-  actionCost: 4
+  actionCost: 3
   eventDetails: "A Water Filter Station in the region has experienced hardware problems.
     A section in the station was apparently aging and gave out just recently, water
     has been cut off to most\r towns and city districts near the station. The damage

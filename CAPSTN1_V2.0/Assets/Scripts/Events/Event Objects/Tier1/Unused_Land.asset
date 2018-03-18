@@ -20,7 +20,7 @@ MonoBehaviour:
   waterCost: 10
   foodCost: 10
   powerCost: 10
-  actionCost: 5
+  actionCost: 3
   eventDetails: A plot of land is available for use, we can use this to setup an environmental
     reserve for the country's endangered flora and fauna.
   qualityDecay: 0.01

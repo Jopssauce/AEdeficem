@@ -20,7 +20,7 @@ MonoBehaviour:
   waterCost: 15
   foodCost: 5
   powerCost: 4
-  actionCost: 4
+  actionCost: 3
   eventDetails: "Pipe lines have begun to rust due to age. Recent complaints from
     the populace claim that water coming faucets and showers are coming out with a
     brown color, this is due to the\r rust spreading along the pipes. This incident

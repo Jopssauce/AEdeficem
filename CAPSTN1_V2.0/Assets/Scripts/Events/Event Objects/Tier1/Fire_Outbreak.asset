@@ -20,7 +20,7 @@ MonoBehaviour:
   waterCost: 10
   foodCost: 10
   powerCost: 5
-  actionCost: 7
+  actionCost: 4
   eventDetails: "A widespread fire has affected the city. The fire has been put out
     but the affected populace is still reeling from the tragedy. We can take action
     and provide reasonable recompense\r for the fire victims. We can also allow the
