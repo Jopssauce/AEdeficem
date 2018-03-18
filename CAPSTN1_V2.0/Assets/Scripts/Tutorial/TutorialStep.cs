@@ -8,6 +8,7 @@ public class TutorialStep : ScriptableObject
 	public GameObject tutorialStepPrefab;
 	public Vector3 	  uiPos;
 	public bool 	  isStepDone;
+	public int 		  stepNumber;
 
 	[TextArea(3,10)]
 	public string tutorialDescription;
