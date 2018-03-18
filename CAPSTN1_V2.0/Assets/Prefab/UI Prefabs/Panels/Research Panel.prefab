@@ -1035,7 +1035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1962865509627688
 GameObject:
   m_ObjectHideFlags: 1
@@ -1127,6 +1127,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114045622436445136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1147,6 +1148,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114048999839916574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1227,6 +1229,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114071998712586212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2110,6 +2113,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114327868352027790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2190,6 +2194,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114373471281872726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2263,6 +2268,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b7a2f388449d0ca42ab0df8ca09727cc, type: 3}
   - {fileID: 21300000, guid: 0be761161958b2f4a82b8b27e42a7b45, type: 3}
   researchManager: {fileID: 0}
+  turnManager: {fileID: 0}
 --- !u!114 &114422720292216174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2283,6 +2289,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114443251792168916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2901,6 +2908,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114728604758418312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2954,6 +2962,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114736097127614004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3053,6 +3062,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114762432750747870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3100,6 +3110,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114777414281934942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3347,6 +3358,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114816697614030710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3394,6 +3406,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114821585447610322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3414,6 +3427,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114832778370750468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3495,6 +3509,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114870566527690868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3722,6 +3737,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114915210840843616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3883,6 +3899,7 @@ MonoBehaviour:
   unSelectedResearchIcon: {fileID: 21300000, guid: 2e0ac1a506ab56344aef805762bf0a04,
     type: 3}
   isSelected: 0
+  turnManager: {fileID: 0}
 --- !u!114 &114940571499376466
 MonoBehaviour:
   m_ObjectHideFlags: 1

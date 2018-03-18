@@ -43,7 +43,7 @@ public class DisplayResourceCost : MonoBehaviour {
 			
 			ChangeColor(waterCost, eventOrigin.regionOrigin.cityOrigin.cityResources.Water, waterColor);
 			ChangeColor(powerCost, eventOrigin.regionOrigin.cityOrigin.cityResources.Power, powerColor);
-			ChangeColor(foodCost,  eventOrigin.regionOrigin.cityOrigin.cityResources.Power, foodColor);
+			ChangeColor(foodCost,  eventOrigin.regionOrigin.cityOrigin.cityResources.Food, foodColor);
 			ChangeColor(actionCost, resManager.actionPoints, actionColor);
 		}
 	}
