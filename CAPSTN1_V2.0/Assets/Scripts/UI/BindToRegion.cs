@@ -14,7 +14,7 @@ public class BindToRegion : MonoBehaviour {
 	void Start () 
 	{
 		//randPos = new Vector3 (Random.value, Random.value, Random.value);
-		spawnArea = regionOrigin.spawnAreas[ Random.Range(0, regionOrigin.spawnAreas.Count)];
+		//spawnArea = regionOrigin.spawnAreas[ Random.Range(0, regionOrigin.spawnAreas.Count)];
 	}
 
 	// Update is called once per frame
@@ -35,12 +35,12 @@ public class BindToRegion : MonoBehaviour {
 					this.GetComponent<EventPopUpBase>().eventWorldPos = spawnArea.transform.position;
 				}
 			}
-			if (randomPoint == false) 
-			{
-				this.transform.position = Camera.main.WorldToScreenPoint(regionOrigin.cityOrigin.transform.position );
-			}
+			
 		}
-
+		if (randomPoint == false) 
+		{
+			this.transform.position = Camera.main.WorldToScreenPoint(regionOrigin.cityOrigin.transform.position );
+		}
 		
 	}
 	private Vector3 RandomPointInPolygon(Vector3 center, Bounds size, Vector3 randPos)
