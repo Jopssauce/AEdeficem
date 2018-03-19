@@ -29,6 +29,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
     public EventManager    	eventManager;
 	public RegionManager	regionManager;
     public TurnManager      turnManager;
+    public TutorialManager  tutorialManager;
 
     private MainUI disableButtons;
 
@@ -58,6 +59,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 		this.GetComponent<BindToRegion> ().regionOrigin = regionOrigin;
         turnManager.EndTurnEvent.AddListener(UpdateEvent);
         cityOrign = regionOrigin.cityOrigin;
+        tutorialManager = cityOrign.tutorialManager;
 	}
 	
     public void Click()
@@ -132,7 +134,17 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
                 cityOrign.DeductCityResource(CityBase.ProductionType.Water,	eventDataCopy.waterCost);
                 cityOrign.DeductCityResource(CityBase.ProductionType.Power, eventDataCopy.powerCost);
                 cityOrign.DeductCityResource(CityBase.ProductionType.Food, eventDataCopy.foodCost);
-
+                if (tutorialManager != null)
+                {
+                    if (tutorialManager.currentTutorialStepPanel != null)
+                    {
+                        if (tutorialManager.currentTutorialStepPanel.GetComponent<SendUnitStep2>())
+                        {
+                            tutorialManager.currentTutorialStepPanel.GetComponent<SendUnitStep2>().isStepDone = true;
+                            tutorialManager.currentTutorialStepPanel.GetComponent<SendUnitStep2>().nextButtonClick();
+                        }
+                    }           
+                }
 				Destroy(eventPanel);
             }
             else

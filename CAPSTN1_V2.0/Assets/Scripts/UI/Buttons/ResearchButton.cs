@@ -33,6 +33,7 @@ public class ResearchButton : MonoBehaviour
 
 	public void Select()
 	{
+
 		isSelected = !isSelected;
 		if (isSelected == true)
 		{

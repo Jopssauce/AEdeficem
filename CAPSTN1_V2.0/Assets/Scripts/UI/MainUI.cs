@@ -28,6 +28,7 @@ public class MainUI : MonoBehaviour
     private TurnManager 	turnManager;
     private RegionManager   regManager;
     private EventManager    eventManager;
+    public TutorialManager  tutorialManager;
 
     public List<GameObject> regionUnderlayDisplayList;
 
@@ -135,7 +136,18 @@ public class MainUI : MonoBehaviour
 
     public void openResearchPanel()
     {
-        //researchPanel.GetComponent<ResearchPanel>().SetButtonInteractable();
+        /*if (tutorialManager != null)
+        {
+            if (tutorialManager.currentTutorialStepPanel != null)
+            {
+                if (tutorialManager.currentTutorialStepPanel.GetComponent<ResearchStep>())
+                {
+                    tutorialManager.currentTutorialStepPanel.GetComponent<ResearchStep>().isStepDone = true;
+                    tutorialManager.currentTutorialStepPanel.GetComponent<ResearchStep>().nextButtonClick();
+                }
+            }           
+        }*/
+       
         researchPanel.transform.SetParent(this.transform, false);
         researchPanel.transform.SetAsLastSibling();
         researchPanel.SetActive(true);

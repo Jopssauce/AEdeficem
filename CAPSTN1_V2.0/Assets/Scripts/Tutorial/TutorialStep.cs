@@ -9,6 +9,7 @@ public class TutorialStep : MonoBehaviour
 	public GameObject blockerPanel;
 
 	public TutorialManager tutorialUI;
+	public TurnManager     turnManager;
 
 	public Image 	pointer;
 	public Text 	textBox;
@@ -24,10 +25,14 @@ public class TutorialStep : MonoBehaviour
 
 	void Start()
 	{
+		if (TurnManager.instance != null)
+		{
+			turnManager = TurnManager.instance;
+		}
 		StartStep();
 	}
 
-	public void StartStep()
+	public virtual void StartStep()
 	{
 		textBox.text = tutorialDescription;
 		this.transform.SetParent(tutorialUI.transform);
@@ -36,7 +41,7 @@ public class TutorialStep : MonoBehaviour
 		nextButton.onClick.AddListener(nextButtonClick);
 	}
 
-	public void nextButtonClick()
+	public virtual void nextButtonClick()
 	{
 		tutorialUI.NextStep.Invoke();
 	}

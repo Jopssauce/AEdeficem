@@ -33,7 +33,9 @@ public class CityBase : MonoBehaviour
 
 	public CityResources 	cityResources;
 	public ProductionType 	firstProduction;
-    public ProductionType 	secondProduction;	
+    public ProductionType 	secondProduction;
+
+	public TutorialManager tutorialManager;	
 
 	public int firstCurrentProduction;
 	public int secondCurrentProduction;
@@ -195,6 +197,17 @@ public class CityBase : MonoBehaviour
 		currentUnit.GetComponent<UnitBase>().cityOrigin = this;
 		currentUnit.GetComponent<UnitBase>().eventOrigin = eventBase;
 		baseUnits.Add(currentUnit);
+		if (tutorialManager != null)
+		{
+			if (tutorialManager.currentTutorialStepPanel != null)
+			{
+				if (tutorialManager.currentTutorialStepPanel.GetComponent<SendUnitStep>())
+				{
+					tutorialManager.currentTutorialStepPanel.GetComponent<SendUnitStep>().isStepDone = true;
+					tutorialManager.currentTutorialStepPanel.GetComponent<SendUnitStep>().nextButtonClick();
+				}
+			}           
+		}
 	}
 	
 	public void SpawnResourceSender(CityBase cityTarget, int water, int food, int power)
