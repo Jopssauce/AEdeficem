@@ -2,34 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour {
 	public List<TutorialStep> tutorialSteps;
-	public List<TutorialStep> tutorialStepsCopy;
 	
 	public bool startTutorial;
+	public int  stepCounter;
 
 	public UnityEvent NextStep;
 	
 	public MainUI	  mainUI;
 	public GameObject startPanel;
 
+	public TutorialStep currentTutorialStepPanel;
+
 
 	// Use this for initialization
 	void Start () 
 	{
-		   transform.SetAsLastSibling();
+		stepCounter = 0;
+		transform.SetAsLastSibling();
+
+		NextStep.AddListener(AdvanceStep);
 	}
 	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
-
+	
 	public void StartTutorial()
 	{
 		startTutorial = true;
 		startPanel.SetActive(false);
+		NextStep.Invoke();
+	}
+
+	public void AdvanceStep()
+	{
+		stepCounter++;
+		if (currentTutorialStepPanel != null)
+		{
+			Destroy(currentTutorialStepPanel.gameObject);
+		}
+		
+		if (stepCounter <= tutorialSteps.Count)
+		{
+			tutorialSteps[stepCounter-1].tutorialUI = this;
+			currentTutorialStepPanel = Instantiate(tutorialSteps[stepCounter-1]);
+		}
+		
 	}
 }
