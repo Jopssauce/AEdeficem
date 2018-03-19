@@ -31,7 +31,7 @@ public class TutorialManager : MonoBehaviour {
 	public void StartTutorial()
 	{
 		startTutorial = true;
-		startPanel.SetActive(false);
+		Destroy(startPanel.gameObject);
 		NextStep.Invoke();
 	}
 
@@ -45,8 +45,8 @@ public class TutorialManager : MonoBehaviour {
 		
 		if (stepCounter <= tutorialSteps.Count)
 		{
-			tutorialSteps[stepCounter-1].tutorialUI = this;
 			currentTutorialStepPanel = Instantiate(tutorialSteps[stepCounter-1]);
+			currentTutorialStepPanel.tutorialUI = this;
 		}
 		
 	}
