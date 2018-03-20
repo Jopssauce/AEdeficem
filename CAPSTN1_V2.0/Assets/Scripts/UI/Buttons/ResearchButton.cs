@@ -43,6 +43,11 @@ public class ResearchButton : MonoBehaviour
 				GetComponent<Image> ().sprite = selectedResearchIcon;
 				resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints,10);
 			}
+			else
+			{
+				researchPanel.notificationPanel.text.text ="10 Action Points required";
+				researchPanel.notificationPanel.gameObject.SetActive(true);
+			}  
 		}
 		if (isSelected == false)
 		{

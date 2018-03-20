@@ -47,7 +47,7 @@ public class EventPanel : MonoBehaviour
     }*/
     public void RequestUnitClick()
 	{
-	   eventManager.SentUnitEvent.Invoke ();
+	  
        eventOrigin.SpawnUnit();
     }
 
