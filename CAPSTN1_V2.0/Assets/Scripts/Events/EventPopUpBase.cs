@@ -15,6 +15,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
     public bool         isResolved;
     public Vector3     	eventWorldPos;
     public List<Sprite> timerSprites;
+	public Sprite 		ResolvingSprite;
     public CityBase     cityOrign;
 
     public Text         turnsToResolve;
@@ -134,6 +135,11 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
             cityOrign.AddCityResource(CityBase.ProductionType.Food,   eventDataCopy.foodCost);
         }
 
+		if (turnsLeft > 0)
+		{
+			GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];	
+		}
+
        	isResolving = false;
         this.GetComponent<Button>().interactable = true;
 		Destroy(eventPanel);
@@ -169,6 +175,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
             {
                 Debug.Log("Not Enough Resources");
             }
+			GetComponent<Image> ().sprite = ResolvingSprite;
             this.GetComponent<Button>().interactable = true;
         }
     }

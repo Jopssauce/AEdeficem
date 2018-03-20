@@ -118,7 +118,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 59cb34abb82f0c6438d19092d10eb347, type: 3}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -164,11 +164,12 @@ MonoBehaviour:
   isResolved: 0
   eventWorldPos: {x: 0, y: 0, z: 0}
   timerSprites:
-  - {fileID: 21300000, guid: c33241570dffe69448dac6d8002bd771, type: 3}
-  - {fileID: 21300000, guid: 6b0517e7f03bcd0499de7942fffb9877, type: 3}
-  - {fileID: 21300000, guid: dae1476496ca6124ea01171c832635dd, type: 3}
-  - {fileID: 21300000, guid: f76efb5a9a3146d4d98f16a2ae2a1b74, type: 3}
-  - {fileID: 21300000, guid: f0e24e3f819ef6d4f9e5aacf7a4678eb, type: 3}
+  - {fileID: 21300000, guid: ca27f4bb6c82d8a4bbddf47451d60c05, type: 3}
+  - {fileID: 21300000, guid: 0d52568bf26472e45a3fb37444fb084a, type: 3}
+  - {fileID: 21300000, guid: 57ee187b3be04a24483a9161e7d21e08, type: 3}
+  - {fileID: 21300000, guid: f9f81422bab8ee9468f0343bdbd92d09, type: 3}
+  - {fileID: 21300000, guid: e3caabd7320c6a447973e29f84b12ab9, type: 3}
+  ResolvingSprite: {fileID: 21300000, guid: 6526947be005afd41933c35c259fb624, type: 3}
   cityOrign: {fileID: 0}
   turnsToResolve: {fileID: 114264313728050208}
   eventPanel: {fileID: 0}
@@ -181,6 +182,7 @@ MonoBehaviour:
   eventManager: {fileID: 0}
   regionManager: {fileID: 0}
   turnManager: {fileID: 0}
+  tutorialManager: {fileID: 0}
 --- !u!114 &114572910853362570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -241,7 +243,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f0e24e3f819ef6d4f9e5aacf7a4678eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3caabd7320c6a447973e29f84b12ab9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -294,7 +296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 48.3}
+  m_AnchoredPosition: {x: -16.7, y: 21.3}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224833324106015020
@@ -313,6 +315,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -84.95, y: 62.53}
-  m_SizeDelta: {x: 88.11, y: 48.06}
+  m_AnchoredPosition: {x: 328.6, y: 219.3}
+  m_SizeDelta: {x: 125.7, y: 80.4}
   m_Pivot: {x: 0.5, y: 0.5}
