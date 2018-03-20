@@ -7,7 +7,7 @@ public class ResearchTabs : MonoBehaviour, IPointerClickHandler {
 
     public void ShowTab()
     {
-		this.transform.parent.SetAsLastSibling ();
+		this.transform.parent.SetSiblingIndex (10);
     }
 
 	#region IPointerDownHandler implementation
