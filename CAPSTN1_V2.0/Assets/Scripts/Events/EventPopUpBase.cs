@@ -158,6 +158,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
                 cityOrign.DeductCityResource(CityBase.ProductionType.Water,	eventDataCopy.waterCost);
                 cityOrign.DeductCityResource(CityBase.ProductionType.Power, eventDataCopy.powerCost);
                 cityOrign.DeductCityResource(CityBase.ProductionType.Food, eventDataCopy.foodCost);
+				GetComponent<Image> ().sprite = ResolvingSprite;
                 if (tutorialManager != null)
                 {
                     if (tutorialManager.currentTutorialStepPanel != null)
@@ -175,7 +176,6 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
             {
                 Debug.Log("Not Enough Resources");
             }
-			GetComponent<Image> ().sprite = ResolvingSprite;
             this.GetComponent<Button>().interactable = true;
         }
     }
