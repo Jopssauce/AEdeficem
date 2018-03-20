@@ -19,6 +19,8 @@ public class TurnButton : MonoBehaviour {
 		{
 			eventManager = EventManager.instance;
 		}
+
+		this.transform.parent.SetAsLastSibling ();
 		//animator = GetComponent<Animator>();
 	}
 	public void OnClick()
