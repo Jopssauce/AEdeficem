@@ -20,6 +20,8 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 
     public Text         turnsToResolve;
 
+    
+
 
 	public GameObject	eventPanel;
 	public GameObject	eventPanelPrefab;
@@ -174,6 +176,8 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
             }
             else
             {
+                eventPanel.GetComponent<EventReader>().notificationPanel.text.text ="Insufficient Resources";
+                eventPanel.GetComponent<EventReader>().notificationPanel.gameObject.SetActive(true);
                 Debug.Log("Not Enough Resources");
             }
             this.GetComponent<Button>().interactable = true;
@@ -232,10 +236,21 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 	}
     public virtual void SpawnUnit()
     {
-        cityOrign.SpawnUnit(this);
-        resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 1);
-        this.GetComponent<Button>().interactable = true;
-        Destroy(eventPanel);   
+        
+        if (resManager.actionPoints > 0)
+        {
+            cityOrign.SpawnUnit(this);
+            eventManager.SentUnitEvent.Invoke ();
+            resManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 1);
+            this.GetComponent<Button>().interactable = true;
+            Destroy(eventPanel); 
+        }
+        else
+        {
+            eventPanel.GetComponent<EventReader>().notificationPanel.text.text ="Insufficient Resources";
+            eventPanel.GetComponent<EventReader>().notificationPanel.gameObject.SetActive(true);
+            Debug.Log("Not Enough Resources");
+        }         
     }
 
 	public void OnPointerClick(PointerEventData eventData)

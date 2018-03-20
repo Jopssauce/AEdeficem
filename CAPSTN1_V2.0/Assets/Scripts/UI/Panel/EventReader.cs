@@ -8,6 +8,8 @@ public class EventReader : EventPanel
 	public Button   refundButton;
 	public Button   resolveButton;
 	public Text     unitIsBeingSent;
+	
+	public NotificationPanel notificationPanel;
 	public void refundClick()
 	{
 		eventManager.IgnoredEvent.Invoke ();

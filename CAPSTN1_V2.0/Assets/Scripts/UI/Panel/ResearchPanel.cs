@@ -21,6 +21,8 @@ public class ResearchPanel : MonoBehaviour
 	public ResearchManager researchManager;
 	public TurnManager turnManager;
 
+	public NotificationPanel notificationPanel;
+
 	public class DisasterPrepClick : UnityEvent<int, int>{}
 
 	public void Start()
