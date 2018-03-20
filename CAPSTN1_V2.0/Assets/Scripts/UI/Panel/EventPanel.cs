@@ -16,6 +16,9 @@ public class EventPanel : MonoBehaviour
     public EventManager eventManager;
     public TurnManager  turnManager;
 
+    public Text eventReward;
+    public Text eventFailure;
+
     private GameObject  NewQueueItem;
     public AQManager    aqManager;
     // Use this for initialization
@@ -29,6 +32,8 @@ public class EventPanel : MonoBehaviour
         {
             aqManager = AQManager.instance;
         }
+        eventReward.text = "Reward: +" + (eventOrigin.eventDataCopy.qualityReward * 100).ToString() +"%";
+        eventFailure.text = "Failure: -" + (eventOrigin.eventDataCopy.qualityDecay * 100).ToString() +"%";
     }
 
     /*public virtual void AddToActionQue()
