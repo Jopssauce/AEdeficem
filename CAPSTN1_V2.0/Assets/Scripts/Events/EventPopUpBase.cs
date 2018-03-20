@@ -19,6 +19,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 
     public Text         turnsToResolve;
 
+
 	public GameObject	eventPanel;
 	public GameObject	eventPanelPrefab;
 	public GameObject 	RightClickPanelPrefab;
@@ -60,6 +61,10 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
         turnManager.EndTurnEvent.AddListener(UpdateEvent);
         cityOrign = regionOrigin.cityOrigin;
         tutorialManager = cityOrign.tutorialManager;
+        if (turnsLeft > 0)
+        {
+        GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];	
+        }
 	}
 	
     public void Click()
@@ -84,24 +89,37 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 	{
         eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
         eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = false;
+        eventPanel.GetComponent<EventReader>().resolveButton.gameObject.SetActive(false);
+        eventPanel.GetComponent<EventReader>().refundButton.gameObject.SetActive(false);
+        if (unit != null)
+        {
+            eventPanel.GetComponent<EventPanel>().sendUnitButton.interactable = false;
+            eventPanel.GetComponent<EventPanel>().sendUnitButton.gameObject.SetActive(false);
+            eventPanel.GetComponent<EventReader>().unitIsBeingSent.gameObject.SetActive(true);            
+        }
+         if (unit == null)
+        {
+            eventPanel.GetComponent<EventPanel>().sendUnitButton.interactable = true;
+            eventPanel.GetComponent<EventPanel>().sendUnitButton.gameObject.SetActive(true);
+            eventPanel.GetComponent<EventReader>().unitIsBeingSent.gameObject.SetActive(false);
+        }
         if (isResolving == true && unit != null && unit.isArrived == true)
         {
+            eventPanel.GetComponent<EventReader>().resolveButton.gameObject.SetActive(true);
+            eventPanel.GetComponent<EventReader>().refundButton.gameObject.SetActive(true);
+            eventPanel.GetComponent<EventReader>().unitIsBeingSent.gameObject.SetActive(false);
             eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = false;
             eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = true;
         }
         if (isResolving == false && unit != null  && unit.isArrived == true)
         {
+            eventPanel.GetComponent<EventReader>().resolveButton.gameObject.SetActive(true);
+            eventPanel.GetComponent<EventReader>().refundButton.gameObject.SetActive(true);
+            eventPanel.GetComponent<EventReader>().unitIsBeingSent.gameObject.SetActive(false);
             eventPanel.GetComponent<EventReader>().resolveButton.GetComponent<Button>().interactable = true;
             eventPanel.GetComponent<EventReader>().refundButton.GetComponent<Button>().interactable = false;
         }
-        if (unit != null)
-        {
-            eventPanel.GetComponent<EventPanel>().sendUnitButton.interactable = false;
-        }
-         if (unit == null)
-        {
-            eventPanel.GetComponent<EventPanel>().sendUnitButton.interactable = true;
-        }
+      
 	}
 
 	public void RefundEvent()
