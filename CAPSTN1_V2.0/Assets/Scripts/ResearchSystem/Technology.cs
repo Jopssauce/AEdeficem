@@ -35,7 +35,7 @@ public class Technology : ScriptableObject
 	public RegionManager   regionManager;
 	public TurnManager 		turnManager;
 
-	public Sprite Thumbnail;
+	public Texture Thumbnail;
 
 	public void Awake()
 	{

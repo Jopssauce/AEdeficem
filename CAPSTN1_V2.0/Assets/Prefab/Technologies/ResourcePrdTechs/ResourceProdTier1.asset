@@ -22,4 +22,4 @@ MonoBehaviour:
   researchManager: {fileID: 0}
   regionManager: {fileID: 0}
   turnManager: {fileID: 0}
-  Thumbnail: {fileID: 0}
+  Thumbnail: {fileID: 2800000, guid: 617b4a4342e1853498c50189a5b15ff7, type: 3}
