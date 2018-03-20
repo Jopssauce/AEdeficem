@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class StartGame : MonoBehaviour, IPointerClickHandler {
+public class StartGame : MonoBehaviour {
 
-	public void OnPointerClick(PointerEventData eventData)
+	public void Click()
     {
 		SceneManager.LoadSceneAsync("Main Scene");
     }
