@@ -599,6 +599,7 @@ GameObject:
   - component: {fileID: 224502323462215012}
   - component: {fileID: 222602360116979950}
   - component: {fileID: 114189793957478862}
+  - component: {fileID: 114571704757250398}
   m_Layer: 5
   m_Name: BlockerPanel
   m_TagString: Untagged
@@ -1805,6 +1806,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Scrollbar+ScrollEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114571704757250398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1915986699763288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6c9969bd3ebf0429e7d1918b33eaf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114573839668126656
 MonoBehaviour:
   m_ObjectHideFlags: 1
