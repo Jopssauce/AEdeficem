@@ -87,9 +87,9 @@ public class RegionManager : MonoBehaviour
         }
 
         bool isVictory;
-        if (turnManager.currentTurn >= 50)
+        if (turnManager.currentTurn >= 10)
         {
-        if (regionList.All(region => region.GetComponent<RegionBase>().regionQuality >= 90))
+            if (regionList.All(region => region.GetComponent<RegionBase>().regionQuality >= 70))
             {
                 isVictory = true;
                 //Victory Scene
