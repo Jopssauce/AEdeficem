@@ -14,7 +14,7 @@ MonoBehaviour:
   eventName: Rampant Drug Trade
   turnsLeft: 3
   turnsToResolve: 3
-  eventSprite: {fileID: 21300000, guid: 0973ead74db72514dae298a1c01fcf23, type: 3}
+  eventSprite: {fileID: 21300000, guid: 5bd5aa5b0232eae4aa33e03596911288, type: 3}
   buildingPrefab: {fileID: 1860774217617404, guid: 518128833c5db0942afa39e6eb917c50,
     type: 2}
   waterCost: 7
