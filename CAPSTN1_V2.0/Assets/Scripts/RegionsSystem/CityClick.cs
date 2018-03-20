@@ -24,12 +24,6 @@ public class CityClick : MonoBehaviour {
 				Debug.Log (cityOrigin.name);
 				cityOrigin.SpawnStatsPanel ();
 			}
-
-			if (Input.GetMouseButtonDown (1)) 
-			{
-				Debug.Log ("Lul");
-				cityOrigin.SpawnRightClickPanel ();
-			}
 		}
 	}
 	

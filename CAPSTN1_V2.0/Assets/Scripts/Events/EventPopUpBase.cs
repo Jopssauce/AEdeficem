@@ -257,13 +257,13 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 	{
 		if (eventData.button == PointerEventData.InputButton.Right)
 		{
-			rightClickPanel = Instantiate (RightClickPanelPrefab);
+			/* rightClickPanel = Instantiate (RightClickPanelPrefab);
 			rightClickPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 			rightClickPanel.transform.SetAsLastSibling();
-			rightClickPanel.transform.position = this.transform.position + new Vector3 (50.0f, 50.0f, 0.0f);
+			rightClickPanel.transform.position = this.transform.position + new Vector3 (50.0f, 50.0f, 0.0f);*/
 		}
 	}
-
+	/*
 	void Update()
 	{
 		if (rightClickPanel != null) 
@@ -271,4 +271,5 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 			rightClickPanel.transform.position = this.transform.position + new Vector3 (50.0f, 50.0f, 0.0f);
 		}
 	}
+	*/
 }
