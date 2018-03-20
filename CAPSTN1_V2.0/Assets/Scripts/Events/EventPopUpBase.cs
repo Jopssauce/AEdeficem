@@ -60,6 +60,10 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
         turnManager.EndTurnEvent.AddListener(UpdateEvent);
         cityOrign = regionOrigin.cityOrigin;
         tutorialManager = cityOrign.tutorialManager;
+        if (turnsLeft > 0)
+        {
+        GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];	
+        }
 	}
 	
     public void Click()
