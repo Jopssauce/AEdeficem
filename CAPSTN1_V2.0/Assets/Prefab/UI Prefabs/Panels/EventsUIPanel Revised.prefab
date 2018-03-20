@@ -475,12 +475,12 @@ GameObject:
   - component: {fileID: 222650550039192580}
   - component: {fileID: 114758728168645162}
   m_Layer: 5
-  m_Name: Turns Left
+  m_Name: Unit is being sent...
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1698833260332578
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +546,23 @@ GameObject:
   - component: {fileID: 114098311410434376}
   m_Layer: 5
   m_Name: City Resources
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1767564938938060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224298106854485898}
+  - component: {fileID: 222156821085217292}
+  - component: {fileID: 114205787723351276}
+  m_Layer: 5
+  m_Name: Turns Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -987,6 +1004,39 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114205787723351276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1767564938938060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 59cb34abb82f0c6438d19092d10eb347, type: 3}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 99 Turns Left
 --- !u!114 &114231373876353966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1122,6 +1172,7 @@ MonoBehaviour:
   aqManager: {fileID: 0}
   refundButton: {fileID: 114717449404479302}
   resolveButton: {fileID: 114363000530645424}
+  unitIsBeingSent: {fileID: 114758728168645162}
 --- !u!114 &114314601732640710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2006,7 +2057,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99 Turns Left
+  m_Text: Unit is being sent...
 --- !u!114 &114842720431753506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2065,7 +2116,7 @@ MonoBehaviour:
   powerCost: {fileID: 114249999685412016}
   foodCost: {fileID: 114204626757581544}
   actionCost: {fileID: 114363226047352020}
-  turnsLeft: {fileID: 114758728168645162}
+  turnsLeft: {fileID: 114205787723351276}
 --- !u!114 &114884897574142996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2227,6 +2278,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210514700402870}
+--- !u!222 &222156821085217292
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1767564938938060}
 --- !u!222 &222167688198301746
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -2567,6 +2624,24 @@ RectTransform:
   m_AnchoredPosition: {x: 17.5, y: -21.676994}
   m_SizeDelta: {x: 53.7, y: 37.85}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224298106854485898
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1767564938938060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224365096177722368}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -71.6, y: 225.6}
+  m_SizeDelta: {x: 241.1, y: 45.2}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224315830287650550
 RectTransform:
   m_ObjectHideFlags: 1
@@ -2662,6 +2737,7 @@ RectTransform:
   - {fileID: 224649154177739488}
   - {fileID: 224359568560214022}
   - {fileID: 224988429282602216}
+  - {fileID: 224298106854485898}
   - {fileID: 224574937917437948}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2731,16 +2807,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1697133623576630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224365096177722368}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -71.6, y: 225.6}
+  m_AnchoredPosition: {x: 124, y: -330.09076}
   m_SizeDelta: {x: 241.1, y: 45.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224593848822077928
