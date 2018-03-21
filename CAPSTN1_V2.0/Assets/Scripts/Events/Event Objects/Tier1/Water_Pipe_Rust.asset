@@ -14,7 +14,7 @@ MonoBehaviour:
   eventName: Water Pipes Rust
   turnsLeft: 3
   turnsToResolve: 1
-  eventSprite: {fileID: 21300000, guid: 0973ead74db72514dae298a1c01fcf23, type: 3}
+  eventSprite: {fileID: 21300000, guid: 24e732efc42e4ba43bb8b06955f18511, type: 3}
   buildingPrefab: {fileID: 1829880561345358, guid: 6a145d13451959f4d892cdef71d15cee,
     type: 2}
   waterCost: 15

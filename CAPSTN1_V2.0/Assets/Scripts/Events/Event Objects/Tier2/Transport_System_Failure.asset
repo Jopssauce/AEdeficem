@@ -14,7 +14,7 @@ MonoBehaviour:
   eventName: Transport System Failure
   turnsLeft: 3
   turnsToResolve: 3
-  eventSprite: {fileID: 21300000, guid: 4aa918f9b4580dd4da4a872a012242e0, type: 3}
+  eventSprite: {fileID: 21300000, guid: 872be6acde82a46448ef74702083b376, type: 3}
   buildingPrefab: {fileID: 1273934592567322, guid: 458400ac70756234bbea4ac59eb20f4a,
     type: 2}
   waterCost: 8
