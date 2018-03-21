@@ -20,6 +20,7 @@ public class MainUI : MonoBehaviour
 
     public Button TurnButton;
     public Button researchButton;
+	public Button gameExitButton;
 
     public UnityEvent EventSelected;
     public UnityEvent EventClosed;
@@ -37,7 +38,10 @@ public class MainUI : MonoBehaviour
 
     public GameObject toggleUnderlayDisplay;
     public GameObject researchPanel;
+
+	public UnityEvent EscButtonPressed;
     
+	public bool isEscapeMenu;
     // Use this for initialization
     
     void Start ()
@@ -46,6 +50,7 @@ public class MainUI : MonoBehaviour
         resManager  = ResourceManager.instance;
         regManager  = RegionManager.instance;
         eventManager = EventManager.instance;
+		isEscapeMenu = false;
 
         foreach (var region in regManager.regionList)
         {
@@ -88,6 +93,22 @@ public class MainUI : MonoBehaviour
 
         Turn.text = turnManager.currentTurn.ToString();
     }
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Escape)) 
+		{
+			isEscapeMenu = !isEscapeMenu;
+			if (isEscapeMenu == true) 
+			{
+				gameExitButton.gameObject.SetActive (true);
+			}
+			if (isEscapeMenu == false) 
+			{
+				gameExitButton.gameObject.SetActive (false);
+			}
+		}
+	}
 
     void SumText(Text text, int sum)
     {

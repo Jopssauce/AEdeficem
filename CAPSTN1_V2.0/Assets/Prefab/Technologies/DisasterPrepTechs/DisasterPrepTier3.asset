@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 0
   isUnlocked: 0
   isResearching: 0
-  turnsLeft: 7
+  turnsLeft: 3
   techName: Disaster Tier 3
   techDescription: Decrease event cost by 30%
   cityBase: {fileID: 0}

@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 0
   isUnlocked: 0
   isResearching: 0
-  turnsLeft: 8
+  turnsLeft: 6
   techName: Disaster Tier 4
   techDescription: Decrease event cost by 40%
   cityBase: {fileID: 0}

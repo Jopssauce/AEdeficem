@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 3
   isUnlocked: 0
   isResearching: 0
-  turnsLeft: 8
+  turnsLeft: 6
   techName: 
   techDescription: All resource production in of cities are increased by 1
   cityBase: {fileID: 0}

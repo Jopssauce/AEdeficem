@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 3
   isUnlocked: 0
   isResearching: 0
-  turnsLeft: 14
+  turnsLeft: 20
   techName: 
   techDescription: Only 1 one event can spawn per region
   cityBase: {fileID: 0}

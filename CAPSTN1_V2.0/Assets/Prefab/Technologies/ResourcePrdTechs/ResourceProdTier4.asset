@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 1
   isUnlocked: 0
   isResearching: 0
-  turnsLeft: 11
+  turnsLeft: 7
   techName: Resource Prod Tier 4
   techDescription: All resource production increase by 1
   cityBase: {fileID: 0}
