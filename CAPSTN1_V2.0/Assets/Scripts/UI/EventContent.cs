@@ -42,6 +42,7 @@ public class EventContent : MonoBehaviour, IPointerClickHandler  {
 	#region IPointerClickHandler implementation
 	public void OnPointerClick(PointerEventData eventData)
     {
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 		Instantiate(particleEffect, eventWorldPos, particleEffect.transform.rotation);
 		Camera.main.transform.position = eventPosToCamera;
 		 if (tutorialManager != null)

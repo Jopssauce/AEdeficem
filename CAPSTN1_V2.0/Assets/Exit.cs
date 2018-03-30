@@ -7,6 +7,7 @@ public class Exit : MonoBehaviour
 {
 	public void Click()
 	{
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 		// note only works on build not editor
 		Application.Quit ();
 	}

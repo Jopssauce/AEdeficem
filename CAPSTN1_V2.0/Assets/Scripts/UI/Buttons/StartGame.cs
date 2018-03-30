@@ -10,6 +10,7 @@ public class StartGame : MonoBehaviour {
 
 	public void Click()
     {
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 		loading.gameObject.SetActive (true);
 		this.transform.parent.gameObject.SetActive (false);
 		SceneManager.LoadSceneAsync("Main Scene");

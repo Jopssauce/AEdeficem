@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour {
 			// this is to help jops not get heart attack
 			s.Source.volume = s.Volume;
 		}
+
+		DontDestroyOnLoad (gameObject);
 	}
 
 	void Start()
