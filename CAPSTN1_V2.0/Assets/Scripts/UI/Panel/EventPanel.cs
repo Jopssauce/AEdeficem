@@ -36,20 +36,6 @@ public class EventPanel : MonoBehaviour
         eventFailure.text = "Failure: -" + (eventOrigin.eventDataCopy.qualityDecay * 100).ToString() +"%";
     }
 
-    /*public virtual void AddToActionQue()
-    {
-        if (eventOrigin.GetComponent<EventPopUpBase>().isResolved == false)
-        {
-            if (ResourceManager.instance.isEnoughRes(eventOrigin.gameObject) == true)
-            {           
-                aqManager.Panel.SetActive(true);
-                NewQueueItem = Instantiate(ActionQueue) as GameObject;
-                NewQueueItem.transform.SetParent(aqManager.ParentPrefab.transform, false);
-                //NewQueueItem.GetComponent<UIActionElement>().eventOrigin = this.eventOrigin;
-            }
-        }
-       
-    }*/
     public void RequestUnitClick()
 	{
 	  

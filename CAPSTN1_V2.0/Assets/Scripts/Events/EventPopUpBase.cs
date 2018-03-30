@@ -19,10 +19,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
     public CityBase     cityOrign;
 
     public Text         turnsToResolve;
-
     
-
-
 	public GameObject	eventPanel;
 	public GameObject	eventPanelPrefab;
 	public GameObject 	RightClickPanelPrefab;
