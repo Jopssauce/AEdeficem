@@ -29,6 +29,7 @@ public class EventManager : MonoBehaviour
 
     public EventPopUpBase selectedEvent;
     public bool isChainEvent;
+	public int maxEvents = 8;
 
     void Awake()
 	{
@@ -50,9 +51,6 @@ public class EventManager : MonoBehaviour
 
     void Start()
     {
-        //EventPanel = Instantiate(EventsPanelPrefab) as GameObject;
-        //EventPanel.transform.SetParent(newCanvas.transform, false);
-        //EventPanel.SetActive(false);
         eventOutliner = GameObject.FindGameObjectWithTag("Event Outliner");
         if (TurnManager.instance != null)
         {
@@ -67,7 +65,7 @@ public class EventManager : MonoBehaviour
 		int num 	= Random.Range(0 , RegionManagerInstance.regionList.Count);
 		int spawnNum = Random.Range(0 ,  RegionManagerInstance.regionList[num].spawnAreas.Count);
 		SpawnArea spawnArea = RegionManagerInstance.regionList[num].spawnAreas[spawnNum].GetComponent<SpawnArea>();
-		if (eventTracker.Count != 8 && spawnArea.eventOrigin == null) 
+		if (eventTracker.Count != maxEvents && spawnArea.eventOrigin == null) 
 		{
 			GameObject newButton = null;
 			if (eventType == EventData.EventType.Standard) 
