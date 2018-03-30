@@ -1334,6 +1334,7 @@ MonoBehaviour:
   tutorialSteps:
   - {fileID: 114358139900332250, guid: 32e6781342d168d40b3df2f18369e5e1, type: 2}
   - {fileID: 114343632678826710, guid: 11b5715c66ea74f48a356a9c4c43fccd, type: 2}
+  - {fileID: 114514673838244934, guid: 6dd19a9dda018874e8b38c12115be6ed, type: 2}
   - {fileID: 114563601012575768, guid: 9735bb347eb3b704985bdba06de2ac1e, type: 2}
   - {fileID: 114198129688926550, guid: 61e9723d9d9905544b9d66bf4ea8f840, type: 2}
   - {fileID: 114430620209184364, guid: 85ee458448fa3da42aea36e1b25d894e, type: 2}
@@ -7156,7 +7157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.884}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8646,7 +8647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
   m_SizeDelta: {x: 275, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2131216239

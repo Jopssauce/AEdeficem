@@ -60,6 +60,7 @@ public class EventManager : MonoBehaviour
 
 	public void SpawnEvent(EventData.EventTier eventTier, EventData.EventType eventType)
     {
+
         RegionManagerInstance = RegionManager.instance;
 
 		int num 	= Random.Range(0 , RegionManagerInstance.regionList.Count);
