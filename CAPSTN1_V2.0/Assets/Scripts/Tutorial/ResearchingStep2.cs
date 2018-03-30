@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResearchStep : TutorialStep {
+public class ResearchingStep2 : TutorialStep {
 
 	public override void nextButtonClick()
 	{
@@ -11,6 +11,4 @@ public class ResearchStep : TutorialStep {
 			tutorialUI.NextStep.Invoke();
 		}
 	}
-	 
-	
 }

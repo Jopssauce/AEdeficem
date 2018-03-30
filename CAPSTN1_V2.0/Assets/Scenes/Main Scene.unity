@@ -1314,15 +1314,13 @@ GameObject:
   - component: {fileID: 392909608}
   - component: {fileID: 392909610}
   - component: {fileID: 392909611}
-  - component: {fileID: 392909612}
-  - component: {fileID: 392909609}
   m_Layer: 5
   m_Name: Tutorial Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &392909608
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1342,22 +1340,6 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: -6}
   m_SizeDelta: {x: -675.5, y: -307.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &392909609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 392909607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!222 &392909610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1377,7 +1359,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialSteps:
   - {fileID: 114358139900332250, guid: 32e6781342d168d40b3df2f18369e5e1, type: 2}
-  - {fileID: 114343632678826710, guid: 11b5715c66ea74f48a356a9c4c43fccd, type: 2}
   - {fileID: 114514673838244934, guid: 6dd19a9dda018874e8b38c12115be6ed, type: 2}
   - {fileID: 114563601012575768, guid: 9735bb347eb3b704985bdba06de2ac1e, type: 2}
   - {fileID: 114198129688926550, guid: 61e9723d9d9905544b9d66bf4ea8f840, type: 2}
@@ -1385,6 +1366,8 @@ MonoBehaviour:
   - {fileID: 114198129688926550, guid: 61e9723d9d9905544b9d66bf4ea8f840, type: 2}
   - {fileID: 114138096417667964, guid: ba06d44c8eb52424eb624b3c3ac434cf, type: 2}
   - {fileID: 114061389215083848, guid: b1b772bc0d4831d4e871163d51c33166, type: 2}
+  - {fileID: 114996486776496910, guid: ef6be003ab2d35248912035dad29d182, type: 2}
+  - {fileID: 114907822522994816, guid: 11b5715c66ea74f48a356a9c4c43fccd, type: 2}
   startTutorial: 0
   isTutorialFinished: 0
   stepCounter: 0
@@ -1396,26 +1379,6 @@ MonoBehaviour:
   mainUI: {fileID: 474264067}
   startPanel: {fileID: 1481110531}
   currentTutorialStepPanel: {fileID: 0}
---- !u!223 &392909612
-Canvas:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 392909607}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 2
-  m_TargetDisplay: 0
 --- !u!1 &394307070
 GameObject:
   m_ObjectHideFlags: 0
@@ -4075,8 +4038,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366422060424752, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114407034268546702, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
+        type: 2}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 392909611}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
   m_IsPrefabParent: 0
@@ -4967,7 +4935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1161141668562726, guid: 31887d39b26bd2d4287aa481f6058bf7, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31887d39b26bd2d4287aa481f6058bf7, type: 2}

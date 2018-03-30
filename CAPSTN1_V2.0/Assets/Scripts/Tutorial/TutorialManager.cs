@@ -51,6 +51,7 @@ public class TutorialManager : MonoBehaviour {
 			isTutorialFinished = true;
 			eventManager.maxEvents = 8;
 		}
+		//transform.SetAsLastSibling();
 	}
 	
 	public void StartTutorial()

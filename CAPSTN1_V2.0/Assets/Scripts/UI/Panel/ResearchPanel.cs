@@ -20,6 +20,7 @@ public class ResearchPanel : MonoBehaviour
 
 	public ResearchManager researchManager;
 	public TurnManager turnManager;
+	public TutorialManager tutorialManager;
 
 	public NotificationPanel notificationPanel;
 
@@ -35,6 +36,7 @@ public class ResearchPanel : MonoBehaviour
 		{
 			turnManager = TurnManager.instance;
 		}
+	
 		foreach (var item in disasterPrepButtons)
 		{
 			if (item.GetComponent<ResearchButton>())
@@ -88,6 +90,17 @@ public class ResearchPanel : MonoBehaviour
 		
 		researchManager.selectedButton = button;
 		SetButtonInteractable();
+		if (tutorialManager != null)
+		{
+			if (tutorialManager.currentTutorialStepPanel != null)
+			{
+				if (tutorialManager.currentTutorialStepPanel.GetComponent<ResearchStep>())
+				{
+					tutorialManager.currentTutorialStepPanel.GetComponent<ResearchStep>().isStepDone = true;
+					tutorialManager.currentTutorialStepPanel.GetComponent<ResearchStep>().nextButtonClick();
+				}
+			}           
+		}
 	}
 
 	public void DeselectResearch()
@@ -198,8 +211,21 @@ public class ResearchPanel : MonoBehaviour
 
 	public void exitClick()
 	{
+		if (tutorialManager != null)
+		{
+			if (tutorialManager.currentTutorialStepPanel != null)
+			{
+				if (tutorialManager.currentTutorialStepPanel.GetComponent<ResearchingStep2>())
+				{
+					tutorialManager.currentTutorialStepPanel.GetComponent<ResearchingStep2>().isStepDone = true;
+					tutorialManager.currentTutorialStepPanel.GetComponent<ResearchingStep2>().nextButtonClick();
+				}
+			}           
+		}
 		this.gameObject.SetActive(false);
 		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
+
+
 
 }

@@ -62,7 +62,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1739783923514940
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,7 +81,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1869801316358014
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,8 +92,8 @@ GameObject:
   - component: {fileID: 224353715518456726}
   - component: {fileID: 222959744547572512}
   - component: {fileID: 114848817890133752}
-  - component: {fileID: 114343632678826710}
   - component: {fileID: 114116606263023412}
+  - component: {fileID: 114907822522994816}
   m_Layer: 5
   m_Name: IntroCities
   m_TagString: Untagged
@@ -210,30 +210,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114343632678826710
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1869801316358014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ae58cde7032c240a086d5b40cecb67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backgroundPanel: {fileID: 1931056596542192}
-  blockerPanel: {fileID: 0}
-  tutorialUI: {fileID: 0}
-  turnManager: {fileID: 0}
-  pointer: {fileID: 0}
-  textBox: {fileID: 114047673232028400}
-  nextButton: {fileID: 114865431834047934}
-  uiPos: {x: -102, y: -268, z: 0}
-  isStepDone: 0
-  stepNumber: 0
-  tutorialDescription: "Next are the cities. Keep them alive by resolving events and
-    transfering resources between them.The regions of these cities lose quality every
-    turn. <color=yellow>Click on a city for more information.</color> \n"
 --- !u!114 &114789867892219270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -365,6 +341,30 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114907822522994816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1869801316358014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b628cfcbfbf6a274b971385bb649bee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundPanel: {fileID: 1931056596542192}
+  blockerPanel: {fileID: 0}
+  tutorialUI: {fileID: 0}
+  turnManager: {fileID: 0}
+  pointer: {fileID: 0}
+  textBox: {fileID: 114047673232028400}
+  nextButton: {fileID: 114865431834047934}
+  uiPos: {x: -102, y: -268, z: 0}
+  isStepDone: 0
+  stepNumber: 0
+  tutorialDescription: Next are the cities. Keep them alive by resolving events and
+    transfering resources between them.The regions of these cities lose quality every
+    turn. <color=yellow>Click on a city for more information.</color>
 --- !u!222 &222413476306717814
 CanvasRenderer:
   m_ObjectHideFlags: 1

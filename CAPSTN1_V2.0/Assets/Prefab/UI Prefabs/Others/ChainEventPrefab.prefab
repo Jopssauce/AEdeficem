@@ -64,6 +64,8 @@ MonoBehaviour:
   offset: 0
   randPos: {x: 0, y: 0, z: 0}
   spawnArea: {fileID: 0}
+  worldPos: {x: 0, y: 0, z: 0}
+  uiPos: {x: 0, y: 0, z: 0}
 --- !u!114 &114446600389467276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,9 +137,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107d84b554bf0204c8af29b3fc20e9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventDataCopy: {fileID: 0}
   eventData: {fileID: 0}
   regionOrigin: {fileID: 0}
   turnsLeft: 0
+  isResolving: 0
   isResolved: 0
   eventWorldPos: {x: 0, y: 0, z: 0}
   timerSprites:
@@ -146,15 +150,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dae1476496ca6124ea01171c832635dd, type: 3}
   - {fileID: 21300000, guid: f76efb5a9a3146d4d98f16a2ae2a1b74, type: 3}
   - {fileID: 21300000, guid: f0e24e3f819ef6d4f9e5aacf7a4678eb, type: 3}
+  ResolvingSprite: {fileID: 0}
   cityOrign: {fileID: 0}
+  turnsToResolve: {fileID: 0}
   eventPanel: {fileID: 0}
   eventPanelPrefab: {fileID: 1032759389003268, guid: 691c287e4a1d37340806a189ee09387b,
     type: 2}
+  RightClickPanelPrefab: {fileID: 0}
   unit: {fileID: 0}
   resManager: {fileID: 0}
   eventManager: {fileID: 0}
   regionManager: {fileID: 0}
   turnManager: {fileID: 0}
+  tutorialManager: {fileID: 0}
   persistentEvents: []
   persistentEventPrefab: {fileID: 1851754591194924, guid: 8b9d2548fd92b89439b5c2117e175c16,
     type: 2}

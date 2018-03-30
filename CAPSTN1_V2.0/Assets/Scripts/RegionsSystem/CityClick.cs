@@ -19,8 +19,20 @@ public class CityClick : MonoBehaviour {
 	{
 		if (!EventSystem.current.IsPointerOverGameObject ())
 		{
+			
 			if (Input.GetMouseButtonDown (0))
 			{
+				if (cityOrigin.tutorialManager != null)
+				{
+					if (cityOrigin.tutorialManager.currentTutorialStepPanel != null)
+					{
+						if (cityOrigin.tutorialManager.currentTutorialStepPanel.GetComponent<CitiesStep>())
+						{
+							cityOrigin.tutorialManager.currentTutorialStepPanel.GetComponent<CitiesStep>().isStepDone = true;
+							cityOrigin.tutorialManager.currentTutorialStepPanel.GetComponent<CitiesStep>().nextButtonClick();
+						}
+					}           
+				}
 				Debug.Log (cityOrigin.name);
 				cityOrigin.SpawnStatsPanel ();
 				FindObjectOfType<AudioManager> ().Play ("Generic");
