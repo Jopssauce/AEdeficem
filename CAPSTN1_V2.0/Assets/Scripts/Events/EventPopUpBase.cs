@@ -83,6 +83,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 		eventPanel.SetActive(true);
 		eventPanel.transform.SetAsLastSibling();
         this.GetComponent<Button>().interactable = false;
+		FindObjectOfType<AudioManager> ().Play ("Generic");
     }
 
 	public virtual void AssignButtons()

@@ -142,6 +142,7 @@ public class MainUI : MonoBehaviour
 
     public void toggleRegionUnderlayDisplay()
     {
+		FindObjectOfType<AudioManager> ().Play ("Generic");
         foreach (var underlay in regionUnderlayDisplayList)
         {
             if (underlay.activeInHierarchy == false)
@@ -172,5 +173,6 @@ public class MainUI : MonoBehaviour
         researchPanel.transform.SetParent(this.transform, false);
         researchPanel.transform.SetAsLastSibling();
         researchPanel.SetActive(true);
+		FindObjectOfType<AudioManager> ().Play ("Generic");
     }
 }
