@@ -7,17 +7,12 @@ public class MenuOption : MonoBehaviour {
 
 	public Slider[] VolumeSliders;
 
-	void Awake()
-	{
-		DontDestroyOnLoad (gameObject);
-	}
-
 	void Start()
 	{
-		FindObjectOfType<AudioManager> ().Sounds [3].Source.volume = VolumeSliders[0].value;
-		FindObjectOfType<AudioManager> ().Sounds [0].Source.volume = VolumeSliders[1].value;
-		FindObjectOfType<AudioManager> ().Sounds [1].Source.volume = VolumeSliders[1].value;
-		FindObjectOfType<AudioManager> ().Sounds [2].Source.volume = VolumeSliders[1].value;
+		VolumeSliders[0].value = FindObjectOfType<AudioManager> ().Sounds [3].Source.volume;
+		VolumeSliders[1].value = FindObjectOfType<AudioManager> ().Sounds [0].Source.volume;
+		VolumeSliders[1].value = FindObjectOfType<AudioManager> ().Sounds [1].Source.volume;
+		VolumeSliders[1].value = FindObjectOfType<AudioManager> ().Sounds [2].Source.volume;
 	}
 
 	public void SetMusicVolume()

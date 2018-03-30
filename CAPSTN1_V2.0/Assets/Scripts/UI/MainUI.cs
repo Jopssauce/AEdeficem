@@ -20,7 +20,7 @@ public class MainUI : MonoBehaviour
 
     public Button TurnButton;
     public Button researchButton;
-	public Button gameExitButton;
+	public GameObject gameExitButton;
 
     public UnityEvent EventSelected;
     public UnityEvent EventClosed;
@@ -101,11 +101,11 @@ public class MainUI : MonoBehaviour
 			isEscapeMenu = !isEscapeMenu;
 			if (isEscapeMenu == true) 
 			{
-				gameExitButton.gameObject.SetActive (true);
+				gameExitButton.SetActive (true);
 			}
 			if (isEscapeMenu == false) 
 			{
-				gameExitButton.gameObject.SetActive (false);
+				gameExitButton.SetActive (false);
 			}
 		}
 	}
