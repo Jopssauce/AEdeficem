@@ -8068,6 +8068,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114016465967760302, guid: 45c48b181d55739499da882deff94aa3,
+        type: 2}
+      propertyPath: VolumeSliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 2062683419}
+    - target: {fileID: 114016465967760302, guid: 45c48b181d55739499da882deff94aa3,
+        type: 2}
+      propertyPath: VolumeSliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 2062683418}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45c48b181d55739499da882deff94aa3, type: 2}
   m_IsPrefabParent: 0
@@ -8637,10 +8647,27 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 229
       objectReference: {fileID: 0}
+    - target: {fileID: 114330644702739168, guid: 75b18a0b93b224f4ab3ff3370b866f79,
+        type: 2}
+      propertyPath: m_Text
+      value: Quit
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114617776517379604, guid: 75b18a0b93b224f4ab3ff3370b866f79, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 75b18a0b93b224f4ab3ff3370b866f79, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2062683418 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114745086916851818, guid: 75b18a0b93b224f4ab3ff3370b866f79,
+    type: 2}
+  m_PrefabInternal: {fileID: 2062683417}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &2062683419 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114630523560450520, guid: 75b18a0b93b224f4ab3ff3370b866f79,
+    type: 2}
+  m_PrefabInternal: {fileID: 2062683417}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &2105874871
 GameObject:
   m_ObjectHideFlags: 0
