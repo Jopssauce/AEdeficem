@@ -11,9 +11,12 @@ public class EventContent : MonoBehaviour, IPointerClickHandler  {
 	public int 			turnsLeft;
 	public Vector3 		eventWorldPos;
 	public Vector3		eventPosToCamera;
+
+	public TutorialManager  tutorialManager;
 	// Use this for initialization
 	void Start () 
 	{
+		tutorialManager = eventOrigin.tutorialManager;
 		eventTitle.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.eventName;
 		this.GetComponent<DisplayResourceCost>().eventOrigin = this.eventOrigin;
 	}
@@ -39,9 +42,19 @@ public class EventContent : MonoBehaviour, IPointerClickHandler  {
 	#region IPointerClickHandler implementation
 	public void OnPointerClick(PointerEventData eventData)
     {
-		Debug.Log("Clicked");
 		Instantiate(particleEffect, eventWorldPos, particleEffect.transform.rotation);
 		Camera.main.transform.position = eventPosToCamera;
+		 if (tutorialManager != null)
+		{
+			if (tutorialManager.currentTutorialStepPanel != null)
+			{
+				if (tutorialManager.currentTutorialStepPanel.GetComponent<EventOutlinerStep>())
+				{
+					tutorialManager.currentTutorialStepPanel.GetComponent<EventOutlinerStep>().isStepDone = true;
+					tutorialManager.currentTutorialStepPanel.GetComponent<EventOutlinerStep>().nextButtonClick();
+				}
+			}           
+		}
     }
 	#endregion
 }

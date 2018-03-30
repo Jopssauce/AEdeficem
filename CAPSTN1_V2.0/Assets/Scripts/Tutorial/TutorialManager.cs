@@ -19,6 +19,7 @@ public class TutorialManager : MonoBehaviour {
 	public TutorialStep currentTutorialStepPanel;
 
 	TurnManager turnManager;
+	EventManager eventManager;
 
 
 	// Use this for initialization
@@ -28,6 +29,11 @@ public class TutorialManager : MonoBehaviour {
 		{
 			turnManager = TurnManager.instance;
 		}
+		if (EventManager.instance != null)
+		{
+			eventManager = EventManager.instance;
+		}
+		eventManager.maxEvents = 1;
 		stepCounter = 0;
 		transform.SetAsLastSibling();
 		turnManager.EndTurnEvent.AddListener(transform.SetAsLastSibling);
@@ -43,6 +49,7 @@ public class TutorialManager : MonoBehaviour {
 		if (stepCounter >= tutorialSteps.Count)
 		{
 			isTutorialFinished = true;
+			eventManager.maxEvents = 8;
 		}
 	}
 	
@@ -68,5 +75,11 @@ public class TutorialManager : MonoBehaviour {
 			currentTutorialStepPanel.tutorialUI = this;
 		}
 		
+	}
+
+	void OnDestroy()
+	{
+		isTutorialFinished = true;
+		eventManager.maxEvents = 8;
 	}
 }
