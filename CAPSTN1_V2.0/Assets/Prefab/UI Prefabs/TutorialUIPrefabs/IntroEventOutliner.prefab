@@ -172,8 +172,8 @@ MonoBehaviour:
   uiPos: {x: -263, y: 191, z: 0}
   isStepDone: 0
   stepNumber: 0
-  tutorialDescription: This is the Event Outliner. Click on an event to go to its
-    location.
+  tutorialDescription: This is the Event Outliner. <color=yellow>Click on an event
+    in the Event Outliner</color> to go to its location.
 --- !u!114 &114592530759416614
 MonoBehaviour:
   m_ObjectHideFlags: 1

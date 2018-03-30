@@ -1340,6 +1340,7 @@ MonoBehaviour:
   - {fileID: 114430620209184364, guid: 85ee458448fa3da42aea36e1b25d894e, type: 2}
   - {fileID: 114198129688926550, guid: 61e9723d9d9905544b9d66bf4ea8f840, type: 2}
   - {fileID: 114138096417667964, guid: ba06d44c8eb52424eb624b3c3ac434cf, type: 2}
+  - {fileID: 114061389215083848, guid: b1b772bc0d4831d4e871163d51c33166, type: 2}
   startTutorial: 0
   isTutorialFinished: 0
   stepCounter: 0
@@ -4219,74 +4220,13 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1366422060424752, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1269751556251944, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987404775275572, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1448793682997736, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1365280929372118, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1316707631891458, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552560877463004, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1351616956901424, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736314084647924, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1672678192224952, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1021827287090576, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1388897028356254, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1140166184491724, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
+    - target: {fileID: 223690190698598586, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
+        type: 2}
+      propertyPath: m_OverrideSorting
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114828909033253774, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114870509357848578, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114008735877007148, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114503186745468072, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114332912282505028, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114958810575143608, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114780196633048960, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114722563195905338, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114684012457949098, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114336119913175954, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114938906839185698, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114628874916593094, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114053024294277208, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114534054159959586, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114295601362306416, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
+    - {fileID: 223690190698598586, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1100536029
@@ -4508,7 +4448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175, y: 20}
+  m_AnchoredPosition: {x: -30, y: 294}
   m_SizeDelta: {x: 1878, y: 999.69995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1181835267
@@ -8602,22 +8542,22 @@ MonoBehaviour:
     SoundEffect: {fileID: 8300000, guid: 2eba81ea1671250488c30d6f907b3eba, type: 3}
     Source: {fileID: 0}
     Loop: 0
-    Volume: 0.7
+    Volume: 0.3
   - name: Generic
     SoundEffect: {fileID: 8300000, guid: 23a8d48073abfce4ba7abeeec0b61e8e, type: 3}
     Source: {fileID: 0}
     Loop: 0
-    Volume: 0.7
+    Volume: 0.3
   - name: Research
     SoundEffect: {fileID: 8300000, guid: e27b42e2e7c8c9846868819ac5b5e96d, type: 3}
     Source: {fileID: 0}
     Loop: 0
-    Volume: 0.7
+    Volume: 0.3
   - name: Theme
     SoundEffect: {fileID: 8300000, guid: 2f857e4d4e4535b489bfc31466d24457, type: 3}
     Source: {fileID: 0}
     Loop: 0
-    Volume: 0.3
+    Volume: 0.1
 --- !u!4 &2091389825
 Transform:
   m_ObjectHideFlags: 0
