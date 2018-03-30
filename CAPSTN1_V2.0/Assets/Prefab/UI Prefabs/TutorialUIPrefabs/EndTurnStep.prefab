@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 222969723898082794}
   - component: {fileID: 114996955441409976}
   - component: {fileID: 114198129688926550}
+  - component: {fileID: 114335198903454080}
   m_Layer: 5
   m_Name: EndTurnStep
   m_TagString: Untagged
@@ -198,6 +199,20 @@ MonoBehaviour:
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: Now end the turn
+--- !u!114 &114335198903454080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1395893317096156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 1, b: 0.91724133, a: 0.5}
+  m_EffectDistance: {x: 8, y: 8}
+  m_UseGraphicAlpha: 1
 --- !u!114 &114472303205073926
 MonoBehaviour:
   m_ObjectHideFlags: 1

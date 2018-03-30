@@ -1340,6 +1340,7 @@ MonoBehaviour:
   - {fileID: 114430620209184364, guid: 85ee458448fa3da42aea36e1b25d894e, type: 2}
   - {fileID: 114198129688926550, guid: 61e9723d9d9905544b9d66bf4ea8f840, type: 2}
   - {fileID: 114138096417667964, guid: ba06d44c8eb52424eb624b3c3ac434cf, type: 2}
+  - {fileID: 114061389215083848, guid: b1b772bc0d4831d4e871163d51c33166, type: 2}
   startTutorial: 0
   isTutorialFinished: 0
   stepCounter: 0
@@ -4508,7 +4509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175, y: 20}
+  m_AnchoredPosition: {x: -29, y: 263.0478}
   m_SizeDelta: {x: 1878, y: 999.69995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1181835267
@@ -5173,10 +5174,6 @@ Prefab:
     - target: {fileID: 4050471792356464, guid: 31887d39b26bd2d4287aa481f6058bf7, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1161141668562726, guid: 31887d39b26bd2d4287aa481f6058bf7, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31887d39b26bd2d4287aa481f6058bf7, type: 2}

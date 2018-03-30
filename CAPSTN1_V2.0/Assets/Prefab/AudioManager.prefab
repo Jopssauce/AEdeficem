@@ -56,19 +56,19 @@ MonoBehaviour:
     SoundEffect: {fileID: 8300000, guid: 2eba81ea1671250488c30d6f907b3eba, type: 3}
     Source: {fileID: 0}
     Loop: 0
-    Volume: 0.7
+    Volume: 0.3
   - name: Generic
     SoundEffect: {fileID: 8300000, guid: 23a8d48073abfce4ba7abeeec0b61e8e, type: 3}
     Source: {fileID: 0}
     Loop: 0
-    Volume: 0.7
+    Volume: 0.3
   - name: Research
     SoundEffect: {fileID: 8300000, guid: e27b42e2e7c8c9846868819ac5b5e96d, type: 3}
     Source: {fileID: 0}
     Loop: 0
-    Volume: 0.7
+    Volume: 0.3
   - name: Theme
     SoundEffect: {fileID: 8300000, guid: 2f857e4d4e4535b489bfc31466d24457, type: 3}
     Source: {fileID: 0}
     Loop: 1
-    Volume: 0.3
+    Volume: 0.1
