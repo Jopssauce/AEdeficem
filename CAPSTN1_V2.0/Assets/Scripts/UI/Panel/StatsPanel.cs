@@ -30,6 +30,8 @@ public class StatsPanel : MonoBehaviour
 	private TurnManager turnManager;
 
 	public RegionUnderlayDisplay regionUnderlayDisplay;
+
+	public TutorialManager tutorialManager;
 	
 	public void Start()
 	{
@@ -37,6 +39,7 @@ public class StatsPanel : MonoBehaviour
 		{
 			turnManager = TurnManager.instance;
 		}
+		tutorialManager = cityOrigin.tutorialManager;
 		turnManager.EndTurnEvent.AddListener(SetUIText);
 		cityOrigin.AdjustedCityResource.AddListener(SetUIText);
 		SetUIText();
@@ -57,6 +60,17 @@ public class StatsPanel : MonoBehaviour
 	}
 	public void transferButtonClick()
 	{
+		if (tutorialManager != null)
+		{
+			if (tutorialManager.currentTutorialStepPanel != null)
+			{
+				if (tutorialManager.currentTutorialStepPanel.GetComponent<TransferStep>())
+				{
+					tutorialManager.currentTutorialStepPanel.GetComponent<TransferStep>().isStepDone = true;
+					tutorialManager.currentTutorialStepPanel.GetComponent<TransferStep>().nextButtonClick();
+				}
+			}           
+		}
 		transferPanel = Instantiate(transferPanelPrefab);
 		transferPanel.GetComponent<TransferPanel>().cityOrigin = this.cityOrigin;
 		transferPanel.GetComponent<TransferPanel>().regionOrigin = regionOrigin;

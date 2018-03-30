@@ -206,7 +206,8 @@ MonoBehaviour:
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: Thats it! The goal of the game is to keep all the cities from
-    reaching the <color=red>REDZONE</color>. Click on finish to end the tutorial
+    reaching the <color=red>REDZONE</color>. <color=yellow>Click on finish to end
+    the tutorial.</color>
 --- !u!114 &114723470530777492
 MonoBehaviour:
   m_ObjectHideFlags: 1

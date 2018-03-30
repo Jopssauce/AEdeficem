@@ -29,6 +29,7 @@ public class TransferPanel : MonoBehaviour
 	RegionManager regionManager;
 	ResourceManager resourceManager;
 	TurnManager turnManager;
+	TutorialManager tutorialManager;
 	
 
 	void Start()
@@ -49,6 +50,7 @@ public class TransferPanel : MonoBehaviour
 		{
 			turnManager = TurnManager.instance;
 		}
+		tutorialManager = cityOrigin.tutorialManager;
 		turnManager.EndTurnEvent.AddListener(SetUIText);
 		regionListCopy = new List<RegionBase>(regionManager.regionList);
 		regionListCopy.Remove(regionOrigin);
@@ -66,6 +68,17 @@ public class TransferPanel : MonoBehaviour
     {
 		if (isEnoughRes() == true)
 		{
+			if (tutorialManager != null)
+			{
+				if (tutorialManager.currentTutorialStepPanel != null)
+				{
+					if (tutorialManager.currentTutorialStepPanel.GetComponent<TransferStep2>())
+					{
+						tutorialManager.currentTutorialStepPanel.GetComponent<TransferStep2>().isStepDone = true;
+						tutorialManager.currentTutorialStepPanel.GetComponent<TransferStep2>().nextButtonClick();
+					}
+				}           
+			}
 			cityOrigin.SpawnResourceSender(regionListCopy[dropdown.value].cityOrigin, int.Parse(waterInput.text), int.Parse(foodInput.text), int.Parse(powerInput.text));
         	resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 2);
 			SetUIText();

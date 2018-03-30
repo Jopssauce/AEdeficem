@@ -1367,7 +1367,12 @@ MonoBehaviour:
   - {fileID: 114138096417667964, guid: ba06d44c8eb52424eb624b3c3ac434cf, type: 2}
   - {fileID: 114061389215083848, guid: b1b772bc0d4831d4e871163d51c33166, type: 2}
   - {fileID: 114996486776496910, guid: ef6be003ab2d35248912035dad29d182, type: 2}
+  - {fileID: 114198129688926550, guid: 61e9723d9d9905544b9d66bf4ea8f840, type: 2}
   - {fileID: 114907822522994816, guid: 11b5715c66ea74f48a356a9c4c43fccd, type: 2}
+  - {fileID: 114660077976452314, guid: 219dac4b9cf5e89479586c1de4eaf7fb, type: 2}
+  - {fileID: 114542154294143888, guid: d96d72237b1d1864d9b5e92723e39b55, type: 2}
+  - {fileID: 114198129688926550, guid: 61e9723d9d9905544b9d66bf4ea8f840, type: 2}
+  - {fileID: 114466452411987544, guid: e30955fc298a8d34bbf732601afd10be, type: 2}
   startTutorial: 0
   isTutorialFinished: 0
   stepCounter: 0
@@ -4038,7 +4043,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366422060424752, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114407034268546702, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
         type: 2}
