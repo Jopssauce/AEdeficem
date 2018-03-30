@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 222959744547572512}
   - component: {fileID: 114848817890133752}
   - component: {fileID: 114343632678826710}
+  - component: {fileID: 114116606263023412}
   m_Layer: 5
   m_Name: IntroCities
   m_TagString: Untagged
@@ -150,6 +151,20 @@ MonoBehaviour:
     spend per turn.
 
 '
+--- !u!114 &114116606263023412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1869801316358014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 1, b: 0.91724133, a: 0.5}
+  m_EffectDistance: {x: 8, y: 8}
+  m_UseGraphicAlpha: 1
 --- !u!114 &114285026352529742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,8 +184,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8740161baae6f814bbc2f6917f882c49, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -191,6 +206,7 @@ MonoBehaviour:
   backgroundPanel: {fileID: 1931056596542192}
   blockerPanel: {fileID: 0}
   tutorialUI: {fileID: 0}
+  turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114047673232028400}
   nextButton: {fileID: 114865431834047934}
@@ -199,7 +215,7 @@ MonoBehaviour:
   stepNumber: 0
   tutorialDescription: "Next are the cities. Keep them alive by resolving events and
     transfering resources between them.The regions of these cities lose quality every
-    turn. Click on a city for more information. \n"
+    turn. <color=yellow>Click on a city for more information.</color> \n"
 --- !u!114 &114789867892219270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -306,7 +322,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -315,7 +331,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 7e9cbeec1ab43db4e8c69167838efdc4,
+      type: 3}
     m_PressedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
