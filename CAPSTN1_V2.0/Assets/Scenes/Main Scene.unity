@@ -1288,6 +1288,8 @@ GameObject:
   - component: {fileID: 392909608}
   - component: {fileID: 392909610}
   - component: {fileID: 392909611}
+  - component: {fileID: 392909612}
+  - component: {fileID: 392909609}
   m_Layer: 5
   m_Name: Tutorial Panel
   m_TagString: Untagged
@@ -1314,6 +1316,22 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: -6}
   m_SizeDelta: {x: -675.5, y: -307.9}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &392909609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392909607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!222 &392909610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1352,6 +1370,26 @@ MonoBehaviour:
   mainUI: {fileID: 474264067}
   startPanel: {fileID: 1481110531}
   currentTutorialStepPanel: {fileID: 0}
+--- !u!223 &392909612
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392909607}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &394307070
 GameObject:
   m_ObjectHideFlags: 0
@@ -4224,70 +4262,7 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1269751556251944, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987404775275572, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1448793682997736, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1365280929372118, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1316707631891458, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552560877463004, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1351616956901424, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736314084647924, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1672678192224952, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1021827287090576, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1388897028356254, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    - target: {fileID: 1140166184491724, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_TagString
-      value: ResearchTag
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114828909033253774, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114870509357848578, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114008735877007148, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114503186745468072, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114332912282505028, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114958810575143608, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114780196633048960, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114722563195905338, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114684012457949098, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114336119913175954, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114938906839185698, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114628874916593094, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114053024294277208, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114534054159959586, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-    - {fileID: 114295601362306416, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1100536029
@@ -6358,6 +6333,8 @@ GameObject:
   - component: {fileID: 1525296951}
   - component: {fileID: 1525296950}
   - component: {fileID: 1525296949}
+  - component: {fileID: 1525296953}
+  - component: {fileID: 1525296952}
   m_Layer: 5
   m_Name: Event Outliner
   m_TagString: Untagged
@@ -6451,6 +6428,42 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1525296952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1525296947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &1525296953
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1525296947}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &1546747176
 GameObject:
   m_ObjectHideFlags: 0
