@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour {
 			s.Source = gameObject.AddComponent<AudioSource> ();
 			s.Source.clip = s.SoundEffect;
 			s.Source.loop = s.Loop;
+			// this is to help jops not get heart attack
 			s.Source.volume = s.Volume;
 		}
 	}
