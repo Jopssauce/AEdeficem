@@ -61,7 +61,7 @@ public class ResearchButton : MonoBehaviour
 		
 		
 		researchPanel.SetButtonInteractable();
-		
+		FindObjectOfType<AudioManager> ().Play ("Research");
 	}
 
 

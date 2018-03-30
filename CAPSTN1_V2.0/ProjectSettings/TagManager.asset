@@ -7,6 +7,8 @@ TagManager:
   - Region
   - Event Outliner
   - Main UI
+  - End Turn
+  - ResearchTag
   layers:
   - Default
   - TransparentFX

@@ -14,11 +14,13 @@ public class EventReader : EventPanel
 	{
 		eventManager.IgnoredEvent.Invoke ();
 		eventOrigin.GetComponent<EventPopUpBase> ().RefundEvent ();
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
 	public void resolveClick()
 	{
 		eventManager.ResolvedEvent.Invoke ();
 		eventOrigin.GetComponent<EventPopUpBase> ().ResolveEvent ();
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
 
 

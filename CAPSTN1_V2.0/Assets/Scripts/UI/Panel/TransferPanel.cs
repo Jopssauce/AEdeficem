@@ -71,6 +71,7 @@ public class TransferPanel : MonoBehaviour
 			SetUIText();
 			//Destroy (CityBase.blockerPanel);
 			Destroy(this.gameObject);   
+			FindObjectOfType<AudioManager> ().Play ("Generic");
 		}
         
     }

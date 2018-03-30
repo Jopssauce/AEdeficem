@@ -8,5 +8,6 @@ public class ShowMessage : MonoBehaviour {
 	public void ShowMessagePanel()
 	{
 		MessagePanel.SetActive(true);
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
 }

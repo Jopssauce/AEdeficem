@@ -35,6 +35,8 @@ public class TurnButton : MonoBehaviour {
 				turnManager.EndTurnEvent.Invoke();
 				}
 				turnManager.isTurnEnded = true;
+
+			FindObjectOfType<AudioManager>().Play ("EndTurn");
 			//}
 			
 		}

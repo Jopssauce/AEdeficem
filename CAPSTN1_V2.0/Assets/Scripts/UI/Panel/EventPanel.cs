@@ -52,7 +52,7 @@ public class EventPanel : MonoBehaviour
     }*/
     public void RequestUnitClick()
 	{
-	  
+	   FindObjectOfType<AudioManager> ().Play ("Generic");
        eventOrigin.SpawnUnit();
     }
 

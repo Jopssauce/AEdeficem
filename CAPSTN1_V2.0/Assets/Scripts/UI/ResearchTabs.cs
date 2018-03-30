@@ -14,6 +14,7 @@ public class ResearchTabs : MonoBehaviour, IPointerClickHandler {
 	public void OnPointerClick (PointerEventData eventData)
 	{
 		ShowTab ();
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
 	#endregion
 }

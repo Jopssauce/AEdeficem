@@ -62,5 +62,6 @@ public class StatsPanel : MonoBehaviour
 		transferPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
 		transferPanel.transform.SetAsLastSibling();
 		Destroy(this.gameObject);
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
 }
