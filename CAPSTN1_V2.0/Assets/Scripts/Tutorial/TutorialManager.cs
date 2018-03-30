@@ -51,6 +51,7 @@ public class TutorialManager : MonoBehaviour {
 		startTutorial = true;
 		Destroy(startPanel.gameObject);
 		NextStep.Invoke();
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
 
 	public void AdvanceStep()

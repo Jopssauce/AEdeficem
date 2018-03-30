@@ -53,6 +53,7 @@ public class StatsPanel : MonoBehaviour
 	public void exitClick()
 	{
 		Destroy(this.gameObject);
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
 	public void transferButtonClick()
 	{

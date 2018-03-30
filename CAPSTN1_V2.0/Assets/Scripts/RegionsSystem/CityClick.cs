@@ -23,6 +23,7 @@ public class CityClick : MonoBehaviour {
 			{
 				Debug.Log (cityOrigin.name);
 				cityOrigin.SpawnStatsPanel ();
+				FindObjectOfType<AudioManager> ().Play ("Generic");
 			}
 		}
 	}

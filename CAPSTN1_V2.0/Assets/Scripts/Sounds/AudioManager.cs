@@ -6,10 +6,6 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour {
 
-	//for now imma do dis
-	[HideInInspector]
-	public static AudioManager instance;
-
 	public SoundFX[] Sounds;
 	// Use this for initialization
 	void Awake () 
@@ -18,21 +14,14 @@ public class AudioManager : MonoBehaviour {
 		{
 			s.Source = gameObject.AddComponent<AudioSource> ();
 			s.Source.clip = s.SoundEffect;
-		}
-
-		if (instance == null) 
-		{
-			instance = this;	
-		}
-		else if (instance != this) 
-		{
-			Destroy (gameObject);
+			s.Source.loop = s.Loop;
+			s.Source.volume = s.Volume;
 		}
 	}
 
-	void OnDestroy()
+	void Start()
 	{
-		instance = null;
+		Play ("Theme");
 	}
 	
 	public void Play (string name)

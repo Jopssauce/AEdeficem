@@ -92,6 +92,7 @@ public class TransferPanel : MonoBehaviour
 		{
 			return true;
 		}
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 		
 	}
 

@@ -18,5 +18,6 @@ public class ExitButton : MonoBehaviour {
     public void Click()
 	{
 		Destroy(panel);
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
 }

@@ -11,4 +11,9 @@ public class SoundFX
 
 	[HideInInspector]
 	public AudioSource Source;
+
+	public bool Loop;
+
+	[Range(0.0f, 1.0f)]
+	public float Volume;
 }

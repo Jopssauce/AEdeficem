@@ -199,6 +199,7 @@ public class ResearchPanel : MonoBehaviour
 	public void exitClick()
 	{
 		this.gameObject.SetActive(false);
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
 
 }
