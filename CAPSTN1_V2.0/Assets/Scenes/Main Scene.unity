@@ -7223,6 +7223,7 @@ GameObject:
   - component: {fileID: 1623203452}
   - component: {fileID: 1623203455}
   - component: {fileID: 1623203454}
+  - component: {fileID: 1623203453}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -7248,6 +7249,20 @@ RectTransform:
   m_AnchoredPosition: {x: 14, y: -62}
   m_SizeDelta: {x: 595.2, y: 331.33}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1623203453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1623203451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.95862055, b: 1, a: 1}
+  m_EffectDistance: {x: 8, y: 8}
+  m_UseGraphicAlpha: 1
 --- !u!114 &1623203454
 MonoBehaviour:
   m_ObjectHideFlags: 0

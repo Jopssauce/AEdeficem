@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222034440743194220}
   - component: {fileID: 114723470530777492}
   - component: {fileID: 114466452411987544}
+  - component: {fileID: 114734299122186370}
   m_Layer: 5
   m_Name: IntroGoal
   m_TagString: Untagged
@@ -232,6 +233,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114734299122186370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143877274843260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 1, b: 0.91724133, a: 0.5}
+  m_EffectDistance: {x: 8, y: 8}
+  m_UseGraphicAlpha: 1
 --- !u!114 &114763605974883594
 MonoBehaviour:
   m_ObjectHideFlags: 1

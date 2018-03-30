@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 222719920802679530}
   - component: {fileID: 114652546516667306}
   - component: {fileID: 114514673838244934}
+  - component: {fileID: 114592530759416614}
   m_Layer: 5
   m_Name: IntroEventOutliner
   m_TagString: Untagged
@@ -173,6 +174,20 @@ MonoBehaviour:
   stepNumber: 0
   tutorialDescription: This is the Event Outliner. Click on an event to go to its
     location.
+--- !u!114 &114592530759416614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1745784680088858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 1, b: 0.91724133, a: 0.5}
+  m_EffectDistance: {x: 8, y: 8}
+  m_UseGraphicAlpha: 1
 --- !u!114 &114652546516667306
 MonoBehaviour:
   m_ObjectHideFlags: 1

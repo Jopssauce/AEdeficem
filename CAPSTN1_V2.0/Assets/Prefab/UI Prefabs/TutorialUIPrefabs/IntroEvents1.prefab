@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 222290582542925444}
   - component: {fileID: 114515328771587532}
   - component: {fileID: 114563601012575768}
+  - component: {fileID: 114241948987262848}
   m_Layer: 5
   m_Name: IntroEvents1
   m_TagString: Untagged
@@ -182,6 +183,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114241948987262848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715151759496444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 1, b: 0.91724133, a: 0.5}
+  m_EffectDistance: {x: 8, y: 8}
+  m_UseGraphicAlpha: 1
 --- !u!114 &114254021473631226
 MonoBehaviour:
   m_ObjectHideFlags: 1
