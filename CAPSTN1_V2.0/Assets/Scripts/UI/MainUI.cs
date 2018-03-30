@@ -158,7 +158,7 @@ public class MainUI : MonoBehaviour
 
     public void openResearchPanel()
     {
-        /*if (tutorialManager != null)
+        if (tutorialManager != null)
         {
             if (tutorialManager.currentTutorialStepPanel != null)
             {
@@ -168,7 +168,7 @@ public class MainUI : MonoBehaviour
                     tutorialManager.currentTutorialStepPanel.GetComponent<ResearchStep>().nextButtonClick();
                 }
             }           
-        }*/
+        }
        
         researchPanel.transform.SetParent(this.transform, false);
         researchPanel.transform.SetAsLastSibling();
