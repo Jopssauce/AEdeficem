@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class hide : MonoBehaviour, IPointerClickHandler
+public class OpenOptionsMenu : MonoBehaviour
 {
-	public void OnPointerClick (PointerEventData eventData)
+	public GameObject Menu;
+	public void OptionsButtonPressed()
 	{
 		FindObjectOfType<AudioManager> ().Play ("Generic");
+		Menu.SetActive (true);
 		this.transform.parent.gameObject.SetActive (false);
 	}
 }
