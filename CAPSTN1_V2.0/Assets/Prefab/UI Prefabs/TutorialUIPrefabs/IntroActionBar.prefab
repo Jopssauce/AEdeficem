@@ -163,14 +163,15 @@ MonoBehaviour:
   backgroundPanel: {fileID: 1153283024546502}
   blockerPanel: {fileID: 0}
   tutorialUI: {fileID: 0}
+  turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114399363168032538}
   nextButton: {fileID: 114812725147429104}
   uiPos: {x: -205, y: 419.4, z: 0}
   isStepDone: 0
   stepNumber: 0
-  tutorialDescription: 'This is the action bar. This shows the amount of action points
-    you can spend per turn.
+  tutorialDescription: 'This is the <color=cyan>action bar</color>. This shows the
+    amount of action points you can spend per turn.
 
 '
 --- !u!114 &114399363168032538

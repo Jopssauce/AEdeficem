@@ -191,6 +191,7 @@ MonoBehaviour:
   backgroundPanel: {fileID: 1931056596542192}
   blockerPanel: {fileID: 0}
   tutorialUI: {fileID: 0}
+  turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114047673232028400}
   nextButton: {fileID: 114865431834047934}
@@ -199,7 +200,7 @@ MonoBehaviour:
   stepNumber: 0
   tutorialDescription: "Next are the cities. Keep them alive by resolving events and
     transfering resources between them.The regions of these cities lose quality every
-    turn. Click on a city for more information. \n"
+    turn. <color=yellow>Click on a city for more information.</color> \n"
 --- !u!114 &114789867892219270
 MonoBehaviour:
   m_ObjectHideFlags: 1
