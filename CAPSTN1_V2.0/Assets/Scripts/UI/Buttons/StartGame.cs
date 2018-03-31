@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour {
-	public Text loading;
+	public GameObject loading;
 
 	public void Click()
     {
 		FindObjectOfType<AudioManager> ().Play ("Generic");
-		loading.gameObject.SetActive (true);
+		loading.SetActive (true);
 		this.transform.parent.gameObject.SetActive (false);
 		SceneManager.LoadSceneAsync("Main Scene");
     }
