@@ -8,6 +8,7 @@ public class Loader : MonoBehaviour {
 	public GameObject regionManager;
 	public GameObject turnManager;
 	public GameObject researchManager;
+	public GameObject audioManager;
 
 	void Awake()
 	{
