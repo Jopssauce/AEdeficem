@@ -105,5 +105,13 @@ public class RegionManager : MonoBehaviour
             PlayerPrefs.SetString("isVictory", isVictory.ToString());
             SceneManager.LoadScene("Victory Scene");
         }
+
+		if (turnManager.currentTurn % 10 == 0) 
+		{
+			foreach (RegionBase r in regionList) 
+			{
+				Debug.Log (r.GetComponent<RegionBase> ().regionQuality.ToString());
+			}
+		}
     }
 }
