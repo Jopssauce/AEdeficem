@@ -67,6 +67,7 @@ MonoBehaviour:
     Source: {fileID: 0}
     Loop: 0
     Volume: 0.3
+  Music:
   - name: Theme
     SoundEffect: {fileID: 8300000, guid: 2f857e4d4e4535b489bfc31466d24457, type: 3}
     Source: {fileID: 0}
