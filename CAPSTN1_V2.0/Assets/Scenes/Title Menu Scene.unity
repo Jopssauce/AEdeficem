@@ -622,6 +622,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114230473583474414, guid: 31887d39b26bd2d4287aa481f6058bf7,
+        type: 2}
+      propertyPath: Music.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114230473583474414, guid: 31887d39b26bd2d4287aa481f6058bf7,
+        type: 2}
+      propertyPath: Sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4050471792356464, guid: 31887d39b26bd2d4287aa481f6058bf7, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1241.759
@@ -653,6 +663,46 @@ Prefab:
     - target: {fileID: 4050471792356464, guid: 31887d39b26bd2d4287aa481f6058bf7, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114230473583474414, guid: 31887d39b26bd2d4287aa481f6058bf7,
+        type: 2}
+      propertyPath: Sounds.Array.data[3].name
+      value: Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 114230473583474414, guid: 31887d39b26bd2d4287aa481f6058bf7,
+        type: 2}
+      propertyPath: Sounds.Array.data[3].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f857e4d4e4535b489bfc31466d24457, type: 3}
+    - target: {fileID: 114230473583474414, guid: 31887d39b26bd2d4287aa481f6058bf7,
+        type: 2}
+      propertyPath: Sounds.Array.data[3].Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114230473583474414, guid: 31887d39b26bd2d4287aa481f6058bf7,
+        type: 2}
+      propertyPath: Sounds.Array.data[3].Volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114230473583474414, guid: 31887d39b26bd2d4287aa481f6058bf7,
+        type: 2}
+      propertyPath: Music.Array.data[0].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f857e4d4e4535b489bfc31466d24457, type: 3}
+    - target: {fileID: 114230473583474414, guid: 31887d39b26bd2d4287aa481f6058bf7,
+        type: 2}
+      propertyPath: Music.Array.data[0].name
+      value: Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 114230473583474414, guid: 31887d39b26bd2d4287aa481f6058bf7,
+        type: 2}
+      propertyPath: Music.Array.data[0].Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114230473583474414, guid: 31887d39b26bd2d4287aa481f6058bf7,
+        type: 2}
+      propertyPath: Music.Array.data[0].Volume
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31887d39b26bd2d4287aa481f6058bf7, type: 2}
