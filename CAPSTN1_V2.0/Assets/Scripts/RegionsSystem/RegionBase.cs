@@ -23,7 +23,7 @@ public class RegionBase : MonoBehaviour
         maxEvents = 0;
         MaxRegionResource 	= 6;
         maxRegionQuality    = 100;
-        regionQualityDecay  = 0.05f;
+        regionQualityDecay  = 0.01f;
         //regionResourceAmount = Mathf.RoundToInt( ( regionQuality / maxRegionQuality) * MaxRegionResource);
         material            = this.GetComponent<Renderer>().material;
         material.shader = Shader.Find("SFHologram/HologramShader");
