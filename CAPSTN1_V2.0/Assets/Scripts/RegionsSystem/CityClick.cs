@@ -9,6 +9,7 @@ public class CityClick : MonoBehaviour {
 
 	private GameObject blockPanel;
 
+	public TutorialManager tutorialManager;
 	void Start()
 	{
 		cityOrigin = GetComponent<CityBase>();
@@ -17,7 +18,7 @@ public class CityClick : MonoBehaviour {
 	
 	void OnMouseOver()
 	{
-		if (!EventSystem.current.IsPointerOverGameObject ())
+		if (!EventSystem.current.IsPointerOverGameObject () && !(tutorialManager.currentTutorialStepPanel is SendUnitStep) && !(tutorialManager.currentTutorialStepPanel is SendUnitStep2) )
 		{
 			
 			if (Input.GetMouseButtonDown (0))

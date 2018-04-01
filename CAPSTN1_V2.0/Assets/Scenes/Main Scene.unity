@@ -1018,6 +1018,11 @@ Prefab:
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 392909611}
+    - target: {fileID: 114200637209777504, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 392909611}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6542f92a3851c7749889e3c4164c7ac5, type: 2}
   m_IsPrefabParent: 0
@@ -2810,6 +2815,11 @@ Prefab:
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 392909611}
+    - target: {fileID: 114540775389164684, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 392909611}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94898287935255c42940fdc585224552, type: 2}
   m_IsPrefabParent: 0
@@ -2858,6 +2868,11 @@ Prefab:
       value: 
       objectReference: {fileID: 195183814}
     - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 392909611}
+    - target: {fileID: 114635563363553144, guid: f12e78861a162aa4687cda64b643e350,
         type: 2}
       propertyPath: tutorialManager
       value: 
@@ -3569,6 +3584,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1941507192}
     - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
+        type: 2}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 392909611}
+    - target: {fileID: 114000905504637082, guid: 465cd92417f316749871fefa33d17937,
         type: 2}
       propertyPath: tutorialManager
       value: 
@@ -7414,6 +7434,11 @@ Prefab:
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 392909611}
+    - target: {fileID: 114992266592678466, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 392909611}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614455dfb6c81bb4689bef7ffdd5ce8a, type: 2}
   m_IsPrefabParent: 0
@@ -7659,7 +7684,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1845977019}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
