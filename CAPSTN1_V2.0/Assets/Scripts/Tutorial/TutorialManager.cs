@@ -73,6 +73,10 @@ public class TutorialManager : MonoBehaviour {
 		if (stepCounter <= tutorialSteps.Count)
 		{
 			currentTutorialStepPanel = Instantiate(tutorialSteps[stepCounter-1]);
+			//Important for fixing resolution
+			currentTutorialStepPanel.gameObject.transform.SetParent(transform.parent, false);
+			Vector2 pos = currentTutorialStepPanel.GetComponent<RectTransform>().localPosition;
+			currentTutorialStepPanel.GetComponent<RectTransform>().localPosition = new Vector2( pos.x , pos.y * ScreenScale().y);
 			currentTutorialStepPanel.tutorialUI = this;
 		}
 		
@@ -82,5 +86,11 @@ public class TutorialManager : MonoBehaviour {
 	{
 		isTutorialFinished = true;
 		eventManager.maxEvents = 8;
+	}
+	
+	Vector2 ScreenScale()
+	{
+		CanvasScaler cs = transform.parent.GetComponent<CanvasScaler>();
+		return new Vector2(cs.referenceResolution.x / Screen.width, cs.referenceResolution.y / Screen.height);
 	}
 }

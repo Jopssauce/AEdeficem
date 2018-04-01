@@ -1528,7 +1528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialSteps:
-  - {fileID: 114358139900332250, guid: 32e6781342d168d40b3df2f18369e5e1, type: 2}
+  - {fileID: 114998414066533804, guid: 32e6781342d168d40b3df2f18369e5e1, type: 2}
   - {fileID: 114514673838244934, guid: 6dd19a9dda018874e8b38c12115be6ed, type: 2}
   - {fileID: 114563601012575768, guid: 9735bb347eb3b704985bdba06de2ac1e, type: 2}
   - {fileID: 114198129688926550, guid: 61e9723d9d9905544b9d66bf4ea8f840, type: 2}
@@ -7659,7 +7659,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1845977019}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9390,7 +9390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000136345625}
+  m_AnchoredPosition: {x: 0, y: -0.000047400594}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2105874873

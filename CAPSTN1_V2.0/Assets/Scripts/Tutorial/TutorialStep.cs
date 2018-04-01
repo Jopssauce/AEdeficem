@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class TutorialStep : MonoBehaviour 
 {
-	public GameObject backgroundPanel;
-	public GameObject blockerPanel;
-
 	public TutorialManager tutorialUI;
 	public TurnManager     turnManager;
 
@@ -16,7 +13,6 @@ public class TutorialStep : MonoBehaviour
 	public Button	nextButton;
 
 
-	public Vector3 	  uiPos;
 	public bool 	  isStepDone;
 	public int 		  stepNumber;
 
@@ -36,9 +32,7 @@ public class TutorialStep : MonoBehaviour
 	public virtual void StartStep()
 	{
 		textBox.text = tutorialDescription;
-		this.transform.SetParent(tutorialUI.transform);
 		this.transform.SetAsLastSibling();
-		this.GetComponent<RectTransform>().localPosition = uiPos;
 		nextButton.onClick.AddListener(nextButtonClick);
 	}
 

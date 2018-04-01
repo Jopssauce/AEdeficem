@@ -9,19 +9,22 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1326103565837530}
+  m_RootGameObject: {fileID: 1017356429391598}
   m_IsPrefabParent: 1
---- !u!1 &1153283024546502
+--- !u!1 &1017356429391598
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 224282646169378892}
-  - component: {fileID: 222149910371621298}
+  - component: {fileID: 224858501318681758}
+  - component: {fileID: 222851628554420550}
+  - component: {fileID: 114998762289061804}
+  - component: {fileID: 114998414066533804}
+  - component: {fileID: 114296584537637728}
   m_Layer: 5
-  m_Name: Background
+  m_Name: IntroActionBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +50,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1326103565837530
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -55,10 +58,24 @@ GameObject:
   - component: {fileID: 224427284862009888}
   - component: {fileID: 222309601721003750}
   - component: {fileID: 114767688525573872}
-  - component: {fileID: 114358139900332250}
   - component: {fileID: 114550979456807104}
   m_Layer: 5
-  m_Name: IntroActionBar
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1438326362297158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224088299549104940}
+  m_Layer: 5
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +117,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1984674785054974
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -150,31 +167,20 @@ MonoBehaviour:
   m_Text: 'Next
 
 '
---- !u!114 &114358139900332250
+--- !u!114 &114296584537637728
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326103565837530}
+  m_GameObject: {fileID: 1017356429391598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ae58cde7032c240a086d5b40cecb67, type: 3}
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPanel: {fileID: 1153283024546502}
-  blockerPanel: {fileID: 0}
-  tutorialUI: {fileID: 0}
-  turnManager: {fileID: 0}
-  pointer: {fileID: 0}
-  textBox: {fileID: 114399363168032538}
-  nextButton: {fileID: 114812725147429104}
-  uiPos: {x: -205, y: 419.4, z: 0}
-  isStepDone: 0
-  stepNumber: 0
-  tutorialDescription: 'This is the <color=cyan>action bar</color>. This shows the
-    amount of action points you can spend per turn.
-
-'
+  m_EffectColor: {r: 0, g: 1, b: 0.91724133, a: 0.5}
+  m_EffectDistance: {x: 8, y: 8}
+  m_UseGraphicAlpha: 1
 --- !u!114 &114399363168032538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,12 +354,55 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!222 &222149910371621298
-CanvasRenderer:
+--- !u!114 &114998414066533804
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153283024546502}
+  m_GameObject: {fileID: 1017356429391598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ae58cde7032c240a086d5b40cecb67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialUI: {fileID: 0}
+  turnManager: {fileID: 0}
+  pointer: {fileID: 0}
+  textBox: {fileID: 114399363168032538}
+  nextButton: {fileID: 114812725147429104}
+  isStepDone: 0
+  stepNumber: 0
+  tutorialDescription: 'This is the <color=cyan>action bar</color>. This shows the
+    amount of action points you can spend per turn.
+
+'
+--- !u!114 &114998762289061804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017356429391598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!222 &222309601721003750
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -378,12 +427,38 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1225613610120904}
+--- !u!222 &222851628554420550
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017356429391598}
 --- !u!222 &222993770326708668
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560138743056500}
+--- !u!224 &224088299549104940
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1438326362297158}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 224427284862009888}
+  - {fileID: 224121266093909420}
+  m_Father: {fileID: 224858501318681758}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224121266093909420
 RectTransform:
   m_ObjectHideFlags: 1
@@ -394,31 +469,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224427284862009888}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 142.09985, y: -461.73328}
-  m_SizeDelta: {x: 1172.4, y: 945.2999}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224282646169378892
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153283024546502}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224427284862009888}
+  m_Father: {fileID: 224088299549104940}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -59}
-  m_SizeDelta: {x: 1144.5, y: 672.1}
+  m_AnchoredPosition: {x: 142.09985, y: -204.3}
+  m_SizeDelta: {x: 1878, y: 1408.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224427284862009888
 RectTransform:
@@ -429,17 +486,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 224121266093909420}
-  - {fileID: 224282646169378892}
-  - {fileID: 224880256483786352}
-  - {fileID: 224573805338410714}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 224088299549104940}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146, y: 452.8833}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 805.6, y: 154.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224573805338410714
@@ -453,12 +506,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224657605527395172}
-  m_Father: {fileID: 224427284862009888}
-  m_RootOrder: 3
+  m_Father: {fileID: 224858501318681758}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -110, y: 37}
+  m_AnchoredPosition: {x: 292.80005, y: -50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224657605527395172
@@ -479,6 +532,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224858501318681758
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017356429391598}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 224088299549104940}
+  - {fileID: 224880256483786352}
+  - {fileID: 224573805338410714}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -133, y: 412}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224880256483786352
 RectTransform:
   m_ObjectHideFlags: 1
@@ -489,11 +563,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224427284862009888}
-  m_RootOrder: 2
+  m_Father: {fileID: 224858501318681758}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.1, y: 5}
+  m_AnchoredPosition: {x: -5.1, y: 0}
   m_SizeDelta: {x: 736.5, y: 138.1}
   m_Pivot: {x: 0.5, y: 0.5}
