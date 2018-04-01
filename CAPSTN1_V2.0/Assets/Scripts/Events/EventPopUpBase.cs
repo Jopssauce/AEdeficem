@@ -125,7 +125,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 
 	public void RefundEvent()
     {
-
+        turnsToResolve.gameObject.SetActive(false);
         if (GetComponent<EventPopUpBase>().isResolving == true)
         {
             Debug.Log("Refund");
