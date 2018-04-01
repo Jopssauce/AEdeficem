@@ -87,16 +87,16 @@ public class RegionManager : MonoBehaviour
         }
 
         bool isVictory;
-        if (turnManager.currentTurn % 10 == 0) 
-		{
-			if (regionList.All(region => region.GetComponent<RegionBase>().regionQuality >= 70))
+        if (turnManager.currentTurn >= 100)
+        {
+            if (regionList.All(region => region.GetComponent<RegionBase>().regionQuality >= 70))
             {
                 isVictory = true;
                 //Victory Scene
                 PlayerPrefs.SetString("isVictory", isVictory.ToString());
                 SceneManager.LoadScene("Victory Scene");
             }
-		}
+        }
         
         if (regionList.All(region => region.GetComponent<RegionBase>().regionQuality <= 0))
         {
@@ -106,6 +106,12 @@ public class RegionManager : MonoBehaviour
             SceneManager.LoadScene("Victory Scene");
         }
 
-		
+		if (turnManager.currentTurn % 10 == 0) 
+		{
+			foreach (RegionBase r in regionList) 
+			{
+				Debug.Log (r.GetComponent<RegionBase> ().regionQuality.ToString());
+			}
+		}
     }
 }
