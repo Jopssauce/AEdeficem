@@ -32,5 +32,10 @@ public class Loader : MonoBehaviour {
 		{
 			Instantiate (researchManager);
 		}
+
+		if (AudioManager.instance == null)
+		{
+			Instantiate (audioManager);
+		}
 	}
 }
