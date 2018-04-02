@@ -37,5 +37,7 @@ public class Loader : MonoBehaviour {
 		{
 			Instantiate (audioManager);
 		}
+
+		FindObjectOfType<AudioManager> ().PlayMusic ("Theme");
 	}
 }

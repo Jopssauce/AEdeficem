@@ -1123,6 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loading: {fileID: 1571985100}
+  SceneName: Movie Scene
 --- !u!1 &916209255
 GameObject:
   m_ObjectHideFlags: 0

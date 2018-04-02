@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loading: {fileID: 0}
+  SceneName: 
 --- !u!1 &179263109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,6 +1263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loading: {fileID: 462225217}
+  SceneName: Main Scene
 --- !u!114 &2065776301
 MonoBehaviour:
   m_ObjectHideFlags: 0

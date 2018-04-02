@@ -64,4 +64,10 @@ public class AudioManager : MonoBehaviour {
 		SoundFX s = Array.Find (Music, sound => sound.name == name);
 		s.Source.Play();
 	}
+
+	public void PauseMusic(string name)
+	{
+		SoundFX s = Array.Find (Music, sound => sound.name == name);
+		s.Source.Pause();
+	}
 }
