@@ -8,6 +8,6 @@ public class MoviePlay : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		FindObjectOfType<AudioManager> ().PauseMusic ("Theme");
+		FindObjectOfType<AudioManager> ().StopMusic ("Theme");
 	}
 }
