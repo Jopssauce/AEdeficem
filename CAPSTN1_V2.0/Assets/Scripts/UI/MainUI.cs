@@ -6,6 +6,10 @@ using UnityEngine.Events;
 
 public class MainUI : MonoBehaviour
 {
+    public GameObject eventLayer;
+    public GameObject staticUILayer;
+    public GameObject regionUnderlayDisplayLayer;
+
     public Text WaterAmnt;
     public Text PowerAmnt;
     public Text FoodAmnt;
@@ -62,7 +66,7 @@ public class MainUI : MonoBehaviour
             //ruBarOutliner.GetComponent<RegionUnderlayDisplay>().regionOrigin    = region.GetComponent<RegionBase>();
 
             regionUnderlayDisplayList.Add(ruBar);
-            ruBar.transform.SetParent(this.transform, false);
+            ruBar.transform.SetParent(regionUnderlayDisplayLayer.transform, false);
             //ruBarOutliner.transform.SetParent(regionOutliner.transform, false);
         }
         
@@ -86,10 +90,7 @@ public class MainUI : MonoBehaviour
         FoodAmnt.text 	= resManager.food.ToString();
         APAmnt.text 	= resManager.actionPoints.ToString();
 
-        SumText(waterAmntSum,   resManager.waterSum);
-        SumText(powerAmntSum,   resManager.powerSum);
-        SumText(foodAmntSum,    resManager.foodSum);
-        SumText(apAmntSum,      resManager.actionPointsSum);
+        
 
         Turn.text = turnManager.currentTurn.ToString();
     }
@@ -110,17 +111,7 @@ public class MainUI : MonoBehaviour
 		}
 	}
 
-    void SumText(Text text, int sum)
-    {
-        if (sum >= 0)
-        {
-            text.text = "+" + sum.ToString();
-        }
-        if (sum < 0)
-        {
-            text.text = "-" + sum.ToString();
-        }
-    }
+    
 
     public void DisableButtons()
     {
@@ -175,4 +166,6 @@ public class MainUI : MonoBehaviour
         researchPanel.SetActive(true);
 		FindObjectOfType<AudioManager> ().Play ("Generic");
     }
+
+
 }

@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182388d4ecc00b845b3f436f92ceaf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventLayer: {fileID: 0}
   baseEvent: {fileID: 1419573078965202, guid: d21987b1c508b4b4fb13f005459f866e, type: 2}
   chainEventPrefab: {fileID: 0}
   eventPrefabs:
@@ -76,6 +77,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  SentUnitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   eventTracker: []
   selectedEvent: {fileID: 0}
   isChainEvent: 0
+  maxEvents: 8

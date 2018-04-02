@@ -74,7 +74,7 @@ public class TutorialManager : MonoBehaviour {
 		{
 			currentTutorialStepPanel = Instantiate(tutorialSteps[stepCounter-1]);
 			//Important for fixing resolution
-			currentTutorialStepPanel.gameObject.transform.SetParent(transform.parent, false);
+			currentTutorialStepPanel.gameObject.transform.SetParent(transform, false);
 			Vector2 pos = currentTutorialStepPanel.GetComponent<RectTransform>().localPosition;
 			currentTutorialStepPanel.GetComponent<RectTransform>().localPosition = new Vector2( pos.x , pos.y * ScreenScale().y);
 			currentTutorialStepPanel.tutorialUI = this;

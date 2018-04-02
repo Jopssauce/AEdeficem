@@ -8,6 +8,7 @@ public class EventManager : MonoBehaviour
 {
 
 	public static EventManager instance = null;
+	public GameObject	eventLayer;
     private TurnManager turnManager;
     public GameObject   baseEvent;
 	public GameObject	chainEventPrefab;
@@ -83,7 +84,7 @@ public class EventManager : MonoBehaviour
 			}
 
 
-			newButton.transform.SetParent(newCanvas.transform, false);
+			newButton.transform.SetParent(newCanvas.GetComponent<MainUI>().eventLayer.transform, false);
 			newButton.GetComponent<EventPopUpBase>().regionOrigin = RegionManagerInstance.regionList[num];
 			newButton.GetComponent<EventPopUpBase>().regionOrigin.spawnAreas[spawnNum].GetComponent<SpawnArea>().eventOrigin = newButton.GetComponent<EventPopUpBase>();
 			newButton.GetComponent<BindToRegion>().spawnArea 	  = RegionManagerInstance.regionList[num].spawnAreas[spawnNum];
