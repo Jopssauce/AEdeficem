@@ -32,7 +32,7 @@ public class TutorialStep : MonoBehaviour
 	public virtual void StartStep()
 	{
 		textBox.text = tutorialDescription;
-		this.transform.SetAsLastSibling();
+		//this.transform.SetAsLastSibling();
 		nextButton.onClick.AddListener(nextButtonClick);
 	}
 

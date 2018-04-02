@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114133190083133052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,14 +179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539668e53fc89ab4fbcbc05dd6accae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPanel: {fileID: 1007717221945498}
-  blockerPanel: {fileID: 1424824831519456}
   tutorialUI: {fileID: 0}
   turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114133190083133052}
   nextButton: {fileID: 114762293606981010}
-  uiPos: {x: 135, y: -474, z: 0}
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: 'Next researching gives your cities bonuses that help in sustaining
@@ -470,9 +467,9 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135, y: -474}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -487, y: -65}
   m_SizeDelta: {x: 805.6, y: 154.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224330732492462700
@@ -545,7 +542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 713, y: -137.60007}
+  m_AnchoredPosition: {x: 713, y: -172}
   m_SizeDelta: {x: -198.19995, y: 151.79996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224964380337983136

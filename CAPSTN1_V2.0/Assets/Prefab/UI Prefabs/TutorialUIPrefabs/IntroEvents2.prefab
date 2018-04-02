@@ -98,7 +98,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1999282554221742
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,14 +256,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ecf10b1f26a5ec4282b6a1470fe268c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPanel: {fileID: 1830478188512316}
-  blockerPanel: {fileID: 1879576240802712}
   tutorialUI: {fileID: 0}
   turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114844466572390074}
   nextButton: {fileID: 114697966072549442}
-  uiPos: {x: -102, y: -268, z: 0}
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: 'Now <color=yellow>resolve the event with a unit</color> and

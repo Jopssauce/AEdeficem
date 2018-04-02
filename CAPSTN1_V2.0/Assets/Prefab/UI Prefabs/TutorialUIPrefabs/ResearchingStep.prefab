@@ -48,7 +48,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1308392239852904
 GameObject:
   m_ObjectHideFlags: 1
@@ -215,14 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539668e53fc89ab4fbcbc05dd6accae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPanel: {fileID: 1847050102977294}
-  blockerPanel: {fileID: 1678908888678212}
   tutorialUI: {fileID: 0}
   turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114011778992122582}
   nextButton: {fileID: 114751831600508942}
-  uiPos: {x: 135, y: -276, z: 0}
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: '<color=yellow>Click on the research hexagon.</color> Click

@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114044364183172972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -206,14 +206,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731705640f3b7b841960116402b1d981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPanel: {fileID: 1040061978203030}
-  blockerPanel: {fileID: 0}
   tutorialUI: {fileID: 0}
   turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114044364183172972}
   nextButton: {fileID: 114761314967932972}
-  uiPos: {x: -263, y: 191, z: 0}
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: This is the Event Outliner. <color=yellow>Click on an event

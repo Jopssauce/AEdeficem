@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class EventContent : MonoBehaviour, IPointerClickHandler  {
+public class EventContent : MonoBehaviour {
 	public EventPopUpBase 	eventOrigin;
 	public GameObject	particleEffect;
 	public Text 		eventTitle;
@@ -39,8 +39,7 @@ public class EventContent : MonoBehaviour, IPointerClickHandler  {
 			Destroy(this.gameObject);
 		}
 	}
-	#region IPointerClickHandler implementation
-	public void OnPointerClick(PointerEventData eventData)
+	public void Click()
     {
 		FindObjectOfType<AudioManager> ().Play ("Generic");
 		Instantiate(particleEffect, eventWorldPos, particleEffect.transform.rotation);
@@ -57,5 +56,5 @@ public class EventContent : MonoBehaviour, IPointerClickHandler  {
 			}           
 		}
     }
-	#endregion
+
 }

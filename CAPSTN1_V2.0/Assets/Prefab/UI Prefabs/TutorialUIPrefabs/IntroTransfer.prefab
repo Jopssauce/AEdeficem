@@ -82,7 +82,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1200980124922428
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,14 +337,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ee0a078fa12b6438bd153248320223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPanel: {fileID: 1840941024603174}
-  blockerPanel: {fileID: 0}
   tutorialUI: {fileID: 0}
   turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114214278419308568}
   nextButton: {fileID: 114853684698049942}
-  uiPos: {x: 453, y: -270, z: 0}
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: "Transfering allows you to <color=lightgreen>move resources</color>

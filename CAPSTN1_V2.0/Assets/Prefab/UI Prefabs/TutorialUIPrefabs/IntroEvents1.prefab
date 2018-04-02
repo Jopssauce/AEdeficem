@@ -114,7 +114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114062457038595302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,14 +263,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351db7ad75acc0b4e8754b09a8e4828c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPanel: {fileID: 1088356931424954}
-  blockerPanel: {fileID: 0}
   tutorialUI: {fileID: 0}
   turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114618053846647480}
   nextButton: {fileID: 114162357325264160}
-  uiPos: {x: -102, y: -268, z: 0}
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: 'Click on an event and <color=yellow>assign a unit</color>.

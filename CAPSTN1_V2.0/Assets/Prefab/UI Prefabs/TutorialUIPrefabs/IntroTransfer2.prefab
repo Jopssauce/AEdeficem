@@ -64,7 +64,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1516558495781112
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,14 +353,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3299a5765aa2ae54f9919a6335febba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPanel: {fileID: 1180292674231066}
-  blockerPanel: {fileID: 0}
   tutorialUI: {fileID: 0}
   turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114735469216978504}
   nextButton: {fileID: 114412451131189434}
-  uiPos: {x: 83, y: -316.6947, z: 0}
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: 'You can <color=cyan>select a city</color> and <color=cyan>input

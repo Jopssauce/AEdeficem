@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1931056596542192
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,14 +352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b628cfcbfbf6a274b971385bb649bee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPanel: {fileID: 1931056596542192}
-  blockerPanel: {fileID: 0}
   tutorialUI: {fileID: 0}
   turnManager: {fileID: 0}
   pointer: {fileID: 0}
   textBox: {fileID: 114047673232028400}
   nextButton: {fileID: 114865431834047934}
-  uiPos: {x: -102, y: -268, z: 0}
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: Next are the cities. Keep them alive by resolving events and
