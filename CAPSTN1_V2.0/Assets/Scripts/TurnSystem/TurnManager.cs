@@ -74,6 +74,7 @@ public class TurnManager : MonoBehaviour {
 		currentTurn++;
 		sustainableRegions = 0;		
 		GameObject.FindGameObjectWithTag("Main UI").GetComponent<MainUI>().UpdateUiText();
+		GameObject.FindGameObjectWithTag("Main UI").GetComponent<MainUI>().ShowChecker();
 	}
 	
 }

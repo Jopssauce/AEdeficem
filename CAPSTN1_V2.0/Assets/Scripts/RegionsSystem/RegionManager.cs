@@ -110,7 +110,7 @@ public class RegionManager : MonoBehaviour
 		{
 			foreach (RegionBase r in regionList) 
 			{
-				Debug.Log (r.GetComponent<RegionBase> ().regionQuality.ToString());
+				
 			}
 		}
     }

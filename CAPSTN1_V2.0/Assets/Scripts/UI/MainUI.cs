@@ -43,6 +43,8 @@ public class MainUI : MonoBehaviour
     public GameObject toggleUnderlayDisplay;
     public GameObject researchPanel;
 
+    public GameObject regQualityChecker;
+
 	public UnityEvent EscButtonPressed;
     
 	public bool isEscapeMenu;
@@ -89,9 +91,6 @@ public class MainUI : MonoBehaviour
         PowerAmnt.text 	= resManager.power.ToString();
         FoodAmnt.text 	= resManager.food.ToString();
         APAmnt.text 	= resManager.actionPoints.ToString();
-
-        
-
         Turn.text = turnManager.currentTurn.ToString();
     }
 
@@ -167,5 +166,13 @@ public class MainUI : MonoBehaviour
 		FindObjectOfType<AudioManager> ().Play ("Generic");
     }
 
+    public void ShowChecker()
+    {
+        if (turnManager.currentTurn % 10 == 0 )
+        {
+            Debug.Log(turnManager.currentTurn % 10);
+            regQualityChecker.gameObject.SetActive(true);
+        }
+    }
 
 }
