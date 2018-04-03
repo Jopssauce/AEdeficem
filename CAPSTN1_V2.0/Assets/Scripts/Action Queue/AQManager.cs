@@ -13,7 +13,7 @@ public class AQManager : MonoBehaviour {
     public GameObject EventOrigin { get; set; }
     public Text EventText;
 
-    private TurnManager turnManagerInstance;
+    //private TurnManager turnManagerInstance;
     private EventManager eventManagerInstance;
     private GameObject NewQueueItem;
 
@@ -34,7 +34,7 @@ public class AQManager : MonoBehaviour {
     {
 		if (TurnManager.instance != null) 
 		{
-			turnManagerInstance = TurnManager.instance;
+			//turnManagerInstance = TurnManager.instance;
 		}
 
         if (EventManager.instance != null)

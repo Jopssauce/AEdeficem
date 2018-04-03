@@ -3780,40 +3780,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1143877274843260, guid: e30955fc298a8d34bbf732601afd10be, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224534024332356106, guid: e30955fc298a8d34bbf732601afd10be,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -560
-      objectReference: {fileID: 0}
-    - target: {fileID: 224534024332356106, guid: e30955fc298a8d34bbf732601afd10be,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 103.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 224534024332356106, guid: e30955fc298a8d34bbf732601afd10be,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 370.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 224534024332356106, guid: e30955fc298a8d34bbf732601afd10be,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 69.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114939441833436348, guid: e30955fc298a8d34bbf732601afd10be,
-        type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 114939441833436348, guid: e30955fc298a8d34bbf732601afd10be,
-        type: 2}
-      propertyPath: m_FontData.m_MinSize
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e30955fc298a8d34bbf732601afd10be, type: 2}
   m_IsPrefabParent: 0

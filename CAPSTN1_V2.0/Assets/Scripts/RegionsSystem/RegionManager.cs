@@ -11,9 +11,9 @@ public class RegionManager : MonoBehaviour
     public GameObject RegionStatsCanvasPrefab;
     public GameObject RegionStatUI;
 
-    private List<GameObject> Duplicates;
+    //private List<GameObject> Duplicates;
     private GameObject[] RegionHolder;
-    private List<ResourceManager.ResourceType> TypeCheckList;
+    //private List<ResourceManager.ResourceType> TypeCheckList;
     private List<ResourceManager.ResourceType> MissingRegionType;
 
     TurnManager turnManager;
@@ -32,8 +32,8 @@ public class RegionManager : MonoBehaviour
 
         RegionHolder = GameObject.FindGameObjectsWithTag("Region");
 
-        TypeCheckList       = new List<ResourceManager.ResourceType>();
-        Duplicates          = new List<GameObject>();
+        //TypeCheckList       = new List<ResourceManager.ResourceType>();
+        //Duplicates          = new List<GameObject>();
         MissingRegionType   = new List<ResourceManager.ResourceType>();
 
         MakeRegionStatsCanvas();

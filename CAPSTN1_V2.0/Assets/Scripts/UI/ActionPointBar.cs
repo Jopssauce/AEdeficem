@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ActionPointBar : MonoBehaviour {
 	ResourceManager 	resManager;
-	TurnManager			turnManager;
-	EventManager		eventManager;
+	//TurnManager			turnManager;
+	//EventManager		eventManager;
 	public List<Sprite> actionPointBarSprites;
 	// Use this for initialization
 	void Start () 
@@ -15,14 +15,8 @@ public class ActionPointBar : MonoBehaviour {
 		{
 			resManager = ResourceManager.instance;
 		}
-		if (TurnManager.instance != null)
-		{
-			turnManager = TurnManager.instance;
-		}
-		if (EventManager.instance != null)
-		{
-			eventManager = EventManager.instance;
-		}
+		
+		
 		resManager.AdjustedResourceEvent.AddListener(ChangeSprite);
 		ChangeSprite();
 	}
