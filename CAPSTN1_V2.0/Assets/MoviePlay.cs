@@ -23,7 +23,7 @@ public class MoviePlay : MonoBehaviour {
 		videoPlayer.loopPointReached += OnEndVideo;
 	}
 
-	void OnEndVideo(VideoPlayer vp)
+	public void OnEndVideo(VideoPlayer vp)
 	{
 		videoPlayer.Stop ();
 		loading.SetActive (true);

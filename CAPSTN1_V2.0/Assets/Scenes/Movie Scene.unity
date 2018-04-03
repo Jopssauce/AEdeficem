@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 120435571}
   - component: {fileID: 120435570}
   - component: {fileID: 120435569}
-  - component: {fileID: 120435572}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -190,12 +189,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 120435572}
-        m_MethodName: Click
-        m_Mode: 1
+      - m_Target: {fileID: 903266643}
+        m_MethodName: OnEndVideo
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 903266644}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -236,19 +235,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120435567}
---- !u!114 &120435572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 120435567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618361c8c56caad4bb47f848e5017dff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loading: {fileID: 1578852873}
-  SceneName: Main Scene
 --- !u!1 &175984175
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +503,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 0
-  m_AspectRatio: 3
+  m_AspectRatio: 5
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
@@ -710,7 +696,7 @@ Camera:
   m_GameObject: {fileID: 1878144098}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
