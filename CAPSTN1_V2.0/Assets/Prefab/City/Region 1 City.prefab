@@ -242,7 +242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4025500227379194
 Transform:
   m_ObjectHideFlags: 1
@@ -950,6 +950,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cityOrigin: {fileID: 0}
   BlockPanel: {fileID: 0}
+  cityParticle: {fileID: 198329760211061104}
+  tutorialManager: {fileID: 0}
 --- !u!114 &114313301969230612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -979,6 +981,7 @@ MonoBehaviour:
     Food: 15
   firstProduction: 0
   secondProduction: 1
+  tutorialManager: {fileID: 0}
   firstCurrentProduction: 0
   secondCurrentProduction: 0
   maxFirstProd: 0
@@ -1132,7 +1135,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -747012627
+  randomSeed: -830715819
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -55,11 +55,18 @@ public class StatsPanel : MonoBehaviour
 
 	public void exitClick()
 	{
+		
 		Destroy(this.gameObject);
 		FindObjectOfType<AudioManager> ().Play ("Generic");
 	}
+
+	void OnDestroy()
+	{
+		cityOrigin.GetComponent<CityClick>().cityParticle.gameObject.SetActive(false);
+	}
 	public void transferButtonClick()
 	{
+		cityOrigin.GetComponent<CityClick>().cityParticle.gameObject.SetActive(false);
 		if (tutorialManager != null)
 		{
 			if (tutorialManager.currentTutorialStepPanel != null)

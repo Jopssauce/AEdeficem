@@ -1044,6 +1044,7 @@ MonoBehaviour:
     Food: 15
   firstProduction: 2
   secondProduction: 1
+  tutorialManager: {fileID: 0}
   firstCurrentProduction: 0
   secondCurrentProduction: 0
   maxFirstProd: 0
@@ -1072,6 +1073,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cityOrigin: {fileID: 0}
   BlockPanel: {fileID: 0}
+  cityParticle: {fileID: 198669103491075304}
+  tutorialManager: {fileID: 0}
 --- !u!136 &136441217531270670
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1145,7 +1148,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -747012627
+  randomSeed: 178349452
   InitialModule:
     serializedVersion: 3
     enabled: 1

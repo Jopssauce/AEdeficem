@@ -7,7 +7,9 @@ public class CityClick : MonoBehaviour {
 	public CityBase cityOrigin;
 	public GameObject BlockPanel;
 
-	private GameObject blockPanel;
+	private GameObject blockPanel;	
+
+	public ParticleSystem cityParticle;
 
 	public TutorialManager tutorialManager;
 	void Start()
@@ -20,7 +22,7 @@ public class CityClick : MonoBehaviour {
 	{
 		if (!EventSystem.current.IsPointerOverGameObject () && !(tutorialManager.currentTutorialStepPanel is SendUnitStep) && !(tutorialManager.currentTutorialStepPanel is SendUnitStep2) )
 		{
-			
+			cityParticle.gameObject.SetActive(true);
 			if (Input.GetMouseButtonDown (0))
 			{
 				if (cityOrigin.tutorialManager != null)
@@ -39,6 +41,18 @@ public class CityClick : MonoBehaviour {
 				FindObjectOfType<AudioManager> ().Play ("Generic");
 			}
 		}
+	}
+	void OnMouseExit()
+	{	
+		if (!EventSystem.current.IsPointerOverGameObject())
+		{
+			if (cityOrigin.cityPanel == null)
+			{
+				cityParticle.gameObject.SetActive(false);
+			}
+		}
+		
+		
 	}
 	
 }
