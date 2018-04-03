@@ -1363,17 +1363,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114200637209777504, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 392909611}
     - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
         type: 2}
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 1328886627}
     - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
-        type: 2}
-      propertyPath: tutorialManager
-      value: 
-      objectReference: {fileID: 392909611}
-    - target: {fileID: 114200637209777504, guid: 6542f92a3851c7749889e3c4164c7ac5,
         type: 2}
       propertyPath: tutorialManager
       value: 
@@ -3107,6 +3107,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114635563363553144, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 392909611}
     - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
         type: 2}
       propertyPath: regionOrigin
@@ -3117,11 +3122,10 @@ Prefab:
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 392909611}
-    - target: {fileID: 114635563363553144, guid: f12e78861a162aa4687cda64b643e350,
-        type: 2}
-      propertyPath: tutorialManager
-      value: 
-      objectReference: {fileID: 392909611}
+    - target: {fileID: 1371480559665206, guid: f12e78861a162aa4687cda64b643e350, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12e78861a162aa4687cda64b643e350, type: 2}
   m_IsPrefabParent: 0
@@ -8205,17 +8209,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 114992266592678466, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 392909611}
     - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
         type: 2}
       propertyPath: regionOrigin
       value: 
       objectReference: {fileID: 330569765}
     - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
-        type: 2}
-      propertyPath: tutorialManager
-      value: 
-      objectReference: {fileID: 392909611}
-    - target: {fileID: 114992266592678466, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
         type: 2}
       propertyPath: tutorialManager
       value: 
