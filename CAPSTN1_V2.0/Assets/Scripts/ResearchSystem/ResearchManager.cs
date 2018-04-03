@@ -32,6 +32,7 @@ public class ResearchManager : MonoBehaviour
     public List<Technology> unlockedTech;
 
     public static ResearchManager instance;
+    TurnManager turnManager;
     public TierProgress tierProgress;
 
     public Technology selectedResearch;
@@ -86,24 +87,37 @@ public class ResearchManager : MonoBehaviour
         tierProgress.transportEffTier = 0;
         tierProgress.regionalPlanTier = 0;
 
+        if (TurnManager.instance != null)
+		{
+			turnManager = TurnManager.instance;
+		}
+
         foreach (var item in disasterPrepTech)
         {
-            disasterPrepTechCopy.Add(Instantiate(item));
+            Technology tech = Instantiate(item);
+            turnManager.EndTurnEvent.AddListener(tech.ResearchTech);
+            disasterPrepTechCopy.Add(tech);   
         }
 
         foreach (var item in resourceProdTech)
         {
-             resourceProdTechCopy.Add(Instantiate(item));
+            Technology tech = Instantiate(item);
+            turnManager.EndTurnEvent.AddListener(tech.ResearchTech);            
+            resourceProdTechCopy.Add(tech);
         }
 
         foreach (var item in transportEffTech)
         {
-            transportEffTechCopy.Add(Instantiate(item));
+            Technology tech = Instantiate(item);
+            turnManager.EndTurnEvent.AddListener(tech.ResearchTech);
+            transportEffTechCopy.Add(tech);
         }
         
         foreach (var item in regionalPlanTech)
         {
-            regionalPlanTechCopy.Add(Instantiate(item));
+            Technology tech = Instantiate(item);
+            turnManager.EndTurnEvent.AddListener(tech.ResearchTech);
+            regionalPlanTechCopy.Add(tech);
         }
         
     }

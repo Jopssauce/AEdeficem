@@ -51,9 +51,9 @@ public class Technology : ScriptableObject
 		{
 			turnManager = TurnManager.instance;
 		}
-		turnManager.EndTurnEvent.AddListener(ResearchTech);
+		//turnManager.EndTurnEvent.AddListener(ResearchTech);
 	}
-
+	
 
 	public virtual void ResearchTech()
 	{
