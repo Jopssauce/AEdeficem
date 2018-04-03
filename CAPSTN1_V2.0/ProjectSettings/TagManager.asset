@@ -9,6 +9,7 @@ TagManager:
   - Main UI
   - End Turn
   - ResearchTag
+  - Tutorial
   layers:
   - Default
   - TransparentFX

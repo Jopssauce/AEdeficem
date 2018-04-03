@@ -96,6 +96,7 @@ public class TransferPanel : MonoBehaviour
 	  public bool isEnoughRes()
 	{
         CityBase cityOrigin = regionOrigin.cityOrigin;
+		FindObjectOfType<AudioManager> ().Play ("Generic");
 		if (cityOrigin.cityResources.Water < int.Parse(waterInput.text) || cityOrigin.cityResources.Food < int.Parse(foodInput.text) 
 		 || cityOrigin.cityResources.Power < int.Parse(powerInput.text) )
 		{
@@ -105,7 +106,7 @@ public class TransferPanel : MonoBehaviour
 		{
 			return true;
 		}
-		FindObjectOfType<AudioManager> ().Play ("Generic");
+		
 		
 	}
 

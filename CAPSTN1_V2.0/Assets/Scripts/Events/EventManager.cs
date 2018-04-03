@@ -128,9 +128,9 @@ public class EventManager : MonoBehaviour
 		
     public void UpdateEvents()
     {
-		int standard 	= 0;
-		int chain 		= 0;
-		int domino 		= 0;
+		//int standard 	= 0;
+		//int chain 		= 0;
+		//int domino 		= 0;
 		int eventNum 	= Random.Range (2, 5);
 	
 		if (eventTracker != null)

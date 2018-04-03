@@ -16,7 +16,7 @@ public class EventContent : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		tutorialManager = eventOrigin.tutorialManager;
+		tutorialManager = FindObjectOfType<TutorialManager>();
 		eventTitle.text = eventOrigin.GetComponent<EventPopUpBase>().eventDataCopy.eventName;
 		this.GetComponent<DisplayResourceCost>().eventOrigin = this.eventOrigin;
 	}

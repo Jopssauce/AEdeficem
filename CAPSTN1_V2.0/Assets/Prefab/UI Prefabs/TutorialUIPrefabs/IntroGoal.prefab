@@ -202,9 +202,10 @@ MonoBehaviour:
   nextButton: {fileID: 114296237750947638}
   isStepDone: 0
   stepNumber: 0
-  tutorialDescription: Thats it! The goal of the game is to keep all the cities from
-    reaching the <color=red>REDZONE</color>. <color=yellow>Click on finish to end
-    the tutorial.</color>
+  tutorialDescription: "Thats it! The goal of the game is to keep all the cities from
+    reaching the <color=red>REDZONE</color>. \n<color=yellow>To win you must have
+    at least 70% region quality on all regions every 10th turn or on the 70th turn.</color>
+    \n<color=yellow>Click on finish to end the tutorial.</color>"
 --- !u!114 &114723470530777492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,10 +295,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 59cb34abb82f0c6438d19092d10eb347, type: 3}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 4
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -448,8 +449,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -553, y: 84}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -202, y: 46}
+  m_SizeDelta: {x: 370.3, y: 69.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224542010153206666
 RectTransform:
