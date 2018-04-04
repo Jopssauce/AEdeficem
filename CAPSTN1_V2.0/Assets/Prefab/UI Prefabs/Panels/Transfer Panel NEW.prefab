@@ -526,7 +526,6 @@ GameObject:
   - component: {fileID: 114335816606649932}
   - component: {fileID: 114931040114492046}
   - component: {fileID: 114664553013543184}
-  - component: {fileID: 114608290524968856}
   m_Layer: 5
   m_Name: Spawn Resource Sender
   m_TagString: Untagged
@@ -5141,17 +5140,6 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1763612338515116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f6c9969bd3ebf0429e7d1918b33eaf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114608290524968856
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1251354720884202}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f6c9969bd3ebf0429e7d1918b33eaf9, type: 3}
