@@ -32,6 +32,8 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
     public TurnManager      turnManager;
     public TutorialManager  tutorialManager;
 
+	public bool isEventUiPanel;
+
     private MainUI disableButtons;
 
 	public virtual void Start ()
@@ -65,6 +67,8 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
         {
         GetComponent<Image>().sprite = timerSprites[turnsLeft - 1];	
         }
+
+		isEventUiPanel = false;
 	}
 	
     public void Click()
@@ -261,13 +265,4 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 			rightClickPanel.transform.position = this.transform.position + new Vector3 (50.0f, 50.0f, 0.0f);*/
 		}
 	}
-	/*
-	void Update()
-	{
-		if (rightClickPanel != null) 
-		{
-			rightClickPanel.transform.position = this.transform.position + new Vector3 (50.0f, 50.0f, 0.0f);
-		}
-	}
-	*/
 }

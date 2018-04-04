@@ -1734,6 +1734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec30ab8e07c52443a6cf7442556a61d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Addition: 100
 --- !u!4 &359216785
 Transform:
   m_ObjectHideFlags: 0
@@ -2582,6 +2583,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   isEscapeMenu: 0
+  isResearchPanel: 0
+  isEventPanel: 0
 --- !u!212 &474264068
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9999,7 +10002,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2119366312}
   m_LocalRotation: {x: 0.37836218, y: -0, z: -0, w: 0.9256577}
-  m_LocalPosition: {x: 0, y: 6, z: -4.91}
+  m_LocalPosition: {x: 5.74, y: 6, z: -8.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
