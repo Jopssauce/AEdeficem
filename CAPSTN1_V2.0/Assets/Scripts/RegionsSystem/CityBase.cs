@@ -255,5 +255,4 @@ public class CityBase : MonoBehaviour
 			bonusSecondProd = bonusPower;
 		}
 	}
-
 }

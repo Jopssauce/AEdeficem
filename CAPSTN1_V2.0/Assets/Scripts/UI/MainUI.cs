@@ -33,6 +33,7 @@ public class MainUI : MonoBehaviour
     private TurnManager 	turnManager;
     private RegionManager   regManager;
     private EventManager    eventManager;
+	private CityClick		cityClick;
     public TutorialManager  tutorialManager;
 
     public List<GameObject> regionUnderlayDisplayList;
@@ -49,7 +50,8 @@ public class MainUI : MonoBehaviour
     
 	public bool isEscapeMenu;
 	public bool isResearchPanel;
-	public bool isEventPanel;
+	public static bool isEventPanel;
+	public static bool isTransferPanel;
     // Use this for initialization
     
     void Start ()
@@ -60,6 +62,13 @@ public class MainUI : MonoBehaviour
         eventManager = EventManager.instance;
 		isEscapeMenu = false;
 		isResearchPanel = false;
+		isEventPanel = false;
+		isTransferPanel = false;
+
+		if (CityClick.instance != null) 
+		{
+			cityClick = CityClick.instance;
+		}
 
 
         foreach (var region in regManager.regionList)
@@ -103,10 +112,17 @@ public class MainUI : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Escape)) 
 		{
 			//isResearchMenu = !isResearchMenu;
-			if (isResearchPanel) 
-			{
+			if (isResearchPanel) {
 				researchPanel.SetActive (false);
 				isResearchPanel = false;
+			} else if (isEventPanel) {
+				Destroy (eventManager.selectedEvent.GetComponent<EventPopUpBase> ().eventPanel);
+				isEventPanel = false;
+			}
+			else if (isTransferPanel)
+			{
+				cityClick.cityOrigin.GetComponent<CityBase> ().transferPanel.gameObject.SetActive (false);
+				isTransferPanel = false;
 			}
 				
 			

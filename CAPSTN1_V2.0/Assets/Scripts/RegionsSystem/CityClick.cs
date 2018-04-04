@@ -12,6 +12,19 @@ public class CityClick : MonoBehaviour {
 	public ParticleSystem cityParticle;
 
 	public TutorialManager tutorialManager;
+	public static CityClick instance = null;
+
+	void Awake()
+	{
+		if (instance == null) 
+		{
+			instance = this;	
+		}
+		else if (instance != this) 
+		{
+			Destroy (gameObject);
+		}
+	}
 	void Start()
 	{
 		cityOrigin = GetComponent<CityBase>();
@@ -36,6 +49,7 @@ public class CityClick : MonoBehaviour {
 						}
 					}           
 				}
+				MainUI.isTransferPanel = true;
 				Debug.Log (cityOrigin.name);
 				cityOrigin.SpawnTransferPanel ();
 				FindObjectOfType<AudioManager> ().Play ("Generic");

@@ -86,6 +86,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
         eventPanel.GetComponent<DisplayCityResources>().eventOrigin       = this.GetComponent<EventPopUpBase>();
 		eventPanel.SetActive(true);
 		eventPanel.transform.SetAsLastSibling();
+		MainUI.isEventPanel = true;
         this.GetComponent<Button>().interactable = false;
 		FindObjectOfType<AudioManager> ().Play ("Generic");
     }
