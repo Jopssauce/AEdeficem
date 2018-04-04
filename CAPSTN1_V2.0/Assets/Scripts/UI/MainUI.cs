@@ -117,10 +117,17 @@ public class MainUI : MonoBehaviour
 			if (isResearchPanel) {
 				researchPanel.SetActive (false);
 				isResearchPanel = false;
-			} else if (isEventPanel)
-			{
+			} else if (isEventPanel) {
 				Destroy (eventManager.selectedEvent.GetComponent<EventPopUpBase> ().eventPanel);
 				isEventPanel = false;
+			} else if (isTransferPanel)
+			{
+				foreach (RegionBase s in regManager.regionList)
+				{
+					Destroy(s.cityOrigin.GetComponent<CityBase> ().transferPanel);
+				}
+
+				isTransferPanel = false;
 			}
 
 			else {

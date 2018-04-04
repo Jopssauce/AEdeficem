@@ -37,6 +37,7 @@ public class CityClick : MonoBehaviour {
 						}
 					}           
 				}
+				MainUI.isTransferPanel = true;
 				Debug.Log (cityOrigin.name);
 				cityOrigin.SpawnTransferPanel ();
 				FindObjectOfType<AudioManager> ().Play ("Generic");
