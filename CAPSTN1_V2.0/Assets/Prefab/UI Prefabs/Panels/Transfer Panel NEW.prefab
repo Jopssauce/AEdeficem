@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 114687871147821772}
   - component: {fileID: 114468820252425336}
   m_Layer: 5
-  m_Name: Transfer Panel NEW
+  m_Name: Transfer Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

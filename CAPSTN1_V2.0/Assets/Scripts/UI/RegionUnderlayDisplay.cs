@@ -20,6 +20,19 @@ public class RegionUnderlayDisplay : MonoBehaviour {
 		regionName.text = regionOrigin.name;
 		SetUIText();
 		regionOrigin.cityOrigin.AdjustedCityResource.AddListener(SetUIText);
+	
+	}
+
+	void ChangeColor(Text cost, Color prevColor)
+	{
+		if ( System.Int32.Parse( cost.text) <= 4 )
+		{
+			cost.color = Color.red;
+		}
+		else
+		{
+			cost.color = prevColor;
+		}
 	}
 
 	public void SetUIText()
@@ -27,6 +40,9 @@ public class RegionUnderlayDisplay : MonoBehaviour {
 		waterAmt.text 	= regionOrigin.cityOrigin.cityResources.Water.ToString();
 		foodAmt.text 	= regionOrigin.cityOrigin.cityResources.Food.ToString();
 		powerAmt.text 	= regionOrigin.cityOrigin.cityResources.Power.ToString();
+		ChangeColor(waterAmt, Color.white);
+		ChangeColor(foodAmt, Color.white);
+		ChangeColor(powerAmt, Color.white);
 	}
 
 }
