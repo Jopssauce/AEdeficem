@@ -1382,7 +1382,7 @@ Prefab:
         type: 2}
       propertyPath: transferPanelPrefab
       value: 
-      objectReference: {fileID: 1386539896978942, guid: b8aba7f105e15f9428bd0bd8840b4503,
+      objectReference: {fileID: 1301340709576872, guid: d73be2738eabf4944a73b1ebf664a6aa,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6542f92a3851c7749889e3c4164c7ac5, type: 2}
@@ -1628,6 +1628,10 @@ Prefab:
       propertyPath: cityOrigin
       value: 
       objectReference: {fileID: 30346402}
+    - target: {fileID: 4278001111683070, guid: 572266f04627e7f4f8373416702755b2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.27
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 572266f04627e7f4f8373416702755b2, type: 2}
   m_IsPrefabParent: 0
@@ -2392,6 +2396,7 @@ GameObject:
   - component: {fileID: 474264063}
   - component: {fileID: 474264067}
   - component: {fileID: 474264068}
+  - component: {fileID: 474264069}
   m_Layer: 5
   m_Name: MainUI
   m_TagString: Main UI
@@ -2538,6 +2543,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   isEscapeMenu: 0
+  isResearchMenu: 0
 --- !u!212 &474264068
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2582,6 +2588,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &474264069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 474264062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dde38b9f2bf2274d998b17bc6c4d109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regionOrigin: {fileID: 0}
+  cityOrigin: {fileID: 0}
+  cityTarget: {fileID: 0}
+  regionListCopy: []
+  cityName: []
+  regionOriginName: {fileID: 0}
+  waterAmount: {fileID: 0}
+  foodAmount: {fileID: 0}
+  powerAmount: {fileID: 0}
+  transferFields: []
+  dropdown: {fileID: 0}
+  exitButton: {fileID: 0}
+  cityDropdownContentPrefab: {fileID: 0}
 --- !u!1 &519649675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,7 +3105,7 @@ Prefab:
         type: 2}
       propertyPath: transferPanelPrefab
       value: 
-      objectReference: {fileID: 1386539896978942, guid: b8aba7f105e15f9428bd0bd8840b4503,
+      objectReference: {fileID: 1301340709576872, guid: d73be2738eabf4944a73b1ebf664a6aa,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94898287935255c42940fdc585224552, type: 2}
@@ -3142,7 +3172,7 @@ Prefab:
         type: 2}
       propertyPath: transferPanelPrefab
       value: 
-      objectReference: {fileID: 1386539896978942, guid: b8aba7f105e15f9428bd0bd8840b4503,
+      objectReference: {fileID: 1301340709576872, guid: d73be2738eabf4944a73b1ebf664a6aa,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12e78861a162aa4687cda64b643e350, type: 2}
@@ -3958,7 +3988,7 @@ Prefab:
         type: 2}
       propertyPath: transferPanelPrefab
       value: 
-      objectReference: {fileID: 1386539896978942, guid: b8aba7f105e15f9428bd0bd8840b4503,
+      objectReference: {fileID: 1301340709576872, guid: d73be2738eabf4944a73b1ebf664a6aa,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 465cd92417f316749871fefa33d17937, type: 2}
@@ -6998,7 +7028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 128.40002, y: 167}
+  m_AnchoredPosition: {x: 128.40002, y: 96}
   m_SizeDelta: {x: 246.70001, y: 642.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525296949
@@ -8264,7 +8294,7 @@ Prefab:
         type: 2}
       propertyPath: transferPanelPrefab
       value: 
-      objectReference: {fileID: 1386539896978942, guid: b8aba7f105e15f9428bd0bd8840b4503,
+      objectReference: {fileID: 1301340709576872, guid: d73be2738eabf4944a73b1ebf664a6aa,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614455dfb6c81bb4689bef7ffdd5ce8a, type: 2}

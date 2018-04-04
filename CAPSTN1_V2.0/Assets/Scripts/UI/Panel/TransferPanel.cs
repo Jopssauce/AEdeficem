@@ -13,13 +13,13 @@ public class TransferPanel : MonoBehaviour
 	public List<RegionBase> regionListCopy;
 	public List<string> cityName;
 
+	public Text regionOriginName;
+
 	public Text waterAmount;
 	public Text	foodAmount;
 	public Text powerAmount;
 
-	public InputField waterInput;
-	public InputField foodInput;
-	public InputField powerInput;
+	public List<TransferField> transferFields;
 
 	public Dropdown dropdown;
 	public Button exitButton;
@@ -52,22 +52,34 @@ public class TransferPanel : MonoBehaviour
 		}
 		tutorialManager = cityOrigin.tutorialManager;
 		turnManager.EndTurnEvent.AddListener(SetUIText);
+
 		regionListCopy = new List<RegionBase>(regionManager.regionList);
 		regionListCopy.Remove(regionOrigin);
 
+
+		regionOriginName.text = regionOrigin.cityOrigin.name;
 		foreach (var item in regionListCopy)
 		{
 			cityName.Add(item.cityOrigin.name);
 		}
+
+		
+		for (int i = 0; i <= regionListCopy.Count; i++)
+		{
+			transferFields[i].transferPanel = this;
+			transferFields[i].cityToTransferName.text = regionListCopy[i].cityOrigin.name;
+			transferFields[i].cityTarget = regionListCopy[i].cityOrigin;
+		}
+
 		dropdown.AddOptions(cityName);
 		SetUIText();
 		
 	}
 
-	public void SpawnUnit()
+	
+
+	public void SpawnUnit(CityBase cityTarget, int water, int food, int power)
     {
-		if (isEnoughRes() == true)
-		{
 			if (tutorialManager != null)
 			{
 				if (tutorialManager.currentTutorialStepPanel != null)
@@ -79,21 +91,20 @@ public class TransferPanel : MonoBehaviour
 					}
 				}           
 			}
-			cityOrigin.SpawnResourceSender(regionListCopy[dropdown.value].cityOrigin, int.Parse(waterInput.text), int.Parse(foodInput.text), int.Parse(powerInput.text));
+			cityOrigin.SpawnResourceSender(cityTarget, water, food, power);
         	resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 2);
 			SetUIText();
 			//Destroy (CityBase.blockerPanel);
-			Destroy(this.gameObject);   
-			FindObjectOfType<AudioManager> ().Play ("Generic");
-		}
-        
+			   
+			FindObjectOfType<AudioManager> ().Play ("Generic");   
     }
 
 	public void exitClick()
 	{
 		Destroy(this.gameObject);
 	}
-	  public bool isEnoughRes()
+
+	/*public bool isEnoughRes()
 	{
         CityBase cityOrigin = regionOrigin.cityOrigin;
 		FindObjectOfType<AudioManager> ().Play ("Generic");
@@ -108,7 +119,7 @@ public class TransferPanel : MonoBehaviour
 		}
 		
 		
-	}
+	}*/
 
 	public void SetUIText()
 	{
