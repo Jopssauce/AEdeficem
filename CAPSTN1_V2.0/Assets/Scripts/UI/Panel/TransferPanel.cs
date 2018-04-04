@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class TransferPanel : MonoBehaviour 
 {
@@ -25,15 +26,20 @@ public class TransferPanel : MonoBehaviour
 	public Button exitButton;
 
 	public GameObject cityDropdownContentPrefab;
+	public GameObject notificationPanel;
 	
 	RegionManager regionManager;
 	ResourceManager resourceManager;
 	TurnManager turnManager;
 	TutorialManager tutorialManager;
 	
+	public int waterSum;
+	public int foodSum;
+	public int powerSum;
 
 	void Start()
 	{
+		regionOrigin = cityOrigin.regionOrigin;
 		if (RegionManager.instance != null)
 		{
 			regionManager = RegionManager.instance;
@@ -56,7 +62,6 @@ public class TransferPanel : MonoBehaviour
 		regionListCopy = new List<RegionBase>(regionManager.regionList);
 		regionListCopy.Remove(regionOrigin);
 
-
 		regionOriginName.text = regionOrigin.cityOrigin.name;
 		foreach (var item in regionListCopy)
 		{
@@ -64,7 +69,7 @@ public class TransferPanel : MonoBehaviour
 		}
 
 		
-		for (int i = 0; i <= regionListCopy.Count; i++)
+		for (int i = 0; i <= regionListCopy.Count-1; i++)
 		{
 			transferFields[i].transferPanel = this;
 			transferFields[i].cityToTransferName.text = regionListCopy[i].cityOrigin.name;
@@ -76,10 +81,22 @@ public class TransferPanel : MonoBehaviour
 		
 	}
 
-	
 
-	public void SpawnUnit(CityBase cityTarget, int water, int food, int power)
+	public void SpawnUnit()
     {
+		waterSum = 0;
+		foodSum = 0;
+		powerSum = 0;
+
+		foreach (var item in transferFields)
+		{
+			waterSum += int.Parse(item.waterInput.text);
+			foodSum += int.Parse(item.foodInput.text);
+			powerSum += int.Parse(item.powerInput.text);
+		}
+
+		if (isEnoughRes() && transferFields.Any(field => field.toggle.isOn == true))
+		{
 			if (tutorialManager != null)
 			{
 				if (tutorialManager.currentTutorialStepPanel != null)
@@ -91,25 +108,46 @@ public class TransferPanel : MonoBehaviour
 					}
 				}           
 			}
-			cityOrigin.SpawnResourceSender(cityTarget, water, food, power);
+			
+			foreach (var item in transferFields)
+			{
+				if (item.toggle.isOn == true)
+				{
+					cityOrigin.SpawnResourceSender(item.cityTarget, int.Parse(item.waterInput.text), int.Parse(item.foodInput.text), int.Parse(item.powerInput.text));
+					
+					SetUIText();
+				}
+				
+			}
         	resourceManager.DeductResource(ResourceManager.ResourceType.ActionPoints, 2);
-			SetUIText();
-			//Destroy (CityBase.blockerPanel);
+			Destroy (this.gameObject);
+		}
+		if(!isEnoughRes())
+		{
+			notificationPanel.GetComponent<NotificationPanel>().text.text = "Not Enough Resources";
+			notificationPanel.gameObject.SetActive(true);
+		}
+		else if (transferFields.All(field => field.toggle.isOn == false))
+		{
+			notificationPanel.GetComponent<NotificationPanel>().text.text = "No City Selected";
+			notificationPanel.gameObject.SetActive(true);
+		}
 			   
 			FindObjectOfType<AudioManager> ().Play ("Generic");   
     }
+
 
 	public void exitClick()
 	{
 		Destroy(this.gameObject);
 	}
 
-	/*public bool isEnoughRes()
+	public bool isEnoughRes()
 	{
         CityBase cityOrigin = regionOrigin.cityOrigin;
 		FindObjectOfType<AudioManager> ().Play ("Generic");
-		if (cityOrigin.cityResources.Water < int.Parse(waterInput.text) || cityOrigin.cityResources.Food < int.Parse(foodInput.text) 
-		 || cityOrigin.cityResources.Power < int.Parse(powerInput.text) )
+		if (cityOrigin.cityResources.Water < waterSum || cityOrigin.cityResources.Food < foodSum 
+		 || cityOrigin.cityResources.Power < powerSum )
 		{
 			return false;
 		}
@@ -119,7 +157,7 @@ public class TransferPanel : MonoBehaviour
 		}
 		
 		
-	}*/
+	}
 
 	public void SetUIText()
 	{

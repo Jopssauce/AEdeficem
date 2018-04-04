@@ -5014,10 +5014,6 @@ Prefab:
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 392909611}
-    - target: {fileID: 1366422060424752, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c19ee39c234dc2c40b8f0b387cdf0b12, type: 2}
   m_IsPrefabParent: 0
