@@ -21,8 +21,8 @@ public class CityBase : MonoBehaviour
     }
 
 	public RegionBase regionOrigin;
-	public GameObject cityPanelPrefab;
-	public GameObject cityPanel;
+	public GameObject transferPanelPrefab;
+	public GameObject transferPanel;
 	public GameObject baseUnitPrefab;
 	public GameObject unitResourceSenderPrefab;
 	public GameObject RightClickPanel;
@@ -132,13 +132,13 @@ public class CityBase : MonoBehaviour
 		AdjustedCityResource.Invoke();
 	}
 
-	public void SpawnStatsPanel()
+	public void SpawnTransferPanel()
 	{
-		cityPanel = Instantiate(cityPanelPrefab);
-		cityPanel.GetComponent<StatsPanel>().cityOrigin = this.GetComponent<CityBase>();
-		cityPanel.GetComponent<StatsPanel>().regionOrigin = regionOrigin;
-		cityPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
-		cityPanel.transform.SetAsLastSibling();
+		transferPanel = Instantiate(transferPanelPrefab);
+		transferPanel.GetComponent<TransferPanel>().cityOrigin = this.GetComponent<CityBase>();
+		transferPanel.GetComponent<TransferPanel>().regionOrigin = regionOrigin;
+		transferPanel.transform.SetParent(GameObject.FindGameObjectWithTag("Main UI").transform, false);
+		transferPanel.transform.SetAsLastSibling();
 	}
 		
 	public void SpawnRightClickPanel()

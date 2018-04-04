@@ -37,7 +37,7 @@ public class CityClick : MonoBehaviour {
 					}           
 				}
 				Debug.Log (cityOrigin.name);
-				cityOrigin.SpawnStatsPanel ();
+				cityOrigin.SpawnTransferPanel ();
 				FindObjectOfType<AudioManager> ().Play ("Generic");
 			}
 		}
@@ -46,7 +46,7 @@ public class CityClick : MonoBehaviour {
 	{	
 		if (!EventSystem.current.IsPointerOverGameObject())
 		{
-			if (cityOrigin.cityPanel == null)
+			if (cityOrigin.transferPanel == null)
 			{
 				cityParticle.gameObject.SetActive(false);
 			}
