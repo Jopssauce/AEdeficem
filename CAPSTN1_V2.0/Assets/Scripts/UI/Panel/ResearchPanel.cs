@@ -172,25 +172,6 @@ public class ResearchPanel : MonoBehaviour
 					item.interactable = false;
 			}
 		}
-		foreach (var item in transportEffButtons)
-		{
-			if (item.GetComponent<ResearchButton>().tierNum != researchManager.tierProgress.transportEffTier + 1)
-			{
-				item.interactable = false;
-				if (researchManager.tierProgress.transportEffTier + 1 > item.GetComponent<ResearchButton> ().tierNum)
-				{
-					item.GetComponent<ResearchButton> ().GetComponent<Image> ().sprite = TierIcons [item.GetComponent<ResearchButton> ().tierNum - 1];
-				}
-			}
-			else
-			{
-				item.interactable = true;
-			}
-			if (researchManager.selectedResearch != null && researchManager.selectedResearch.type != Technology.TechType.Transport)
-			{
-					item.interactable = false;
-			}
-		}
 	}
 
 	public void SetSelectedResearchText()

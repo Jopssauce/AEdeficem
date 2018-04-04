@@ -33,7 +33,7 @@ public class MainUI : MonoBehaviour
     private TurnManager 	turnManager;
     private RegionManager   regManager;
     private EventManager    eventManager;
-	private CityClick		cityClick;
+	//private CityClick		cityClick;
     public TutorialManager  tutorialManager;
 
     public List<GameObject> regionUnderlayDisplayList;
@@ -64,12 +64,6 @@ public class MainUI : MonoBehaviour
 		isResearchPanel = false;
 		isEventPanel = false;
 		isTransferPanel = false;
-
-		if (CityClick.instance != null) 
-		{
-			cityClick = CityClick.instance;
-		}
-
 
         foreach (var region in regManager.regionList)
         {
@@ -121,7 +115,7 @@ public class MainUI : MonoBehaviour
 			}
 			else if (isTransferPanel)
 			{
-				cityClick.cityOrigin.GetComponent<CityBase> ().transferPanel.gameObject.SetActive (false);
+				//cityClick.cityOrigin.GetComponent<CityBase> ().transferPanel.gameObject.SetActive (false);
 				isTransferPanel = false;
 			}
 				

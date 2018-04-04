@@ -12,19 +12,7 @@ public class CityClick : MonoBehaviour {
 	public ParticleSystem cityParticle;
 
 	public TutorialManager tutorialManager;
-	public static CityClick instance = null;
 
-	void Awake()
-	{
-		if (instance == null) 
-		{
-			instance = this;	
-		}
-		else if (instance != this) 
-		{
-			Destroy (gameObject);
-		}
-	}
 	void Start()
 	{
 		cityOrigin = GetComponent<CityBase>();

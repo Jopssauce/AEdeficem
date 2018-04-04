@@ -17,7 +17,7 @@ public class ResearchTabs : MonoBehaviour, IPointerClickHandler {
     public void ShowTab()
     {
 		ThePanel.texture = Thumnails;
-		this.transform.parent.SetSiblingIndex (10);
+		this.transform.parent.SetSiblingIndex (9);
     }
 
 	#region IPointerDownHandler implementation
