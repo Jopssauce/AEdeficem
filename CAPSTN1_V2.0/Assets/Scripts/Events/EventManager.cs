@@ -113,13 +113,13 @@ public class EventManager : MonoBehaviour
 			}
 			GameObject building = Instantiate(newButton.GetComponent<EventPopUpBase>().eventData.buildingPrefab);
 			building.GetComponent<BuildingPrefab>().eventOrigin = newButton.GetComponent<EventPopUpBase>();
-			GameObject newEventContent                                  = Instantiate(eventOutlinerContent);
-			newEventContent.GetComponent<EventContent>().eventOrigin    = newButton.GetComponent<EventPopUpBase>();
+			//GameObject newEventContent                                  = Instantiate(eventOutlinerContent);
+			//newEventContent.GetComponent<EventContent>().eventOrigin    = newButton.GetComponent<EventPopUpBase>();
 
 			newButton.GetComponent<EventPopUpBase>().turnsLeft          = newButton.GetComponent<EventPopUpBase>().eventData.turnsLeft;
-			eventOutlinerTracker.Add(newEventContent);
+			//eventOutlinerTracker.Add(newEventContent);
 
-			newEventContent.transform.SetParent(eventOutliner.transform, false);
+			//newEventContent.transform.SetParent(eventOutliner.transform, false);
 
 			eventTracker.Add(newButton);
 		}

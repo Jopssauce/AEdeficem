@@ -1378,6 +1378,12 @@ Prefab:
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 392909611}
+    - target: {fileID: 114176567413964334, guid: 6542f92a3851c7749889e3c4164c7ac5,
+        type: 2}
+      propertyPath: transferPanelPrefab
+      value: 
+      objectReference: {fileID: 1301340709576872, guid: d73be2738eabf4944a73b1ebf664a6aa,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6542f92a3851c7749889e3c4164c7ac5, type: 2}
   m_IsPrefabParent: 0
@@ -1727,7 +1733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 55.05005, y: -254.15002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &392909607
@@ -2494,7 +2500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventLayer: {fileID: 1920076167}
   staticUILayer: {fileID: 0}
-  regionUnderlayDisplayLayer: {fileID: 381118193}
+  regionOutliner: {fileID: 2105874871}
   WaterAmnt: {fileID: 1879452176}
   PowerAmnt: {fileID: 107135216}
   FoodAmnt: {fileID: 1443267292}
@@ -2797,7 +2803,7 @@ GameObject:
   - component: {fileID: 542130012}
   - component: {fileID: 542130011}
   m_Layer: 5
-  m_Name: Event Outliner text
+  m_Name: Region Outliner text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2818,8 +2824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 336}
-  m_SizeDelta: {x: 251.1, y: 47.1}
+  m_AnchoredPosition: {x: 7.5, y: 336}
+  m_SizeDelta: {x: 268.1, y: 47.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &542130011
 MonoBehaviour:
@@ -2853,7 +2859,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Event Outliner
+  m_Text: 'Region Outliner
 
 '
 --- !u!222 &542130012
@@ -3065,6 +3071,12 @@ Prefab:
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 392909611}
+    - target: {fileID: 114751372656499930, guid: 94898287935255c42940fdc585224552,
+        type: 2}
+      propertyPath: transferPanelPrefab
+      value: 
+      objectReference: {fileID: 1301340709576872, guid: d73be2738eabf4944a73b1ebf664a6aa,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94898287935255c42940fdc585224552, type: 2}
   m_IsPrefabParent: 0
@@ -3126,6 +3138,12 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114461779823704710, guid: f12e78861a162aa4687cda64b643e350,
+        type: 2}
+      propertyPath: transferPanelPrefab
+      value: 
+      objectReference: {fileID: 1301340709576872, guid: d73be2738eabf4944a73b1ebf664a6aa,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12e78861a162aa4687cda64b643e350, type: 2}
   m_IsPrefabParent: 0
@@ -3936,6 +3954,12 @@ Prefab:
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 392909611}
+    - target: {fileID: 114313301969230612, guid: 465cd92417f316749871fefa33d17937,
+        type: 2}
+      propertyPath: transferPanelPrefab
+      value: 
+      objectReference: {fileID: 1301340709576872, guid: d73be2738eabf4944a73b1ebf664a6aa,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 465cd92417f316749871fefa33d17937, type: 2}
   m_IsPrefabParent: 0
@@ -4929,7 +4953,7 @@ Prefab:
     - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
         type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224200874622457798, guid: c19ee39c234dc2c40b8f0b387cdf0b12,
         type: 2}
@@ -6937,7 +6961,7 @@ GameObject:
   - component: {fileID: 1525296953}
   - component: {fileID: 1525296952}
   m_Layer: 5
-  m_Name: Event Outliner
+  m_Name: Region Outliner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8051,7 +8075,7 @@ Prefab:
     - target: {fileID: 224855354460144774, guid: 75b18a0b93b224f4ab3ff3370b866f79,
         type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 224855354460144774, guid: 75b18a0b93b224f4ab3ff3370b866f79,
         type: 2}
@@ -8224,6 +8248,12 @@ Prefab:
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 392909611}
+    - target: {fileID: 114398707487080528, guid: 614455dfb6c81bb4689bef7ffdd5ce8a,
+        type: 2}
+      propertyPath: transferPanelPrefab
+      value: 
+      objectReference: {fileID: 1301340709576872, guid: d73be2738eabf4944a73b1ebf664a6aa,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614455dfb6c81bb4689bef7ffdd5ce8a, type: 2}
   m_IsPrefabParent: 0
@@ -9814,7 +9844,7 @@ MonoBehaviour:
   m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
+  m_HorizontalFit: 2
   m_VerticalFit: 2
 --- !u!114 &2105874874
 MonoBehaviour:
@@ -9833,7 +9863,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 5
+  m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0

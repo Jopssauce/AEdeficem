@@ -8,7 +8,7 @@ public class MainUI : MonoBehaviour
 {
     public GameObject eventLayer;
     public GameObject staticUILayer;
-    public GameObject regionUnderlayDisplayLayer;
+    public GameObject regionOutliner;
 
     public Text WaterAmnt;
     public Text PowerAmnt;
@@ -68,7 +68,7 @@ public class MainUI : MonoBehaviour
             //ruBarOutliner.GetComponent<RegionUnderlayDisplay>().regionOrigin    = region.GetComponent<RegionBase>();
 
             regionUnderlayDisplayList.Add(ruBar);
-            ruBar.transform.SetParent(regionUnderlayDisplayLayer.transform, false);
+            ruBar.transform.SetParent(regionOutliner.transform, false);
             //ruBarOutliner.transform.SetParent(regionOutliner.transform, false);
         }
         
