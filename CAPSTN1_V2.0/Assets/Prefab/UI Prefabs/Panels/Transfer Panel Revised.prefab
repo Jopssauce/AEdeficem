@@ -320,7 +320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1307593634285816
 GameObject:
   m_ObjectHideFlags: 1
@@ -2407,12 +2407,11 @@ MonoBehaviour:
   cityTarget: {fileID: 0}
   regionListCopy: []
   cityName: []
+  regionOriginName: {fileID: 0}
   waterAmount: {fileID: 114084727532474376}
   foodAmount: {fileID: 114345758619520794}
   powerAmount: {fileID: 114176033369367972}
-  waterInput: {fileID: 114139019588937476}
-  foodInput: {fileID: 114350603243588282}
-  powerInput: {fileID: 114687627050487618}
+  transferFields: []
   dropdown: {fileID: 114262593170525554}
   exitButton: {fileID: 114040231643887684}
   cityDropdownContentPrefab: {fileID: 0}
