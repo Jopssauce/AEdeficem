@@ -48,7 +48,7 @@ public class MainUI : MonoBehaviour
 	public UnityEvent EscButtonPressed;
     
 	public bool isEscapeMenu;
-	public bool isResearchMenu;
+	public static bool isAnyMenuOn;
     // Use this for initialization
     
     void Start ()
@@ -58,7 +58,8 @@ public class MainUI : MonoBehaviour
         regManager  = RegionManager.instance;
         eventManager = EventManager.instance;
 		isEscapeMenu = false;
-		isResearchMenu = false;
+		isAnyMenuOn = false;
+
 
         foreach (var region in regManager.regionList)
         {
@@ -101,9 +102,10 @@ public class MainUI : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Escape)) 
 		{
 			//isResearchMenu = !isResearchMenu;
-			if (isResearchMenu) {
+			if (isAnyMenuOn) 
+			{
 				researchPanel.SetActive (false);
-				isResearchMenu = false;
+				isAnyMenuOn = false;
 			}
 			
 			else {
@@ -171,7 +173,7 @@ public class MainUI : MonoBehaviour
         researchPanel.transform.SetParent(this.transform, false);
         researchPanel.transform.SetAsLastSibling();
         researchPanel.SetActive(true);
-		isResearchMenu = true;
+		isAnyMenuOn = true;
 		FindObjectOfType<AudioManager> ().Play ("Generic");
     }
 
