@@ -35,8 +35,6 @@ public class Technology : ScriptableObject
 	public RegionManager   regionManager;
 	public TurnManager 		turnManager;
 
-	public Texture Thumbnail;
-
 	public void Awake()
 	{
 		if (ResearchManager.instance != null)

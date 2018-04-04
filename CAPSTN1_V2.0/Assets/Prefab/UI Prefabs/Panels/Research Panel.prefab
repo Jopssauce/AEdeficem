@@ -558,7 +558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1369872013229928
 GameObject:
   m_ObjectHideFlags: 1
@@ -965,7 +965,6 @@ GameObject:
   - component: {fileID: 224801229389797350}
   - component: {fileID: 222487658695022150}
   - component: {fileID: 114411615606891030}
-  - component: {fileID: 114871438266421178}
   m_Layer: 5
   m_Name: ResearchThumbnail
   m_TagString: Untagged
@@ -1606,6 +1605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c45a3456dc3bac438e579cc761eaeb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThePanel: {fileID: 0}
+  Thumnails: {fileID: 0}
 --- !u!114 &114160316344964242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2129,6 +2130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c45a3456dc3bac438e579cc761eaeb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThePanel: {fileID: 114411615606891030}
+  Thumnails: {fileID: 2800000, guid: 617b4a4342e1853498c50189a5b15ff7, type: 3}
 --- !u!114 &114296329974913634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2423,6 +2426,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0be761161958b2f4a82b8b27e42a7b45, type: 3}
   researchManager: {fileID: 0}
   turnManager: {fileID: 0}
+  tutorialManager: {fileID: 0}
   notificationPanel: {fileID: 114352952595269318}
 --- !u!114 &114411615606891030
 MonoBehaviour:
@@ -2928,6 +2932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c45a3456dc3bac438e579cc761eaeb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThePanel: {fileID: 114411615606891030}
+  Thumnails: {fileID: 2800000, guid: 02324e04c1fdc80459be30d90596e99b, type: 3}
 --- !u!114 &114599601367858250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3368,6 +3374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c45a3456dc3bac438e579cc761eaeb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThePanel: {fileID: 114411615606891030}
+  Thumnails: {fileID: 2800000, guid: 617b4a4342e1853498c50189a5b15ff7, type: 3}
 --- !u!114 &114782797069706080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3832,18 +3840,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114871438266421178
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1742310482565278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 467f57da588c50149beef23ed92f9e3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DefaultThumbnail: {fileID: 2800000, guid: 335623dc985e8e948baf5466a4530099, type: 3}
 --- !u!114 &114871439468188056
 MonoBehaviour:
   m_ObjectHideFlags: 1
