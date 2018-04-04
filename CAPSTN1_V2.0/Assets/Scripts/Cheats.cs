@@ -6,6 +6,7 @@ public class Cheats : MonoBehaviour {
 
 	private RegionManager regionManager;
 	private ResourceManager resourceManager;
+	public int Addition;
 	// Use this for initialization
 	void Start()
 	{
@@ -42,9 +43,9 @@ public class Cheats : MonoBehaviour {
 	{
 		foreach (RegionBase s in regionManager.regionList)
 		{
-			s.cityOrigin.GetComponent<CityBase> ().cityResources.Water += 100;
-			s.cityOrigin.GetComponent<CityBase> ().cityResources.Food += 100;
-			s.cityOrigin.GetComponent<CityBase> ().cityResources.Power += 100;
+			s.cityOrigin.GetComponent<CityBase> ().cityResources.Water += Addition;
+			s.cityOrigin.GetComponent<CityBase> ().cityResources.Food += Addition;
+			s.cityOrigin.GetComponent<CityBase> ().cityResources.Power += Addition;
 			s.cityOrigin.GetComponent<CityBase> ().AdjustedCityResource.Invoke ();
 		}
 	}
