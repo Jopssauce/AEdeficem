@@ -9,6 +9,7 @@ public class MainUI : MonoBehaviour
     public GameObject eventLayer;
     public GameObject staticUILayer;
     public GameObject regionOutliner;
+    public GameObject nameLayer;
 
     public Text WaterAmnt;
     public Text PowerAmnt;
@@ -37,12 +38,14 @@ public class MainUI : MonoBehaviour
     public TutorialManager  tutorialManager;
 
     public List<GameObject> regionUnderlayDisplayList;
+    public List<GameObject> regionNameList;
 
     public GameObject regionUnderlayDisplay;
     public GameObject regionOutlinerContent;
 
     public GameObject toggleUnderlayDisplay;
     public GameObject researchPanel;
+    public GameObject regionNamePrefab;
 
     public GameObject regQualityChecker;
 
@@ -68,14 +71,20 @@ public class MainUI : MonoBehaviour
         foreach (var region in regManager.regionList)
         {
             GameObject ruBar            = Instantiate(regionUnderlayDisplay);
+            GameObject ruBar2            = Instantiate(regionNamePrefab);
             //GameObject ruBarOutliner    = Instantiate(regionOutlinerContent);
 
             ruBar.GetComponent<RegionUnderlayDisplay>().regionOrigin            = region.GetComponent<RegionBase>();
             ruBar.GetComponent<BindToRegion>().regionOrigin 					= region.GetComponent<RegionBase>();
+
+            ruBar2.GetComponent<RegionUnderlayDisplay>().regionOrigin            = region.GetComponent<RegionBase>();
+            ruBar2.GetComponent<BindToRegion>().regionOrigin 					= region.GetComponent<RegionBase>();
             //ruBarOutliner.GetComponent<RegionUnderlayDisplay>().regionOrigin    = region.GetComponent<RegionBase>();
 
             regionUnderlayDisplayList.Add(ruBar);
+            regionNameList.Add(ruBar2);
             ruBar.transform.SetParent(regionOutliner.transform, false);
+             ruBar2.transform.SetParent(nameLayer.transform, false);
             //ruBarOutliner.transform.SetParent(regionOutliner.transform, false);
         }
         
