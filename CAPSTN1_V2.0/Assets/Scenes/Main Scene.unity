@@ -2538,6 +2538,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   isEscapeMenu: 0
+  isResearchMenu: 0
 --- !u!212 &474264068
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4629,7 +4630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -326.06, y: 91.56}
+  m_AnchoredPosition: {x: -352.2, y: 108.2}
   m_SizeDelta: {x: 148.83, y: 48.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1027642702
@@ -4737,8 +4738,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 7e9cbeec1ab43db4e8c69167838efdc4,
-      type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -4783,7 +4783,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8740161baae6f814bbc2f6917f882c49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b6edb508637730488df6db582d73f40, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7510,7 +7510,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RESEARCH
+  m_Text: 
 --- !u!222 &1589664837
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7537,7 +7537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1595428771
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9675,7 +9675,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 807367df8c38faa4f9fb97a535ef572c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 327d37e5da0535a4a953c695c943e5cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
