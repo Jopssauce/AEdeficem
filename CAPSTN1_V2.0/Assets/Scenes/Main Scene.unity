@@ -1780,7 +1780,7 @@ RectTransform:
   - {fileID: 63392327}
   - {fileID: 874823170}
   m_Father: {fileID: 474264066}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2475,8 +2475,8 @@ RectTransform:
   - {fileID: 1328522148}
   - {fileID: 1461566592}
   - {fileID: 1371878295}
-  - {fileID: 395659331}
   - {fileID: 392909608}
+  - {fileID: 395659331}
   - {fileID: 1287215685}
   - {fileID: 63384960}
   m_Father: {fileID: 0}
@@ -5061,6 +5061,7 @@ GameObject:
   - component: {fileID: 1181835266}
   - component: {fileID: 1181835268}
   - component: {fileID: 1181835267}
+  - component: {fileID: 1181835269}
   m_Layer: 5
   m_Name: BlockerPanel
   m_TagString: Untagged
@@ -5122,6 +5123,17 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1181835265}
+--- !u!114 &1181835269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1181835265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -146154839, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1246466723
 GameObject:
   m_ObjectHideFlags: 0
@@ -6986,7 +6998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 128.40002, y: 14.8}
+  m_AnchoredPosition: {x: 128.40002, y: 167}
   m_SizeDelta: {x: 246.70001, y: 642.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525296949
@@ -8075,7 +8087,7 @@ Prefab:
     - target: {fileID: 224855354460144774, guid: 75b18a0b93b224f4ab3ff3370b866f79,
         type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 224855354460144774, guid: 75b18a0b93b224f4ab3ff3370b866f79,
         type: 2}
@@ -9863,7 +9875,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
