@@ -21,7 +21,6 @@ public class NotificationPanel : MonoBehaviour {
 		yield return new WaitForSeconds(2);
 		while (this.gameObject.activeSelf == true)
 		{
-			Debug.Log("coroutine");
 			this.gameObject.SetActive(false);
 		}
  		
