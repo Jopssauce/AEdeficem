@@ -151,7 +151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1840941024603174
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,8 +345,7 @@ MonoBehaviour:
   isStepDone: 0
   stepNumber: 0
   tutorialDescription: "Transfering allows you to <color=lightgreen>move resources</color>
-    to other cities. <color=yellow>Click on the transfer button to proceed.</color>
-    \n"
+    to other cities. <color=yellow>Click on the next  button to proceed.</color> \n"
 --- !u!114 &114732262653231006
 MonoBehaviour:
   m_ObjectHideFlags: 1

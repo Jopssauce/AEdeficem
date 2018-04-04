@@ -17,7 +17,7 @@ public class RegionUnderlayDisplay : MonoBehaviour {
 	{	
 		regionQualityBar.GetComponent<RegionQualityBar>().regionOrigin 	= regionOrigin;
 		regionResources.GetComponent<RegionResources>().regionOrigin 	= this.regionOrigin;
-		regionName.text = regionOrigin.name;
+		regionName.text = regionOrigin.cityOrigin.name;
 		SetUIText();
 		regionOrigin.cityOrigin.AdjustedCityResource.AddListener(SetUIText);
 	
@@ -37,12 +37,16 @@ public class RegionUnderlayDisplay : MonoBehaviour {
 
 	public void SetUIText()
 	{
-		waterAmt.text 	= regionOrigin.cityOrigin.cityResources.Water.ToString();
+		if (waterAmt != null && foodAmt != null  && powerAmt != null)
+		{
+			waterAmt.text 	= regionOrigin.cityOrigin.cityResources.Water.ToString();
 		foodAmt.text 	= regionOrigin.cityOrigin.cityResources.Food.ToString();
 		powerAmt.text 	= regionOrigin.cityOrigin.cityResources.Power.ToString();
 		ChangeColor(waterAmt, Color.white);
 		ChangeColor(foodAmt, Color.white);
 		ChangeColor(powerAmt, Color.white);
+		}
+		
 	}
 
 }

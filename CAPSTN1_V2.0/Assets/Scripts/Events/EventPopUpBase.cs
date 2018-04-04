@@ -20,6 +20,7 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 
     public Text         turnsToResolve;
     
+    public GameObject   arrow;
 	public GameObject	eventPanel;
 	public GameObject	eventPanelPrefab;
 	public GameObject 	RightClickPanelPrefab;
@@ -71,6 +72,25 @@ public class EventPopUpBase : MonoBehaviour, IPointerClickHandler
 		isEventUiPanel = false;
 	}
 	
+    void FixedUpdate()
+    {
+        if (tutorialManager != null)
+        {
+            if (tutorialManager.currentTutorialStepPanel != null)
+            {
+                if (tutorialManager.currentTutorialStepPanel.GetComponent<SendUnitStep>() || tutorialManager.currentTutorialStepPanel.GetComponent<SendUnitStep2>() )
+                {
+                    arrow.SetActive(true);
+                }
+                else
+                {
+                    arrow.SetActive(false);
+                }
+            }
+           
+        }
+    }
+
     public void Click()
     {   
 		eventPanel = Instantiate(eventPanelPrefab) as GameObject;
