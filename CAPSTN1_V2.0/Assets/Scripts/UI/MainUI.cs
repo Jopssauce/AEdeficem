@@ -125,6 +125,7 @@ public class MainUI : MonoBehaviour
                     gameExitButton.SetActive(false);
                 }
             }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             //isResearchMenu = !isResearchMenu;
