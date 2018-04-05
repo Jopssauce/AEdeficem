@@ -111,35 +111,46 @@ public class MainUI : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape)) 
-		{
-			//isResearchMenu = !isResearchMenu;
-			if (isResearchPanel) {
-				researchPanel.SetActive (false);
-				isResearchPanel = false;
-			} else if (isEventPanel) {
-				Destroy (eventManager.selectedEvent.GetComponent<EventPopUpBase> ().eventPanel);
-				isEventPanel = false;
-			} else if (isTransferPanel)
-			{
-				foreach (RegionBase s in regManager.regionList)
-				{
-					Destroy(s.cityOrigin.GetComponent<CityBase> ().transferPanel);
-				}
+	
 
-				isTransferPanel = false;
-			}
+            if (Input.GetKeyDown(KeyCode.Escape) && !isResearchPanel && !isEventPanel && !isTransferPanel)
+            {
+                isEscapeMenu = !isEscapeMenu;
+                if (isEscapeMenu == true)
+                {
+                    gameExitButton.SetActive(true);
+                }
+                if (isEscapeMenu == false)
+                {
+                    gameExitButton.SetActive(false);
+                }
+            }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //isResearchMenu = !isResearchMenu;
+            if (tutorialManager.isTutorialFinished == true)
+            {
+                if (isResearchPanel)
+                {
+                    researchPanel.SetActive(false);
+                    isResearchPanel = false;
+                }
+                else if (isEventPanel)
+                {
+                    Destroy(eventManager.selectedEvent.GetComponent<EventPopUpBase>().eventPanel);
+                    isEventPanel = false;
+                }
+                else if (isTransferPanel)
+                {
+                    foreach (RegionBase s in regManager.regionList)
+                    {
+                        Destroy(s.cityOrigin.GetComponent<CityBase>().transferPanel);
+                    }
 
-			else {
-				isEscapeMenu = !isEscapeMenu;
-				if (isEscapeMenu == true) {
-					gameExitButton.SetActive (true);
-				}
-				if (isEscapeMenu == false) {
-					gameExitButton.SetActive (false);
-				}
-			}
-		}
+                    isTransferPanel = false;
+                }
+            }
+        }
 	}
 
     
