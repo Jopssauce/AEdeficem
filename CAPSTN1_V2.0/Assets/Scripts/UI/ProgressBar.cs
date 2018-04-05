@@ -35,6 +35,6 @@ public class ProgressBar : MonoBehaviour {
 		rqSum /= 500;
 		slider.value = rqSum;
 		float progressNum = rqSum * 100.0f;
-		progressText.text = progressNum.ToString() + "%";
+		progressText.text = "Region Quality Average: " + progressNum.ToString() + "%";
 	}
 }
