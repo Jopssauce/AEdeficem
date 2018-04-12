@@ -2596,6 +2596,7 @@ MonoBehaviour:
   tutorialManager: {fileID: 392909611}
   regionUnderlayDisplayList: []
   regionNameList: []
+  turnButton: {fileID: 2006899925}
   regionUnderlayDisplay: {fileID: 1832858713281702, guid: bff0c58464bde9d478374e211883e3bb,
     type: 2}
   regionOutlinerContent: {fileID: 1292236568973542, guid: ceff0669d45eef64e85ca67df4e52954,

@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class RegionManager : MonoBehaviour
 {
     public List<RegionBase> regionList;
+    public List<UnitBase>   unitsList;
     public GameObject RegionStatsCanvasPrefab;
     public GameObject RegionStatUI;
 

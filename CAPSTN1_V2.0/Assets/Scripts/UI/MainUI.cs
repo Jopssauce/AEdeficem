@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System.Linq;
 
 public class MainUI : MonoBehaviour
 {
@@ -23,7 +24,6 @@ public class MainUI : MonoBehaviour
 
     public Text Turn;
 
-    public Button TurnButton;
     public Button researchButton;
 	public GameObject gameExitButton;
 
@@ -39,6 +39,8 @@ public class MainUI : MonoBehaviour
 
     public List<GameObject> regionUnderlayDisplayList;
     public List<GameObject> regionNameList;
+
+    public GameObject turnButton;
 
     public GameObject regionUnderlayDisplay;
     public GameObject regionOutlinerContent;
@@ -97,6 +99,7 @@ public class MainUI : MonoBehaviour
         EventSelected.AddListener(DisableButtons);
         EventClosed.AddListener(EnableButtons);
         turnManager.EndTurnEvent.AddListener(UpdateUiText);
+        turnManager.EndTurnEvent.AddListener(DisableTurnButton);
     
     }
 
@@ -111,7 +114,7 @@ public class MainUI : MonoBehaviour
 
 	void Update()
 	{
-	
+        EnableTurnButton();
 
             if (Input.GetKeyDown(KeyCode.Escape) && !isResearchPanel && !isEventPanel && !isTransferPanel)
             {
@@ -157,7 +160,7 @@ public class MainUI : MonoBehaviour
 
     public void DisableButtons()
     {
-        TurnButton.interactable = false;
+        //TurnButton.interactable = false;
         for(int i = 0; i < eventManager.eventTracker.Count; i++)
         {
             eventManager.eventTracker[i].GetComponent<Button>().interactable = false;
@@ -166,7 +169,7 @@ public class MainUI : MonoBehaviour
 
     public void EnableButtons()
     {
-        TurnButton.interactable = true;
+        //TurnButton.interactable = true;
         for (int i = 0; i < eventManager.eventTracker.Count; i++)
         {
             eventManager.eventTracker[i].GetComponent<Button>().interactable = true;
@@ -218,5 +221,21 @@ public class MainUI : MonoBehaviour
             regQualityChecker.gameObject.SetActive(true);
         }
     }
+
+    public void DisableTurnButton()
+    {
+        if(regManager.unitsList.Any(w => w.isArrived == false))
+        {
+            turnButton.SetActive(false);
+        }
+    }
+    public void EnableTurnButton()
+    {
+        if(regManager.unitsList.All(w => w.isArrived == true) || regManager.unitsList.Count == 0 && turnButton.activeSelf == false)
+        {
+            turnButton.SetActive(true);
+        }
+    }
+
 
 }

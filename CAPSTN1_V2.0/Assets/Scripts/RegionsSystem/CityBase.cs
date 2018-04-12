@@ -56,12 +56,17 @@ public class CityBase : MonoBehaviour
 
 
 	private TurnManager turnManager;
+	private RegionManager regionManager;
 	public UnityEvent AdjustedCityResource;
 	public void Start()
 	{
 		if (TurnManager.instance != null)
 		{
 			turnManager = TurnManager.instance;
+		}
+		if (RegionManager.instance != null)
+		{
+			regionManager = RegionManager.instance;
 		}
 		turnManager.EndTurnEvent.AddListener(UpdateCity);
 		UpdateCity();
@@ -197,6 +202,7 @@ public class CityBase : MonoBehaviour
 		currentUnit.GetComponent<UnitBase>().cityOrigin = this;
 		currentUnit.GetComponent<UnitBase>().eventOrigin = eventBase;
 		baseUnits.Add(currentUnit);
+		regionManager.unitsList.Add(currentUnit.GetComponent<UnitBase>());
 		if (tutorialManager != null)
 		{
 			if (tutorialManager.currentTutorialStepPanel != null)
@@ -226,6 +232,7 @@ public class CityBase : MonoBehaviour
 		resourceSender.StoreResource(ProductionType.Power, power);
 		
 		unitResourceSenders.Add(currentUnit);
+		regionManager.unitsList.Add(currentUnit.GetComponent<UnitBase>());
 	}
 
 	public void ApplyBonusResource()
