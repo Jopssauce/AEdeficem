@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class ResearchManager : MonoBehaviour 
 {
@@ -54,6 +55,12 @@ public class ResearchManager : MonoBehaviour
         progressResearchTier.AddListener(AddTier);
     
 		//StartCoroutine (LoadScene ());	
+
+		var techs = regionalPlanTech.ToList ();
+		regionalPlanTech.Clear ();
+		foreach (Technology tech in techs) {
+			regionalPlanTech.Add (Instantiate (tech));
+		}
 	}
 
 	void OnDestroy()
